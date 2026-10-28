@@ -7,8 +7,12 @@
     " L "
   ],
   "key": {
-    "W": "apotheosis:rare_material",
-    "L": "apotheosis:common_material"
+    "W": {
+      "item": "apotheosis:rare_material"
+    },
+    "L": {
+      "item": "apotheosis:common_material"
+    }
   },
   "result": {
     "id": "apotheotic_additions:mythicalband",

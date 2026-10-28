@@ -3,6 +3,13 @@
 """
 import zipfile,json,pathlib,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+MOVED_ITEM_IDS = {
+    'apotheosis:ancient_material': 'apotheotic_additions:ancient_material',
+    'apotheosis:beeshelf': 'apothic_enchanting:beeshelf',
+    'apotheosis:blazing_hellshelf': 'apothic_enchanting:blazing_hellshelf',
+    'apotheosis:echoing_sculkshelf': 'apothic_enchanting:echoing_sculkshelf',
+    'apotheosis:heart_seashelf': 'apothic_enchanting:heart_seashelf',
+}
 original=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else ROOT.parent.parent.parent/'ApotheoticAdditionsV2.2.2.jar'
 with zipfile.ZipFile(original) as z:
     base='data/apotheotic_additions/recipes/'
@@ -30,20 +37,20 @@ with zipfile.ZipFile(original) as z:
             want['result']=dict(want['result']);want['result'].pop('count')
         if 'result' in wanted and isinstance(wanted['result'],dict) and wanted['result'].get('count')==1:
             wanted['result']=dict(wanted['result']);wanted['result'].pop('count')
-        # Minecraft 1.21 introduced compact item/tag ingredient strings.
-        def compact(v):
-            if isinstance(v,dict) and len(v)==1:
-                if 'item' in v: return v['item']
-                if 'tag' in v: return '#' + v['tag']
-            return v
-        if 'key' in wanted: wanted['key']={k:compact(v) for k,v in wanted['key'].items()}
-        if 'ingredients' in wanted: wanted['ingredients']=[compact(v) for v in wanted['ingredients']]
-        if 'ingredient' in wanted: wanted['ingredient']=compact(wanted['ingredient'])
+        # Minecraft 1.21.1 Ingredient codecs still require item/tag objects.
+        # Do not compact these to strings: that format fails runtime decoding.
+        def migrate_removed_ids(value):
+            if isinstance(value, dict):
+                return {k: migrate_removed_ids(v) for k, v in value.items()}
+            if isinstance(value, list):
+                return [migrate_removed_ids(v) for v in value]
+            if isinstance(value, str):
+                return MOVED_ITEM_IDS.get(value, value)
+            return value
+        wanted = migrate_removed_ids(wanted)
         if wanted!=want:
-            # Allow the three known conversion classes as exceptions ONLY for 1.21 format changes.
             diffs={k:(wanted.get(k),want.get(k)) for k in set(wanted)|set(want) if wanted.get(k)!=want.get(k)}
-            if set(diffs)!={'ingredient'} and set(diffs)!={'result'}:
-                raise AssertionError(rel+' '+str(diffs)[:400])
+            raise AssertionError(rel+' '+str(diffs)[:400])
         count+=1
     if count!=26:raise AssertionError(f'Expected 26 vanilla recipes, got {count}')
     print(f'PASS: {count} active vanilla recipes correspond to original entries')

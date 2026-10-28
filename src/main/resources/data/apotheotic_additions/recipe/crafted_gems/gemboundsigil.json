@@ -7,10 +7,18 @@
     "ADA"
   ],
   "key": {
-    "A": "#apotheotic_additions:slate_reagents",
-    "B": "apotheosis:gem_fused_slate",
-    "C": "minecraft:sculk",
-    "D": "apotheosis:gem_dust"
+    "A": {
+      "tag": "apotheotic_additions:slate_reagents"
+    },
+    "B": {
+      "item": "apotheosis:gem_fused_slate"
+    },
+    "C": {
+      "item": "minecraft:sculk"
+    },
+    "D": {
+      "item": "apotheosis:gem_dust"
+    }
   },
   "result": {
     "id": "apotheotic_additions:gemboundsigil",

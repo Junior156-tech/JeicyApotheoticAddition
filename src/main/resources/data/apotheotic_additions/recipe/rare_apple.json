@@ -7,8 +7,12 @@
     "LLL"
   ],
   "key": {
-    "W": "minecraft:apple",
-    "L": "apotheosis:rare_material"
+    "W": {
+      "item": "minecraft:apple"
+    },
+    "L": {
+      "item": "apotheosis:rare_material"
+    }
   },
   "result": {
     "id": "apotheotic_additions:rareapple",

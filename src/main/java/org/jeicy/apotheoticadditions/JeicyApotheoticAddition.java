@@ -17,6 +17,7 @@ public final class JeicyApotheoticAddition {
 
     static {
         ITEMS.registerSimpleItem("artifact_material", new Item.Properties());
+        ITEMS.registerSimpleItem("ancient_material", new Item.Properties());
         ITEMS.registerSimpleItem("heirloom_material", new Item.Properties());
         ITEMS.registerSimpleItem("esoteric_material", new Item.Properties());
         ITEMS.registerSimpleItem("gemboundsigil", new Item.Properties());

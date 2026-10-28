@@ -7,10 +7,18 @@
     "AOA"
   ],
   "key": {
-    "W": "apotheosis:gem_fused_slate",
-    "L": "#apotheotic_additions:slate_reagents",
-    "O": "#apotheotic_additions:slate_gems",
-    "A": "apotheosis:gem_dust"
+    "W": {
+      "item": "apotheosis:gem_fused_slate"
+    },
+    "L": {
+      "tag": "apotheotic_additions:slate_reagents"
+    },
+    "O": {
+      "tag": "apotheotic_additions:slate_gems"
+    },
+    "A": {
+      "item": "apotheosis:gem_dust"
+    }
   },
   "result": {
     "id": "apotheosis:sigil_of_socketing",

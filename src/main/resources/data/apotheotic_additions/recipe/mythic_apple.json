@@ -7,8 +7,12 @@
     "LLL"
   ],
   "key": {
-    "W": "minecraft:apple",
-    "L": "apotheosis:mythic_material"
+    "W": {
+      "item": "minecraft:apple"
+    },
+    "L": {
+      "item": "apotheosis:mythic_material"
+    }
   },
   "result": {
     "id": "apotheotic_additions:mythicapple",

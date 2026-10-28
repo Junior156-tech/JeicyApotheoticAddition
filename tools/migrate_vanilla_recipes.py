@@ -18,20 +18,34 @@ ALLOW = {
     'minecraft:stonecutting', 'minecraft:smelting',
     'minecraft:blasting', 'minecraft:smithing_transform',
 }
-KNOWN_BASE_NS = {'minecraft','apotheosis',NS}
+KNOWN_BASE_NS = {'minecraft', 'apotheosis', 'apothic_enchanting', NS}
 VALID_RESULT_KEYS = {'id','count','components'}
+MOVED_ITEM_IDS = {
+    'apotheosis:ancient_material': 'apotheotic_additions:ancient_material',
+    'apotheosis:beeshelf': 'apothic_enchanting:beeshelf',
+    'apotheosis:blazing_hellshelf': 'apothic_enchanting:blazing_hellshelf',
+    'apotheosis:echoing_sculkshelf': 'apothic_enchanting:echoing_sculkshelf',
+    'apotheosis:heart_seashelf': 'apothic_enchanting:heart_seashelf',
+}
 
 
 def convert_ingredient(d):
     if not isinstance(d, dict):
         raise ValueError('unexpected ingredient type')
     if 'item' in d and set(d) <= {'item'}:
-        return d['item']
+        # Minecraft 1.21.1's Ingredient codec still requires an object (or an
+        # array of objects). Compact item strings are not accepted here.
+        item = d['item']
+        # Apotheosis 8.8.0 removed ancient_material, but the original recipes
+        # use Mythic and Ancient together. Preserve that distinction with the
+        # compatibility item registered by this port.
+        item = MOVED_ITEM_IDS.get(item, item)
+        return {'item': item}
     if 'tag' in d and set(d) <= {'tag'}:
         # Replacing forge tags with common (c:) tags is NOT automatic: may change ingredients.
         if d['tag'].startswith('forge:'):
             raise ValueError('legacy Forge tag: requires semantic mapping')
-        return '#'+d['tag']
+        return {'tag': d['tag']}
     raise ValueError('nonvanilla/custom ingredient')
 
 

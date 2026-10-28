@@ -7,8 +7,12 @@
     "LLL"
   ],
   "key": {
-    "W": "minecraft:apple",
-    "L": "apotheosis:epic_material"
+    "W": {
+      "item": "minecraft:apple"
+    },
+    "L": {
+      "item": "apotheosis:epic_material"
+    }
   },
   "result": {
     "id": "apotheotic_additions:epicapple",

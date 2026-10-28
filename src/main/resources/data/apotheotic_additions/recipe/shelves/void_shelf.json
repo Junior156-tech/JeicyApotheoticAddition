@@ -6,10 +6,18 @@
     "EPE"
   ],
   "key": {
-    "A": "apotheosis:ancient_material",
-    "R": "apotheosis:echoing_sculkshelf",
-    "P": "apotheosis:mythic_material",
-    "E": "minecraft:gold_block"
+    "A": {
+      "item": "apotheotic_additions:ancient_material"
+    },
+    "R": {
+      "item": "apothic_enchanting:echoing_sculkshelf"
+    },
+    "P": {
+      "item": "apotheosis:mythic_material"
+    },
+    "E": {
+      "item": "minecraft:gold_block"
+    }
   },
   "result": {
     "id": "apotheotic_additions:void_shelf",

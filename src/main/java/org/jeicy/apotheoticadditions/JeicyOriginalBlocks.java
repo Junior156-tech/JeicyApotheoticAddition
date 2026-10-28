@@ -29,7 +29,7 @@ public final class JeicyOriginalBlocks {
     public static final DeferredBlock<Block> SCRAP_CARVED = BLOCKS.registerBlock("scrap_carved", Block::new, BlockBehaviour.Properties.of().strength(2.0F, 6.0F));
     public static final DeferredBlock<SlabBlock> SCRAP_BRICK_SLAB = BLOCKS.registerBlock("scrap_brick_slab", SlabBlock::new, BlockBehaviour.Properties.of().strength(2.0F, 6.0F));
     public static final DeferredBlock<StairBlock> SCRAP_BRICK_STAIRS = BLOCKS.registerBlock("scrap_brick_stairs", props -> new StairBlock(Blocks.STONE_BRICKS.defaultBlockState(), props), BlockBehaviour.Properties.of().strength(2.0F, 6.0F));
-    public static final DeferredBlock<GlassBlock> LUMINOUS_GLASS = BLOCKS.registerBlock("luminous_glass", GlassBlock::new, BlockBehaviour.Properties.of().strength(0.3F).noOcclusion().lightLevel(state -> 15));
+    public static final DeferredBlock<TransparentBlock> LUMINOUS_GLASS = BLOCKS.registerBlock("luminous_glass", TransparentBlock::new, BlockBehaviour.Properties.of().strength(0.3F).noOcclusion().lightLevel(state -> 15));
     public static final DeferredBlock<IronBarsBlock> LUMINOUS_GLASS_PANE = BLOCKS.registerBlock("luminous_glass_pane", IronBarsBlock::new, BlockBehaviour.Properties.of().strength(0.3F).noOcclusion().lightLevel(state -> 15));
     public static final DeferredBlock<Block> TIMEWORN_FABRIC = BLOCKS.registerBlock("timeworn_fabric", Block::new, BlockBehaviour.Properties.of().strength(1.0F));
     public static final DeferredBlock<Block> TIMEWORN_FANCY = BLOCKS.registerBlock("timeworn_fancy", Block::new, BlockBehaviour.Properties.of().strength(2.0F, 6.0F));

@@ -11,7 +11,7 @@ root=pathlib.Path(__file__).resolve().parents[1]
 original=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else None
 if not original or not original.exists(): sys.exit('Pass path to original 2.2.2 JAR')
 activated=list((root/'src/main/resources/data/apotheotic_additions/recipe').rglob('*.json'))
-assert len(activated)==26, f'Expected 22 native recipes; found {len(activated)}'
+assert len(activated)==26, f'Expected 26 native recipes; found {len(activated)}'
 with zipfile.ZipFile(original) as z:
  for p in activated:
   rel=p.relative_to(root/'src/main/resources/data/apotheotic_additions/recipe')
