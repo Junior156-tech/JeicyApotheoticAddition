@@ -71,6 +71,8 @@ public final class JeicyRuntimeGemVerifier {
         LOGGER.info("Verified 6 exact socket decisions and 3 split weapon profiles.");
         verifyEnderDragonEnchantments(event);
         LOGGER.info("Verified Ender Dragon Artifact rank adds 2 levels to all existing enchantments.");
+        verifyOriginalRankEvolution(event);
+        LOGGER.info("Verified native and custom cutting paths from Common through Esoteric.");
     }
 
     private static void verifySocketRule(String gemPath, net.minecraft.world.item.Item target,
@@ -126,5 +128,84 @@ public final class JeicyRuntimeGemVerifier {
         if (enchantments.getLevel(sharpness) != 5 || enchantments.getLevel(unbreaking) != 4) {
             throw new IllegalStateException("Ender Dragon global enchantment bonus did not preserve +2");
         }
+    }
+
+    private static void verifyOriginalRankEvolution(ServerStartedEvent serverEvent) {
+        var level = serverEvent.getServer().overworld();
+        var recipes = serverEvent.getServer().getRecipeManager();
+        var registries = serverEvent.getServer().registryAccess();
+
+        Gem armor = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", "modded/armor"));
+        ItemStack common = armor.toStack(Purity.CRACKED);
+        var commonInput = cuttingInput(common, common.copy(),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.GEM_DUST.value(), 1),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.TIMEWORN_FABRIC.value(), 1));
+        var nativeRecipe = recipes.getRecipeFor(
+            dev.shadowsoffire.apotheosis.Apoth.RecipeTypes.GEM_CUTTING, commonInput, level)
+            .orElseThrow(() -> new IllegalStateException("Common original gem cutting recipe not found"));
+        ItemStack uncommon = nativeRecipe.value().assemble(commonInput, registries);
+        if (JeicyGemRankAccess.get(uncommon) != OriginalGemRank.UNCOMMON
+            || dev.shadowsoffire.apotheosis.socket.gem.GemItem.getPurity(uncommon) != Purity.CHIPPED) {
+            throw new IllegalStateException("Native cutting did not advance Common to Uncommon");
+        }
+
+        ItemStack epic = armor.toStack(Purity.NORMAL);
+        var forbiddenInput = cuttingInput(epic, epic.copy(),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.GEM_DUST.value(), 7),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.TIMEWORN_FABRIC.value(), 27));
+        if (recipes.getRecipeFor(dev.shadowsoffire.apotheosis.Apoth.RecipeTypes.GEM_CUTTING,
+            forbiddenInput, level).isPresent()) {
+            throw new IllegalStateException("Original cutting accepted a material two ranks below");
+        }
+
+        ItemStack mythic = armor.toStack(Purity.FLAWLESS);
+        var ancientInput = cuttingInput(mythic, mythic.copy(),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.GEM_DUST.value(), 9),
+            new ItemStack(JeicyApotheoticAddition.ANCIENT_MATERIAL.get(), 1));
+        var ancientRecipe = recipes.getRecipeFor(
+            dev.shadowsoffire.apotheosis.Apoth.RecipeTypes.GEM_CUTTING, ancientInput, level)
+            .orElseThrow(() -> new IllegalStateException("Mythic to Ancient cutting recipe not found"));
+        ItemStack ancient = ancientRecipe.value().assemble(ancientInput, registries);
+        if (JeicyGemRankAccess.get(ancient) != OriginalGemRank.ANCIENT
+            || dev.shadowsoffire.apotheosis.socket.gem.GemItem.getPurity(ancient) != Purity.PERFECT) {
+            throw new IllegalStateException("Custom cutting did not advance Mythic to Ancient");
+        }
+
+        Gem dragon = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", "crafted/ender_dragon"));
+        ItemStack artifact = dragon.toStack(Purity.PERFECT);
+        var heirloomInput = cuttingInput(artifact, artifact.copy(),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.GEM_DUST.value(), 13),
+            new ItemStack(JeicyApotheoticAddition.HEIRLOOM_MATERIAL.get(), 1));
+        var heirloomRecipe = recipes.getRecipeFor(
+            dev.shadowsoffire.apotheosis.Apoth.RecipeTypes.GEM_CUTTING, heirloomInput, level)
+            .orElseThrow(() -> new IllegalStateException("Artifact to Heirloom recipe not found"));
+        ItemStack heirloom = heirloomRecipe.value().assemble(heirloomInput, registries);
+        if (JeicyGemRankAccess.get(heirloom) != OriginalGemRank.HEIRLOOM) {
+            throw new IllegalStateException("Custom cutting did not advance Artifact to Heirloom");
+        }
+
+        var esotericInput = cuttingInput(heirloom, heirloom.copy(),
+            new ItemStack(dev.shadowsoffire.apotheosis.Apoth.Items.GEM_DUST.value(), 15),
+            new ItemStack(JeicyApotheoticAddition.ESOTERIC_MATERIAL.get(), 1));
+        var esotericRecipe = recipes.getRecipeFor(
+            dev.shadowsoffire.apotheosis.Apoth.RecipeTypes.GEM_CUTTING, esotericInput, level)
+            .orElseThrow(() -> new IllegalStateException("Heirloom to Esoteric recipe not found"));
+        ItemStack esoteric = esotericRecipe.value().assemble(esotericInput, registries);
+        if (JeicyGemRankAccess.get(esoteric) != OriginalGemRank.ESOTERIC) {
+            throw new IllegalStateException("Custom cutting did not advance Heirloom to Esoteric");
+        }
+    }
+
+    private static dev.shadowsoffire.apotheosis.socket.gem.cutting.GemCuttingRecipe.CuttingRecipeInput
+        cuttingInput(ItemStack base, ItemStack top, ItemStack left, ItemStack right) {
+        var handler = new net.neoforged.neoforge.items.ItemStackHandler(4);
+        handler.setStackInSlot(0, base);
+        handler.setStackInSlot(1, top);
+        handler.setStackInSlot(2, left);
+        handler.setStackInSlot(3, right);
+        return new dev.shadowsoffire.apotheosis.socket.gem.cutting.GemCuttingRecipe.CuttingRecipeInput(
+            handler);
     }
 }

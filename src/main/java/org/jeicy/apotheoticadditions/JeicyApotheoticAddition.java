@@ -3,8 +3,12 @@ package org.jeicy.apotheoticadditions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.common.NeoForge;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.GemBonus;
 
@@ -15,12 +19,22 @@ import dev.shadowsoffire.apotheosis.socket.gem.bonus.GemBonus;
 @Mod("apotheotic_additions")
 public final class JeicyApotheoticAddition {
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems("apotheotic_additions");
+    private static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
+        DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, "apotheotic_additions");
+
+    public static final DeferredItem<Item> ARTIFACT_MATERIAL =
+        ITEMS.registerSimpleItem("artifact_material", new Item.Properties());
+    public static final DeferredItem<Item> ANCIENT_MATERIAL =
+        ITEMS.registerSimpleItem("ancient_material", new Item.Properties());
+    public static final DeferredItem<Item> HEIRLOOM_MATERIAL =
+        ITEMS.registerSimpleItem("heirloom_material", new Item.Properties());
+    public static final DeferredItem<Item> ESOTERIC_MATERIAL =
+        ITEMS.registerSimpleItem("esoteric_material", new Item.Properties());
+    public static final DeferredHolder<RecipeSerializer<?>, OriginalRankUpgradeRecipe.Serializer>
+        ORIGINAL_RANK_UPGRADE_SERIALIZER = RECIPE_SERIALIZERS.register(
+            "original_rank_upgrade", () -> OriginalRankUpgradeRecipe.Serializer.INSTANCE);
 
     static {
-        ITEMS.registerSimpleItem("artifact_material", new Item.Properties());
-        ITEMS.registerSimpleItem("ancient_material", new Item.Properties());
-        ITEMS.registerSimpleItem("heirloom_material", new Item.Properties());
-        ITEMS.registerSimpleItem("esoteric_material", new Item.Properties());
         ITEMS.registerSimpleItem("gemboundsigil", new Item.Properties());
         ITEMS.registerSimpleItem("apotheotic_coin", new Item.Properties());
         ITEMS.registerSimpleItem("infused_coin", new Item.Properties());
@@ -42,6 +56,7 @@ public final class JeicyApotheoticAddition {
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_multi_attribute"),
             JeicyTieredMultiAttributeBonus.CODEC);
         ITEMS.register(modBus);
+        RECIPE_SERIALIZERS.register(modBus);
         JeicyOriginalBlocks.register(modBus);
         JeicyGemComponents.register(modBus);
         NeoForge.EVENT_BUS.addListener(JeicyRuntimeGemVerifier::onServerStarted);

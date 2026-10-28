@@ -17,6 +17,10 @@ with zipfile.ZipFile(original) as z:
     for f in sorted((ROOT/'src/main/resources/data/apotheotic_additions/recipe').rglob('*.json')):
         rel=f.relative_to(ROOT/'src/main/resources/data/apotheotic_additions/recipe').as_posix()
         data=json.loads(f.read_text(encoding='utf-8'))
+        if rel == 'gem_cutting/original_rank_upgrade.json':
+            if data != {'type':'apotheotic_additions:original_rank_upgrade'}:
+                raise AssertionError('Invalid original rank upgrade recipe')
+            continue
         actual_name=base+rel
         if actual_name not in z.namelist():
             raise AssertionError('Recipe not present in original: '+rel)

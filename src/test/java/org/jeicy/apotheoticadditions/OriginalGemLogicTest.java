@@ -101,4 +101,19 @@ final class OriginalGemLogicTest {
         assertTrue(OriginalSocketRules.appliesTo(Set.of("sword", "trident"), "sword"));
         assertFalse(OriginalSocketRules.appliesTo(Set.of("sword", "trident"), "axe"));
     }
+
+    @Test
+    void preservesOriginalGemCuttingCosts() {
+        for (int index = 0; index < OriginalGemRank.ESOTERIC.stableId(); index++) {
+            OriginalGemRank rank = OriginalGemRank.fromIndex(index);
+            assertEquals(1 + index * 2, OriginalGemUpgradeCosts.dustCost(rank));
+            assertEquals(3, OriginalGemUpgradeCosts.materialCost(index, index));
+            assertEquals(1, OriginalGemUpgradeCosts.materialCost(index, index + 1));
+            if (index > 0) assertEquals(9,
+                OriginalGemUpgradeCosts.materialCost(index, index - 1));
+            assertEquals(-1, OriginalGemUpgradeCosts.materialCost(index, index + 2));
+        }
+        assertThrows(IllegalArgumentException.class,
+            () -> OriginalGemUpgradeCosts.dustCost(OriginalGemRank.ESOTERIC));
+    }
 }

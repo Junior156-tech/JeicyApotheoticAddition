@@ -11,8 +11,8 @@ NeoForge y Apotheosis 8.8.0.
 - Datos originales inventariados: 67 gemas, 263 affixes y 229 recetas.
 - `compileJava` correcto contra NeoForge 21.1.251, Apotheosis 8.8.0, Placebo
   9.9.2 y Apothic Attributes 2.10.1.
-- `clean test` correcto; cuatro tests JUnit pasan sin fallos.
-- El servidor de desarrollo carga nueve mods, 26 recetas activas y llega a
+- `clean test` correcto; cinco tests JUnit pasan sin fallos.
+- El servidor de desarrollo carga nueve mods, 27 recetas activas y llega a
   `Done` sin errores de recetas o codecs.
 - Apotheosis registra 34 gemas: sus 21 gemas base y 13 gemas originales
   activadas (`Armor`, `Hearty` y once gemas crafted).
@@ -22,6 +22,9 @@ NeoForge y Apotheosis 8.8.0.
 - El catálogo runtime ya conserva el rango mínimo original de las 67 gemas.
 - Los bonuses portados cubren atributos simples, encantamientos globales y
   multiatributos con perfiles distintos para espada/tridente y arma pesada.
+- La mesa de corte conserva la evolución secuencial Common–Esoteric: consume
+  dos gemas idénticas, `1 + rango×2` Gem Dust y material actual×3, siguiente×1
+  o anterior×9. Las rutas nativa y extendida se verifican en cada arranque.
 - Un validador restaura las categorías que Apotheosis 8.x fusionó; el arranque
   verifica 78 asignaciones de rango, seis decisiones de socket y tres perfiles
   de arma de la gema Wither.

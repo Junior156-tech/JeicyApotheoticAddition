@@ -10,7 +10,12 @@ from migrate_vanilla_recipes import convert_recipe
 root=pathlib.Path(__file__).resolve().parents[1]
 original=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else None
 if not original or not original.exists(): sys.exit('Pass path to original 2.2.2 JAR')
-activated=list((root/'src/main/resources/data/apotheotic_additions/recipe').rglob('*.json'))
+recipe_root=root/'src/main/resources/data/apotheotic_additions/recipe'
+all_activated=list(recipe_root.rglob('*.json'))
+custom=recipe_root/'gem_cutting/original_rank_upgrade.json'
+assert custom in all_activated
+assert json.loads(custom.read_text()) == {'type':'apotheotic_additions:original_rank_upgrade'}
+activated=[path for path in all_activated if path != custom]
 assert len(activated)==26, f'Expected 26 native recipes; found {len(activated)}'
 with zipfile.ZipFile(original) as z:
  for p in activated:
@@ -24,4 +29,4 @@ with zipfile.ZipFile(original) as z:
   former=json.loads(z.read(f'data/apotheotic_additions/tags/items/{name}.json'))
   current=json.loads((root/f'src/main/resources/data/apotheotic_additions/tags/item/{name}.json').read_text())
   assert former==current, name
-print('OK: 26 native recipes and 2 ingredient tags structurally match the original; NOT TESTED IN MINECRAFT')
+print('OK: 26 native recipes, original rank-upgrade recipe, and 2 ingredient tags are structurally valid; NOT TESTED IN MINECRAFT')
