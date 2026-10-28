@@ -1,0 +1,33 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "enderio:loot_capacitor"
+  },
+  "outputs": [
+    {
+      "min_count": 1,
+      "max_count": 2,
+      "stack": {
+        "item": "enderio:grains_of_infinity"
+      }
+    },
+    {
+      "min_count": 0,
+      "max_count": 1,
+      "stack": {
+        "item": "minecraft:copper_ingot"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

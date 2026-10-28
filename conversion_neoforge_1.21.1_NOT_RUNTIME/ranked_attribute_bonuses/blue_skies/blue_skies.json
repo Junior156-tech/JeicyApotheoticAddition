@@ -1,0 +1,69 @@
+{
+  "original_gem": "blue_skies/blue_skies",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "forge:block_reach",
+      "operation": "add_value",
+      "values": {
+        "rare": 1.0,
+        "epic": 1.5,
+        "mythic": 2.0,
+        "ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      },
+      "__requires_exact_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      "__origin": "blue_skies/blue_skies.json#bonuses[0]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.5,
+        "epic": 1.0,
+        "mythic": 1.5,
+        "ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      },
+      "__requires_exact_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      "__origin": "blue_skies/blue_skies.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:dodge_chance",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.1,
+        "epic": 0.15,
+        "mythic": 0.2,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "blue_skies/blue_skies.json#bonuses[2]"
+    }
+  ]
+}

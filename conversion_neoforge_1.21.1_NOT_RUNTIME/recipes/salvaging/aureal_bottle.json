@@ -1,0 +1,33 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "forbidden_arcanus:aureal_bottle"
+  },
+  "outputs": [
+    {
+      "min_count": 1,
+      "max_count": 3,
+      "stack": {
+        "item": "forbidden_arcanus:arcane_crystal_dust"
+      }
+    },
+    {
+      "min_count": 0,
+      "max_count": 1,
+      "stack": {
+        "item": "minecraft:glass"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "forbidden_arcanus"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

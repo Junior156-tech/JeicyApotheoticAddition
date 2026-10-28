@@ -1,0 +1,37 @@
+{
+  "type": "apotheosis:attribute",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apotheosis_modern_ragnarok"
+    }
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "attributeslib:fire_damage",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 60,
+      "steps": 120,
+      "step": 0.5
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 20,
+      "steps": 60,
+      "step": 0.25
+    },
+    "apotheotic_additions:esoteric": {
+      "min": 80,
+      "steps": 150,
+      "step": 0.75
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

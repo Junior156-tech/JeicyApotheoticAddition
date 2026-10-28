@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "aether:zanite_ore",
+      "required": false
+    }
+  ]
+}

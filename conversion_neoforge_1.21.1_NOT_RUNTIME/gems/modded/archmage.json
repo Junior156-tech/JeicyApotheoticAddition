@@ -1,0 +1,121 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:enchantment",
+      "enchantment": "ars_nouveau:mana_regen",
+      "values": {
+        "apotheosis:rare": 1,
+        "apotheosis:epic": 1,
+        "apotheosis:mythic": 2,
+        "apotheotic_additions:ancient": 2,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      },
+      "__unported_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "ars_nouveau:ars_nouveau.perk.spell_damage",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:rare": 0.2,
+        "apotheosis:epic": 0.3,
+        "apotheosis:mythic": 0.4,
+        "apotheotic_additions:ancient": 0.5,
+        "apotheotic_additions:artifact": 0.6,
+        "apotheotic_additions:heirloom": 0.7,
+        "apotheotic_additions:esoteric": 0.8
+      },
+      "__unported_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:rare": 0.05,
+        "apotheosis:epic": 0.1,
+        "apotheosis:mythic": 0.15,
+        "apotheotic_additions:ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      },
+      "__unported_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "ars_nouveau:shocked",
+      "target": "arrow_target",
+      "values": {
+        "apotheosis:mythic": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 500
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 320,
+          "amplifier": 1,
+          "cooldown": 300
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 1,
+          "cooldown": 200
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 2,
+          "cooldown": 200
+        }
+      },
+      "__unported_gem_class": {
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow",
+          "trident"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 1.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "constraints": {
+    "dimensions": []
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,23 @@
+{
+  "original_gem": "crafted/frostmaw",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_value",
+      "values": {
+        "apotheotic_additions:artifact": 9,
+        "apotheotic_additions:heirloom": 10,
+        "apotheotic_additions:esoteric": 11
+      },
+      "__requires_exact_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      "__origin": "crafted/frostmaw.json#bonuses[0]"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:fletching",
+  "ingredients": [
+    {
+      "item": "minecraft:rabbit_hide"
+    },
+    {
+      "tag": "forge:rods/wooden"
+    },
+    {
+      "tag": "apotheotic_additions:feathers"
+    }
+  ],
+  "result": {
+    "item": "archers_paradox:training_arrow",
+    "count": 6
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "village"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "archers_paradox"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

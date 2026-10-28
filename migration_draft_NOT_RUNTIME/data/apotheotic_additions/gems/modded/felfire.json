@@ -1,0 +1,233 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "attributeslib:fire_damage",
+          "operation": "ADDITION",
+          "values": {
+            "uncommon": 2.5,
+            "rare": 3.25,
+            "epic": 3.75,
+            "mythic": 4.25,
+            "ancient": 4.75,
+            "apotheotic_additions:artifact": 5.25,
+            "apotheotic_additions:heirloom": 5.75,
+            "apotheotic_additions:esoteric": 6.25
+          }
+        },
+        {
+          "attribute": "attributeslib:cold_damage",
+          "operation": "ADDITION",
+          "values": {
+            "uncommon": 2.5,
+            "rare": 3.25,
+            "epic": 3.75,
+            "mythic": 4.25,
+            "ancient": 4.75,
+            "apotheotic_additions:artifact": 5.25,
+            "apotheotic_additions:heirloom": 5.75,
+            "apotheotic_additions:esoteric": 6.25
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:ores/diamond",
+      "inputs": {
+        "tag": "forge:gems/diamond"
+      },
+      "output": {
+        "item": "born_in_chaos_v1:pieceofdarkmetal"
+      },
+      "values": {
+        "chipped": 0.05,
+        "flawed": 0.1,
+        "normal": 0.15,
+        "flawless": 0.2,
+        "perfect": 0.25
+      },
+      "desc": "gem.apotheotic_additions:alchemy/felfire.pickaxe",
+      "original_tier_values": {
+        "uncommon": 0.05,
+        "rare": 0.1,
+        "epic": 0.15,
+        "mythic": 0.2,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "mob_effect": "born_in_chaos_v1:infernal_flame",
+      "target": "attack_target",
+      "stack_on_reapply": true,
+      "values": {
+        "chipped": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "flawed": {
+          "duration": 150,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "normal": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "flawless": {
+          "duration": 250,
+          "amplifier": 1,
+          "cooldown": 100
+        },
+        "perfect": {
+          "duration": 300,
+          "amplifier": 1,
+          "cooldown": 100
+        }
+      },
+      "original_tier_values": {
+        "uncommon": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "rare": {
+          "duration": 150,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "epic": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "mythic": {
+          "duration": 250,
+          "amplifier": 1,
+          "cooldown": 100
+        },
+        "ancient": {
+          "duration": 300,
+          "amplifier": 1,
+          "cooldown": 100
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 400,
+          "amplifier": 2,
+          "cooldown": 100
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 500,
+          "amplifier": 2,
+          "cooldown": 100
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 600,
+          "amplifier": 2,
+          "cooldown": 100
+        }
+      }
+    },
+    {
+      "type": "apotheosis:enchantment",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "enchantment": "apotheosis:rebounding",
+      "values": {
+        "flawed": 1,
+        "normal": 1,
+        "flawless": 1,
+        "perfect": 2
+      },
+      "original_tier_values": {
+        "rare": 1,
+        "epic": 1,
+        "mythic": 1,
+        "ancient": 2,
+        "apotheotic_additions:artifact": 2,
+        "apotheotic_additions:heirloom": 2,
+        "apotheotic_additions:esoteric": 3
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "apothic_attributes:life_steal",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.05,
+        "flawed": 0.1,
+        "normal": 0.15,
+        "flawless": 0.2,
+        "perfect": 0.25
+      },
+      "original_tier_values": {
+        "uncommon": 0.05,
+        "rare": 0.1,
+        "epic": 0.15,
+        "mythic": 0.2,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "enchantment"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "born_in_chaos_v1"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 3,
+    "quality": 4.5
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "chipped"
+}

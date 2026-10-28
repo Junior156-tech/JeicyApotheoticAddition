@@ -1,0 +1,79 @@
+{
+  "categories": [
+    "apotheosis:boots"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "malum:zephyrs_courage",
+  "target": "hurt_self",
+  "values": {
+    "apotheosis:epic": {
+      "duration": {
+        "min": 100,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 150,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 200,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 300,
+        "steps": 20,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 500,
+        "steps": 20,
+        "step": 25
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 1200,
+        "steps": 40,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

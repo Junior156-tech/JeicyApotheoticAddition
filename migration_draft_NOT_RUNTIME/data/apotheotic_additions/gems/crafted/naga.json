@@ -1,0 +1,45 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "axe",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "blocks": "minecraft:logs",
+      "inputs": {
+        "tag": "minecraft:logs"
+      },
+      "output": {
+        "item": "twilightforest:liveroot"
+      },
+      "values": {},
+      "desc": "gem.apotheotic_additions:alchemy/naga.axe",
+      "original_tier_values": {
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 0.9,
+        "apotheotic_additions:esoteric": 1
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "min_purity": "apotheotic_additions:artifact"
+}

@@ -1,0 +1,3181 @@
+{
+  "counts": {
+    "ONE_TO_ONE_CATEGORIES_CANDIDATE": 57,
+    "REQUIRES_EXACT_JAVA_TARGET": 203,
+    "NO_TARGETS_IN_SOURCE": 3
+  },
+  "source": "ApotheoticAdditionsV2.2.2.jar",
+  "warning": "Candidates are NOT runtime-verified. Broader Apotheosis classes cannot replace sword, heavy_weapon, pickaxe, shovel or crossbow.",
+  "entries": [
+    {
+      "id": "apotheotic_additions:armor/attribute/artifact_armor",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/artifact_hp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/artifact_luck",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/artifact_source",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/artifact_toughness",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_armor",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_hp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_luck",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_source",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_toughness",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_voidic_infusion_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "chestplate",
+        "leggings",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_voidic_paranoia_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/esoteric_voidic_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/feathers",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/lava_speed",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/reapers",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/roll_count",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/roll_distance",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/roll_recharge",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/sourcetouched",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/spirit_spoils",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/voidic_infusion_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "chestplate",
+        "leggings"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/voidic_paranoia_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/voidic_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/attribute/warding",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/dmg_reduction/explosion",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/dmg_reduction/fall",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/dmg_reduction/fire",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/dmg_reduction/physical",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/dmg_reduction/runed",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots",
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/bad_luck",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/beenergized",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/darkness",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "chestplate",
+        "leggings"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/deepsight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/dolphin",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/gaias_bulwark",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/heirloom_aura",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/heirloom_repellent",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/heirloom_resistance",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/heirloom_vision",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/mana_irons",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/rejection",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/resilience",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/roundabout",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "chestplate",
+        "leggings"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:chestplate",
+        "apotheosis:leggings"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/soulsteal",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/sweet_tooth",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:armor/mob_effect/zephyr",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:boots"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/artifact_luck",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/artifact_speed",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/artifact_xp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/block_reach",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/bonus_loot",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/sliding",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/attribute/speed",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "pickaxe",
+        "shovel",
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/angel_wings",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/ascension",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/aurora",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/beaver",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/comfort",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/copper_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/emptiness",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/gold_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/iron_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/lapis_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/node",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/nourishment",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/osmium_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/mob_effect/redstone_sight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "pickaxe",
+        "shovel"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:breaker/special/enlightened",
+      "legacy_codec": "apotheosis:enlightened",
+      "original_types": null,
+      "exact_vanilla_category_candidates": [],
+      "status": "NO_TARGETS_IN_SOURCE"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/chanting",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/hp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/luck",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/mining_speed",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/resilience",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/attribute/xp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/dmg_reduction/explosion",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/dmg_reduction/fall",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/dmg_reduction/fire",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/dmg_reduction/physical",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_aether/dmg_reduction/runed",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:aether_gloves",
+        "curios:aether_accessory",
+        "curios:aether_shield",
+        "curios:aether_cape",
+        "curios:aether_pendant",
+        "curios:aether_ring"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/dodge",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/forged",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/healing_power",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/hp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/luck",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/spell_resist",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/tailored",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/voidic_infusion_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/voidic_paranoia_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/voidic_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/warding",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/attribute/weakness_aura",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:body",
+        "curios:head",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/dmg_reduction/explosion",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands",
+        "curios:belt",
+        "curios:talisman",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/dmg_reduction/fall",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/dmg_reduction/fire",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/dmg_reduction/physical",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/dmg_reduction/runed",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/mob_effect/chilly",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:hands"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/mob_effect/fleet_footed",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:feet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/mob_effect/immolate",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:body",
+        "curios:back",
+        "curios:an_focus"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/mob_effect/instant_damage",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:hands",
+        "curios:belt"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_armor/mob_effect/perforation",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:head",
+        "curios:belt"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/arcane",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/chanting",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/flight",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/gaia",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/mana_regen",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/resilience",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/source_regen",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/sourcetouched",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/attribute/speed",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/dmg_reduction/explosion",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:head",
+        "curios:body",
+        "curios:back",
+        "curios:feet",
+        "curios:hands",
+        "curios:belt",
+        "curios:talisman",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/dmg_reduction/fall",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/dmg_reduction/fire",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/dmg_reduction/physical",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/dmg_reduction/runed",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:ring",
+        "curios:an_focus",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt",
+        "curios:spellstone",
+        "curios:scroll",
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:bracelet"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/blazing_might",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellstone",
+        "curios:scroll"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/conduit_power",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:scroll",
+        "curios:spellstone",
+        "curios:an_focus"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/despoil",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:bracelet",
+        "curios:talisman",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/flesh_infested",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/heirloom_glowing",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/heirloom_repellent",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/jaw_attack",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm",
+        "curios:belt"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/mana_regen",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:an_focus"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/rage",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/reinforced",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/spell_damage",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:an_focus"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_jewelry/mob_effect/stun",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:ring",
+        "curios:necklace",
+        "curios:charm"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/arcane",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/integrity",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:rune",
+        "curios:brooch"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/recovery",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:rune",
+        "curios:brooch"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/scythe",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:rune",
+        "curios:brooch"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/soul_ward",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/attribute/spirit_spoils",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:rune",
+        "curios:brooch"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/dmg_reduction/explosion",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/dmg_reduction/fall",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/dmg_reduction/fire",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/dmg_reduction/physical",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/dmg_reduction/runed",
+      "legacy_codec": "apotheosis:damage_reduction",
+      "original_types": [
+        "curios:brooch",
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/ascended",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/cancerous_growth",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/despoil",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/miners_rage",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/rejected",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:curios_malum/mob_effect/silence",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:rune"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/baby_blue",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/chemical_x",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/cursed_flame",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/fazbear",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/fractured",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/kamakaze",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/monstrous",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:heavy_weapon/mob_effect/time_stop",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/attribute/bullet_res",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/attribute/lightweight",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/drunkards",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/eldritch",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/infernal_flame",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/nuclear",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/plague",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/all_gun/mob_effect/studious",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun",
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto",
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/bolt_action/attribute/cold_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/bolt_action/attribute/crit_chance",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/bolt_action/attribute/crit_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/bolt_action/attribute/fire_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/bolt_action/attribute/life_steal_x",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:bolt_action"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/rapid_fire/attribute/cold_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/rapid_fire/attribute/fire_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/rapid_fire/attribute/void_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:full_auto",
+        "apotheosis_modern_ragnarok:semi_auto"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/shotgun/attribute/cold_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/shotgun/attribute/fire_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/shotgun/attribute/void_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ragnarok/shotgun/mob_effect/rage",
+      "legacy_codec": "apotheosis_modern_ragnarok:mob_effect_ads",
+      "original_types": [
+        "apotheosis_modern_ragnarok:shotgun"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/artifact_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/artifact_velocity",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/crit_chance",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/crit_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/esoteric_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/esoteric_velocity",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/shred",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/attribute/voidic_arrow",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/acidic",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/chemical",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/despoil",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/double_jump",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/inebriation",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/jaw_attack",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/planar",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/stun",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:ranged/mob_effect/sunbird",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "bow",
+        "crossbow",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/artifact_bleed_immune",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/artifact_regen",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/corruption",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/forsaken",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/irradiated_shield",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/omen",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/strong_armor",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/tears",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/venomous",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:shield/mob_effect/witherstorm",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "shield"
+      ],
+      "exact_vanilla_category_candidates": [
+        "apotheosis:shield"
+      ],
+      "status": "ONE_TO_ONE_CATEGORIES_CANDIDATE"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/aa_mana",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_blood",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_ender",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_evocation",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_fire",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_holy",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_ice",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_lightning",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/power_nature",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/attribute/summon",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/charged",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/instant_mana",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/knowledge",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/magnetic",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/menders",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:spellbook/mob_effect/resistance",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "curios:spellbook"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/artifact_cold",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/artifact_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/artifact_fire",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/artifact_hp_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/artifact_knockback",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/esoteric_cold",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/esoteric_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/esoteric_fire",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/esoteric_hp_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/esoteric_knockback",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/pixie",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/reapers",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/spell_power",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/spell_resist",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/attribute/void_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/abyssal_curse",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/black_flame",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/blazing_brand",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/bone_shield",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/corrosive",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/flesh_infested",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/flicker",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/flight",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/frosted",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/haste_break",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/inebriation",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident",
+        "heavy_weapon"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/irradiated",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/rage",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/rat_chef",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/shock",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/shred",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/stun",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/tiger",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:sword/mob_effect/voodoo",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "sword",
+        "trident"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/chanting",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand",
+        "helmet",
+        "chestplate",
+        "leggings",
+        "boots"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/gaia",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/magic_damage",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/magic_power",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/spirit_spoils",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/attribute/xp",
+      "legacy_codec": "apotheosis:attribute",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/hailing",
+      "legacy_codec": "eidolon:hailing",
+      "original_types": null,
+      "exact_vanilla_category_candidates": [],
+      "status": "NO_TARGETS_IN_SOURCE"
+    },
+    {
+      "id": "apotheotic_additions:wand/mob_effect/knowledge",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/mob_effect/magnetic",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/mob_effect/menders",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/mob_effect/resistance",
+      "legacy_codec": "apotheosis:mob_effect",
+      "original_types": [
+        "wand"
+      ],
+      "exact_vanilla_category_candidates": [],
+      "status": "REQUIRES_EXACT_JAVA_TARGET"
+    },
+    {
+      "id": "apotheotic_additions:wand/tracking",
+      "legacy_codec": "eidolon:tracking",
+      "original_types": null,
+      "exact_vanilla_category_candidates": [],
+      "status": "NO_TARGETS_IN_SOURCE"
+    }
+  ]
+}

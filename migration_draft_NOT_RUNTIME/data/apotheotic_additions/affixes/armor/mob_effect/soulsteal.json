@@ -1,0 +1,69 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "alexsmobs:soulsteal",
+  "target": "hurt_self",
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 20,
+        "steps": 20,
+        "step": 5
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 30,
+        "steps": 20,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 40,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 50,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 80,
+        "steps": 40,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ],
+  "categories": [
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

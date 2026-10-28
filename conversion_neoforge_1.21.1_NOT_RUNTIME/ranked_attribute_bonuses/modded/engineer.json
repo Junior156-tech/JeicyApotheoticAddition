@@ -1,0 +1,48 @@
+{
+  "original_gem": "modded/engineer",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "forge:entity_reach",
+      "operation": "add_value",
+      "values": {
+        "rare": 1.0,
+        "epic": 1.5,
+        "mythic": 2.0,
+        "ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3.5,
+        "apotheotic_additions:esoteric": 4
+      },
+      "__requires_exact_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      "__origin": "modded/engineer.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "forge:block_reach",
+      "operation": "add_value",
+      "values": {
+        "rare": 1.0,
+        "epic": 1.5,
+        "mythic": 2.0,
+        "ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3.5,
+        "apotheotic_additions:esoteric": 4
+      },
+      "__requires_exact_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      "__origin": "modded/engineer.json#bonuses[2]"
+    }
+  ]
+}

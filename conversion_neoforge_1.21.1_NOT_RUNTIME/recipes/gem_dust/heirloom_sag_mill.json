@@ -1,0 +1,25 @@
+{
+  "type": "enderio:sag_milling",
+  "energy": 4800,
+  "input": {
+    "type": "apotheosis:gem",
+    "rarity": "apotheotic_additions:heirloom"
+  },
+  "outputs": [
+    {
+      "count": 20,
+      "item": "apotheosis:gem_dust"
+    },
+    {
+      "chance": 0.9,
+      "item": "apotheosis:gem_dust"
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

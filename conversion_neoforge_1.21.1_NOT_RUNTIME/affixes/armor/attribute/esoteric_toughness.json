@@ -1,0 +1,28 @@
+{
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots",
+    "apotheosis:shield"
+  ],
+  "type": "apotheosis:attribute",
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "minecraft:generic.armor_toughness",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:esoteric": {
+      "min": 12,
+      "steps": 16,
+      "step": 2
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

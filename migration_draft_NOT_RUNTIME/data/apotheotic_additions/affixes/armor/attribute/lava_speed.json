@@ -1,0 +1,60 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "additionalentityattributes:lava_speed",
+  "operation": "add_multiplied_base",
+  "values": {
+    "apotheosis:common": {
+      "min": 0.01,
+      "steps": 1,
+      "step": 0.01
+    },
+    "apotheosis:uncommon": {
+      "min": 0.02,
+      "steps": 2,
+      "step": 0.01
+    },
+    "apotheosis:rare": {
+      "min": 0.05,
+      "steps": 2,
+      "step": 0.02
+    },
+    "apotheosis:epic": {
+      "min": 0.1,
+      "steps": 3,
+      "step": 0.02
+    },
+    "apotheosis:mythic": {
+      "min": 0.15,
+      "steps": 3,
+      "step": 0.03
+    },
+    "apotheosis:ancient": {
+      "min": 0.2,
+      "steps": 3,
+      "step": 0.04
+    },
+    "apotheotic_additions:artifact": {
+      "min": 0.25,
+      "steps": 4,
+      "step": 0.05
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "additionalentityattributes"
+    }
+  ],
+  "categories": [
+    "apotheosis:chestplate",
+    "apotheosis:helmet"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

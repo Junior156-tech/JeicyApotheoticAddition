@@ -1,0 +1,58 @@
+{
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots"
+  ],
+  "type": "apotheosis:attribute",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "malum:spirit_spoils",
+  "operation": "add_value",
+  "values": {
+    "apotheosis:common": {
+      "min": 2,
+      "steps": 2,
+      "step": 1
+    },
+    "apotheosis:uncommon": {
+      "min": 2,
+      "steps": 2,
+      "step": 1
+    },
+    "apotheosis:rare": {
+      "min": 3,
+      "steps": 3,
+      "step": 1
+    },
+    "apotheosis:epic": {
+      "min": 3,
+      "steps": 5,
+      "step": 1
+    },
+    "apotheosis:mythic": {
+      "min": 3,
+      "steps": 5,
+      "step": 1
+    },
+    "apotheotic_additions:ancient": {
+      "min": 4,
+      "steps": 8,
+      "step": 1
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

@@ -1,0 +1,72 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mageslayer",
+      "values": {
+        "apotheosis:epic": 0.05,
+        "apotheosis:mythic": 0.1,
+        "apotheotic_additions:ancient": 0.15,
+        "apotheotic_additions:artifact": 0.2,
+        "apotheotic_additions:heirloom": 0.25,
+        "apotheotic_additions:esoteric": 0.3
+      }
+    },
+    {
+      "type": "apotheosis:enchantment",
+      "enchantment": "minecraft:sweeping",
+      "values": {
+        "apotheosis:epic": 1,
+        "apotheosis:mythic": 1,
+        "apotheotic_additions:ancient": 1,
+        "apotheotic_additions:artifact": 2,
+        "apotheotic_additions:heirloom": 2,
+        "apotheotic_additions:esoteric": 3
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "minecraft:leaves",
+      "inputs": {
+        "tag": "minecraft:saplings"
+      },
+      "output": {
+        "item": "minecraft:golden_apple"
+      },
+      "values": {
+        "apotheosis:epic": 0.01,
+        "apotheosis:mythic": 0.04,
+        "apotheotic_additions:ancient": 0.07,
+        "apotheotic_additions:artifact": 0.1,
+        "apotheotic_additions:heirloom": 0.15,
+        "apotheotic_additions:esoteric": 0.2
+      },
+      "desc": "gem.apotheotic_additions:alchemy/midas.axe",
+      "__unported_gem_class": {
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 1
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:the_end"
+    ]
+  },
+  "__unported_min_rarity": "epic",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

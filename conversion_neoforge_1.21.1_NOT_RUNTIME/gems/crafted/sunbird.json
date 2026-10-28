@@ -1,0 +1,51 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "mowziesmobs:suns_blessing",
+      "target": "hurt_self",
+      "values": {
+        "apotheotic_additions:artifact": {
+          "duration": 5000,
+          "amplifier": 0,
+          "cooldown": 6000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 6000,
+          "amplifier": 0,
+          "cooldown": 5000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 7000,
+          "amplifier": 0,
+          "cooldown": 4000
+        }
+      },
+      "__unported_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mowziesmobs"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "__unported_min_rarity": "apotheotic_additions:artifact",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,48 @@
+{
+  "original_gem": "modded/safari",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:crit_chance",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.02,
+        "epic": 0.04,
+        "mythic": 0.06,
+        "ancient": 0.08,
+        "apotheotic_additions:artifact": 0.1,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      },
+      "__requires_exact_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "trident",
+          "sword"
+        ]
+      },
+      "__origin": "modded/safari.json#bonuses[3]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:experience_gained",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.03,
+        "epic": 0.06,
+        "mythic": 0.09,
+        "ancient": 0.12,
+        "apotheotic_additions:artifact": 0.15,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/safari.json#bonuses[4]"
+    }
+  ]
+}

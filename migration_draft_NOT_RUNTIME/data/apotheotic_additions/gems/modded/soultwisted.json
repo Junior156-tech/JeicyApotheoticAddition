@@ -1,0 +1,358 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "mob_effect": "eidolon:reinforced",
+      "target": "attack_self",
+      "values": {
+        "normal": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "flawless": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "perfect": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      },
+      "original_tier_values": {
+        "epic": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "ancient": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "boots",
+        "types": [
+          "apotheosis:boots"
+        ]
+      },
+      "mob_effect": "eidolon:anchored",
+      "target": "attack_self",
+      "values": {
+        "normal": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "flawless": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "perfect": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      },
+      "original_tier_values": {
+        "epic": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "ancient": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 0,
+          "cooldown": 40
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 40
+        }
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "mob_effect": "eidolon:vulnerable",
+      "target": "attack_target",
+      "values": {
+        "flawed": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 120
+        },
+        "normal": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "flawless": {
+          "duration": 220,
+          "amplifier": 1,
+          "cooldown": 80
+        },
+        "perfect": {
+          "duration": 500,
+          "amplifier": 1,
+          "cooldown": 60
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 120
+        },
+        "epic": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "mythic": {
+          "duration": 220,
+          "amplifier": 1,
+          "cooldown": 80
+        },
+        "ancient": {
+          "duration": 500,
+          "amplifier": 1,
+          "cooldown": 60
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 750,
+          "amplifier": 1,
+          "cooldown": 40
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 1000,
+          "amplifier": 2,
+          "cooldown": 40
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1000,
+          "amplifier": 3,
+          "cooldown": 40
+        }
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "mob_effect": "eidolon:chilled",
+      "target": "attack_target",
+      "stack_on_reapply": true,
+      "values": {
+        "flawed": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 120
+        },
+        "normal": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "flawless": {
+          "duration": 220,
+          "amplifier": 0,
+          "cooldown": 80
+        },
+        "perfect": {
+          "duration": 500,
+          "amplifier": 1,
+          "cooldown": 60
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 120
+        },
+        "epic": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "mythic": {
+          "duration": 220,
+          "amplifier": 0,
+          "cooldown": 80
+        },
+        "ancient": {
+          "duration": 500,
+          "amplifier": 1,
+          "cooldown": 60
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 750,
+          "amplifier": 1,
+          "cooldown": 40
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 1000,
+          "amplifier": 2,
+          "cooldown": 40
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1300,
+          "amplifier": 2,
+          "cooldown": 40
+        }
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "wand",
+        "types": []
+      },
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_total",
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.2,
+        "flawless": 0.3,
+        "perfect": 0.4
+      },
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.6,
+        "apotheotic_additions:esoteric": 0.7
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "apothic_attributes:healing_received",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.03,
+        "normal": 0.06,
+        "flawless": 0.09,
+        "perfect": 0.12
+      },
+      "original_tier_values": {
+        "rare": 0.03,
+        "epic": 0.06,
+        "mythic": 0.09,
+        "ancient": 0.12,
+        "apotheotic_additions:artifact": 0.15,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "leggings",
+        "types": [
+          "apotheosis:leggings"
+        ]
+      },
+      "attribute": "eidolon:chanting_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.2,
+        "flawless": 0.3,
+        "perfect": 0.4
+      },
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.6,
+        "apotheotic_additions:esoteric": 0.7
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 1.5
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "flawed"
+}

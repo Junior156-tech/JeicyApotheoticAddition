@@ -1,0 +1,135 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:ores/zanite",
+      "inputs": {
+        "item": "aether:zanite_gemstone"
+      },
+      "output": {
+        "item": "twilightforest:liveroot"
+      },
+      "values": {
+        "flawed": 0.05,
+        "normal": 0.1,
+        "flawless": 0.15,
+        "perfect": 0.2
+      },
+      "desc": "gem.apotheotic_additions:alchemy/umbral_matrimony.bonus.pickaxe",
+      "original_tier_values": {
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.15,
+        "ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_armor",
+        "types": []
+      },
+      "attribute": "minecraft:max_health",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.5,
+        "normal": 1,
+        "flawless": 1.5,
+        "perfect": 2
+      },
+      "original_tier_values": {
+        "rare": 0.5,
+        "epic": 1,
+        "mythic": 1.5,
+        "ancient": 2,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_jewelry",
+        "types": []
+      },
+      "attribute": "minecraft:armor",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.5,
+        "normal": 1,
+        "flawless": 1.5,
+        "perfect": 2
+      },
+      "original_tier_values": {
+        "rare": 0.5,
+        "epic": 1,
+        "mythic": 1.5,
+        "ancient": 2,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_aether",
+        "types": []
+      },
+      "attribute": "minecraft:armor",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.25,
+        "normal": 0.5,
+        "flawless": 0.75,
+        "perfect": 1
+      },
+      "original_tier_values": {
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 6.5
+  },
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether",
+      "twilightforest:twilight_forest"
+    ]
+  },
+  "min_purity": "flawed"
+}

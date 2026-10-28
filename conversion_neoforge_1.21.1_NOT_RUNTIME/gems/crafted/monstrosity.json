@@ -1,0 +1,45 @@
+{
+  "variant": "monstrosity",
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.armor_toughness",
+      "operation": "add_value",
+      "values": {
+        "apotheotic_additions:artifact": 4.5,
+        "apotheotic_additions:heirloom": 5,
+        "apotheotic_additions:esoteric": 6
+      },
+      "__unported_gem_class": {
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "__unported_min_rarity": "apotheotic_additions:artifact",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,226 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "blue_skies:deadly_venom",
+      "target": "attack_target",
+      "stack_on_reapply": true,
+      "values": {
+        "apotheosis:uncommon": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "apotheosis:rare": {
+          "duration": 150,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "apotheosis:epic": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 100
+        },
+        "apotheosis:mythic": {
+          "duration": 250,
+          "amplifier": 1,
+          "cooldown": 100
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 300,
+          "amplifier": 1,
+          "cooldown": 100
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 400,
+          "amplifier": 2,
+          "cooldown": 100
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 500,
+          "amplifier": 2,
+          "cooldown": 100
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1000,
+          "amplifier": 2,
+          "cooldown": 100
+        }
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:nature_spell_power",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:uncommon": 0.25,
+        "apotheosis:rare": 0.5,
+        "apotheosis:epic": 1.0,
+        "apotheosis:mythic": 1.5,
+        "apotheotic_additions:ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      },
+      "__unported_gem_class": {
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "modifiers": [
+        {
+          "attribute": "attributeslib:life_steal",
+          "operation": "MULTIPLY_TOTAL",
+          "values": {
+            "uncommon": 0.03,
+            "rare": 0.06,
+            "epic": 0.09,
+            "mythic": 0.12,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.18,
+            "apotheotic_additions:heirloom": 0.21,
+            "apotheotic_additions:esoteric": 0.24
+          }
+        },
+        {
+          "attribute": "irons_spellbooks:max_mana",
+          "operation": "MULTIPLY_TOTAL",
+          "values": {
+            "uncommon": -0.05,
+            "rare": -0.1,
+            "epic": -0.15,
+            "mythic": -0.2,
+            "ancient": -0.25,
+            "apotheotic_additions:artifact": -0.3,
+            "apotheotic_additions:heirloom": -0.35,
+            "apotheotic_additions:esoteric": -0.4
+          }
+        }
+      ],
+      "__unported_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__unported_gem_class": {
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:fire_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__unported_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 5,
+        "apotheosis:epic": 10,
+        "apotheosis:mythic": 15,
+        "apotheotic_additions:ancient": 20,
+        "apotheotic_additions:artifact": 25,
+        "apotheotic_additions:heirloom": 30,
+        "apotheotic_additions:esoteric": 35
+      },
+      "__unported_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 1.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "blue_skies:everdawn",
+      "blue_skies:everbright"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,404 @@
+[
+  {
+    "path": "aether/aether.json",
+    "bonuses": 2,
+    "min_rarity": "mythic",
+    "has_external_mods": true
+  },
+  {
+    "path": "aether/candied.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "aether/purity.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "aether/zanite_alchemist.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "blue_skies/arachnarch.json",
+    "bonuses": 6,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "blue_skies/blue_skies.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "blue_skies/horizonite_alchemist.json",
+    "bonuses": 1,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "blue_skies/twin_magi.json",
+    "bonuses": 5,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "blue_skies/ventium_alchemist.json",
+    "bonuses": 1,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "bumblezone/bee_queen.json",
+    "bonuses": 3,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "bumblezone/hive.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/cornelia.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": false
+  },
+  {
+    "path": "crafted/ender_dragon.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": false
+  },
+  {
+    "path": "crafted/frostmaw.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/harbringer.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/hydra.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/ignis.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/leviathan.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/lich.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/maledictus.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/monstrosity.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": false
+  },
+  {
+    "path": "crafted/naga.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/remnant.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/slider.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/snow_queen.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/sunbird.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/ur-ghast.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "crafted/warden.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": false
+  },
+  {
+    "path": "crafted/wither.json",
+    "bonuses": 2,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": false
+  },
+  {
+    "path": "crafted/wroughtnaut.json",
+    "bonuses": 1,
+    "min_rarity": "apotheotic_additions:artifact",
+    "has_external_mods": true
+  },
+  {
+    "path": "curios/reinforced.json",
+    "bonuses": 2,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "curios/twisted.json",
+    "bonuses": 2,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "curios/vitalic.json",
+    "bonuses": 1,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "midnight/darkheart.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "midnight/midnight.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/amber.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/archmage.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/armor.json",
+    "bonuses": 1,
+    "min_rarity": null,
+    "has_external_mods": false
+  },
+  {
+    "path": "modded/ars_mana.json",
+    "bonuses": 3,
+    "min_rarity": null,
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/bloodcaster.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/cataclysm.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/depths.json",
+    "bonuses": 4,
+    "min_rarity": "epic",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/draconic_legacy.json",
+    "bonuses": 5,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/dracula.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/engineer.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/felfire.json",
+    "bonuses": 5,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/flesh.json",
+    "bonuses": 5,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/flux.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/heartland.json",
+    "bonuses": 4,
+    "min_rarity": "epic",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/hearty.json",
+    "bonuses": 1,
+    "min_rarity": null,
+    "has_external_mods": false
+  },
+  {
+    "path": "modded/marrow.json",
+    "bonuses": 4,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/midas.json",
+    "bonuses": 3,
+    "min_rarity": "epic",
+    "has_external_mods": false
+  },
+  {
+    "path": "modded/mystic.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/rat_chef.json",
+    "bonuses": 7,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/safari.json",
+    "bonuses": 5,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/soultwisted.json",
+    "bonuses": 7,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/thermal.json",
+    "bonuses": 3,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/uranium.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/weeping_well.json",
+    "bonuses": 5,
+    "min_rarity": "epic",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/witch_queen.json",
+    "bonuses": 6,
+    "min_rarity": "uncommon",
+    "has_external_mods": true
+  },
+  {
+    "path": "modded/witherstorm.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "otherside/sculk.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "twilight/umbral_matrimony.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "twilight/wildheart.json",
+    "bonuses": 4,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "undergarden/decay.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "undergarden/forlorn.json",
+    "bonuses": 6,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  },
+  {
+    "path": "undergarden/undergarden.json",
+    "bonuses": 3,
+    "min_rarity": "rare",
+    "has_external_mods": true
+  }
+]

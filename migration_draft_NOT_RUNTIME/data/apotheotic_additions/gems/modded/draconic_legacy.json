@@ -1,0 +1,211 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "minecraft:luck",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.02,
+        "flawed": 0.04,
+        "normal": 0.06,
+        "flawless": 0.08,
+        "perfect": 0.1
+      },
+      "original_tier_values": {
+        "uncommon": 0.02,
+        "rare": 0.04,
+        "epic": 0.06,
+        "mythic": 0.08,
+        "ancient": 0.1,
+        "apotheotic_additions:artifact": 0.12,
+        "apotheotic_additions:heirloom": 0.14,
+        "apotheotic_additions:esoteric": 0.16
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "attribute": "minecraft:armor_toughness",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.03,
+        "flawed": 0.06,
+        "normal": 0.09,
+        "flawless": 0.12,
+        "perfect": 0.15
+      },
+      "original_tier_values": {
+        "uncommon": 0.03,
+        "rare": 0.06,
+        "epic": 0.09,
+        "mythic": 0.12,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.18,
+        "apotheotic_additions:heirloom": 0.21,
+        "apotheotic_additions:esoteric": 0.24
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "apotheosis:boots",
+          "apotheosis:leggings"
+        ]
+      },
+      "attribute": "apothic_attributes:fire_damage",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.015,
+        "flawed": 0.03,
+        "normal": 0.045,
+        "flawless": 0.06,
+        "perfect": 0.075
+      },
+      "original_tier_values": {
+        "uncommon": 0.015,
+        "rare": 0.03,
+        "epic": 0.045,
+        "mythic": 0.06,
+        "ancient": 0.075,
+        "apotheotic_additions:artifact": 0.09,
+        "apotheotic_additions:heirloom": 0.105,
+        "apotheotic_additions:esoteric": 0.12
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "mob_effect": "minecraft:strength",
+      "target": "attack_self",
+      "values": {
+        "flawed": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "normal": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "flawless": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "perfect": {
+          "duration": 160,
+          "amplifier": 1,
+          "cooldown": 900
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "epic": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "mythic": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "ancient": {
+          "duration": 160,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 200,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 240,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 280,
+          "amplifier": 2,
+          "cooldown": 900
+        }
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "shovel",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:gravel",
+      "inputs": {
+        "tag": "forge:gravel"
+      },
+      "output": {
+        "item": "iceandfire:dragonbone"
+      },
+      "values": {
+        "chipped": 0.01,
+        "flawed": 0.02,
+        "normal": 0.03,
+        "flawless": 0.05,
+        "perfect": 0.07
+      },
+      "desc": "gem.apotheotic_additions:alchemy/draconic_legacy.shovel",
+      "original_tier_values": {
+        "uncommon": 0.01,
+        "rare": 0.02,
+        "epic": 0.03,
+        "mythic": 0.05,
+        "ancient": 0.07,
+        "apotheotic_additions:artifact": 0.09,
+        "apotheotic_additions:heirloom": 0.11,
+        "apotheotic_additions:esoteric": 0.13
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:overworld"
+    ]
+  },
+  "min_purity": "chipped"
+}

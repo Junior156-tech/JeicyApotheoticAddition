@@ -1,0 +1,133 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:ores/gravitite",
+      "inputs": {
+        "item": "aether:gravitite_ore"
+      },
+      "output": {
+        "item": "deeperdarker:warden_carapace"
+      },
+      "values": {
+        "flawless": 0.01,
+        "perfect": 0.02
+      },
+      "desc": "gem.apotheotic_additions:alchemy/sculk.bonus.pickaxe",
+      "original_tier_values": {
+        "mythic": 0.01,
+        "ancient": 0.02,
+        "apotheotic_additions:artifact": 0.03,
+        "apotheotic_additions:heirloom": 0.04,
+        "apotheotic_additions:esoteric": 0.05
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_armor",
+        "types": []
+      },
+      "attribute": "apothic_attributes:cold_damage",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.25,
+        "normal": 0.5,
+        "flawless": 0.75,
+        "perfect": 1
+      },
+      "original_tier_values": {
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 1.75
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "attribute": "apothic_attributes:current_hp_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "flawed": 0.01,
+        "normal": 0.02,
+        "flawless": 0.03,
+        "perfect": 0.04
+      },
+      "original_tier_values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.06,
+        "apotheotic_additions:heirloom": 0.08,
+        "apotheotic_additions:esoteric": 0.1
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_aether",
+        "types": []
+      },
+      "attribute": "minecraft:max_health",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.25,
+        "normal": 0.5,
+        "flawless": 0.75,
+        "perfect": 1
+      },
+      "original_tier_values": {
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "deeperdarker"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 3.5
+  },
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether",
+      "deeperdarker:otherside"
+    ]
+  },
+  "min_purity": "flawed"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:fletching",
+  "ingredients": [
+    {
+      "item": "cataclysm:void_jaw"
+    },
+    {
+      "item": "minecraft:spectral_arrow"
+    },
+    {
+      "tag": "apotheotic_additions:feathers"
+    }
+  ],
+  "result": {
+    "item": "cataclysm:void_scatter_arrow",
+    "count": 4
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "village"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

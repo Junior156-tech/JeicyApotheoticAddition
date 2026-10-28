@@ -1,0 +1,25 @@
+{
+  "original_gem": "modded/depths",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_multiplied_total",
+      "values": {
+        "epic": 0.15,
+        "mythic": 0.3,
+        "ancient": 0.45,
+        "apotheotic_additions:artifact": 0.6,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 0.9
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/depths.json#bonuses[3]"
+    }
+  ]
+}

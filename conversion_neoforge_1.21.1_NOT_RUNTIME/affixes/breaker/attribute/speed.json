@@ -1,0 +1,67 @@
+{
+  "categories": [
+    "apotheosis:pickaxe",
+    "apotheosis:shovel",
+    "apotheosis:bow",
+    "apotheosis:crossbow"
+  ],
+  "type": "apotheosis:attribute",
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "minecraft:generic.movement_speed",
+  "operation": "add_multiplied_base",
+  "values": {
+    "apotheosis:common": {
+      "min": 0.03,
+      "steps": 2,
+      "step": 0.01
+    },
+    "apotheosis:uncommon": {
+      "min": 0.03,
+      "steps": 4,
+      "step": 0.01
+    },
+    "apotheosis:rare": {
+      "min": 0.03,
+      "steps": 6,
+      "step": 0.01
+    },
+    "apotheosis:epic": {
+      "min": 0.06,
+      "steps": 8,
+      "step": 0.01
+    },
+    "apotheosis:mythic": {
+      "min": 0.06,
+      "steps": 10,
+      "step": 0.01
+    },
+    "apotheotic_additions:ancient": {
+      "min": 0.06,
+      "steps": 12,
+      "step": 0.01
+    },
+    "apotheotic_additions:artifact": {
+      "min": 0.09,
+      "steps": 15,
+      "step": 0.01
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 0.06,
+      "steps": 12,
+      "step": 0.01
+    },
+    "apotheotic_additions:esoteric": {
+      "min": 0.09,
+      "steps": 25,
+      "step": 0.01
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

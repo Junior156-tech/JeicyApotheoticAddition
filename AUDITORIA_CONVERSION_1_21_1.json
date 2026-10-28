@@ -1,0 +1,70 @@
+{
+  "input_sha256": "1d210294ee16e1a53b05b582ef7c61b6e5a6ff78dedad19d039b8fbb4b7c764a",
+  "affixes": {
+    "converted_draft": 263,
+    "needs_exact_weapon_or_curios_registry": 166,
+    "needs_custom_affix_serializer": 9,
+    "types": {
+      "apotheosis:attribute": 118,
+      "apotheosis:damage_reduction": 25,
+      "apotheosis:mob_effect": 110,
+      "apotheosis:enlightened": 1,
+      "apotheosis_modern_ragnarok:mob_effect_ads": 7,
+      "eidolon:hailing": 1,
+      "eidolon:tracking": 1
+    }
+  },
+  "gems": {
+    "converted_draft": 67,
+    "bonus_types": {
+      "apotheosis:attribute": 85,
+      "apotheosis:drop_transform": 20,
+      "apotheosis:mob_effect": 45,
+      "apotheosis:multi_attribute": 22,
+      "apotheosis:enchantment": 15,
+      "apotheosis:all_stats": 3,
+      "apotheosis:mageslayer": 1,
+      "apotheosis:twilight_treasure_goblin": 1,
+      "apotheosis:twilight_fortification": 1
+    },
+    "needs_component_purity_engine": true
+  },
+  "recipes": {
+    "converted_draft": 229,
+    "classification": {
+      "requires_tag_migration": 75,
+      "vanilla_shape_converted": 47,
+      "requires_apotheosis_condition_migration": 107
+    },
+    "note": "All recipes are inert until validation in real mod; no guessed ingredient changes."
+  },
+  "rarities": {
+    "ancient": {
+      "original_color": "rainbow",
+      "original_weight": 1,
+      "original_rule_count": 16,
+      "unported_rule_types": [
+        "ancient"
+      ]
+    },
+    "artifact": {
+      "original_color": "#ec996b",
+      "original_weight": 5,
+      "original_rule_count": 8,
+      "unported_rule_types": []
+    },
+    "heirloom": {
+      "original_color": "#bd2323",
+      "original_weight": 25,
+      "original_rule_count": 4,
+      "unported_rule_types": []
+    },
+    "esoteric": {
+      "original_color": "#551097",
+      "original_weight": 0,
+      "original_rule_count": 16,
+      "unported_rule_types": []
+    }
+  },
+  "warnings": []
+}

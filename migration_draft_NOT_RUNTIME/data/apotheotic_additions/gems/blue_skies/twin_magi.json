@@ -1,0 +1,208 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "wand",
+        "types": []
+      },
+      "mob_effect": "irons_spellbooks:instant_mana",
+      "target": "attack_self",
+      "values": {
+        "normal": {
+          "duration": 1,
+          "amplifier": 0,
+          "cooldown": 500
+        },
+        "flawless": {
+          "duration": 1,
+          "amplifier": 0,
+          "cooldown": 500
+        },
+        "perfect": {
+          "duration": 1,
+          "amplifier": 1,
+          "cooldown": 500
+        }
+      },
+      "original_tier_values": {
+        "epic": {
+          "duration": 1,
+          "amplifier": 0,
+          "cooldown": 500
+        },
+        "mythic": {
+          "duration": 1,
+          "amplifier": 0,
+          "cooldown": 500
+        },
+        "ancient": {
+          "duration": 1,
+          "amplifier": 1,
+          "cooldown": 500
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 1,
+          "amplifier": 1,
+          "cooldown": 500
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 1,
+          "amplifier": 2,
+          "cooldown": 500
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1,
+          "amplifier": 2,
+          "cooldown": 500
+        }
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "spellbook",
+        "types": []
+      },
+      "attribute": "irons_spellbooks:summon_damage",
+      "operation": "add_value",
+      "values": {
+        "chipped": 0.25,
+        "flawed": 0.5,
+        "normal": 1.0,
+        "flawless": 1.5,
+        "perfect": 2.0
+      },
+      "original_tier_values": {
+        "uncommon": 0.25,
+        "rare": 0.5,
+        "epic": 1.0,
+        "mythic": 1.5,
+        "ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      }
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "apotheosis:boots",
+          "apotheosis:leggings"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "irons_spellbooks:spell_power",
+          "operation": "MULTIPLY_TOTAL",
+          "values": {
+            "uncommon": 0.1,
+            "rare": 0.2,
+            "epic": 0.3,
+            "mythic": 0.4,
+            "ancient": 0.5,
+            "apotheotic_additions:artifact": 0.6,
+            "apotheotic_additions:heirloom": 0.7,
+            "apotheotic_additions:esoteric": 0.8
+          }
+        },
+        {
+          "attribute": "irons_spellbooks:spell_resist",
+          "operation": "MULTIPLY_TOTAL",
+          "values": {
+            "uncommon": -0.05,
+            "rare": -0.1,
+            "epic": -0.15,
+            "mythic": -0.2,
+            "ancient": -0.25,
+            "apotheotic_additions:artifact": -0.3,
+            "apotheotic_additions:heirloom": -0.35,
+            "apotheotic_additions:esoteric": -0.4
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_jewelry",
+        "types": []
+      },
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_base",
+      "values": {
+        "flawed": 0.01,
+        "normal": 0.02,
+        "flawless": 0.03,
+        "perfect": 0.04
+      },
+      "original_tier_values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_armor",
+        "types": []
+      },
+      "attribute": "irons_spellbooks:cast_time_reduction",
+      "operation": "add_multiplied_base",
+      "values": {
+        "flawed": 0.01,
+        "normal": 0.02,
+        "flawless": 0.03,
+        "perfect": 0.04
+      },
+      "original_tier_values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 1.5
+  },
+  "constraints": {
+    "dimensions": [
+      "blue_skies:everdawn",
+      "blue_skies:everbright"
+    ]
+  },
+  "min_purity": "flawed"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "RLL",
+    "WBW",
+    "RLL"
+  ],
+  "key": {
+    "W": {
+      "item": "apotheosis:epic_material"
+    },
+    "B": {
+      "item": "irons_spellbooks:diamond_spell_book"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "L": {
+      "item": "irons_spellbooks:cinder_essence"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:blaze_spell_book",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

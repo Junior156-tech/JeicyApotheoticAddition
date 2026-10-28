@@ -1,0 +1,125 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "attribute": "minecraft:max_health",
+      "operation": "add_value",
+      "values": {
+        "flawed": 3.0,
+        "normal": 4.0,
+        "flawless": 5.0,
+        "perfect": 6.0
+      },
+      "original_tier_values": {
+        "rare": 3.0,
+        "epic": 4.0,
+        "mythic": 5.0,
+        "ancient": 6.0,
+        "apotheotic_additions:artifact": 8,
+        "apotheotic_additions:heirloom": 10,
+        "apotheotic_additions:esoteric": 12
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "apothic_attributes:life_steal",
+      "operation": "add_multiplied_total",
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.15,
+        "flawless": 0.2,
+        "perfect": 0.25
+      },
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.15,
+        "mythic": 0.2,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "ranged_weapon",
+        "types": [
+          "apotheosis:bow",
+          "apotheosis:trident"
+        ]
+      },
+      "mob_effect": "undergarden:virulence",
+      "target": "arrow_target",
+      "values": {
+        "flawless": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 800
+        },
+        "perfect": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 800
+        }
+      },
+      "original_tier_values": {
+        "mythic": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 800
+        },
+        "ancient": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 800
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 1,
+          "cooldown": 800
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 360,
+          "amplifier": 1,
+          "cooldown": 700
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 420,
+          "amplifier": 2,
+          "cooldown": 700
+        }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 4.5
+  },
+  "constraints": {
+    "dimensions": [
+      "undergarden:undergarden"
+    ]
+  },
+  "min_purity": "flawed"
+}

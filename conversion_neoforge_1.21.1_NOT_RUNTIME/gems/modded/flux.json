@@ -1,0 +1,145 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "cofh_core:supercharge",
+      "target": "attack_self",
+      "values": {
+        "apotheosis:rare": {
+          "duration": 10,
+          "amplifier": 0,
+          "cooldown": 1500
+        },
+        "apotheosis:epic": {
+          "duration": 20,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:mythic": {
+          "duration": 30,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 40,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 50,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 60,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 70,
+          "amplifier": 1,
+          "cooldown": 1000
+        }
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "cofh_core:explosion_resistance",
+      "target": "hurt_self",
+      "values": {
+        "apotheosis:rare": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 1500
+        },
+        "apotheosis:epic": {
+          "duration": 160,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:mythic": {
+          "duration": 220,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 340,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 460,
+          "amplifier": 1,
+          "cooldown": 1000
+        }
+      },
+      "__unported_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:enchantment",
+      "enchantment": "cofh_core:holding",
+      "values": {
+        "apotheosis:rare": 1,
+        "apotheosis:epic": 1,
+        "apotheosis:mythic": 2,
+        "apotheotic_additions:ancient": 2,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 4
+      },
+      "__unported_gem_class": {
+        "key": "flux",
+        "types": [
+          "pickaxe",
+          "shovel",
+          "heavy_weapon"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 2,
+    "quality": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cofh_core"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thermal"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "minecraft:the_end"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

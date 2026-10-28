@@ -1,0 +1,27 @@
+{
+  "original_gem": "modded/felfire",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:life_steal",
+      "operation": "add_multiplied_total",
+      "values": {
+        "uncommon": 0.05,
+        "rare": 0.1,
+        "epic": 0.15,
+        "mythic": 0.2,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/felfire.json#bonuses[4]"
+    }
+  ]
+}

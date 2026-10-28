@@ -1,0 +1,85 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "forge:block_reach",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 1.0,
+        "apotheosis:epic": 1.5,
+        "apotheosis:mythic": 2.0,
+        "apotheotic_additions:ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      },
+      "__unported_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.5,
+        "apotheosis:epic": 1.0,
+        "apotheosis:mythic": 1.5,
+        "apotheotic_additions:ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      },
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:dodge_chance",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.1,
+        "apotheosis:epic": 0.15,
+        "apotheosis:mythic": 0.2,
+        "apotheotic_additions:ancient": 0.25,
+        "apotheotic_additions:artifact": 0.3,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.4
+      },
+      "__unported_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 5.0
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "blue_skies:everdawn",
+      "blue_skies:everbright"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

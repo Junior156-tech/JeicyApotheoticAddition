@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "W": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "L": {
+      "tag": "apotheotic_additions:nature_rune_materials"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:nature_rune",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

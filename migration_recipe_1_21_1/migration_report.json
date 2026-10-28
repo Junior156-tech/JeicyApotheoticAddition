@@ -1,0 +1,1384 @@
+{
+  "counts": {
+    "manual_review": 207,
+    "vanilla_staging": 22,
+    "total_original_recipes": 229
+  },
+  "note": "Only STAGING; no files enabled at mod runtime until 1.21.1 dependency+datapack load tests.",
+  "recipes": [
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/bioluminescent_torch.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "legacy Forge tag: requires semantic mapping"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/biome_treat.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/candy_cane_pole.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/candy_cane_sword.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/confection_oven.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/frostmint_spear.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/rocky_shell_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/candy_cane_block.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/chocolate_ice_cream.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/gingerbread_crumbs.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/gingerbread_crumbs_aether.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/gingerbread_crumbs_spiritual.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/neapolitan_ice_cream.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/peppermint_powder.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/rainbow_oak.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/shapeless/vanilla_ice_cream.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/sundae.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/void_crystal.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/void_infused_endstone.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/void_lantern.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/alexs_mods/void_stone.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/antidote_vessel.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/cloud_in_a_bottle.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/cowboy_hat.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/everlasting_beef.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/novelty_hat.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/novelty_hat_reversal.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/pickaxe_heater.json",
+      "type": "minecraft:smithing_transform",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/artifacts/snowshoes.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/blasted_iron_ingot.json",
+      "type": "minecraft:blasting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/blasted_iron_ingot.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/bone_meal_from_naga_fang.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/boss_spawner.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/common_apple.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/common_apple.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_cornelia.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_ender_dragon.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_frostmaw.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_harbringer.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_hydra.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_ignis.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_leviathan.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_lich.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_maledictus.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_monstrosity.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_naga.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_remnant.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_slider.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_snow_queen.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_sunbird.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_ur-ghast.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_warden.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_wither.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/eye_wroughtnaut.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "NBT/components or custom result needs DataComponents port"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/crafted_gems/gemboundsigil.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/crafted_gems/gemboundsigil.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/dragonforge/scrap_metal.json",
+      "type": "iceandfire:dragonforge",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/enchanting/ascended_coin.json",
+      "type": "apotheosis:enchanting",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/enchanting/infused_coin.json",
+      "type": "apotheosis:enchanting",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/epic_apple.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/epic_apple.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fertile_essence.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/amphithere_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/blaze_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/challenge_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/diamond_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/ender_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/explosive_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/frost_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/lightning_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/phantasmal_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/prismarine_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/quartz_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/shulker_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/slime_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/spore_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/training_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/archers_paradox/verdant_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/blunt_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/boom_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/burrowing_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/crystal_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/dart.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/draco_arcanus_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/dragonbone_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/ebonite_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/golden_dart.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/hydra_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/large_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/mischief_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/rat_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/seeking_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/shark_tooth_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/stymphalian_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/tide_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/torch_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/fletching/void_scatter_arrow.json",
+      "type": "apotheosis:fletching",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gateways/aether_gate.json",
+      "type": "gateways:gate_recipe",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gateways/caves_gate.json",
+      "type": "gateways:gate_recipe",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gateways/dark_garden.json",
+      "type": "gateways:gate_recipe",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gateways/endless_boss.json",
+      "type": "gateways:gate_recipe",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gateways/time_lost_gate.json",
+      "type": "gateways:gate_recipe",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/ancient_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/ancient_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/artifact_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/artifact_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/common_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/common_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/epic_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/epic_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/esoteric_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/esoteric_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/heirloom_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/heirloom_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/mythic_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/mythic_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/rare_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/rare_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/uncommon_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/gem_dust/uncommon_sag_mill.json",
+      "type": "enderio:sag_milling",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/blaze_spell_book.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/blood_rune.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/concentration_amulet.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/evoker_spell_book.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/fire_rune.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/ice_rune.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/lightning_rune.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/nature_rune.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/necronomicon_spell_book.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/silver_ring.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "legacy Forge tag: requires semantic mapping"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/irons_compat/villager_spell_book.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/ancient_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/artifact_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/common_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/epic_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/esoteric_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/heirloom_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/mythic_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/rare_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/sculk.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/sculk_bone.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/soul_dust.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/material/uncommon_crushing.json",
+      "type": "create:crushing",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/mythic_apple.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/mythic_apple.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/mythicalband.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/mythicalband.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/rare_apple.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/rare_apple.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/reforging/ancient.json",
+      "type": "apotheosis:reforging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/reforging/artifact.json",
+      "type": "apotheosis:reforging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/ancient_material.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/ancient_to_mythic.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/artifact_gem.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/artifact_material.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/artifact_to_mythic.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/aureal_bottle.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/brush.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/bundle.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/camel_saddle.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/clock.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/compass.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/copper_horse_armor.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/epic_to_rare.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/esoteric_gem.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/esoteric_material.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/esoteric_to_artifact.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/heirloom_gem.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/heirloom_material.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/heirloom_to_rare.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/loot_capacitor.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/music_disc_5.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/mythic_to_epic.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/netherite_ingot.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/rare_to_uncommon.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/saddle.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/salvaging_table.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/scroll.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/simple_reforging_table.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/smithing_template_rune.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/splash_aureal_bottle.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/totem_of_undying.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/uncommon_to_common.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/salvaging/wooden_gear.json",
+      "type": "apotheosis:salvaging",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/gilded_aerogel_skyshelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/hollowed_barrel_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "legacy Forge tag: requires semantic mapping"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/hollowed_barrel_shelf2.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "legacy Forge tag: requires semantic mapping"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/infused_skyshelf.json",
+      "type": "apotheosis:enchanting",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/infused_thornshelf.json",
+      "type": "apotheosis:enchanting",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/nuclear_barrel_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/occult_thornshelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/sacrificial_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/terra_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/thornshelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/void_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/shelves/wavebinders_shelf.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/sigil_compat/gem_fused_slate_aether.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/sigil_compat/gem_fused_slate_blue_skies.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "references external mod/tag that needs 1.21.1 ID verification"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/sigil_compat/gem_fused_slate_undergarden.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MANUAL_REVIEW",
+      "reason": "optional mod or module condition; stage for manual review"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/sigil_compat/sigil_of_socketing.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/sigil_compat/sigil_of_socketing.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/smelted_iron_ingot.json",
+      "type": "minecraft:smelting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/smelted_iron_ingot.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stink_bottle.json",
+      "type": "minecraft:crafting_shapeless",
+      "status": "MANUAL_REVIEW",
+      "reason": "legacy Forge tag: requires semantic mapping"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/luminous_glass.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/luminous_glass.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/luminous_glass_pane.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/luminous_glass_pane.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_bricks.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_bricks.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_carved.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_carved.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_pillar.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_pillar.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_rough.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_rough.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_slab1.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_slab1.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_slab2.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_slab2.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_stairs1.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_stairs1.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/scrap_stairs2.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/scrap_stairs2.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/timeworn_fabric.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/timeworn_fabric.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/stonecutting/timeworn_fancy.json",
+      "type": "minecraft:stonecutting",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/stonecutting/timeworn_fancy.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/uncommon_apple.json",
+      "type": "minecraft:crafting_shaped",
+      "status": "MIGRATED_STAGING",
+      "output": "STAGING_ONLY/vanilla/uncommon_apple.json"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/apotheotic_coin.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/arcane_essence.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/corrupted_arcane_crystal.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/corrupted_pixie.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/corrupted_soul.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/cosmic_cod.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/dark_tatters.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/dark_tatters_reversal.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/earth_heart.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/ender_calx.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/ichor_bottle.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/licoroot.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/licoroot_vine.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/mimicream.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/rainbow_jelly.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/sculk_sensor.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/skreecher_soul.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/void_favor/soul_shard.json",
+      "type": "malum:favor_of_the_void",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/weapon_infusion/magehunter.json",
+      "type": "cataclysm:weapon_fusion",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/weapon_infusion/runic_arc.json",
+      "type": "cataclysm:weapon_fusion",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    },
+    {
+      "original": "data/apotheotic_additions/recipes/weapon_infusion/sweet_lance.json",
+      "type": "cataclysm:weapon_fusion",
+      "status": "MANUAL_REVIEW",
+      "reason": "non-vanilla recipe type"
+    }
+  ]
+}

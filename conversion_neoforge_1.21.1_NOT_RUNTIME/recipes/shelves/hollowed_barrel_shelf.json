@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "RTR",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:book"
+    },
+    "T": {
+      "tag": "forge:barrels/wooden"
+    }
+  },
+  "result": {
+    "id": "apotheotic_additions:hollowed_barrel_shelf",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    },
+    {
+      "type": "apotheosis:module",
+      "module": "enchantment"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

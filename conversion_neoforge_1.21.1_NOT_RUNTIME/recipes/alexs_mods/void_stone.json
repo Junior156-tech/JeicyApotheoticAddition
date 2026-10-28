@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "W": {
+      "item": "alexsmobs:mimicream"
+    },
+    "L": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "id": "cataclysm:void_stone",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

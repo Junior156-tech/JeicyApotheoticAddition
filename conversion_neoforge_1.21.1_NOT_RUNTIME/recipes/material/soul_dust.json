@@ -1,0 +1,34 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "apotheosis:warden_tendril"
+    }
+  ],
+  "processingTime": 150,
+  "results": [
+    {
+      "count": 2,
+      "item": "deeperdarker:soul_dust"
+    },
+    {
+      "chance": 0.5,
+      "item": "deeperdarker:soul_dust"
+    },
+    {
+      "chance": 0.2,
+      "item": "minecraft:sculk"
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "deeperdarker"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

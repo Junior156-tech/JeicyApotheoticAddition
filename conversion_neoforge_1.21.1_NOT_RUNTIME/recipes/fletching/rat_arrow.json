@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:fletching",
+  "ingredients": [
+    {
+      "item": "rats:rat_pelt"
+    },
+    {
+      "tag": "forge:rods/wooden"
+    },
+    {
+      "tag": "apotheotic_additions:feathers"
+    }
+  ],
+  "result": {
+    "item": "rats:rat_arrow",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "village"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "rats"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

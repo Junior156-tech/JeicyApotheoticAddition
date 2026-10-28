@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    " W ",
+    "WLW",
+    " L "
+  ],
+  "key": {
+    "W": {
+      "item": "alexscaves:frostmint"
+    },
+    "L": {
+      "item": "aether:candy_cane"
+    }
+  },
+  "result": {
+    "id": "alexscaves:frostmint_spear",
+    "count": 4
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

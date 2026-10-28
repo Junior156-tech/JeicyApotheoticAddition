@@ -1,0 +1,81 @@
+{
+  "original_gem": "midnight/darkheart",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_multiplied_base",
+      "values": {
+        "rare": 0.015,
+        "epic": 0.03,
+        "mythic": 0.045,
+        "ancient": 0.06,
+        "apotheotic_additions:artifact": 0.075,
+        "apotheotic_additions:heirloom": 0.09,
+        "apotheotic_additions:esoteric": 0.105
+      },
+      "__requires_exact_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      },
+      "__origin": "midnight/darkheart.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+      "operation": "add_multiplied_base",
+      "values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__requires_exact_gem_class": {
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      "__origin": "midnight/darkheart.json#bonuses[2]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "ars_nouveau:ars_nouveau.perk.spell_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__requires_exact_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      "__origin": "midnight/darkheart.json#bonuses[3]"
+    }
+  ]
+}

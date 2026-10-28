@@ -1,0 +1,14 @@
+{
+  "type": "apotheosis:reforging",
+  "rarity": "apotheosis:ancient",
+  "material_cost": 2,
+  "sigil_cost": 5,
+  "level_cost": 150,
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

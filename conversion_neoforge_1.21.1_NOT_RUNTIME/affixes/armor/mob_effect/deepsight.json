@@ -1,0 +1,88 @@
+{
+  "categories": [
+    "apotheosis:helmet"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "alexscaves:deepsight",
+  "target": "hurt_self",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 600,
+        "steps": 20,
+        "step": 5
+      },
+      "amplifier": 0,
+      "cooldown": 2000
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 550,
+        "steps": 20,
+        "step": 5
+      },
+      "amplifier": 0,
+      "cooldown": 1800
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 500,
+        "steps": 20,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 1600
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 700,
+        "steps": 20,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 1400
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 800,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 1500,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 1800,
+        "steps": 40,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

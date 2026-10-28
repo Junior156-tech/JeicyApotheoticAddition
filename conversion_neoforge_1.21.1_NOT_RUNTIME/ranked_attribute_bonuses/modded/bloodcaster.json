@@ -1,0 +1,26 @@
+{
+  "original_gem": "modded/bloodcaster",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "irons_spellbooks:blood_spell_power",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.5,
+        "epic": 1.0,
+        "mythic": 1.5,
+        "ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      },
+      "__requires_exact_gem_class": {
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      "__origin": "modded/bloodcaster.json#bonuses[1]"
+    }
+  ]
+}

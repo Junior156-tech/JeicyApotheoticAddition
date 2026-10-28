@@ -1,0 +1,20 @@
+{
+  "type": "malum:favor_of_the_void",
+  "input": {
+    "item": "alexscaves:candy_cane_block"
+  },
+  "output": {
+    "item": "alexscaves:licoroot"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

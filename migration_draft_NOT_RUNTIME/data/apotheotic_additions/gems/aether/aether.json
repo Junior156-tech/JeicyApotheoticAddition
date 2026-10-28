@@ -1,0 +1,66 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "apothic_attributes:elytra_flight",
+      "operation": "add_value",
+      "values": {
+        "flawless": 1,
+        "perfect": 1
+      },
+      "original_tier_values": {
+        "mythic": 1,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1,
+        "apotheotic_additions:heirloom": 1,
+        "apotheotic_additions:esoteric": 1
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "attribute": "apothic_attributes:creative_flight",
+      "operation": "add_value",
+      "values": {
+        "flawless": 0,
+        "perfect": 0
+      },
+      "original_tier_values": {
+        "mythic": 0,
+        "ancient": 0,
+        "apotheotic_additions:artifact": 0,
+        "apotheotic_additions:heirloom": 0,
+        "apotheotic_additions:esoteric": 1
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 1,
+    "quality": 1
+  },
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether"
+    ]
+  },
+  "min_purity": "flawless"
+}

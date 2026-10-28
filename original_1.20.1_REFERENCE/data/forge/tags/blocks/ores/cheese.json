@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "rats:cheese_ore",
+      "required": false
+    },
+    {
+      "id": "ad_astra:moon_cheese_ore",
+      "required": false
+    }
+  ]
+}

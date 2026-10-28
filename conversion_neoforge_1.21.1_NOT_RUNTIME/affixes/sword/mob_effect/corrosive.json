@@ -1,0 +1,79 @@
+{
+  "categories": [
+    "apotheosis:trident"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "biomancy"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "biomancy:corrosive",
+  "target": "attack_target",
+  "values": {
+    "apotheosis:epic": {
+      "duration": {
+        "min": 20,
+        "steps": 4,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1600
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 20,
+        "steps": 4,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1600
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 30,
+        "steps": 4,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1600
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 40,
+        "steps": 5,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1600
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 120,
+        "steps": 8,
+        "step": 40
+      },
+      "amplifier": 1,
+      "cooldown": 1600
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 200,
+        "steps": 8,
+        "step": 40
+      },
+      "amplifier": 2,
+      "cooldown": 1600
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

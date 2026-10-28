@@ -1,0 +1,37 @@
+{
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots",
+    "apotheosis:shield"
+  ],
+  "type": "apotheosis:damage_reduction",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "damage_type": "magic",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 0.2,
+      "steps": 7,
+      "step": 0.03
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 0.3,
+      "steps": 7,
+      "step": 0.03
+    },
+    "apotheotic_additions:esoteric": {
+      "min": 0.4,
+      "steps": 7,
+      "step": 0.04
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

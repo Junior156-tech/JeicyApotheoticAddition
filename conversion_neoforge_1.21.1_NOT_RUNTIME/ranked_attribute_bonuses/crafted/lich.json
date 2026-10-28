@@ -1,0 +1,22 @@
+{
+  "original_gem": "crafted/lich",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheotic_additions:artifact": 1,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2
+      },
+      "__requires_exact_gem_class": {
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      "__origin": "crafted/lich.json#bonuses[0]"
+    }
+  ]
+}

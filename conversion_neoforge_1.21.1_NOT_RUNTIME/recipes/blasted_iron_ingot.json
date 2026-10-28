@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "apotheosis:common_material"
+  },
+  "result": "minecraft:iron_ingot",
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

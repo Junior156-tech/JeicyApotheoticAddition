@@ -1,0 +1,55 @@
+{
+  "categories": [
+    "apotheosis:trident"
+  ],
+  "type": "apotheosis:attribute",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "malum:scythe_proficiency",
+  "operation": "add_value",
+  "values": {
+    "apotheosis:epic": {
+      "min": 0.5,
+      "steps": 2,
+      "step": 0.25
+    },
+    "apotheosis:mythic": {
+      "min": 0.75,
+      "steps": 3,
+      "step": 0.25
+    },
+    "apotheotic_additions:ancient": {
+      "min": 1,
+      "steps": 4,
+      "step": 0.25
+    },
+    "apotheotic_additions:artifact": {
+      "min": 3,
+      "steps": 6,
+      "step": 0.5
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 0.5,
+      "steps": 4,
+      "step": 0.5
+    },
+    "apotheotic_additions:esoteric": {
+      "min": 5,
+      "steps": 5,
+      "step": 1
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

@@ -1,0 +1,88 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "alexscaves:irradiated",
+  "target": "attack_target",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 600,
+        "steps": 15,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 700,
+        "steps": 20,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 800,
+        "steps": 25,
+        "step": 20
+      },
+      "amplifier": 1,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 1200,
+        "steps": 8,
+        "step": 20
+      },
+      "amplifier": 1,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 2400,
+        "steps": 8,
+        "step": 30
+      },
+      "amplifier": 2,
+      "cooldown": 3000
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 4800,
+        "steps": 8,
+        "step": 40
+      },
+      "amplifier": 2,
+      "cooldown": 3000
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "categories": [
+    "apotheosis:melee_weapon",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

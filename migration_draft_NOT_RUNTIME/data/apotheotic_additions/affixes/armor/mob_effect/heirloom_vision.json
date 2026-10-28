@@ -1,0 +1,39 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "minecraft:night_vision",
+  "target": "hurt_self",
+  "values": {
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 600,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 800,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    }
+  },
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

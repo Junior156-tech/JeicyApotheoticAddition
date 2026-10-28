@@ -1,0 +1,169 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:ores/lapis",
+      "inputs": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "output": {
+        "item": "aether:ambrosium_shard"
+      },
+      "values": {
+        "apotheosis:rare": 0.05,
+        "apotheosis:epic": 0.1,
+        "apotheosis:mythic": 0.15,
+        "apotheotic_additions:ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      },
+      "desc": "gem.apotheotic_additions:alchemy/wildheart.bonus.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:twilight_treasure_goblin",
+      "values": {
+        "apotheosis:rare": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "apotheosis:epic": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "apotheosis:mythic": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:ancient": {
+          "chance": 0.004,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:artifact": {
+          "chance": 0.005,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:heirloom": {
+          "chance": 0.006,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:esoteric": {
+          "chance": 0.007,
+          "cooldown": 4800
+        }
+      },
+      "__unported_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:experience_gained",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__unported_gem_class": {
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:twilight_fortification",
+      "values": {
+        "apotheosis:rare": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "apotheosis:epic": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "apotheosis:mythic": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:ancient": {
+          "chance": 0.004,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:artifact": {
+          "chance": 0.005,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:heirloom": {
+          "chance": 0.006,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:esoteric": {
+          "chance": 0.007,
+          "cooldown": 4800
+        }
+      },
+      "__unported_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 5.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether",
+      "twilightforest:twilight_forest"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

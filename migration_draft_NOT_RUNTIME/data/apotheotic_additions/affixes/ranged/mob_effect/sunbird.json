@@ -1,0 +1,96 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "alexsmobs:sunbird_curse",
+  "target": "arrow_target",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 20,
+        "steps": 2,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 100
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 40,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": {
+        "min": 0,
+        "steps": 4,
+        "step": 0.26
+      },
+      "cooldown": 160
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 40,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": {
+        "min": 0,
+        "steps": 4,
+        "step": 0.26
+      },
+      "cooldown": 160
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 120,
+        "steps": 6,
+        "step": 40
+      },
+      "amplifier": 5,
+      "cooldown": 400
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 200,
+        "steps": 8,
+        "step": 50
+      },
+      "amplifier": 5,
+      "cooldown": 400
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 300
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 700,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 300
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ],
+  "categories": [
+    "apotheosis:bow",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "original_gem": "modded/witch_queen",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "eidolon:chanting_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "uncommon": 0.15,
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1.0,
+        "apotheotic_additions:artifact": 1.5,
+        "apotheotic_additions:heirloom": 2
+      },
+      "__requires_exact_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      "__origin": "modded/witch_queen.json#bonuses[3]"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+group = 'org.jeicy.apotheoticadditions'
+version = '1.21.1'
+base.archivesName = 'JeicyApotheoticAddition'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+repositories {
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter { includeGroup('maven.modrinth') }
+    }
+}
+
+neoForge {
+    version = '21.1.251'
+    runs {
+        client { client() }
+        server { server() }
+    }
+    mods {
+        apotheotic_additions { sourceSet sourceSets.main }
+    }
+}
+
+// Exact 1.21.1 binaries used by Apotheosis 8.8.0. Modrinth's Maven POMs do
+// not publish transitive dependencies, so every required runtime mod is pinned
+// explicitly. This project intentionally has no AO Port or KubeJS dependency.
+dependencies {
+    implementation 'maven.modrinth:rqFWfVlz:nEWTeHFF'
+    implementation 'maven.modrinth:tCkE8p2N:1Ypo4tf4' // Placebo 9.9.2
+    implementation 'maven.modrinth:DGaH8Rh0:Xtaunf84' // Apothic Attributes 2.10.1
+    runtimeOnly 'maven.modrinth:nU0bVIaL:BIogJv2D' // Patchouli 93
+    runtimeOnly 'maven.modrinth:DfxVkOAO:pWfxcfO2' // Apothic Spawners 1.4.0
+    runtimeOnly 'maven.modrinth:pL8MtgqY:2vH7csNR' // Apothic Enchanting 1.6.2
+
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}

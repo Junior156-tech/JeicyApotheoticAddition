@@ -1,0 +1,79 @@
+{
+  "variant": "wither",
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "modifiers": [
+        {
+          "attribute": "attributeslib:fire_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 5.5,
+            "apotheotic_additions:heirloom": 6,
+            "apotheotic_additions:esoteric": 6.5
+          }
+        },
+        {
+          "attribute": "attributeslib:cold_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 5.5,
+            "apotheotic_additions:heirloom": 6,
+            "apotheotic_additions:esoteric": 6.5
+          }
+        }
+      ],
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "modifiers": [
+        {
+          "attribute": "attributeslib:fire_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 7,
+            "apotheotic_additions:heirloom": 8,
+            "apotheotic_additions:esoteric": 9
+          }
+        },
+        {
+          "attribute": "attributeslib:cold_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 7,
+            "apotheotic_additions:heirloom": 8,
+            "apotheotic_additions:esoteric": 9
+          }
+        }
+      ],
+      "__unported_gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "__unported_min_rarity": "apotheotic_additions:artifact",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "apotheosis:common_material",
+  "result": {
+    "id": "apotheotic_additions:scrap_brick_slab",
+    "count": 1
+  }
+}

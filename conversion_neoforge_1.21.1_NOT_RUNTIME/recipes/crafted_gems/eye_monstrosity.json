@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "ADA",
+    "CBC",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "apotheotic_additions:artifact_material"
+    },
+    "B": {
+      "item": "cataclysm:monstrous_horn"
+    },
+    "C": {
+      "item": "cataclysm:lava_power_cell"
+    },
+    "D": {
+      "item": "apotheotic_additions:gemboundsigil"
+    }
+  },
+  "result": {
+    "id": "apotheosis:gem",
+    "count": 1,
+    "nbt": "{affix_data:{rarity:\"apotheotic_additions:artifact\"},gem:\"apotheotic_additions:crafted/monstrosity\"}"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

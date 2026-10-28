@@ -1,0 +1,87 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "botania:emptiness",
+  "target": "break_self",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 20,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 20,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 30,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 3000
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 40,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 2400
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 80,
+        "steps": 8,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1800
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 300,
+        "steps": 20,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 150,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    }
+  ],
+  "categories": [
+    "apotheosis:breaker"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

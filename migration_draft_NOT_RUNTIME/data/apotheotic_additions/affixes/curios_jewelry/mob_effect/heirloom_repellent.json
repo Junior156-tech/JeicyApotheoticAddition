@@ -1,0 +1,44 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "alexsmobs:mosquito_repellent",
+  "target": "hurt_self",
+  "values": {
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 400,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 800,
+        "steps": 10,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "categories": [],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

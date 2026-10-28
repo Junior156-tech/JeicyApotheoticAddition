@@ -1,0 +1,107 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#551097",
+  "material": "apotheotic_additions:esoteric_material",
+  "sort_index": 850,
+  "weights": {
+    "haven": {
+      "weight": 0,
+      "quality": 0
+    },
+    "frontier": {
+      "weight": 0,
+      "quality": 0
+    },
+    "ascent": {
+      "weight": 0,
+      "quality": 0
+    },
+    "summit": {
+      "weight": 0,
+      "quality": 0
+    },
+    "pinnacle": {
+      "weight": 0,
+      "quality": 0
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:durability",
+      "original_chance_unported": 0.7
+    }
+  ],
+  "render_data": {
+    "beam_height": 4.5,
+    "beam_radius": 0.045,
+    "beam_texture": "ao_apotheotic_port:textures/rarity/esoteric_beam.png",
+    "glow_radius": 0.085,
+    "glow_texture": "ao_apotheotic_port:textures/rarity/esoteric_glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.0,
+      "frames": 16,
+      "size": 0.5,
+      "texture": "ao_apotheotic_port:textures/rarity/esoteric_shadow.png"
+    }
+  },
+  "_migration_notes": "NO RUNTIME: original chance/backup and rule types require port verification. No gameplay balancing introduced."
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:apple"
+    },
+    "L": {
+      "item": "apotheosis:mythic_material"
+    }
+  },
+  "result": {
+    "id": "apotheotic_additions:mythicapple",
+    "count": 1
+  },
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

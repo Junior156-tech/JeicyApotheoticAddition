@@ -1,0 +1,162 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.luck",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.02,
+        "apotheosis:rare": 0.04,
+        "apotheosis:epic": 0.06,
+        "apotheosis:mythic": 0.08,
+        "apotheotic_additions:ancient": 0.1,
+        "apotheotic_additions:artifact": 0.12,
+        "apotheotic_additions:heirloom": 0.14,
+        "apotheotic_additions:esoteric": 0.16
+      },
+      "__unported_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.armor_toughness",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.03,
+        "apotheosis:rare": 0.06,
+        "apotheosis:epic": 0.09,
+        "apotheosis:mythic": 0.12,
+        "apotheotic_additions:ancient": 0.15,
+        "apotheotic_additions:artifact": 0.18,
+        "apotheotic_additions:heirloom": 0.21,
+        "apotheotic_additions:esoteric": 0.24
+      },
+      "__unported_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:fire_damage",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.015,
+        "apotheosis:rare": 0.03,
+        "apotheosis:epic": 0.045,
+        "apotheosis:mythic": 0.06,
+        "apotheotic_additions:ancient": 0.075,
+        "apotheotic_additions:artifact": 0.09,
+        "apotheotic_additions:heirloom": 0.105,
+        "apotheotic_additions:esoteric": 0.12
+      },
+      "__unported_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "minecraft:strength",
+      "target": "attack_self",
+      "values": {
+        "apotheosis:rare": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:epic": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:mythic": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 160,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 200,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 240,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 280,
+          "amplifier": 2,
+          "cooldown": 900
+        }
+      },
+      "__unported_gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:gravel",
+      "inputs": {
+        "tag": "forge:gravel"
+      },
+      "output": {
+        "item": "iceandfire:dragonbone"
+      },
+      "values": {
+        "apotheosis:uncommon": 0.01,
+        "apotheosis:rare": 0.02,
+        "apotheosis:epic": 0.03,
+        "apotheosis:mythic": 0.05,
+        "apotheotic_additions:ancient": 0.07,
+        "apotheotic_additions:artifact": 0.09,
+        "apotheotic_additions:heirloom": 0.11,
+        "apotheotic_additions:esoteric": 0.13
+      },
+      "desc": "gem.apotheotic_additions:alchemy/draconic_legacy.shovel",
+      "__unported_gem_class": {
+        "key": "shovel",
+        "types": [
+          "shovel"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "minecraft:overworld"
+    ]
+  },
+  "__unported_min_rarity": "uncommon",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    " L ",
+    "LWL",
+    " L "
+  ],
+  "key": {
+    "W": {
+      "item": "apotheotic_additions:heirloom_material"
+    },
+    "L": {
+      "item": "irons_spellbooks:arcane_salvage"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:concentration_amulet",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

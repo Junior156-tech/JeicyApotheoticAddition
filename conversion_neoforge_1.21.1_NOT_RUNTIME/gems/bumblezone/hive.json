@@ -1,0 +1,129 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:arrow_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.015,
+        "apotheosis:epic": 0.03,
+        "apotheosis:mythic": 0.045,
+        "apotheotic_additions:ancient": 0.06,
+        "apotheotic_additions:artifact": 0.075,
+        "apotheotic_additions:heirloom": 0.09,
+        "apotheotic_additions:esoteric": 0.105
+      },
+      "__unported_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:nature_spell_power",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:uncommon": 0.25,
+        "apotheosis:rare": 0.5,
+        "apotheosis:epic": 1.0,
+        "apotheosis:mythic": 1.5,
+        "apotheotic_additions:ancient": 2.0,
+        "apotheotic_additions:artifact": 2.5,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3.5
+      },
+      "__unported_gem_class": {
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:nature_spell_power",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__unported_gem_class": {
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:nature_magic_resist",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      },
+      "__unported_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 4.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "the_bumblezone:the_bumblezone"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

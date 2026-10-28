@@ -1,0 +1,5392 @@
+{
+  "tier_ids": [
+    "common",
+    "uncommon",
+    "rare",
+    "epic",
+    "mythic",
+    "ancient",
+    "apotheotic_additions:artifact",
+    "apotheotic_additions:heirloom",
+    "apotheotic_additions:esoteric"
+  ],
+  "gems": {
+    "aether/aether": {
+      "original_id": "apotheotic_additions:aether/aether",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1,
+            "apotheotic_additions:heirloom": 1,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "mythic": 0,
+            "ancient": 0,
+            "apotheotic_additions:artifact": 0,
+            "apotheotic_additions:heirloom": 0,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 1,
+      "quality": 1
+    },
+    "aether/candied": {
+      "original_id": "apotheotic_additions:aether/candied",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.2,
+            "mythic": 0.3,
+            "ancient": 0.4,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.75,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "axe",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.2,
+            "mythic": 0.3,
+            "ancient": 0.4,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.75,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 0,
+              "cooldown": 900
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 2.5
+    },
+    "aether/purity": {
+      "original_id": "apotheotic_additions:aether/purity",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.015,
+            "epic": 0.03,
+            "mythic": 0.045,
+            "ancient": 0.06,
+            "apotheotic_additions:artifact": 0.075,
+            "apotheotic_additions:heirloom": 0.09,
+            "apotheotic_additions:esoteric": 0.11
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 4.5
+    },
+    "aether/zanite_alchemist": {
+      "original_id": "apotheotic_additions:aether/zanite_alchemist",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 1,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 1,
+              "amplifier": 0,
+              "cooldown": 1400
+            },
+            "mythic": {
+              "duration": 1,
+              "amplifier": 0,
+              "cooldown": 1300
+            },
+            "ancient": {
+              "duration": 1,
+              "amplifier": 1,
+              "cooldown": 1200
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 1,
+              "amplifier": 2,
+              "cooldown": 1100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1,
+              "amplifier": 2,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1,
+              "amplifier": 3,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 1.5
+    },
+    "blue_skies/arachnarch": {
+      "original_id": "apotheotic_additions:blue_skies/arachnarch",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.25,
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 5,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 5,
+            "epic": 10,
+            "mythic": 15,
+            "ancient": 20,
+            "apotheotic_additions:artifact": 25,
+            "apotheotic_additions:heirloom": 30,
+            "apotheotic_additions:esoteric": 35
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 1.5
+    },
+    "blue_skies/blue_skies": {
+      "original_id": "apotheotic_additions:blue_skies/blue_skies",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1.0,
+            "epic": 1.5,
+            "mythic": 2.0,
+            "ancient": 2.5,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.15,
+            "mythic": 0.2,
+            "ancient": 0.25,
+            "apotheotic_additions:artifact": 0.3,
+            "apotheotic_additions:heirloom": 0.35,
+            "apotheotic_additions:esoteric": 0.4
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 5.0
+    },
+    "blue_skies/horizonite_alchemist": {
+      "original_id": "apotheotic_additions:blue_skies/horizonite_alchemist",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 1.5
+    },
+    "blue_skies/twin_magi": {
+      "original_id": "apotheotic_additions:blue_skies/twin_magi",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "epic": {
+              "duration": 1,
+              "amplifier": 0,
+              "cooldown": 500
+            },
+            "mythic": {
+              "duration": 1,
+              "amplifier": 0,
+              "cooldown": 500
+            },
+            "ancient": {
+              "duration": 1,
+              "amplifier": 1,
+              "cooldown": 500
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 1,
+              "amplifier": 1,
+              "cooldown": 500
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1,
+              "amplifier": 2,
+              "cooldown": 500
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1,
+              "amplifier": 2,
+              "cooldown": 500
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.25,
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 1.5
+    },
+    "blue_skies/ventium_alchemist": {
+      "original_id": "apotheotic_additions:blue_skies/ventium_alchemist",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 1.5
+    },
+    "bumblezone/bee_queen": {
+      "original_id": "apotheotic_additions:bumblezone/bee_queen",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.5,
+            "rare": 1.0,
+            "epic": 1.5,
+            "mythic": 2.0,
+            "ancient": 2.5,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3.5,
+            "apotheotic_additions:esoteric": 4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 7,
+      "quality": 5.5
+    },
+    "bumblezone/hive": {
+      "original_id": "apotheotic_additions:bumblezone/hive",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.015,
+            "epic": 0.03,
+            "mythic": 0.045,
+            "ancient": 0.06,
+            "apotheotic_additions:artifact": 0.075,
+            "apotheotic_additions:heirloom": 0.09,
+            "apotheotic_additions:esoteric": 0.105
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.25,
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 4.5
+    },
+    "crafted/cornelia": {
+      "original_id": "apotheotic_additions:crafted/cornelia",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 4.5,
+            "apotheotic_additions:heirloom": 5,
+            "apotheotic_additions:esoteric": 6
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/ender_dragon": {
+      "original_id": "apotheotic_additions:crafted/ender_dragon",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 4
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/frostmaw": {
+      "original_id": "apotheotic_additions:crafted/frostmaw",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 9,
+            "apotheotic_additions:heirloom": 10,
+            "apotheotic_additions:esoteric": 11
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/harbringer": {
+      "original_id": "apotheotic_additions:crafted/harbringer",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": {
+              "duration": 1000,
+              "amplifier": 0,
+              "cooldown": 6000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1500,
+              "amplifier": 0,
+              "cooldown": 5000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 2000,
+              "amplifier": 0,
+              "cooldown": 4000
+            }
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/hydra": {
+      "original_id": "apotheotic_additions:crafted/hydra",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.5,
+            "apotheotic_additions:esoteric": 0.75
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/ignis": {
+      "original_id": "apotheotic_additions:crafted/ignis",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 9,
+            "apotheotic_additions:heirloom": 10,
+            "apotheotic_additions:esoteric": 11
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/leviathan": {
+      "original_id": "apotheotic_additions:crafted/leviathan",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": {
+              "duration": 600,
+              "amplifier": 0,
+              "cooldown": 6000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 750,
+              "amplifier": 0,
+              "cooldown": 5000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 900,
+              "amplifier": 0,
+              "cooldown": 4000
+            }
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/lich": {
+      "original_id": "apotheotic_additions:crafted/lich",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 1,
+            "apotheotic_additions:heirloom": 1.5,
+            "apotheotic_additions:esoteric": 2
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/maledictus": {
+      "original_id": "apotheotic_additions:crafted/maledictus",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 1,
+            "apotheotic_additions:esoteric": 1.25
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/monstrosity": {
+      "original_id": "apotheotic_additions:crafted/monstrosity",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 4.5,
+            "apotheotic_additions:heirloom": 5,
+            "apotheotic_additions:esoteric": 6
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/naga": {
+      "original_id": "apotheotic_additions:crafted/naga",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "axe",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/remnant": {
+      "original_id": "apotheotic_additions:crafted/remnant",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 6000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 5000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 4000
+            }
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/slider": {
+      "original_id": "apotheotic_additions:crafted/slider",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3.5,
+            "apotheotic_additions:esoteric": 4
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/snow_queen": {
+      "original_id": "apotheotic_additions:crafted/snow_queen",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.75,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/sunbird": {
+      "original_id": "apotheotic_additions:crafted/sunbird",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": {
+              "duration": 5000,
+              "amplifier": 0,
+              "cooldown": 6000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 6000,
+              "amplifier": 0,
+              "cooldown": 5000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 7000,
+              "amplifier": 0,
+              "cooldown": 4000
+            }
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/ur-ghast": {
+      "original_id": "apotheotic_additions:crafted/ur-ghast",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:all_stats",
+          "gem_class": {
+            "key": "boots",
+            "types": [
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.075,
+            "apotheotic_additions:esoteric": 0.1
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/warden": {
+      "original_id": "apotheotic_additions:crafted/warden",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "apotheotic_additions:artifact": 4.5,
+            "apotheotic_additions:heirloom": 5,
+            "apotheotic_additions:esoteric": 6
+          }
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/wither": {
+      "original_id": "apotheotic_additions:crafted/wither",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "crafted/wroughtnaut": {
+      "original_id": "apotheotic_additions:crafted/wroughtnaut",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 0,
+      "quality": 0
+    },
+    "curios/reinforced": {
+      "original_id": "apotheotic_additions:curios/reinforced",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 1.5,
+            "epic": 2,
+            "mythic": 2.5,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 1.5,
+            "epic": 2,
+            "mythic": 2.5,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 4.0
+    },
+    "curios/twisted": {
+      "original_id": "apotheotic_additions:curios/twisted",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 3,
+      "quality": 3.0
+    },
+    "curios/vitalic": {
+      "original_id": "apotheotic_additions:curios/vitalic",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands",
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 1.5,
+            "epic": 2,
+            "mythic": 2.5,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 3.0
+    },
+    "midnight/darkheart": {
+      "original_id": "apotheotic_additions:midnight/darkheart",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.015,
+            "epic": 0.03,
+            "mythic": 0.045,
+            "ancient": 0.06,
+            "apotheotic_additions:artifact": 0.075,
+            "apotheotic_additions:heirloom": 0.09,
+            "apotheotic_additions:esoteric": 0.105
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 4.5
+    },
+    "midnight/midnight": {
+      "original_id": "apotheotic_additions:midnight/midnight",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.5,
+            "rare": 1.0,
+            "epic": 1.5,
+            "mythic": 2.0,
+            "ancient": 2.5,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3.5,
+            "apotheotic_additions:esoteric": 4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 7,
+      "quality": 4.5
+    },
+    "modded/amber": {
+      "original_id": "apotheotic_additions:modded/amber",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "resistor_shield",
+            "types": [
+              "shield"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "prim_club",
+            "types": [
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.2,
+            "ancient": 0.3,
+            "apotheotic_additions:artifact": 0.35,
+            "apotheotic_additions:heirloom": 0.45,
+            "apotheotic_additions:esoteric": 0.5
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 40,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 160,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 320,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        }
+      ],
+      "weight": 1,
+      "quality": 1
+    },
+    "modded/archmage": {
+      "original_id": "apotheotic_additions:modded/archmage",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.2,
+            "epic": 0.3,
+            "mythic": 0.4,
+            "ancient": 0.5,
+            "apotheotic_additions:artifact": 0.6,
+            "apotheotic_additions:heirloom": 0.7,
+            "apotheotic_additions:esoteric": 0.8
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "ranged_weapon",
+            "types": [
+              "bow",
+              "crossbow",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "mythic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 500
+            },
+            "ancient": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 320,
+              "amplifier": 1,
+              "cooldown": 300
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 200
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 200
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 1.5
+    },
+    "modded/armor": {
+      "original_id": "apotheotic_additions:modded/armor",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 1.5,
+            "epic": 2,
+            "mythic": 2.5,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 3
+    },
+    "modded/ars_mana": {
+      "original_id": "apotheotic_additions:modded/ars_mana",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "common": 25,
+            "uncommon": 50,
+            "rare": 75,
+            "epic": 100,
+            "mythic": 125,
+            "ancient": 150,
+            "apotheotic_additions:artifact": 175,
+            "apotheotic_additions:heirloom": 200,
+            "apotheotic_additions:esoteric": 225
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1.0,
+            "rare": 1.5,
+            "epic": 2.0,
+            "mythic": 2.5,
+            "ancient": 3.0,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 4.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "shield",
+            "types": [
+              "shield"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.025,
+            "uncommon": 0.05,
+            "rare": 0.075,
+            "epic": 0.1,
+            "mythic": 0.125,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.175,
+            "apotheotic_additions:heirloom": 0.2,
+            "apotheotic_additions:esoteric": 0.225
+          }
+        }
+      ],
+      "weight": 4,
+      "quality": 2
+    },
+    "modded/bloodcaster": {
+      "original_id": "apotheotic_additions:modded/bloodcaster",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 400
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 1,
+              "cooldown": 400
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        }
+      ],
+      "weight": 3,
+      "quality": 2.5
+    },
+    "modded/cataclysm": {
+      "original_id": "apotheotic_additions:modded/cataclysm",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 120
+            },
+            "epic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 220,
+              "amplifier": 1,
+              "cooldown": 80
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 1,
+              "cooldown": 60
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 1,
+              "cooldown": 40
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 20
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 2000,
+              "amplifier": 2,
+              "cooldown": 20
+            }
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 2
+    },
+    "modded/depths": {
+      "original_id": "apotheotic_additions:modded/depths",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:all_stats",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.005,
+            "epic": 0.01,
+            "mythic": 0.015,
+            "ancient": 0.02,
+            "apotheotic_additions:artifact": 0.025,
+            "apotheotic_additions:heirloom": 0.03,
+            "apotheotic_additions:esoteric": 0.035
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "ortholance",
+            "types": [
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "breaker",
+            "types": [
+              "shovel",
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1,
+            "apotheotic_additions:heirloom": 1,
+            "apotheotic_additions:esoteric": 2
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.15,
+            "mythic": 0.3,
+            "ancient": 0.45,
+            "apotheotic_additions:artifact": 0.6,
+            "apotheotic_additions:heirloom": 0.75,
+            "apotheotic_additions:esoteric": 0.9
+          }
+        }
+      ],
+      "weight": 1,
+      "quality": 1
+    },
+    "modded/draconic_legacy": {
+      "original_id": "apotheotic_additions:modded/draconic_legacy",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.02,
+            "rare": 0.04,
+            "epic": 0.06,
+            "mythic": 0.08,
+            "ancient": 0.1,
+            "apotheotic_additions:artifact": 0.12,
+            "apotheotic_additions:heirloom": 0.14,
+            "apotheotic_additions:esoteric": 0.16
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.03,
+            "rare": 0.06,
+            "epic": 0.09,
+            "mythic": 0.12,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.18,
+            "apotheotic_additions:heirloom": 0.21,
+            "apotheotic_additions:esoteric": 0.24
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.015,
+            "rare": 0.03,
+            "epic": 0.045,
+            "mythic": 0.06,
+            "ancient": 0.075,
+            "apotheotic_additions:artifact": 0.09,
+            "apotheotic_additions:heirloom": 0.105,
+            "apotheotic_additions:esoteric": 0.12
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "shovel",
+            "types": [
+              "shovel"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.01,
+            "rare": 0.02,
+            "epic": 0.03,
+            "mythic": 0.05,
+            "ancient": 0.07,
+            "apotheotic_additions:artifact": 0.09,
+            "apotheotic_additions:heirloom": 0.11,
+            "apotheotic_additions:esoteric": 0.13
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 2.5
+    },
+    "modded/dracula": {
+      "original_id": "apotheotic_additions:modded/dracula",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 450
+            },
+            "epic": {
+              "duration": 360,
+              "amplifier": 1,
+              "cooldown": 450
+            },
+            "mythic": {
+              "duration": 420,
+              "amplifier": 1,
+              "cooldown": 450
+            },
+            "ancient": {
+              "duration": 480,
+              "amplifier": 2,
+              "cooldown": 450
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 540,
+              "amplifier": 2,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 600,
+              "amplifier": 2,
+              "cooldown": 400
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 800,
+              "amplifier": 2,
+              "cooldown": 400
+            }
+          }
+        }
+      ],
+      "weight": 2,
+      "quality": 1.5
+    },
+    "modded/engineer": {
+      "original_id": "apotheotic_additions:modded/engineer",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "weapon",
+            "types": [
+              "heavy_weapon",
+              "sword",
+              "trident",
+              "bow",
+              "crossbow"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1.0,
+            "epic": 1.5,
+            "mythic": 2.0,
+            "ancient": 2.5,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3.5,
+            "apotheotic_additions:esoteric": 4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1.0,
+            "epic": 1.5,
+            "mythic": 2.0,
+            "ancient": 2.5,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3.5,
+            "apotheotic_additions:esoteric": 4
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 3.5
+    },
+    "modded/felfire": {
+      "original_id": "apotheotic_additions:modded/felfire",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.05,
+            "rare": 0.1,
+            "epic": 0.15,
+            "mythic": 0.2,
+            "ancient": 0.25,
+            "apotheotic_additions:artifact": 0.3,
+            "apotheotic_additions:heirloom": 0.35,
+            "apotheotic_additions:esoteric": 0.4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 600,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.05,
+            "rare": 0.1,
+            "epic": 0.15,
+            "mythic": 0.2,
+            "ancient": 0.25,
+            "apotheotic_additions:artifact": 0.3,
+            "apotheotic_additions:heirloom": 0.35,
+            "apotheotic_additions:esoteric": 0.4
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 4.5
+    },
+    "modded/flesh": {
+      "original_id": "apotheotic_additions:modded/flesh",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.02,
+            "rare": 0.04,
+            "epic": 0.06,
+            "mythic": 0.08,
+            "ancient": 0.1,
+            "apotheotic_additions:artifact": 0.12,
+            "apotheotic_additions:heirloom": 0.14,
+            "apotheotic_additions:esoteric": 0.16
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.03,
+            "rare": 0.06,
+            "epic": 0.09,
+            "mythic": 0.12,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.18,
+            "apotheotic_additions:heirloom": 0.21,
+            "apotheotic_additions:esoteric": 0.24
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.015,
+            "rare": 0.03,
+            "epic": 0.045,
+            "mythic": 0.06,
+            "ancient": 0.075,
+            "apotheotic_additions:artifact": 0.09,
+            "apotheotic_additions:heirloom": 0.105,
+            "apotheotic_additions:esoteric": 0.12
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 280,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 320,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 360,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 440,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 2.5
+    },
+    "modded/flux": {
+      "original_id": "apotheotic_additions:modded/flux",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 10,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 20,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 40,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 50,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 60,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 70,
+              "amplifier": 1,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 160,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 220,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 280,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 340,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 460,
+              "amplifier": 1,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "flux",
+            "types": [
+              "pickaxe",
+              "shovel",
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": 1,
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 3,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 4
+          }
+        }
+      ],
+      "weight": 2,
+      "quality": 1
+    },
+    "modded/heartland": {
+      "original_id": "apotheotic_additions:modded/heartland",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "axe",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.05,
+            "mythic": 0.1,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.2,
+            "apotheotic_additions:heirloom": 0.25,
+            "apotheotic_additions:esoteric": 0.3
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "knife",
+            "types": [
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "ranged_weapon",
+            "types": [
+              "bow",
+              "crossbow",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 80,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 120,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 160,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 200,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 240,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 280,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "shovel",
+            "types": [
+              "shovel"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.02,
+            "mythic": 0.04,
+            "ancient": 0.06,
+            "apotheotic_additions:artifact": 0.08,
+            "apotheotic_additions:heirloom": 0.1,
+            "apotheotic_additions:esoteric": 0.12
+          }
+        }
+      ],
+      "weight": 1,
+      "quality": 1
+    },
+    "modded/hearty": {
+      "original_id": "apotheotic_additions:modded/hearty",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "anything",
+            "types": [
+              "bow",
+              "crossbow",
+              "pickaxe",
+              "shovel",
+              "heavy_weapon",
+              "helmet",
+              "chestplate",
+              "leggings",
+              "boots",
+              "shield",
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 1.5,
+            "epic": 2,
+            "mythic": 2.5,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 3.5,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 2
+    },
+    "modded/marrow": {
+      "original_id": "apotheotic_additions:modded/marrow",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.03,
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.03,
+            "rare": 0.06,
+            "epic": 0.09,
+            "mythic": 0.12,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.18,
+            "apotheotic_additions:heirloom": 0.21,
+            "apotheotic_additions:esoteric": 0.24
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands",
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.01,
+            "rare": 0.02,
+            "epic": 0.03,
+            "mythic": 0.04,
+            "ancient": 0.05,
+            "apotheotic_additions:artifact": 0.06,
+            "apotheotic_additions:heirloom": 0.07,
+            "apotheotic_additions:esoteric": 0.08
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "epic": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "mythic": {
+              "duration": 280,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "ancient": {
+              "duration": 320,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 360,
+              "amplifier": 0,
+              "cooldown": 900
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 1,
+              "cooldown": 900
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 440,
+              "amplifier": 2,
+              "cooldown": 900
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 2.5
+    },
+    "modded/midas": {
+      "original_id": "apotheotic_additions:modded/midas",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mageslayer",
+          "gem_class": {},
+          "legacy_values": {
+            "epic": 0.05,
+            "mythic": 0.1,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.2,
+            "apotheotic_additions:heirloom": 0.25,
+            "apotheotic_additions:esoteric": 0.3
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 3
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "axe",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.01,
+            "mythic": 0.04,
+            "ancient": 0.07,
+            "apotheotic_additions:artifact": 0.1,
+            "apotheotic_additions:heirloom": 0.15,
+            "apotheotic_additions:esoteric": 0.2
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 1
+    },
+    "modded/mystic": {
+      "original_id": "apotheotic_additions:modded/mystic",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 400
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "rare": 50,
+            "epic": 75,
+            "mythic": 100,
+            "ancient": 125,
+            "apotheotic_additions:artifact": 150,
+            "apotheotic_additions:heirloom": 200,
+            "apotheotic_additions:esoteric": 250
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.2,
+            "mythic": 0.3,
+            "ancient": 0.4,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.6,
+            "apotheotic_additions:esoteric": 0.7
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 5.5
+    },
+    "modded/rat_chef": {
+      "original_id": "apotheotic_additions:modded/rat_chef",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 3000
+            },
+            "rare": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 180,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 220,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 260,
+              "amplifier": 1,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "rare": {
+              "duration": 1200,
+              "amplifier": 0,
+              "cooldown": 500
+            },
+            "epic": {
+              "duration": 1800,
+              "amplifier": 0,
+              "cooldown": 450
+            },
+            "mythic": {
+              "duration": 2400,
+              "amplifier": 1,
+              "cooldown": 425
+            },
+            "ancient": {
+              "duration": 3000,
+              "amplifier": 1,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 3600,
+              "amplifier": 2,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 4200,
+              "amplifier": 2,
+              "cooldown": 400
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 5400,
+              "amplifier": 2,
+              "cooldown": 400
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "boots",
+            "types": [
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.05,
+            "rare": 0.1,
+            "epic": 0.15,
+            "mythic": 0.2,
+            "ancient": 0.25,
+            "apotheotic_additions:artifact": 0.3,
+            "apotheotic_additions:heirloom": 0.35,
+            "apotheotic_additions:esoteric": 0.4
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:all_stats",
+          "gem_class": {
+            "key": "shield",
+            "types": [
+              "shield"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.005,
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 5,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "leggings",
+            "types": [
+              "leggings"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 6,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.05,
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 2.5
+    },
+    "modded/safari": {
+      "original_id": "apotheotic_additions:modded/safari",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 0,
+              "cooldown": 40
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 40
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "boots",
+            "types": [
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 0,
+              "cooldown": 40
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 40
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "epic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "mythic": {
+              "duration": 220,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 900,
+              "amplifier": 1,
+              "cooldown": 200
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1100,
+              "amplifier": 1,
+              "cooldown": 200
+            }
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "trident",
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.02,
+            "epic": 0.04,
+            "mythic": 0.06,
+            "ancient": 0.08,
+            "apotheotic_additions:artifact": 0.1,
+            "apotheotic_additions:heirloom": 0.2,
+            "apotheotic_additions:esoteric": 0.25
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.03,
+            "epic": 0.06,
+            "mythic": 0.09,
+            "ancient": 0.12,
+            "apotheotic_additions:artifact": 0.15,
+            "apotheotic_additions:heirloom": 0.2,
+            "apotheotic_additions:esoteric": 0.25
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 3.5
+    },
+    "modded/soultwisted": {
+      "original_id": "apotheotic_additions:modded/soultwisted",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 400
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "boots",
+            "types": [
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "ancient": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 0,
+              "cooldown": 400
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 400,
+              "amplifier": 0,
+              "cooldown": 40
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 40
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 120
+            },
+            "epic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 220,
+              "amplifier": 1,
+              "cooldown": 80
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 1,
+              "cooldown": 60
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 1,
+              "cooldown": 40
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 40
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 3,
+              "cooldown": 40
+            }
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 120
+            },
+            "epic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 220,
+              "amplifier": 0,
+              "cooldown": 80
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 1,
+              "cooldown": 60
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 1,
+              "cooldown": 40
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 40
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1300,
+              "amplifier": 2,
+              "cooldown": 40
+            }
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.2,
+            "mythic": 0.3,
+            "ancient": 0.4,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.6,
+            "apotheotic_additions:esoteric": 0.7
+          }
+        },
+        {
+          "index": 5,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.03,
+            "epic": 0.06,
+            "mythic": 0.09,
+            "ancient": 0.12,
+            "apotheotic_additions:artifact": 0.15,
+            "apotheotic_additions:heirloom": 0.2,
+            "apotheotic_additions:esoteric": 0.25
+          }
+        },
+        {
+          "index": 6,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "leggings",
+            "types": [
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.2,
+            "mythic": 0.3,
+            "ancient": 0.4,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.6,
+            "apotheotic_additions:esoteric": 0.7
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 1.5
+    },
+    "modded/thermal": {
+      "original_id": "apotheotic_additions:modded/thermal",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 3000
+            },
+            "rare": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 180,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 220,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "rare": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "epic": {
+              "duration": 330,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 420,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 510,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 700,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 890,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.01,
+            "rare": 0.03,
+            "epic": 0.06,
+            "mythic": 0.09,
+            "ancient": 0.12,
+            "apotheotic_additions:artifact": 0.15,
+            "apotheotic_additions:heirloom": 0.18,
+            "apotheotic_additions:esoteric": 0.21
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 3
+    },
+    "modded/uranium": {
+      "original_id": "apotheotic_additions:modded/uranium",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "mythic": 1,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1,
+            "apotheotic_additions:heirloom": 2,
+            "apotheotic_additions:esoteric": 2
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 220,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "epic": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 200
+            },
+            "mythic": {
+              "duration": 280,
+              "amplifier": 1,
+              "cooldown": 200
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 1,
+              "cooldown": 200
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 1,
+              "cooldown": 200
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 200
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 2000,
+              "amplifier": 2,
+              "cooldown": 200
+            }
+          }
+        }
+      ],
+      "weight": 3,
+      "quality": 2.5
+    },
+    "modded/weeping_well": {
+      "original_id": "apotheotic_additions:modded/weeping_well",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 4,
+            "apotheotic_additions:heirloom": 5,
+            "apotheotic_additions:esoteric": 6
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "scythe",
+            "types": [
+              "sword"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 1,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 2,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.1,
+            "mythic": 0.2,
+            "ancient": 0.35,
+            "apotheotic_additions:artifact": 0.5,
+            "apotheotic_additions:heirloom": 0.75,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "boots",
+              "leggings"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.05,
+            "mythic": 0.1,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.5,
+            "apotheotic_additions:esoteric": 0.75
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "epic": 0.05,
+            "mythic": 0.1,
+            "ancient": 0.15,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.5,
+            "apotheotic_additions:esoteric": 0.75
+          }
+        }
+      ],
+      "weight": 1,
+      "quality": 1
+    },
+    "modded/witch_queen": {
+      "original_id": "apotheotic_additions:modded/witch_queen",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "wand",
+            "types": [
+              "wand"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 3000
+            },
+            "rare": {
+              "duration": 30,
+              "amplifier": 0,
+              "cooldown": 1500
+            },
+            "epic": {
+              "duration": 60,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 140,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 180,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 220,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "rare": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "epic": {
+              "duration": 330,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "mythic": {
+              "duration": 420,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "ancient": {
+              "duration": 510,
+              "amplifier": 0,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 700,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 890,
+              "amplifier": 1,
+              "cooldown": 1000
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 1000
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "ranged_weapon",
+            "types": [
+              "bow",
+              "crossbow",
+              "trident"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.15,
+            "rare": 0.25,
+            "epic": 0.5,
+            "mythic": 0.75,
+            "ancient": 1.0,
+            "apotheotic_additions:artifact": 1.5,
+            "apotheotic_additions:heirloom": 2
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "leggings",
+            "types": [
+              "leggings"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 5,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.01,
+            "rare": 0.03,
+            "epic": 0.06,
+            "mythic": 0.09,
+            "ancient": 0.12,
+            "apotheotic_additions:artifact": 0.15,
+            "apotheotic_additions:heirloom": 0.18,
+            "apotheotic_additions:esoteric": 0.21
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 5.5
+    },
+    "modded/witherstorm": {
+      "original_id": "apotheotic_additions:modded/witherstorm",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:enchantment",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "epic": 1,
+            "mythic": 2,
+            "ancient": 3,
+            "apotheotic_additions:artifact": 4,
+            "apotheotic_additions:heirloom": 4,
+            "apotheotic_additions:esoteric": 5
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 300
+            },
+            "epic": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 300
+            },
+            "mythic": {
+              "duration": 280,
+              "amplifier": 0,
+              "cooldown": 300
+            },
+            "ancient": {
+              "duration": 500,
+              "amplifier": 0,
+              "cooldown": 300
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 750,
+              "amplifier": 1,
+              "cooldown": 300
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 1000,
+              "amplifier": 1,
+              "cooldown": 300
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 2000,
+              "amplifier": 2,
+              "cooldown": 300
+            }
+          }
+        }
+      ],
+      "weight": 2,
+      "quality": 2.5
+    },
+    "otherside/sculk": {
+      "original_id": "apotheotic_additions:otherside/sculk",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "mythic": 0.01,
+            "ancient": 0.02,
+            "apotheotic_additions:artifact": 0.03,
+            "apotheotic_additions:heirloom": 0.04,
+            "apotheotic_additions:esoteric": 0.05
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.25,
+            "epic": 0.5,
+            "mythic": 0.75,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1.25,
+            "apotheotic_additions:heirloom": 1.5,
+            "apotheotic_additions:esoteric": 1.75
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "heavy_weapon",
+            "types": [
+              "heavy_weapon"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.06,
+            "apotheotic_additions:heirloom": 0.08,
+            "apotheotic_additions:esoteric": 0.1
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.25,
+            "epic": 0.5,
+            "mythic": 0.75,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1.25,
+            "apotheotic_additions:heirloom": 1.5,
+            "apotheotic_additions:esoteric": 2
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 3.5
+    },
+    "twilight/umbral_matrimony": {
+      "original_id": "apotheotic_additions:twilight/umbral_matrimony",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.5,
+            "epic": 1,
+            "mythic": 1.5,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.5,
+            "epic": 1,
+            "mythic": 1.5,
+            "ancient": 2,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.25,
+            "epic": 0.5,
+            "mythic": 0.75,
+            "ancient": 1,
+            "apotheotic_additions:artifact": 1.25,
+            "apotheotic_additions:heirloom": 1.5,
+            "apotheotic_additions:esoteric": 2
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 6.5
+    },
+    "twilight/wildheart": {
+      "original_id": "apotheotic_additions:twilight/wildheart",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:twilight_treasure_goblin",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "chance": 0.001,
+              "cooldown": 4800
+            },
+            "epic": {
+              "chance": 0.002,
+              "cooldown": 4800
+            },
+            "mythic": {
+              "chance": 0.003,
+              "cooldown": 4800
+            },
+            "ancient": {
+              "chance": 0.004,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:artifact": {
+              "chance": 0.005,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:heirloom": {
+              "chance": 0.006,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:esoteric": {
+              "chance": 0.007,
+              "cooldown": 4800
+            }
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:twilight_fortification",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": {
+              "chance": 0.001,
+              "cooldown": 4800
+            },
+            "epic": {
+              "chance": 0.002,
+              "cooldown": 4800
+            },
+            "mythic": {
+              "chance": 0.003,
+              "cooldown": 4800
+            },
+            "ancient": {
+              "chance": 0.004,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:artifact": {
+              "chance": 0.005,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:heirloom": {
+              "chance": 0.006,
+              "cooldown": 4800
+            },
+            "apotheotic_additions:esoteric": {
+              "chance": 0.007,
+              "cooldown": 4800
+            }
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 5.5
+    },
+    "undergarden/decay": {
+      "original_id": "apotheotic_additions:undergarden/decay",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:drop_transform",
+          "gem_class": {
+            "key": "pickaxe",
+            "types": [
+              "pickaxe"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.15,
+            "epic": 0.3,
+            "mythic": 0.45,
+            "ancient": 0.6,
+            "apotheotic_additions:artifact": 0.75,
+            "apotheotic_additions:heirloom": 0.9,
+            "apotheotic_additions:esoteric": 1
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.015,
+            "epic": 0.03,
+            "mythic": 0.045,
+            "ancient": 0.06,
+            "apotheotic_additions:artifact": 0.075,
+            "apotheotic_additions:heirloom": 0.09,
+            "apotheotic_additions:esoteric": 0.12
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.05,
+            "epic": 0.1,
+            "mythic": 0.15,
+            "ancient": 0.2,
+            "apotheotic_additions:artifact": 0.25,
+            "apotheotic_additions:heirloom": 0.3,
+            "apotheotic_additions:esoteric": 0.35
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 6.5
+    },
+    "undergarden/forlorn": {
+      "original_id": "apotheotic_additions:undergarden/forlorn",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "light_weapon",
+            "types": [
+              "sword",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": {
+              "duration": 100,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "rare": {
+              "duration": 150,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "epic": {
+              "duration": 200,
+              "amplifier": 0,
+              "cooldown": 100
+            },
+            "mythic": {
+              "duration": 250,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "ancient": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 100
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 400,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 500,
+              "amplifier": 2,
+              "cooldown": 100
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 1000,
+              "amplifier": 2,
+              "cooldown": 100
+            }
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "spellbook",
+            "types": [
+              "curios:spellbook"
+            ]
+          },
+          "legacy_values": {
+            "uncommon": 0.25,
+            "rare": 0.5,
+            "epic": 1.0,
+            "mythic": 1.5,
+            "ancient": 2.0,
+            "apotheotic_additions:artifact": 2.5,
+            "apotheotic_additions:heirloom": 3,
+            "apotheotic_additions:esoteric": 3.5
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:multi_attribute",
+          "gem_class": {
+            "key": "lower_armor",
+            "types": [
+              "leggings",
+              "boots"
+            ]
+          },
+          "legacy_values": {}
+        },
+        {
+          "index": 3,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_jewelry",
+            "types": [
+              "curios:ring",
+              "curios:an_focus",
+              "curios:necklace",
+              "curios:charm",
+              "curios:belt"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 4,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_armor",
+            "types": [
+              "curios:body",
+              "curios:head",
+              "curios:back",
+              "curios:feet",
+              "curios:hands"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        },
+        {
+          "index": 5,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "curios_aether",
+            "types": [
+              "curios:aether_gloves",
+              "curios:aether_accessory",
+              "curios:aether_shield",
+              "curios:aether_cape",
+              "curios:aether_pendant",
+              "curios:aether_ring"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.01,
+            "epic": 0.02,
+            "mythic": 0.03,
+            "ancient": 0.04,
+            "apotheotic_additions:artifact": 0.05,
+            "apotheotic_additions:heirloom": 0.06,
+            "apotheotic_additions:esoteric": 0.07
+          }
+        }
+      ],
+      "weight": 7,
+      "quality": 7.5
+    },
+    "undergarden/undergarden": {
+      "original_id": "apotheotic_additions:undergarden/undergarden",
+      "bonuses": [
+        {
+          "index": 0,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "chestplate",
+            "types": [
+              "chestplate"
+            ]
+          },
+          "legacy_values": {
+            "rare": 3.0,
+            "epic": 4.0,
+            "mythic": 5.0,
+            "ancient": 6.0,
+            "apotheotic_additions:artifact": 8,
+            "apotheotic_additions:heirloom": 10,
+            "apotheotic_additions:esoteric": 12
+          }
+        },
+        {
+          "index": 1,
+          "type": "apotheosis:attribute",
+          "gem_class": {
+            "key": "helmet",
+            "types": [
+              "helmet"
+            ]
+          },
+          "legacy_values": {
+            "rare": 0.1,
+            "epic": 0.15,
+            "mythic": 0.2,
+            "ancient": 0.25,
+            "apotheotic_additions:artifact": 0.3,
+            "apotheotic_additions:heirloom": 0.35,
+            "apotheotic_additions:esoteric": 0.4
+          }
+        },
+        {
+          "index": 2,
+          "type": "apotheosis:mob_effect",
+          "gem_class": {
+            "key": "ranged_weapon",
+            "types": [
+              "bow",
+              "crossbow",
+              "trident"
+            ]
+          },
+          "legacy_values": {
+            "mythic": {
+              "duration": 180,
+              "amplifier": 0,
+              "cooldown": 800
+            },
+            "ancient": {
+              "duration": 240,
+              "amplifier": 0,
+              "cooldown": 800
+            },
+            "apotheotic_additions:artifact": {
+              "duration": 300,
+              "amplifier": 1,
+              "cooldown": 800
+            },
+            "apotheotic_additions:heirloom": {
+              "duration": 360,
+              "amplifier": 1,
+              "cooldown": 700
+            },
+            "apotheotic_additions:esoteric": {
+              "duration": 420,
+              "amplifier": 2,
+              "cooldown": 700
+            }
+          }
+        }
+      ],
+      "weight": 5,
+      "quality": 4.5
+    }
+  }
+}

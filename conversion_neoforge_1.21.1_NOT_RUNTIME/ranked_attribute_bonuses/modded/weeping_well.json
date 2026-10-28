@@ -1,0 +1,86 @@
+{
+  "original_gem": "modded/weeping_well",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "malum:soul_ward_capacity",
+      "operation": "add_value",
+      "values": {
+        "epic": 1,
+        "mythic": 2,
+        "ancient": 3,
+        "apotheotic_additions:artifact": 4,
+        "apotheotic_additions:heirloom": 5,
+        "apotheotic_additions:esoteric": 6
+      },
+      "__requires_exact_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      "__origin": "modded/weeping_well.json#bonuses[0]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:experience_gained",
+      "operation": "add_multiplied_total",
+      "values": {
+        "epic": 0.1,
+        "mythic": 0.2,
+        "ancient": 0.35,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 1
+      },
+      "__requires_exact_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      "__origin": "modded/weeping_well.json#bonuses[2]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "malum:soul_ward_recovery_rate",
+      "operation": "add_multiplied_total",
+      "values": {
+        "epic": 0.05,
+        "mythic": 0.1,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.5,
+        "apotheotic_additions:esoteric": 0.75
+      },
+      "__requires_exact_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      "__origin": "modded/weeping_well.json#bonuses[3]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "malum:spirit_spoils",
+      "operation": "add_multiplied_total",
+      "values": {
+        "epic": 0.05,
+        "mythic": 0.1,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.5,
+        "apotheotic_additions:esoteric": 0.75
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/weeping_well.json#bonuses[4]"
+    }
+  ]
+}

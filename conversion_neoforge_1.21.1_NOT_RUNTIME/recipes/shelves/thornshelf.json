@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "RTR",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "alexscaves:thornwood_planks"
+    },
+    "R": {
+      "item": "minecraft:book"
+    },
+    "T": {
+      "item": "alexscaves:dark_tatters"
+    }
+  },
+  "result": {
+    "id": "apotheotic_additions:thornshelf",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    },
+    {
+      "type": "apotheosis:module",
+      "module": "enchantment"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

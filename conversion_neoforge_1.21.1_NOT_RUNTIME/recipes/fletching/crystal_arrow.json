@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:fletching",
+  "ingredients": [
+    {
+      "item": "monsterplus:crystal_shard"
+    },
+    {
+      "tag": "apotheotic_additions:bones"
+    },
+    {
+      "tag": "apotheotic_additions:feathers"
+    }
+  ],
+  "result": {
+    "item": "monsterplus:crystal_arrow",
+    "count": 6
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "village"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "monsterplus"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

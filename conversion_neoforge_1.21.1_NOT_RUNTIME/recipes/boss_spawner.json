@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "ALA",
+    "AWA",
+    "ALA"
+  ],
+  "key": {
+    "W": {
+      "item": "witherstormmod:withered_nether_star"
+    },
+    "L": {
+      "item": "apotheosis:ancient_material"
+    },
+    "A": {
+      "item": "apotheosis:epic_material"
+    }
+  },
+  "result": {
+    "id": "apotheosis:boss_summoner",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "witherstormmod"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

@@ -1,0 +1,27 @@
+{
+  "type": "cataclysm:weapon_fusion",
+  "base": {
+    "item": "cataclysm:coral_bardiche"
+  },
+  "addition": {
+    "item": "aether:candy_cane"
+  },
+  "result": {
+    "item": "aquamirae:sweet_lance"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aquamirae"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

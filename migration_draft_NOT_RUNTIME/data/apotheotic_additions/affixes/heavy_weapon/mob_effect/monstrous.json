@@ -1,0 +1,69 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "cataclysm:monstrous",
+  "target": "attack_self",
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 80,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 160,
+        "steps": 8,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 120,
+        "steps": 5,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "categories": [
+    "apotheosis:melee_weapon"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

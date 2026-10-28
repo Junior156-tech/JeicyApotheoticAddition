@@ -1,0 +1,156 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:cooldown_reduction",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.03,
+        "apotheosis:rare": 0.05,
+        "apotheosis:epic": 0.1,
+        "apotheosis:mythic": 0.15,
+        "apotheotic_additions:ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      },
+      "__unported_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.03,
+        "apotheosis:rare": 0.06,
+        "apotheosis:epic": 0.09,
+        "apotheosis:mythic": 0.12,
+        "apotheotic_additions:ancient": 0.15,
+        "apotheotic_additions:artifact": 0.18,
+        "apotheotic_additions:heirloom": 0.21,
+        "apotheotic_additions:esoteric": 0.24
+      },
+      "__unported_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheosis:uncommon": 0.01,
+        "apotheosis:rare": 0.02,
+        "apotheosis:epic": 0.03,
+        "apotheosis:mythic": 0.04,
+        "apotheotic_additions:ancient": 0.05,
+        "apotheotic_additions:artifact": 0.06,
+        "apotheotic_additions:heirloom": 0.07,
+        "apotheotic_additions:esoteric": 0.08
+      },
+      "__unported_gem_class": {
+        "key": "curios",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands",
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "biomancy:despoil",
+      "target": "attack_self",
+      "values": {
+        "apotheosis:rare": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:epic": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:mythic": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 320,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 360,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 440,
+          "amplifier": 2,
+          "cooldown": 900
+        }
+      },
+      "__unported_gem_class": {
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "biomancy"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "minecraft:overworld",
+      "minecraft:the_nether"
+    ]
+  },
+  "__unported_min_rarity": "uncommon",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

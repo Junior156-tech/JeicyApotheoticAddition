@@ -1,0 +1,26 @@
+{
+  "original_gem": "modded/mystic",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "add_value",
+      "values": {
+        "rare": 50,
+        "epic": 75,
+        "mythic": 100,
+        "ancient": 125,
+        "apotheotic_additions:artifact": 150,
+        "apotheotic_additions:heirloom": 200,
+        "apotheotic_additions:esoteric": 250
+      },
+      "__requires_exact_gem_class": {
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      "__origin": "modded/mystic.json#bonuses[1]"
+    }
+  ]
+}

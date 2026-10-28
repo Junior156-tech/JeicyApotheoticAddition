@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EPE",
+    "ARA",
+    "EPE"
+  ],
+  "key": {
+    "A": {
+      "item": "apotheosis:ancient_material"
+    },
+    "R": {
+      "item": "apotheosis:echoing_sculkshelf"
+    },
+    "P": {
+      "item": "apotheosis:mythic_material"
+    },
+    "E": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "id": "apotheotic_additions:void_shelf",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "enchantment"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

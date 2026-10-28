@@ -1,0 +1,63 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#bd2323",
+  "material": "apotheotic_additions:heirloom_material",
+  "sort_index": 800,
+  "weights": {
+    "haven": {
+      "weight": 0,
+      "quality": 5
+    },
+    "frontier": {
+      "weight": 0,
+      "quality": 5
+    },
+    "ascent": {
+      "weight": 0,
+      "quality": 5
+    },
+    "summit": {
+      "weight": 0,
+      "quality": 5
+    },
+    "pinnacle": {
+      "weight": 25,
+      "quality": 5
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:durability",
+      "original_chance_unported": 0.7
+    }
+  ],
+  "render_data": {
+    "beam_height": 4.0,
+    "beam_radius": 0.04,
+    "beam_texture": "ao_apotheotic_port:textures/rarity/heirloom_beam.png",
+    "glow_radius": 0.075,
+    "glow_texture": "ao_apotheotic_port:textures/rarity/heirloom_glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.25,
+      "frames": 16,
+      "size": 0.45,
+      "texture": "ao_apotheotic_port:textures/rarity/heirloom_shadow.png"
+    }
+  },
+  "_migration_notes": "NO RUNTIME: original chance/backup and rule types require port verification. No gameplay balancing introduced."
+}

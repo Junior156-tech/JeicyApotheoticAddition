@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "EME",
+    "BCB",
+    "EBE"
+  ],
+  "key": {
+    "C": {
+      "tag": "aether:aerclouds"
+    },
+    "B": {
+      "item": "apotheotic_additions:luminous_glass"
+    },
+    "M": {
+      "tag": "minecraft:planks"
+    },
+    "E": {
+      "item": "apotheosis:epic_material"
+    }
+  },
+  "result": {
+    "id": "artifacts:cloud_in_a_bottle",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "artifacts"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

@@ -1,0 +1,80 @@
+{
+  "unique": false,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_armor",
+        "types": []
+      },
+      "attribute": "minecraft:armor_toughness",
+      "operation": "add_value",
+      "values": {
+        "cracked": 0.5,
+        "chipped": 1,
+        "flawed": 1.5,
+        "normal": 2,
+        "flawless": 2.5,
+        "perfect": 3
+      },
+      "original_tier_values": {
+        "common": 0.5,
+        "uncommon": 1,
+        "rare": 1.5,
+        "epic": 2,
+        "mythic": 2.5,
+        "ancient": 3,
+        "apotheotic_additions:artifact": 3.5,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_jewelry",
+        "types": []
+      },
+      "attribute": "minecraft:armor",
+      "operation": "add_value",
+      "values": {
+        "cracked": 0.5,
+        "chipped": 1,
+        "flawed": 1.5,
+        "normal": 2,
+        "flawless": 2.5,
+        "perfect": 3
+      },
+      "original_tier_values": {
+        "common": 0.5,
+        "uncommon": 1,
+        "rare": 1.5,
+        "epic": 2,
+        "mythic": 2.5,
+        "ancient": 3,
+        "apotheotic_additions:artifact": 3.5,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "enchantment"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 3,
+    "quality": 4.0
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "chipped"
+}

@@ -1,0 +1,52 @@
+{
+  "count": 21,
+  "names": [
+    "sacrificial_shelf",
+    "wavebinders_shelf",
+    "void_shelf",
+    "terra_shelf",
+    "scrap_brick",
+    "scrap_pillar",
+    "scrap_rough",
+    "scrap_carved",
+    "scrap_brick_slab",
+    "scrap_brick_stairs",
+    "luminous_glass",
+    "luminous_glass_pane",
+    "timeworn_fabric",
+    "timeworn_fancy",
+    "infused_skyshelf",
+    "gilded_aerogel_skyshelf",
+    "hollowed_barrel_shelf",
+    "nuclear_barrel_shelf",
+    "thornshelf",
+    "infused_thornshelf",
+    "occult_thornshelf"
+  ],
+  "missing_asset_kinds": {
+    "sacrificial_shelf": [],
+    "wavebinders_shelf": [],
+    "void_shelf": [],
+    "terra_shelf": [],
+    "scrap_brick": [],
+    "scrap_pillar": [],
+    "scrap_rough": [],
+    "scrap_carved": [],
+    "scrap_brick_slab": [],
+    "scrap_brick_stairs": [],
+    "luminous_glass": [],
+    "luminous_glass_pane": [
+      "model"
+    ],
+    "timeworn_fabric": [],
+    "timeworn_fancy": [],
+    "infused_skyshelf": [],
+    "gilded_aerogel_skyshelf": [],
+    "hollowed_barrel_shelf": [],
+    "nuclear_barrel_shelf": [],
+    "thornshelf": [],
+    "infused_thornshelf": [],
+    "occult_thornshelf": []
+  },
+  "status": "source registration only; shelf enchanting stats and exact block behavior remain unimplemented"
+}

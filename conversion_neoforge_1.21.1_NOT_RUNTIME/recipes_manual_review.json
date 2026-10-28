@@ -1,0 +1,1147 @@
+[
+  {
+    "path": "alexs_mods/bioluminescent_torch.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/biome_treat.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/candy_cane_pole.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/candy_cane_sword.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/confection_oven.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/frostmint_spear.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/rocky_shell_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/candy_cane_block.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/chocolate_ice_cream.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/gingerbread_crumbs.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/gingerbread_crumbs_aether.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/gingerbread_crumbs_spiritual.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/neapolitan_ice_cream.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/peppermint_powder.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/rainbow_oak.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/shapeless/vanilla_ice_cream.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/sundae.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/void_crystal.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/void_infused_endstone.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/void_lantern.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "alexs_mods/void_stone.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/antidote_vessel.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/cloud_in_a_bottle.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/cowboy_hat.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/everlasting_beef.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/novelty_hat.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/novelty_hat_reversal.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/pickaxe_heater.json",
+    "type": "minecraft:smithing_transform",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "artifacts/snowshoes.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "blasted_iron_ingot.json",
+    "type": "minecraft:blasting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "bone_meal_from_naga_fang.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "boss_spawner.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "common_apple.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "crafted_gems/eye_cornelia.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_ender_dragon.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "crafted_gems/eye_frostmaw.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_harbringer.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_hydra.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_ignis.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_leviathan.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_lich.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_maledictus.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_monstrosity.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_naga.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_remnant.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_slider.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_snow_queen.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_sunbird.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_ur-ghast.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/eye_warden.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "crafted_gems/eye_wither.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "crafted_gems/eye_wroughtnaut.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "crafted_gems/gemboundsigil.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "dragonforge/scrap_metal.json",
+    "type": "iceandfire:dragonforge",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "enchanting/ascended_coin.json",
+    "type": "apotheosis:enchanting",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "enchanting/infused_coin.json",
+    "type": "apotheosis:enchanting",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "epic_apple.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "fertile_essence.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "fletching/amphithere_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/blaze_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/challenge_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/diamond_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/ender_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/explosive_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/frost_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/lightning_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/phantasmal_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/prismarine_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/quartz_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/shulker_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/slime_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/spore_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/training_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/archers_paradox/verdant_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/blunt_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/boom_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/burrowing_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/crystal_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/dart.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/draco_arcanus_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/dragonbone_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/ebonite_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/golden_dart.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/hydra_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/large_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/mischief_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/rat_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/seeking_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/shark_tooth_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/stymphalian_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/tide_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/torch_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "fletching/void_scatter_arrow.json",
+    "type": "apotheosis:fletching",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gateways/aether_gate.json",
+    "type": "gateways:gate_recipe",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gateways/caves_gate.json",
+    "type": "gateways:gate_recipe",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gateways/dark_garden.json",
+    "type": "gateways:gate_recipe",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gateways/endless_boss.json",
+    "type": "gateways:gate_recipe",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gateways/time_lost_gate.json",
+    "type": "gateways:gate_recipe",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/ancient_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/ancient_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/artifact_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/artifact_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/common_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/common_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/epic_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/epic_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/esoteric_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/esoteric_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/heirloom_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/heirloom_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/mythic_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/mythic_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/rare_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/rare_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/uncommon_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "gem_dust/uncommon_sag_mill.json",
+    "type": "enderio:sag_milling",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "irons_compat/blaze_spell_book.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/blood_rune.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/concentration_amulet.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/evoker_spell_book.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/fire_rune.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/ice_rune.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/lightning_rune.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/nature_rune.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/necronomicon_spell_book.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/silver_ring.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "irons_compat/villager_spell_book.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/ancient_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/artifact_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/common_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/epic_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/esoteric_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/heirloom_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/mythic_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/rare_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/sculk.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/sculk_bone.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/soul_dust.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "material/uncommon_crushing.json",
+    "type": "create:crushing",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "mythicalband.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "mythic_apple.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "rare_apple.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "reforging/ancient.json",
+    "type": "apotheosis:reforging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "reforging/artifact.json",
+    "type": "apotheosis:reforging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/ancient_material.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/ancient_to_mythic.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/artifact_gem.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/artifact_material.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/artifact_to_mythic.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/aureal_bottle.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/brush.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/bundle.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/camel_saddle.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/clock.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/compass.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/copper_horse_armor.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/epic_to_rare.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/esoteric_gem.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/esoteric_material.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/esoteric_to_artifact.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/heirloom_gem.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/heirloom_material.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/heirloom_to_rare.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/loot_capacitor.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/music_disc_5.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/mythic_to_epic.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/netherite_ingot.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/rare_to_uncommon.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/saddle.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/salvaging_table.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/scroll.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/simple_reforging_table.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/smithing_template_rune.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/splash_aureal_bottle.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/totem_of_undying.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/uncommon_to_common.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "salvaging/wooden_gear.json",
+    "type": "apotheosis:salvaging",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/gilded_aerogel_skyshelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/hollowed_barrel_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/hollowed_barrel_shelf2.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/infused_skyshelf.json",
+    "type": "apotheosis:enchanting",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/infused_thornshelf.json",
+    "type": "apotheosis:enchanting",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/nuclear_barrel_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/occult_thornshelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/sacrificial_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/terra_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/thornshelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/void_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "shelves/wavebinders_shelf.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_apotheosis_condition_migration"
+  },
+  {
+    "path": "sigil_compat/gem_fused_slate_aether.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "sigil_compat/gem_fused_slate_blue_skies.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "sigil_compat/gem_fused_slate_undergarden.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "sigil_compat/sigil_of_socketing.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "smelted_iron_ingot.json",
+    "type": "minecraft:smelting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stink_bottle.json",
+    "type": "minecraft:crafting_shapeless",
+    "readiness": "requires_tag_migration"
+  },
+  {
+    "path": "stonecutting/luminous_glass.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/luminous_glass_pane.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_bricks.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_carved.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_pillar.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_rough.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_slab1.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_slab2.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_stairs1.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/scrap_stairs2.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/timeworn_fabric.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "stonecutting/timeworn_fancy.json",
+    "type": "minecraft:stonecutting",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "uncommon_apple.json",
+    "type": "minecraft:crafting_shaped",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/apotheotic_coin.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/arcane_essence.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/corrupted_arcane_crystal.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/corrupted_pixie.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/corrupted_soul.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/cosmic_cod.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/dark_tatters.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/dark_tatters_reversal.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/earth_heart.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/ender_calx.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/ichor_bottle.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/licoroot.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/licoroot_vine.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/mimicream.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/rainbow_jelly.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/sculk_sensor.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/skreecher_soul.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "void_favor/soul_shard.json",
+    "type": "malum:favor_of_the_void",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "weapon_infusion/magehunter.json",
+    "type": "cataclysm:weapon_fusion",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "weapon_infusion/runic_arc.json",
+    "type": "cataclysm:weapon_fusion",
+    "readiness": "vanilla_shape_converted"
+  },
+  {
+    "path": "weapon_infusion/sweet_lance.json",
+    "type": "cataclysm:weapon_fusion",
+    "readiness": "vanilla_shape_converted"
+  }
+]

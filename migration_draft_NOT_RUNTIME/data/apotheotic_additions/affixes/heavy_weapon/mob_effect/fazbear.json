@@ -1,0 +1,33 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "alexsmobs:power_down",
+  "target": "attack_target",
+  "values": {
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 20,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 6000
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ],
+  "categories": [
+    "apotheosis:melee_weapon"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

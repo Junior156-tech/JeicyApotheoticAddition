@@ -1,0 +1,87 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "potionsmaster:goldpotioneffect",
+  "target": "break_self",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 20,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 60,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 100,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 140,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 500
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 200,
+        "steps": 8,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 500
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 300
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 1000,
+        "steps": 20,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 750
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "potionsmaster"
+    }
+  ],
+  "categories": [
+    "apotheosis:breaker"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

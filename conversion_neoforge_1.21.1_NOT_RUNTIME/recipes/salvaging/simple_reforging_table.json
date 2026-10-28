@@ -1,0 +1,36 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "apotheosis:simple_reforging_table"
+  },
+  "outputs": [
+    {
+      "min_count": 1,
+      "max_count": 1,
+      "stack": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    {
+      "min_count": 0,
+      "max_count": 2,
+      "stack": {
+        "item": "apotheosis:gem_dust"
+      }
+    },
+    {
+      "min_count": 1,
+      "max_count": 3,
+      "stack": {
+        "item": "minecraft:smooth_stone"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

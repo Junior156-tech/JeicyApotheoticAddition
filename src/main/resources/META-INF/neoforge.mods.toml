@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="Academic Free License v3.0"
+[[mods]]
+modId="apotheotic_additions"
+version="0.3.0-1.21.1-dev"
+displayName="JeicyApotheoticAddition"
+authors="Original Apotheotic Additions by Bryce792; 1.21.1 port by JEICY"
+description='''Source-only development snapshot for NeoForge 1.21.1. Core gem/affix/shelf mechanics are not playable yet; do not install on worlds.'''
+[[dependencies.apotheotic_additions]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.apotheotic_additions]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.251,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.apotheotic_additions]]
+modId="apotheosis"
+type="required"
+versionRange="[8.8.0,9.0.0)"
+ordering="AFTER"
+side="BOTH"

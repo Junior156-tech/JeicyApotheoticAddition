@@ -1,0 +1,49 @@
+{
+  "original_gem": "aether/purity",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:current_hp_damage",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.015,
+        "epic": 0.03,
+        "mythic": 0.045,
+        "ancient": 0.06,
+        "apotheotic_additions:artifact": 0.075,
+        "apotheotic_additions:heirloom": 0.09,
+        "apotheotic_additions:esoteric": 0.11
+      },
+      "__requires_exact_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      "__origin": "aether/purity.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:healing_received",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.15,
+        "ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      },
+      "__requires_exact_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      "__origin": "aether/purity.json#bonuses[2]"
+    }
+  ]
+}

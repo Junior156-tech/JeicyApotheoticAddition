@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "apotheosis:common_material"
+  },
+  "result": {
+    "id": "apotheotic_additions:scrap_rough",
+    "count": 1
+  },
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "minecraft:totem_of_undying"
+  },
+  "outputs": [
+    {
+      "min_count": 2,
+      "max_count": 4,
+      "stack": {
+        "item": "minecraft:emerald"
+      }
+    },
+    {
+      "min_count": 1,
+      "max_count": 3,
+      "stack": {
+        "item": "minecraft:oak_log"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

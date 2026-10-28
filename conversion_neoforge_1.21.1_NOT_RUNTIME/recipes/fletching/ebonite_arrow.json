@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:fletching",
+  "ingredients": [
+    {
+      "item": "midnight:ebonite"
+    },
+    {
+      "item": "midnight:dark_stick"
+    },
+    {
+      "tag": "apotheotic_additions:feathers"
+    }
+  ],
+  "result": {
+    "item": "midnight:ebonite_arrow",
+    "count": 6
+  },
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "village"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "midnight"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

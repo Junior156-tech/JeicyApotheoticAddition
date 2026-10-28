@@ -1,0 +1,2068 @@
+{
+  "aether/aether.json": {
+    "name": "data/apotheotic_additions/gems/aether/aether.json",
+    "min_rarity": "mythic",
+    "bonuses": 2,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    ]
+  },
+  "aether/candied.json": {
+    "name": "data/apotheotic_additions/gems/aether/candied.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "aether/purity.json": {
+    "name": "data/apotheotic_additions/gems/aether/purity.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "aether/zanite_alchemist.json": {
+    "name": "data/apotheotic_additions/gems/aether/zanite_alchemist.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "blue_skies/arachnarch.json": {
+    "name": "data/apotheotic_additions/gems/blue_skies/arachnarch.json",
+    "min_rarity": "rare",
+    "bonuses": 6,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    ]
+  },
+  "blue_skies/blue_skies.json": {
+    "name": "data/apotheotic_additions/gems/blue_skies/blue_skies.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "blue_skies/horizonite_alchemist.json": {
+    "name": "data/apotheotic_additions/gems/blue_skies/horizonite_alchemist.json",
+    "min_rarity": "rare",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "blue_skies/twin_magi.json": {
+    "name": "data/apotheotic_additions/gems/blue_skies/twin_magi.json",
+    "min_rarity": "rare",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    ]
+  },
+  "blue_skies/ventium_alchemist.json": {
+    "name": "data/apotheotic_additions/gems/blue_skies/ventium_alchemist.json",
+    "min_rarity": "rare",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "bumblezone/bee_queen.json": {
+    "name": "data/apotheotic_additions/gems/bumblezone/bee_queen.json",
+    "min_rarity": "uncommon",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "bumblezone/hive.json": {
+    "name": "data/apotheotic_additions/gems/bumblezone/hive.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    ]
+  },
+  "crafted/cornelia.json": {
+    "name": "data/apotheotic_additions/gems/crafted/cornelia.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "crafted/ender_dragon.json": {
+    "name": "data/apotheotic_additions/gems/crafted/ender_dragon.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "crafted/frostmaw.json": {
+    "name": "data/apotheotic_additions/gems/crafted/frostmaw.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "crafted/harbringer.json": {
+    "name": "data/apotheotic_additions/gems/crafted/harbringer.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    ]
+  },
+  "crafted/hydra.json": {
+    "name": "data/apotheotic_additions/gems/crafted/hydra.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "crafted/ignis.json": {
+    "name": "data/apotheotic_additions/gems/crafted/ignis.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "crafted/leviathan.json": {
+    "name": "data/apotheotic_additions/gems/crafted/leviathan.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "crafted/lich.json": {
+    "name": "data/apotheotic_additions/gems/crafted/lich.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      }
+    ]
+  },
+  "crafted/maledictus.json": {
+    "name": "data/apotheotic_additions/gems/crafted/maledictus.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "crafted/monstrosity.json": {
+    "name": "data/apotheotic_additions/gems/crafted/monstrosity.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "crafted/naga.json": {
+    "name": "data/apotheotic_additions/gems/crafted/naga.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "crafted/remnant.json": {
+    "name": "data/apotheotic_additions/gems/crafted/remnant.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "crafted/slider.json": {
+    "name": "data/apotheotic_additions/gems/crafted/slider.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "crafted/snow_queen.json": {
+    "name": "data/apotheotic_additions/gems/crafted/snow_queen.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "crafted/sunbird.json": {
+    "name": "data/apotheotic_additions/gems/crafted/sunbird.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    ]
+  },
+  "crafted/ur-ghast.json": {
+    "name": "data/apotheotic_additions/gems/crafted/ur-ghast.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:all_stats",
+        "key": "boots",
+        "types": [
+          "boots"
+        ]
+      }
+    ]
+  },
+  "crafted/warden.json": {
+    "name": "data/apotheotic_additions/gems/crafted/warden.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "crafted/wither.json": {
+    "name": "data/apotheotic_additions/gems/crafted/wither.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 2,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "crafted/wroughtnaut.json": {
+    "name": "data/apotheotic_additions/gems/crafted/wroughtnaut.json",
+    "min_rarity": "apotheotic_additions:artifact",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "curios/reinforced.json": {
+    "name": "data/apotheotic_additions/gems/curios/reinforced.json",
+    "min_rarity": "uncommon",
+    "bonuses": 2,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    ]
+  },
+  "curios/twisted.json": {
+    "name": "data/apotheotic_additions/gems/curios/twisted.json",
+    "min_rarity": "uncommon",
+    "bonuses": 2,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    ]
+  },
+  "curios/vitalic.json": {
+    "name": "data/apotheotic_additions/gems/curios/vitalic.json",
+    "min_rarity": "uncommon",
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands",
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      }
+    ]
+  },
+  "midnight/darkheart.json": {
+    "name": "data/apotheotic_additions/gems/midnight/darkheart.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    ]
+  },
+  "midnight/midnight.json": {
+    "name": "data/apotheotic_additions/gems/midnight/midnight.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "modded/amber.json": {
+    "name": "data/apotheotic_additions/gems/modded/amber.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "resistor_shield",
+        "types": [
+          "shield"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "prim_club",
+        "types": [
+          "sword"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      }
+    ]
+  },
+  "modded/archmage.json": {
+    "name": "data/apotheotic_additions/gems/modded/archmage.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "modded/armor.json": {
+    "name": "data/apotheotic_additions/gems/modded/armor.json",
+    "min_rarity": null,
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "modded/ars_mana.json": {
+    "name": "data/apotheotic_additions/gems/modded/ars_mana.json",
+    "min_rarity": null,
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "shield",
+        "types": [
+          "shield"
+        ]
+      }
+    ]
+  },
+  "modded/bloodcaster.json": {
+    "name": "data/apotheotic_additions/gems/modded/bloodcaster.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "modded/cataclysm.json": {
+    "name": "data/apotheotic_additions/gems/modded/cataclysm.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "modded/depths.json": {
+    "name": "data/apotheotic_additions/gems/modded/depths.json",
+    "min_rarity": "epic",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:all_stats",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "ortholance",
+        "types": [
+          "sword"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "breaker",
+        "types": [
+          "shovel",
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "modded/draconic_legacy.json": {
+    "name": "data/apotheotic_additions/gems/modded/draconic_legacy.json",
+    "min_rarity": "uncommon",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "shovel",
+        "types": [
+          "shovel"
+        ]
+      }
+    ]
+  },
+  "modded/dracula.json": {
+    "name": "data/apotheotic_additions/gems/modded/dracula.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "modded/engineer.json": {
+    "name": "data/apotheotic_additions/gems/modded/engineer.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "weapon",
+        "types": [
+          "heavy_weapon",
+          "sword",
+          "trident",
+          "bow",
+          "crossbow"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      }
+    ]
+  },
+  "modded/felfire.json": {
+    "name": "data/apotheotic_additions/gems/modded/felfire.json",
+    "min_rarity": "uncommon",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "modded/flesh.json": {
+    "name": "data/apotheotic_additions/gems/modded/flesh.json",
+    "min_rarity": "uncommon",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "modded/flux.json": {
+    "name": "data/apotheotic_additions/gems/modded/flux.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "flux",
+        "types": [
+          "pickaxe",
+          "shovel",
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "modded/heartland.json": {
+    "name": "data/apotheotic_additions/gems/modded/heartland.json",
+    "min_rarity": "epic",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "knife",
+        "types": [
+          "sword"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "shovel",
+        "types": [
+          "shovel"
+        ]
+      }
+    ]
+  },
+  "modded/hearty.json": {
+    "name": "data/apotheotic_additions/gems/modded/hearty.json",
+    "min_rarity": null,
+    "bonuses": 1,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    ]
+  },
+  "modded/marrow.json": {
+    "name": "data/apotheotic_additions/gems/modded/marrow.json",
+    "min_rarity": "uncommon",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands",
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      }
+    ]
+  },
+  "modded/midas.json": {
+    "name": "data/apotheotic_additions/gems/modded/midas.json",
+    "min_rarity": "epic",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    ]
+  },
+  "modded/mystic.json": {
+    "name": "data/apotheotic_additions/gems/modded/mystic.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "modded/rat_chef.json": {
+    "name": "data/apotheotic_additions/gems/modded/rat_chef.json",
+    "min_rarity": "uncommon",
+    "bonuses": 7,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "boots",
+        "types": [
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:all_stats",
+        "key": "shield",
+        "types": [
+          "shield"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "leggings",
+        "types": [
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "modded/safari.json": {
+    "name": "data/apotheotic_additions/gems/modded/safari.json",
+    "min_rarity": "rare",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "boots",
+        "types": [
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "trident",
+          "sword"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "modded/soultwisted.json": {
+    "name": "data/apotheotic_additions/gems/modded/soultwisted.json",
+    "min_rarity": "rare",
+    "bonuses": 7,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "boots",
+        "types": [
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "leggings",
+        "types": [
+          "leggings"
+        ]
+      }
+    ]
+  },
+  "modded/thermal.json": {
+    "name": "data/apotheotic_additions/gems/modded/thermal.json",
+    "min_rarity": "uncommon",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "modded/uranium.json": {
+    "name": "data/apotheotic_additions/gems/modded/uranium.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "modded/weeping_well.json": {
+    "name": "data/apotheotic_additions/gems/modded/weeping_well.json",
+    "min_rarity": "epic",
+    "bonuses": 5,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "scythe",
+        "types": [
+          "sword"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      }
+    ]
+  },
+  "modded/witch_queen.json": {
+    "name": "data/apotheotic_additions/gems/modded/witch_queen.json",
+    "min_rarity": "uncommon",
+    "bonuses": 6,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "leggings",
+        "types": [
+          "leggings"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    ]
+  },
+  "modded/witherstorm.json": {
+    "name": "data/apotheotic_additions/gems/modded/witherstorm.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:enchantment",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    ]
+  },
+  "otherside/sculk.json": {
+    "name": "data/apotheotic_additions/gems/otherside/sculk.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    ]
+  },
+  "twilight/umbral_matrimony.json": {
+    "name": "data/apotheotic_additions/gems/twilight/umbral_matrimony.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    ]
+  },
+  "twilight/wildheart.json": {
+    "name": "data/apotheotic_additions/gems/twilight/wildheart.json",
+    "min_rarity": "rare",
+    "bonuses": 4,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:twilight_treasure_goblin",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:twilight_fortification",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    ]
+  },
+  "undergarden/decay.json": {
+    "name": "data/apotheotic_additions/gems/undergarden/decay.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:drop_transform",
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    ]
+  },
+  "undergarden/forlorn.json": {
+    "name": "data/apotheotic_additions/gems/undergarden/forlorn.json",
+    "min_rarity": "rare",
+    "bonuses": 6,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "spellbook",
+        "types": [
+          "curios:spellbook"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:multi_attribute",
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_jewelry",
+        "types": [
+          "curios:ring",
+          "curios:an_focus",
+          "curios:necklace",
+          "curios:charm",
+          "curios:belt"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    ]
+  },
+  "undergarden/undergarden.json": {
+    "name": "data/apotheotic_additions/gems/undergarden/undergarden.json",
+    "min_rarity": "rare",
+    "bonuses": 3,
+    "gem_classes": [
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:attribute",
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      {
+        "bonus_type": "apotheosis:mob_effect",
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow",
+          "trident"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "original_gem": "modded/amber",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:mining_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.2,
+        "ancient": 0.3,
+        "apotheotic_additions:artifact": 0.35,
+        "apotheotic_additions:heirloom": 0.45,
+        "apotheotic_additions:esoteric": 0.5
+      },
+      "__requires_exact_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      },
+      "__origin": "modded/amber.json#bonuses[2]"
+    }
+  ]
+}

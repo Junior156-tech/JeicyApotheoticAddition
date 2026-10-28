@@ -1,0 +1,89 @@
+{
+  "categories": [
+    "apotheosis:bow",
+    "apotheosis:crossbow"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "aether:inebriation",
+  "target": "arrow_target",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 20,
+        "steps": 2,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 100
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 40,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 160
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 40,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 160
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 120,
+        "steps": 6,
+        "step": 40
+      },
+      "amplifier": 0,
+      "cooldown": 400
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 200,
+        "steps": 8,
+        "step": 50
+      },
+      "amplifier": 1,
+      "cooldown": 400
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 400,
+        "steps": 8,
+        "step": 75
+      },
+      "amplifier": 1,
+      "cooldown": 400
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 500,
+        "steps": 8,
+        "step": 100
+      },
+      "amplifier": 2,
+      "cooldown": 400
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

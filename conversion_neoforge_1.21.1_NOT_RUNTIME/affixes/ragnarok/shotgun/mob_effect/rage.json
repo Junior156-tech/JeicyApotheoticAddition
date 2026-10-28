@@ -1,0 +1,70 @@
+{
+  "type": "apotheosis_modern_ragnarok:mob_effect_ads",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apotheosis_modern_ragnarok"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "attributeslib:knowledge",
+  "target": "ads_self",
+  "values": {
+    "apotheosis:epic": {
+      "duration": {
+        "min": 20,
+        "steps": 4,
+        "step": 20
+      },
+      "amplifier": 0
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 30,
+        "steps": 4,
+        "step": 20
+      },
+      "amplifier": 0
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 40,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 20,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 100,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 1
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 100,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 1
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

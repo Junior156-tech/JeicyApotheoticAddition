@@ -1,0 +1,23 @@
+{
+  "source_sha256": "1d210294ee16e1a53b05b582ef7c61b6e5a6ff78dedad19d039b8fbb4b7c764a",
+  "runtime_recipe_files": [
+    {
+      "path": "src/main/resources/data/apotheotic_additions/recipe/stonecutting/scrap_slab2.json",
+      "source": "data/apotheotic_additions/recipes/stonecutting/scrap_slab2.json",
+      "ingredients_unmodified": true,
+      "result_unmodified": true
+    },
+    {
+      "path": "src/main/resources/data/apotheotic_additions/recipe/stonecutting/scrap_stairs2.json",
+      "source": "data/apotheotic_additions/recipes/stonecutting/scrap_stairs2.json",
+      "ingredients_unmodified": true,
+      "result_unmodified": true
+    }
+  ],
+  "original_gem_class_manifest": 67,
+  "affixes_staged": 263,
+  "gems_staged": 67,
+  "recipes_staged": 229,
+  "can_compile_here": false,
+  "gameplay_tested": false
+}

@@ -1,0 +1,43 @@
+{
+  "original_gem": "aether/aether",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:elytra_flight",
+      "operation": "add_value",
+      "values": {
+        "mythic": 1,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1,
+        "apotheotic_additions:heirloom": 1,
+        "apotheotic_additions:esoteric": 1
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "aether/aether.json#bonuses[0]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:creative_flight",
+      "operation": "add_value",
+      "values": {
+        "mythic": 0,
+        "ancient": 0,
+        "apotheotic_additions:artifact": 0,
+        "apotheotic_additions:heirloom": 0,
+        "apotheotic_additions:esoteric": 1
+      },
+      "__requires_exact_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      "__origin": "aether/aether.json#bonuses[1]"
+    }
+  ]
+}

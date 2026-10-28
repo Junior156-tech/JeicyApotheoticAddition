@@ -1,0 +1,39 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "attribute": "apothic_attributes:mining_speed",
+      "operation": "multiply_total",
+      "values": {},
+      "original_tier_values": {
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 1,
+        "apotheotic_additions:esoteric": 1.25
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "min_purity": "apotheotic_additions:artifact"
+}

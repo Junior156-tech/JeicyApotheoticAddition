@@ -1,0 +1,69 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "the_bumblezone:beenergized",
+  "target": "hurt_self",
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 300,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 400,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 500,
+        "steps": 20,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 900,
+        "steps": 20,
+        "step": 25
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 1200,
+        "steps": 40,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 900
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ],
+  "categories": [
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

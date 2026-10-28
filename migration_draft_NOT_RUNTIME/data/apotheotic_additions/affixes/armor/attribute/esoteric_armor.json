@@ -1,0 +1,27 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:armor",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:esoteric": {
+      "min": 20,
+      "steps": 20,
+      "step": 2
+    }
+  },
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings",
+    "apotheosis:shield"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EPE",
+    "ARA",
+    "EPE"
+  ],
+  "key": {
+    "A": "apotheosis:ancient_material",
+    "R": "apotheosis:heart_seashelf",
+    "P": "apotheosis:mythic_material",
+    "E": "minecraft:gold_block"
+  },
+  "result": {
+    "id": "apotheotic_additions:wavebinders_shelf",
+    "count": 1
+  }
+}

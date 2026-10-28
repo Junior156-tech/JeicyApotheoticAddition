@@ -1,0 +1,76 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#ec996b",
+  "material": "apotheotic_additions:artifact_material",
+  "sort_index": 750,
+  "weights": {
+    "haven": {
+      "weight": 0,
+      "quality": 8
+    },
+    "frontier": {
+      "weight": 0,
+      "quality": 8
+    },
+    "ascent": {
+      "weight": 0,
+      "quality": 8
+    },
+    "summit": {
+      "weight": 0,
+      "quality": 8
+    },
+    "pinnacle": {
+      "weight": 5,
+      "quality": 8
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:durability",
+      "original_chance_unported": 0.5
+    }
+  ],
+  "render_data": {
+    "beam_height": 3.75,
+    "beam_radius": 0.035,
+    "beam_texture": "ao_apotheotic_port:textures/rarity/artifact_beam.png",
+    "glow_radius": 0.07,
+    "glow_texture": "ao_apotheotic_port:textures/rarity/artifact_glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 16,
+      "size": 0.42,
+      "texture": "ao_apotheotic_port:textures/rarity/artifact_shadow.png"
+    }
+  },
+  "_migration_notes": "NO RUNTIME: original chance/backup and rule types require port verification. No gameplay balancing introduced."
+}

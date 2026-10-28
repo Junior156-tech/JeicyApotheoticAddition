@@ -1,0 +1,244 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "mob_effect": "alexsmobs:poison_resistance",
+      "target": "attack_self",
+      "values": {
+        "flawless": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "perfect": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      },
+      "original_tier_values": {
+        "mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "ancient": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 0,
+          "cooldown": 40
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 40
+        }
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "boots",
+        "types": [
+          "apotheosis:boots"
+        ]
+      },
+      "mob_effect": "alexsmobs:knockback_resistance",
+      "target": "attack_self",
+      "values": {
+        "flawless": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "perfect": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      },
+      "original_tier_values": {
+        "mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "ancient": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 0,
+          "cooldown": 40
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 40
+        }
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "mob_effect": "alexsmobs:exsanguination",
+      "target": "attack_target",
+      "stack_on_reapply": true,
+      "values": {
+        "flawed": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "normal": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "flawless": {
+          "duration": 220,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "perfect": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 200
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "epic": {
+          "duration": 180,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "mythic": {
+          "duration": 220,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "ancient": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 750,
+          "amplifier": 0,
+          "cooldown": 200
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 900,
+          "amplifier": 1,
+          "cooldown": 200
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1100,
+          "amplifier": 1,
+          "cooldown": 200
+        }
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "attribute": "apothic_attributes:crit_chance",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.02,
+        "normal": 0.04,
+        "flawless": 0.06,
+        "perfect": 0.08
+      },
+      "original_tier_values": {
+        "rare": 0.02,
+        "epic": 0.04,
+        "mythic": 0.06,
+        "ancient": 0.08,
+        "apotheotic_additions:artifact": 0.1,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "apothic_attributes:experience_gained",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.03,
+        "normal": 0.06,
+        "flawless": 0.09,
+        "perfect": 0.12
+      },
+      "original_tier_values": {
+        "rare": 0.03,
+        "epic": 0.06,
+        "mythic": 0.09,
+        "ancient": 0.12,
+        "apotheotic_additions:artifact": 0.15,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexsmobs"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 3.5
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "flawed"
+}

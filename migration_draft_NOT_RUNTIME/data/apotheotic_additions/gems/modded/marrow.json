@@ -1,0 +1,185 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "attribute": "irons_spellbooks:cooldown_reduction",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.03,
+        "flawed": 0.05,
+        "normal": 0.1,
+        "flawless": 0.15,
+        "perfect": 0.2
+      },
+      "original_tier_values": {
+        "uncommon": 0.03,
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.15,
+        "ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.03,
+        "flawed": 0.06,
+        "normal": 0.09,
+        "flawless": 0.12,
+        "perfect": 0.15
+      },
+      "original_tier_values": {
+        "uncommon": 0.03,
+        "rare": 0.06,
+        "epic": 0.09,
+        "mythic": 0.12,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.18,
+        "apotheotic_additions:heirloom": 0.21,
+        "apotheotic_additions:esoteric": 0.24
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios",
+        "types": []
+      },
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_total",
+      "values": {
+        "chipped": 0.01,
+        "flawed": 0.02,
+        "normal": 0.03,
+        "flawless": 0.04,
+        "perfect": 0.05
+      },
+      "original_tier_values": {
+        "uncommon": 0.01,
+        "rare": 0.02,
+        "epic": 0.03,
+        "mythic": 0.04,
+        "ancient": 0.05,
+        "apotheotic_additions:artifact": 0.06,
+        "apotheotic_additions:heirloom": 0.07,
+        "apotheotic_additions:esoteric": 0.08
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "wand",
+        "types": []
+      },
+      "mob_effect": "biomancy:despoil",
+      "target": "attack_self",
+      "values": {
+        "flawed": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "normal": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "flawless": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "perfect": {
+          "duration": 320,
+          "amplifier": 0,
+          "cooldown": 900
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "epic": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "mythic": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "ancient": {
+          "duration": 320,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 360,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 1,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 440,
+          "amplifier": 2,
+          "cooldown": 900
+        }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "biomancy"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:overworld",
+      "minecraft:the_nether"
+    ]
+  },
+  "min_purity": "chipped"
+}

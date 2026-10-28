@@ -1,0 +1,85 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "minecraft:instant_damage",
+  "target": "hurt_attacker",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 4000
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 3600
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 3200
+    },
+    "apotheosis:ancient": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 2800
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 2400
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "categories": [],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

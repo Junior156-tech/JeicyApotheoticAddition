@@ -1,0 +1,142 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "wand",
+        "types": []
+      },
+      "mob_effect": "eidolon:reinforced",
+      "target": "attack_self",
+      "values": {
+        "normal": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "flawless": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "perfect": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      },
+      "original_tier_values": {
+        "epic": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "ancient": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 300,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 400,
+          "amplifier": 0,
+          "cooldown": 400
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 500,
+          "amplifier": 0,
+          "cooldown": 400
+        }
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "spellbook",
+        "types": []
+      },
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "add_value",
+      "values": {
+        "flawed": 50,
+        "normal": 75,
+        "flawless": 100,
+        "perfect": 125
+      },
+      "original_tier_values": {
+        "rare": 50,
+        "epic": 75,
+        "mythic": 100,
+        "ancient": 125,
+        "apotheotic_additions:artifact": 150,
+        "apotheotic_additions:heirloom": 200,
+        "apotheotic_additions:esoteric": 250
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:ores/silver",
+      "inputs": {
+        "tag": "forge:raw_materials/silver"
+      },
+      "output": {
+        "item": "irons_spellbooks:arcane_essence"
+      },
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.2,
+        "flawless": 0.3,
+        "perfect": 0.4
+      },
+      "desc": "gem.apotheotic_additions:alchemy/mystic.pickaxe",
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.6,
+        "apotheotic_additions:esoteric": 0.7
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 3,
+    "quality": 5.5
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "flawed"
+}

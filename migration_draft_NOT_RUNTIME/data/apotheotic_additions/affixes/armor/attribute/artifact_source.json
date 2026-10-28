@@ -1,0 +1,38 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 75,
+      "steps": 100,
+      "step": 1
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 50,
+      "steps": 50,
+      "step": 1
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings",
+    "apotheosis:shield"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

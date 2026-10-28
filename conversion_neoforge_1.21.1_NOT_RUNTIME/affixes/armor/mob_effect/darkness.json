@@ -1,0 +1,83 @@
+{
+  "categories": [
+    "apotheosis:chestplate",
+    "apotheosis:leggings"
+  ],
+  "type": "apotheosis:mob_effect",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "minecraft:darkness",
+  "target": "hurt_attacker",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 10,
+        "steps": 20,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 800
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 20,
+        "steps": 20,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 700
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 30,
+        "steps": 25,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 40,
+        "steps": 30,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 60,
+        "steps": 30,
+        "step": 25
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 120,
+        "steps": 30,
+        "step": 25
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 200,
+        "steps": 30,
+        "step": 25
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

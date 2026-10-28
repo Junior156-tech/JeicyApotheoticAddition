@@ -1,0 +1,125 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:ores/gravitite",
+      "inputs": {
+        "item": "aether:gravitite_ore"
+      },
+      "output": {
+        "item": "deeperdarker:warden_carapace"
+      },
+      "values": {
+        "apotheosis:mythic": 0.01,
+        "apotheotic_additions:ancient": 0.02,
+        "apotheotic_additions:artifact": 0.03,
+        "apotheotic_additions:heirloom": 0.04,
+        "apotheotic_additions:esoteric": 0.05
+      },
+      "desc": "gem.apotheotic_additions:alchemy/sculk.bonus.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.25,
+        "apotheosis:epic": 0.5,
+        "apotheosis:mythic": 0.75,
+        "apotheotic_additions:ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 1.75
+      },
+      "__unported_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:current_hp_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "apotheosis:rare": 0.01,
+        "apotheosis:epic": 0.02,
+        "apotheosis:mythic": 0.03,
+        "apotheotic_additions:ancient": 0.04,
+        "apotheotic_additions:artifact": 0.06,
+        "apotheotic_additions:heirloom": 0.08,
+        "apotheotic_additions:esoteric": 0.1
+      },
+      "__unported_gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.25,
+        "apotheosis:epic": 0.5,
+        "apotheosis:mythic": 0.75,
+        "apotheotic_additions:ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2
+      },
+      "__unported_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 3.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "deeperdarker"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether",
+      "deeperdarker:otherside"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

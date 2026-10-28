@@ -1,0 +1,70 @@
+{
+  "categories": [
+    "apotheosis:trident"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "rats"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "rats:synesthesia",
+  "target": "attack_self",
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 20,
+        "steps": 1,
+        "step": 1
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 40,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 200,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 500,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 800,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

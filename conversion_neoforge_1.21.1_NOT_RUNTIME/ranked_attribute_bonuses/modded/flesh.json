@@ -1,0 +1,72 @@
+{
+  "original_gem": "modded/flesh",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:healing_received",
+      "operation": "add_multiplied_total",
+      "values": {
+        "uncommon": 0.02,
+        "rare": 0.04,
+        "epic": 0.06,
+        "mythic": 0.08,
+        "ancient": 0.1,
+        "apotheotic_additions:artifact": 0.12,
+        "apotheotic_additions:heirloom": 0.14,
+        "apotheotic_additions:esoteric": 0.16
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/flesh.json#bonuses[0]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_multiplied_total",
+      "values": {
+        "uncommon": 0.03,
+        "rare": 0.06,
+        "epic": 0.09,
+        "mythic": 0.12,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.18,
+        "apotheotic_additions:heirloom": 0.21,
+        "apotheotic_additions:esoteric": 0.24
+      },
+      "__requires_exact_gem_class": {
+        "key": "chestplate",
+        "types": [
+          "chestplate"
+        ]
+      },
+      "__origin": "modded/flesh.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_multiplied_total",
+      "values": {
+        "uncommon": 0.015,
+        "rare": 0.03,
+        "epic": 0.045,
+        "mythic": 0.06,
+        "ancient": 0.075,
+        "apotheotic_additions:artifact": 0.09,
+        "apotheotic_additions:heirloom": 0.105,
+        "apotheotic_additions:esoteric": 0.12
+      },
+      "__requires_exact_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "boots",
+          "leggings"
+        ]
+      },
+      "__origin": "modded/flesh.json#bonuses[2]"
+    }
+  ]
+}

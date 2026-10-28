@@ -1,0 +1,51 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "helmet",
+        "types": [
+          "apotheosis:helmet"
+        ]
+      },
+      "mob_effect": "cataclysm:abyssal_burn",
+      "target": "hurt_attacker",
+      "values": {},
+      "original_tier_values": {
+        "apotheotic_additions:artifact": {
+          "duration": 600,
+          "amplifier": 0,
+          "cooldown": 6000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 750,
+          "amplifier": 0,
+          "cooldown": 5000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 900,
+          "amplifier": 0,
+          "cooldown": 4000
+        }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "min_purity": "apotheotic_additions:artifact"
+}

@@ -1,0 +1,22 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "apotheosis:rare_material"
+  },
+  "outputs": [
+    {
+      "min_count": 1,
+      "max_count": 2,
+      "stack": {
+        "item": "apotheosis:uncommon_material"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

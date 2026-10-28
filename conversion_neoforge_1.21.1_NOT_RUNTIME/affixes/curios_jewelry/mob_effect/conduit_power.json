@@ -1,0 +1,94 @@
+{
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "minecraft:conduit_power",
+  "target": "hurt_self",
+  "values": {
+    "apotheosis:uncommon": {
+      "duration": {
+        "min": 20,
+        "steps": 1,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 1200
+    },
+    "apotheosis:rare": {
+      "duration": {
+        "min": 20,
+        "steps": 2,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 25,
+        "steps": 2,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 30,
+        "steps": 3,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 35,
+        "steps": 3,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 35,
+        "steps": 3,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 60,
+        "steps": 4,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 70,
+        "steps": 7,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "HHH",
+    "HWH",
+    "HHH"
+  ],
+  "key": {
+    "W": {
+      "item": "apotheosis:gem_dust"
+    },
+    "H": {
+      "item": "aether:holystone"
+    }
+  },
+  "result": {
+    "id": "apotheosis:gem_fused_slate",
+    "count": 12
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

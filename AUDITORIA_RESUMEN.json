@@ -1,0 +1,33 @@
+{
+  "source_counts": {
+    "affixes": 263,
+    "gems": 67,
+    "recipes": 229,
+    "rarities": 3,
+    "affix_loot_entries": 585,
+    "enchanting_stats": 30,
+    "gear_sets": 67
+  },
+  "all_legacy_affix_codecs": {
+    "apotheosis:attribute": 118,
+    "apotheosis:mob_effect": 110,
+    "apotheosis:damage_reduction": 25,
+    "apotheosis_modern_ragnarok:mob_effect_ads": 7,
+    "apotheosis:enlightened": 1,
+    "eidolon:hailing": 1,
+    "eidolon:tracking": 1
+  },
+  "unsupported_codec_paths": [
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/drunkards.json",
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/eldritch.json",
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/infernal_flame.json",
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/nuclear.json",
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/plague.json",
+    "data/apotheotic_additions/affixes/ragnarok/all_gun/mob_effect/studious.json",
+    "data/apotheotic_additions/affixes/ragnarok/shotgun/mob_effect/rage.json",
+    "data/apotheotic_additions/affixes/wand/hailing.json",
+    "data/apotheotic_additions/affixes/wand/tracking.json"
+  ],
+  "affixes_with_caveats": 205,
+  "pure_java_test": "OK: 9 original tiers, 8 transitions, no post-Esoteric, ID isolation, exact bonuses"
+}

@@ -1,0 +1,108 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:stone",
+      "inputs": {
+        "tag": "forge:cobblestone"
+      },
+      "output": {
+        "item": "undergarden:depthrock"
+      },
+      "values": {
+        "flawed": 0.15,
+        "normal": 0.3,
+        "flawless": 0.45,
+        "perfect": 0.6
+      },
+      "desc": "gem.apotheotic_additions:alchemy/decay.pickaxe",
+      "original_tier_values": {
+        "rare": 0.15,
+        "epic": 0.3,
+        "mythic": 0.45,
+        "ancient": 0.6,
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 0.9,
+        "apotheotic_additions:esoteric": 1
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "attribute": "apothic_attributes:armor_shred",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.015,
+        "normal": 0.03,
+        "flawless": 0.045,
+        "perfect": 0.06
+      },
+      "original_tier_values": {
+        "rare": 0.015,
+        "epic": 0.03,
+        "mythic": 0.045,
+        "ancient": 0.06,
+        "apotheotic_additions:artifact": 0.075,
+        "apotheotic_additions:heirloom": 0.09,
+        "apotheotic_additions:esoteric": 0.12
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "apotheosis:boots",
+          "apotheosis:leggings"
+        ]
+      },
+      "attribute": "apothic_attributes:mining_speed",
+      "operation": "add_value",
+      "values": {
+        "flawed": 0.05,
+        "normal": 0.1,
+        "flawless": 0.15,
+        "perfect": 0.2
+      },
+      "original_tier_values": {
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.15,
+        "ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 6.5
+  },
+  "constraints": {
+    "dimensions": [
+      "undergarden:undergarden"
+    ]
+  },
+  "min_purity": "flawed"
+}

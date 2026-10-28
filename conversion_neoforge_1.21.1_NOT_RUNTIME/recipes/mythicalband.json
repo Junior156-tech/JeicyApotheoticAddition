@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "WL ",
+    "L L",
+    " L "
+  ],
+  "key": {
+    "W": {
+      "item": "apotheosis:rare_material"
+    },
+    "L": {
+      "item": "apotheosis:common_material"
+    }
+  },
+  "result": {
+    "id": "apotheotic_additions:mythicalband",
+    "count": 1
+  },
+  "_migration_notes": "NO RUNTIME; vanilla_shape_converted; check registered items, tags, serializers, and recipes."
+}

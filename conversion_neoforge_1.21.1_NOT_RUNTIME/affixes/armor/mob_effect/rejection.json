@@ -1,0 +1,55 @@
+{
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "malum:rejected",
+  "target": "hurt_attacker",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 100,
+        "steps": 10,
+        "step": 5
+      },
+      "amplifier": 0,
+      "cooldown": 800
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 150,
+        "steps": 10,
+        "step": 10
+      },
+      "amplifier": 0,
+      "cooldown": 700
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 200,
+        "steps": 20,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

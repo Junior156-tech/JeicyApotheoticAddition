@@ -1,0 +1,68 @@
+{
+  "original_gem": "modded/soultwisted",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "eidolon:magic_power",
+      "operation": "add_multiplied_total",
+      "values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.6,
+        "apotheotic_additions:esoteric": 0.7
+      },
+      "__requires_exact_gem_class": {
+        "key": "wand",
+        "types": [
+          "wand"
+        ]
+      },
+      "__origin": "modded/soultwisted.json#bonuses[4]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:healing_received",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.03,
+        "epic": 0.06,
+        "mythic": 0.09,
+        "ancient": 0.12,
+        "apotheotic_additions:artifact": 0.15,
+        "apotheotic_additions:heirloom": 0.2,
+        "apotheotic_additions:esoteric": 0.25
+      },
+      "__requires_exact_gem_class": {
+        "key": "helmet",
+        "types": [
+          "helmet"
+        ]
+      },
+      "__origin": "modded/soultwisted.json#bonuses[5]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "eidolon:chanting_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.6,
+        "apotheotic_additions:esoteric": 0.7
+      },
+      "__requires_exact_gem_class": {
+        "key": "leggings",
+        "types": [
+          "leggings"
+        ]
+      },
+      "__origin": "modded/soultwisted.json#bonuses[6]"
+    }
+  ]
+}

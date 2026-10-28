@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "W": "minecraft:apple",
+    "L": "apotheosis:epic_material"
+  },
+  "result": {
+    "id": "apotheotic_additions:epicapple",
+    "count": 1
+  }
+}

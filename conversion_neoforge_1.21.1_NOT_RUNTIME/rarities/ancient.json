@@ -1,0 +1,128 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#B8E4FF",
+  "material": "apotheosis:ancient_material",
+  "sort_index": 725,
+  "weights": {
+    "haven": {
+      "weight": 0,
+      "quality": 5
+    },
+    "frontier": {
+      "weight": 0,
+      "quality": 5
+    },
+    "ascent": {
+      "weight": 0,
+      "quality": 5
+    },
+    "summit": {
+      "weight": 0,
+      "quality": 5
+    },
+    "pinnacle": {
+      "weight": 1,
+      "quality": 5
+    }
+  },
+  "rules": [
+    {
+      "unported_original_rule": {
+        "type": "ancient",
+        "chance": 1.0
+      }
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat",
+      "original_backup_unported": {
+        "type": "ability",
+        "chance": 0.7
+      }
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat",
+      "original_backup_unported": {
+        "type": "ability",
+        "chance": 0.6
+      }
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat",
+      "original_backup_unported": {
+        "type": "ability",
+        "chance": 0.5
+      }
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat",
+      "original_backup_unported": {
+        "type": "ability",
+        "chance": 0.4
+      }
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability",
+      "original_chance_unported": 0.75
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability",
+      "original_chance_unported": 0.45
+    },
+    {
+      "type": "apotheosis:socket"
+    },
+    {
+      "type": "apotheosis:socket",
+      "original_chance_unported": 0.85
+    },
+    {
+      "type": "apotheosis:socket",
+      "original_chance_unported": 0.65
+    },
+    {
+      "type": "apotheosis:socket",
+      "original_chance_unported": 0.45
+    },
+    {
+      "type": "apotheosis:socket",
+      "original_chance_unported": 0.25
+    },
+    {
+      "type": "apotheosis:durability",
+      "original_chance_unported": 0.75
+    }
+  ],
+  "render_data": {
+    "beam_height": 3.5,
+    "beam_radius": 0.025,
+    "beam_texture": "ao_apotheotic_port:textures/rarity/ancient_beam.png",
+    "glow_radius": 0.09,
+    "glow_texture": "ao_apotheotic_port:textures/rarity/ancient_glow.png",
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 6.0,
+      "frames": 16,
+      "size": 0.45,
+      "texture": "ao_apotheotic_port:textures/rarity/ancient_shadow.png"
+    }
+  },
+  "_migration_notes": "NO RUNTIME: original chance/backup and rule types require port verification. No gameplay balancing introduced."
+}

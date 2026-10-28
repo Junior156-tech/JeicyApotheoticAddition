@@ -1,0 +1,77 @@
+{
+  "original_gem": "otherside/sculk",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:cold_damage",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 1.75
+      },
+      "__requires_exact_gem_class": {
+        "key": "curios_armor",
+        "types": [
+          "curios:body",
+          "curios:head",
+          "curios:back",
+          "curios:feet",
+          "curios:hands"
+        ]
+      },
+      "__origin": "otherside/sculk.json#bonuses[1]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "attributeslib:current_hp_damage",
+      "operation": "add_multiplied_base",
+      "values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.06,
+        "apotheotic_additions:heirloom": 0.08,
+        "apotheotic_additions:esoteric": 0.1
+      },
+      "__requires_exact_gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      "__origin": "otherside/sculk.json#bonuses[2]"
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_value",
+      "values": {
+        "rare": 0.25,
+        "epic": 0.5,
+        "mythic": 0.75,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 1.25,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2
+      },
+      "__requires_exact_gem_class": {
+        "key": "curios_aether",
+        "types": [
+          "curios:aether_gloves",
+          "curios:aether_accessory",
+          "curios:aether_shield",
+          "curios:aether_cape",
+          "curios:aether_pendant",
+          "curios:aether_ring"
+        ]
+      },
+      "__origin": "otherside/sculk.json#bonuses[3]"
+    }
+  ]
+}

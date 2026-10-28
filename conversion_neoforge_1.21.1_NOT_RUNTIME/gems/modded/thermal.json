@@ -1,0 +1,161 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "cofh_core:magic_resistance",
+      "target": "attack_self",
+      "values": {
+        "apotheosis:uncommon": {
+          "duration": 30,
+          "amplifier": 0,
+          "cooldown": 3000
+        },
+        "apotheosis:rare": {
+          "duration": 30,
+          "amplifier": 0,
+          "cooldown": 1500
+        },
+        "apotheosis:epic": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:mythic": {
+          "duration": 100,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 140,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 180,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 220,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 300,
+          "amplifier": 1,
+          "cooldown": 1000
+        }
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "cofh_core:sundered",
+      "target": "attack_target",
+      "values": {
+        "apotheosis:uncommon": {
+          "duration": 150,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:rare": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:epic": {
+          "duration": 330,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheosis:mythic": {
+          "duration": 420,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 510,
+          "amplifier": 0,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 700,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 890,
+          "amplifier": 1,
+          "cooldown": 1000
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 1000,
+          "amplifier": 2,
+          "cooldown": 1000
+        }
+      },
+      "__unported_gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:ores/nickel",
+      "inputs": {
+        "tag": "forge:raw_materials/nickel"
+      },
+      "output": {
+        "item": "thermal:basalz_rod"
+      },
+      "values": {
+        "apotheosis:uncommon": 0.01,
+        "apotheosis:rare": 0.03,
+        "apotheosis:epic": 0.06,
+        "apotheosis:mythic": 0.09,
+        "apotheotic_additions:ancient": 0.12,
+        "apotheotic_additions:artifact": 0.15,
+        "apotheotic_additions:heirloom": 0.18,
+        "apotheotic_additions:esoteric": 0.21
+      },
+      "desc": "gem.apotheotic_additions:alchemy/thermal.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 3
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cofh_core"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thermal"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "minecraft:overworld"
+    ]
+  },
+  "__unported_min_rarity": "uncommon",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

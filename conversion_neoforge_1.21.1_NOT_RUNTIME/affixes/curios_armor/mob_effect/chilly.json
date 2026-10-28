@@ -1,0 +1,72 @@
+{
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "undergarden:chilly",
+  "target": "hurt_attacker",
+  "stack_on_reapply": true,
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 100,
+        "steps": 4,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 150
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 100,
+        "steps": 5,
+        "step": 15
+      },
+      "amplifier": 0,
+      "cooldown": 150
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 100,
+        "steps": 5,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 150
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 120,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 150
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 140,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 150
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

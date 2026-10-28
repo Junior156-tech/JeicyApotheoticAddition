@@ -1,0 +1,91 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:stone",
+      "inputs": {
+        "tag": "forge:cobblestone"
+      },
+      "output": {
+        "item": "aether:holystone"
+      },
+      "values": {
+        "apotheosis:rare": 0.15,
+        "apotheosis:epic": 0.3,
+        "apotheosis:mythic": 0.45,
+        "apotheotic_additions:ancient": 0.6,
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 0.9,
+        "apotheotic_additions:esoteric": 1
+      },
+      "desc": "gem.apotheotic_additions:alchemy/purity.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:current_hp_damage",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.015,
+        "apotheosis:epic": 0.03,
+        "apotheosis:mythic": 0.045,
+        "apotheotic_additions:ancient": 0.06,
+        "apotheotic_additions:artifact": 0.075,
+        "apotheotic_additions:heirloom": 0.09,
+        "apotheotic_additions:esoteric": 0.11
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "attributeslib:healing_received",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:rare": 0.05,
+        "apotheosis:epic": 0.1,
+        "apotheosis:mythic": 0.15,
+        "apotheotic_additions:ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      },
+      "__unported_gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "leggings",
+          "boots"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 4.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

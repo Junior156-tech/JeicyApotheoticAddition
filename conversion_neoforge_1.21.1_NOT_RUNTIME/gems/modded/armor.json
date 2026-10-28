@@ -1,0 +1,47 @@
+{
+  "variant": "armor",
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:generic.armor",
+      "operation": "add_value",
+      "values": {
+        "apotheosis:common": 0.5,
+        "apotheosis:uncommon": 1,
+        "apotheosis:rare": 1.5,
+        "apotheosis:epic": 2,
+        "apotheosis:mythic": 2.5,
+        "apotheotic_additions:ancient": 3,
+        "apotheotic_additions:artifact": 3.5,
+        "apotheotic_additions:heirloom": 4,
+        "apotheotic_additions:esoteric": 5
+      },
+      "__unported_gem_class": {
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 3
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

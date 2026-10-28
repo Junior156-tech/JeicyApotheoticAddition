@@ -1,0 +1,50 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "forge:ores/iron",
+      "inputs": {
+        "tag": "forge:raw_materials/gold"
+      },
+      "output": {
+        "item": "blue_skies:raw_ventium"
+      },
+      "values": {
+        "apotheosis:rare": 0.15,
+        "apotheosis:epic": 0.3,
+        "apotheosis:mythic": 0.45,
+        "apotheotic_additions:ancient": 0.6,
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 0.9,
+        "apotheotic_additions:esoteric": 1
+      },
+      "desc": "gem.apotheotic_additions:alchemy/ventium.bonus.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 1.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "blue_skies:everdawn",
+      "blue_skies:everbright"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

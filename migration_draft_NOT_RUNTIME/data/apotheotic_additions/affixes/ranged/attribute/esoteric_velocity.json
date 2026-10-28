@@ -1,0 +1,24 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_attributes:arrow_velocity",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:esoteric": {
+      "min": 0.5,
+      "steps": 35,
+      "step": 0.01
+    }
+  },
+  "categories": [
+    "apotheosis:bow",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

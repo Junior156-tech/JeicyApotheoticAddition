@@ -1,0 +1,89 @@
+{
+  "categories": [
+    "apotheosis:pickaxe",
+    "apotheosis:shovel"
+  ],
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "farmersdelight:comfort",
+  "target": "break_self",
+  "values": {
+    "apotheosis:rare": {
+      "duration": {
+        "min": 200,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheosis:epic": {
+      "duration": {
+        "min": 300,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 400,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 600
+    },
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 500,
+        "steps": 6,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 500
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 1000,
+        "steps": 8,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 500
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 2500,
+        "steps": 10,
+        "step": 50
+      },
+      "amplifier": 0,
+      "cooldown": 300
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 5000,
+        "steps": 10,
+        "step": 50
+      },
+      "amplifier": 0,
+      "cooldown": 500
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

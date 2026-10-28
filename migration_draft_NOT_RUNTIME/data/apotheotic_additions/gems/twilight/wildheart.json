@@ -1,0 +1,197 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "forge:ores/lapis",
+      "inputs": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "output": {
+        "item": "aether:ambrosium_shard"
+      },
+      "values": {
+        "flawed": 0.05,
+        "normal": 0.1,
+        "flawless": 0.15,
+        "perfect": 0.2
+      },
+      "desc": "gem.apotheotic_additions:alchemy/wildheart.bonus.pickaxe",
+      "original_tier_values": {
+        "rare": 0.05,
+        "epic": 0.1,
+        "mythic": 0.15,
+        "ancient": 0.2,
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.3,
+        "apotheotic_additions:esoteric": 0.35
+      }
+    },
+    {
+      "type": "apotheosis:twilight_treasure_goblin",
+      "gem_class": {
+        "key": "curios_armor",
+        "types": []
+      },
+      "values": {
+        "flawed": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "normal": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "flawless": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "perfect": {
+          "chance": 0.004,
+          "cooldown": 4800
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "epic": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "mythic": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "ancient": {
+          "chance": 0.004,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:artifact": {
+          "chance": 0.005,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:heirloom": {
+          "chance": 0.006,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:esoteric": {
+          "chance": 0.007,
+          "cooldown": 4800
+        }
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "curios_jewelry",
+        "types": []
+      },
+      "attribute": "apothic_attributes:experience_gained",
+      "operation": "add_multiplied_base",
+      "values": {
+        "flawed": 0.01,
+        "normal": 0.02,
+        "flawless": 0.03,
+        "perfect": 0.04
+      },
+      "original_tier_values": {
+        "rare": 0.01,
+        "epic": 0.02,
+        "mythic": 0.03,
+        "ancient": 0.04,
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.06,
+        "apotheotic_additions:esoteric": 0.07
+      }
+    },
+    {
+      "type": "apotheosis:twilight_fortification",
+      "gem_class": {
+        "key": "curios_aether",
+        "types": []
+      },
+      "values": {
+        "flawed": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "normal": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "flawless": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "perfect": {
+          "chance": 0.004,
+          "cooldown": 4800
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "chance": 0.001,
+          "cooldown": 4800
+        },
+        "epic": {
+          "chance": 0.002,
+          "cooldown": 4800
+        },
+        "mythic": {
+          "chance": 0.003,
+          "cooldown": 4800
+        },
+        "ancient": {
+          "chance": 0.004,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:artifact": {
+          "chance": 0.005,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:heirloom": {
+          "chance": 0.006,
+          "cooldown": 4800
+        },
+        "apotheotic_additions:esoteric": {
+          "chance": 0.007,
+          "cooldown": 4800
+        }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 7,
+    "quality": 5.5
+  },
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether",
+      "twilightforest:twilight_forest"
+    ]
+  },
+  "min_purity": "flawed"
+}

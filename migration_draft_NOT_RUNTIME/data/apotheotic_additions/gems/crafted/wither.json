@@ -1,0 +1,78 @@
+{
+  "variant": "wither",
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "attributeslib:fire_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 5.5,
+            "apotheotic_additions:heirloom": 6,
+            "apotheotic_additions:esoteric": 6.5
+          }
+        },
+        {
+          "attribute": "attributeslib:cold_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 5.5,
+            "apotheotic_additions:heirloom": 6,
+            "apotheotic_additions:esoteric": 6.5
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "attributeslib:fire_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 7,
+            "apotheotic_additions:heirloom": 8,
+            "apotheotic_additions:esoteric": 9
+          }
+        },
+        {
+          "attribute": "attributeslib:cold_damage",
+          "operation": "ADDITION",
+          "values": {
+            "apotheotic_additions:artifact": 7,
+            "apotheotic_additions:heirloom": 8,
+            "apotheotic_additions:esoteric": 9
+          }
+        }
+      ]
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "min_purity": "apotheotic_additions:artifact"
+}

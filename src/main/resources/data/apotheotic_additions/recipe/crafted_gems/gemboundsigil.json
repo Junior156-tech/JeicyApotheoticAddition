@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "ADA",
+    "CBC",
+    "ADA"
+  ],
+  "key": {
+    "A": "#apotheotic_additions:slate_reagents",
+    "B": "apotheosis:gem_fused_slate",
+    "C": "minecraft:sculk",
+    "D": "apotheosis:gem_dust"
+  },
+  "result": {
+    "id": "apotheotic_additions:gemboundsigil",
+    "count": 1
+  }
+}

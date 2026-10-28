@@ -1,0 +1,42 @@
+{
+  "variant": "armor",
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "anything",
+        "types": [
+          "apotheosis:boots",
+          "apotheosis:bow",
+          "apotheosis:breaker",
+          "apotheosis:chestplate",
+          "apotheosis:helmet",
+          "apotheosis:leggings",
+          "apotheosis:melee_weapon",
+          "apotheosis:shield",
+          "apotheosis:trident"
+        ]
+      },
+      "attribute": "minecraft:max_health",
+      "operation": "add_value",
+      "values": {},
+      "original_tier_values": {
+        "apotheotic_additions:artifact": 4.5,
+        "apotheotic_additions:heirloom": 5,
+        "apotheotic_additions:esoteric": 6
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 0,
+    "quality": 0
+  },
+  "constraints": {
+    "dimensions": [
+      "minecraft:null"
+    ]
+  },
+  "min_purity": "apotheotic_additions:artifact"
+}

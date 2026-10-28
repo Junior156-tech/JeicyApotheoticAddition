@@ -1,0 +1,100 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:enchantment",
+      "gem_class": {
+        "key": "weapon",
+        "types": [
+          "apotheosis:bow",
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "enchantment": "enderio:withering",
+      "values": {
+        "flawed": 1,
+        "normal": 1,
+        "flawless": 2,
+        "perfect": 3
+      },
+      "original_tier_values": {
+        "rare": 1,
+        "epic": 1,
+        "mythic": 2,
+        "ancient": 3,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3,
+        "apotheotic_additions:esoteric": 3
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "chestplate",
+        "types": [
+          "apotheosis:chestplate"
+        ]
+      },
+      "attribute": "neoforge:entity_reach",
+      "operation": "add_value",
+      "values": {
+        "flawed": 1.0,
+        "normal": 1.5,
+        "flawless": 2.0,
+        "perfect": 2.5
+      },
+      "original_tier_values": {
+        "rare": 1.0,
+        "epic": 1.5,
+        "mythic": 2.0,
+        "ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3.5,
+        "apotheotic_additions:esoteric": 4
+      }
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "lower_armor",
+        "types": [
+          "apotheosis:boots",
+          "apotheosis:leggings"
+        ]
+      },
+      "attribute": "neoforge:block_reach",
+      "operation": "add_value",
+      "values": {
+        "flawed": 1.0,
+        "normal": 1.5,
+        "flawless": 2.0,
+        "perfect": 2.5
+      },
+      "original_tier_values": {
+        "rare": 1.0,
+        "epic": 1.5,
+        "mythic": 2.0,
+        "ancient": 2.5,
+        "apotheotic_additions:artifact": 3,
+        "apotheotic_additions:heirloom": 3.5,
+        "apotheotic_additions:esoteric": 4
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 3.5
+  },
+  "constraints": {
+    "dimensions": []
+  },
+  "min_purity": "flawed"
+}

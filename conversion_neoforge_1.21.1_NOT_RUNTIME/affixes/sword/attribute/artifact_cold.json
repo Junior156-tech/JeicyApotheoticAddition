@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "apotheosis:trident"
+  ],
+  "type": "apotheosis:attribute",
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "attributeslib:cold_damage",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 5,
+      "steps": 15,
+      "step": 1
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 4,
+      "steps": 5,
+      "step": 0.5
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

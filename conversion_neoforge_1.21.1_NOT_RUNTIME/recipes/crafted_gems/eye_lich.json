@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "ADA",
+    "CBC",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "apotheotic_additions:artifact_material"
+    },
+    "B": {
+      "item": "twilightforest:lich_trophy"
+    },
+    "C": {
+      "item": "eidolon:shadow_gem"
+    },
+    "D": {
+      "item": "apotheotic_additions:gemboundsigil"
+    }
+  },
+  "result": {
+    "id": "apotheosis:gem",
+    "count": 1,
+    "nbt": "{affix_data:{rarity:\"apotheotic_additions:artifact\"},gem:\"apotheotic_additions:crafted/lich\"}"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eidolon"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_tag_migration; check registered items, tags, serializers, and recipes."
+}

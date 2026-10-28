@@ -1,0 +1,75 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "irons_spellbooks:max_mana",
+  "operation": "add_value",
+  "values": {
+    "apotheosis:common": {
+      "min": 5,
+      "steps": 3,
+      "step": 1
+    },
+    "apotheosis:uncommon": {
+      "min": 8,
+      "steps": 7,
+      "step": 1
+    },
+    "apotheosis:rare": {
+      "min": 12,
+      "steps": 9,
+      "step": 1
+    },
+    "apotheosis:epic": {
+      "min": 15,
+      "steps": 15,
+      "step": 1
+    },
+    "apotheosis:mythic": {
+      "min": 18,
+      "steps": 20,
+      "step": 1
+    },
+    "apotheosis:ancient": {
+      "min": 22,
+      "steps": 30,
+      "step": 1
+    },
+    "apotheotic_additions:artifact": {
+      "min": 30,
+      "steps": 40,
+      "step": 1
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 15,
+      "steps": 30,
+      "step": 1
+    },
+    "apotheotic_additions:esoteric": {
+      "min": 50,
+      "steps": 125,
+      "step": 1
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothiccurios"
+    }
+  ],
+  "categories": [],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

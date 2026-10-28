@@ -1,0 +1,128 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "aether:holystone",
+      "inputs": {
+        "tag": "aether:holystone"
+      },
+      "output": {
+        "item": "alexscaves:block_of_chocolate"
+      },
+      "values": {
+        "apotheosis:rare": 0.1,
+        "apotheosis:epic": 0.2,
+        "apotheosis:mythic": 0.3,
+        "apotheotic_additions:ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 1
+      },
+      "desc": "gem.apotheotic_additions:alchemy/candied.pickaxe",
+      "__unported_gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "pickaxe"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "blocks": "aether:skyroot_logs",
+      "inputs": {
+        "tag": "aether:skyroot_logs"
+      },
+      "output": {
+        "item": "alexscaves:candy_cane"
+      },
+      "values": {
+        "apotheosis:rare": 0.1,
+        "apotheosis:epic": 0.2,
+        "apotheosis:mythic": 0.3,
+        "apotheotic_additions:ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 1
+      },
+      "desc": "gem.apotheotic_additions:alchemy/candied.axe",
+      "__unported_gem_class": {
+        "key": "axe",
+        "types": [
+          "heavy_weapon"
+        ]
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "mob_effect": "alexscaves:sugar_rush",
+      "target": "attack_self",
+      "values": {
+        "apotheosis:rare": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:epic": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheosis:mythic": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:ancient": {
+          "duration": 160,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 900
+        }
+      },
+      "__unported_gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      }
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether"
+    ]
+  },
+  "__unported_min_rarity": "rare",
+  "_migration_notes": "NO RUNTIME: gem class mappings, legacy rarity->modern purity/component, bonus codecs must be implemented and checked."
+}

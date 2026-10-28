@@ -1,0 +1,33 @@
+{
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots",
+    "apotheosis:shield"
+  ],
+  "type": "apotheosis:attribute",
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "attribute": "minecraft:generic.armor",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 10,
+      "steps": 10,
+      "step": 1
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 4,
+      "steps": 5,
+      "step": 0.5
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

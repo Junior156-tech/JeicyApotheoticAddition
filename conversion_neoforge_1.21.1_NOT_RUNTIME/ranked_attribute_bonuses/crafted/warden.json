@@ -1,0 +1,33 @@
+{
+  "original_gem": "crafted/warden",
+  "attribute_bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_value",
+      "values": {
+        "apotheotic_additions:artifact": 4.5,
+        "apotheotic_additions:heirloom": 5,
+        "apotheotic_additions:esoteric": 6
+      },
+      "__requires_exact_gem_class": {
+        "key": "anything",
+        "types": [
+          "bow",
+          "crossbow",
+          "pickaxe",
+          "shovel",
+          "heavy_weapon",
+          "helmet",
+          "chestplate",
+          "leggings",
+          "boots",
+          "shield",
+          "trident",
+          "sword"
+        ]
+      },
+      "__origin": "crafted/warden.json#bonuses[0]"
+    }
+  ]
+}

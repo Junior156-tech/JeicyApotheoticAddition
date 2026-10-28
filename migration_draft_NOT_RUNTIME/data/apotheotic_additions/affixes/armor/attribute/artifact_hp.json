@@ -1,0 +1,32 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:max_health",
+  "operation": "add_value",
+  "values": {
+    "apotheotic_additions:artifact": {
+      "min": 10,
+      "steps": 10,
+      "step": 1
+    },
+    "apotheotic_additions:heirloom": {
+      "min": 4,
+      "steps": 5,
+      "step": 0.5
+    }
+  },
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings",
+    "apotheosis:shield"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  }
+}

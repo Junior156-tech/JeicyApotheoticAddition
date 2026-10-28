@@ -1,0 +1,58 @@
+{
+  "type": "apotheosis:mob_effect",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "theabyss"
+    }
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "weight": 1,
+      "quality": 0
+    }
+  },
+  "mob_effect": "theabyss:time_stop_potion_irator",
+  "target": "attack_target",
+  "values": {
+    "apotheotic_additions:ancient": {
+      "duration": {
+        "min": 20,
+        "steps": 3,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:artifact": {
+      "duration": {
+        "min": 60,
+        "steps": 5,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:heirloom": {
+      "duration": {
+        "min": 120,
+        "steps": 10,
+        "step": 20
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    },
+    "apotheotic_additions:esoteric": {
+      "duration": {
+        "min": 140,
+        "steps": 10,
+        "step": 30
+      },
+      "amplifier": 0,
+      "cooldown": 1000
+    }
+  },
+  "_migration_notes": "NO RUNTIME: verify categories, original definition weights, and codecs before activation"
+}

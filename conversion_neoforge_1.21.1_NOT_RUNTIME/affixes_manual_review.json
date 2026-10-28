@@ -1,0 +1,2018 @@
+[
+  {
+    "path": "armor/attribute/artifact_armor.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/artifact_hp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/artifact_luck.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/artifact_source.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/artifact_toughness.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_armor.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_hp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_luck.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_source.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_toughness.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_voidic_infusion_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_voidic_paranoia_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/esoteric_voidic_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/feathers.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/lava_speed.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/reapers.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/roll_count.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/roll_distance.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/roll_recharge.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/sourcetouched.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/spirit_spoils.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/voidic_infusion_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/voidic_paranoia_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/voidic_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/attribute/warding.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/dmg_reduction/explosion.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/dmg_reduction/fall.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/dmg_reduction/fire.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/dmg_reduction/physical.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/dmg_reduction/runed.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/bad_luck.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/beenergized.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/darkness.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/deepsight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/dolphin.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/gaias_bulwark.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/heirloom_aura.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/heirloom_repellent.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/heirloom_resistance.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/heirloom_vision.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/mana_irons.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/rejection.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/resilience.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/roundabout.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/soulsteal.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/sweet_tooth.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "armor/mob_effect/zephyr.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/artifact_luck.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/artifact_speed.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/artifact_xp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/block_reach.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/bonus_loot.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/sliding.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/attribute/speed.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/angel_wings.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/ascension.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/aurora.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/beaver.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/comfort.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/copper_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/emptiness.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/gold_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/iron_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/lapis_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/node.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/nourishment.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/osmium_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/mob_effect/redstone_sight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "breaker/special/enlightened.json",
+    "original_type": "apotheosis:enlightened",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/chanting.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/hp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/luck.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/mining_speed.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/resilience.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/attribute/xp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/dmg_reduction/explosion.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/dmg_reduction/fall.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/dmg_reduction/fire.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/dmg_reduction/physical.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_aether/dmg_reduction/runed.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:aether_gloves, curios:aether_accessory, curios:aether_shield, curios:aether_cape, curios:aether_pendant, curios:aether_ring",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/dodge.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/forged.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/healing_power.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/hp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/luck.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/spell_resist.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/tailored.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/voidic_infusion_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/voidic_paranoia_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/voidic_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/warding.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/attribute/weakness_aura.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:head, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/dmg_reduction/explosion.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands, curios:belt, curios:talisman, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/dmg_reduction/fall.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/dmg_reduction/fire.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/dmg_reduction/physical.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/dmg_reduction/runed.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/mob_effect/chilly.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:hands",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/mob_effect/fleet_footed.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:feet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/mob_effect/immolate.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:body, curios:back, curios:an_focus",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/mob_effect/instant_damage.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:hands, curios:belt",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_armor/mob_effect/perforation.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:belt",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/arcane.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/chanting.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/flight.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/gaia.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/mana_regen.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/resilience.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/sourcetouched.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/source_regen.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/attribute/speed.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/dmg_reduction/explosion.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:head, curios:body, curios:back, curios:feet, curios:hands, curios:belt, curios:talisman, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/dmg_reduction/fall.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/dmg_reduction/fire.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/dmg_reduction/physical.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/dmg_reduction/runed.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:an_focus, curios:necklace, curios:charm, curios:belt, curios:spellstone, curios:scroll, curios:bracelet, curios:talisman, curios:scroll, curios:spellstone, curios:bracelet",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/blazing_might.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellstone, curios:scroll",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/conduit_power.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:scroll, curios:spellstone, curios:an_focus",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/despoil.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:bracelet, curios:talisman, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/flesh_infested.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/heirloom_glowing.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/heirloom_repellent.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/jaw_attack.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm, curios:belt",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/mana_regen.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:an_focus",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/rage.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/reinforced.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/spell_damage.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:an_focus",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_jewelry/mob_effect/stun.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:ring, curios:necklace, curios:charm",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/arcane.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/integrity.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune, curios:brooch",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/recovery.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune, curios:brooch",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/scythe.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune, curios:brooch",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/soul_ward.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/attribute/spirit_spoils.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune, curios:brooch",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/dmg_reduction/explosion.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/dmg_reduction/fall.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/dmg_reduction/fire.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/dmg_reduction/physical.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/dmg_reduction/runed.json",
+    "original_type": "apotheosis:damage_reduction",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:brooch, curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/ascended.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/cancerous_growth.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/despoil.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/miners_rage.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/rejected.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "curios_malum/mob_effect/silence.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:rune",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/baby_blue.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/chemical_x.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/cursed_flame.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/fazbear.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/fractured.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/kamakaze.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/monstrous.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "heavy_weapon/mob_effect/time_stop.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/attribute/bullet_res.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/attribute/lightweight.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/drunkards.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/eldritch.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/infernal_flame.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/nuclear.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/plague.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/all_gun/mob_effect/studious.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun, apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto, apotheosis_modern_ragnarok:bolt_action",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/bolt_action/attribute/cold_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/bolt_action/attribute/crit_chance.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/bolt_action/attribute/crit_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/bolt_action/attribute/fire_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/bolt_action/attribute/life_steal_x.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:bolt_action",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/rapid_fire/attribute/cold_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/rapid_fire/attribute/fire_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/rapid_fire/attribute/void_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:full_auto, apotheosis_modern_ragnarok:semi_auto",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/shotgun/attribute/cold_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/shotgun/attribute/fire_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/shotgun/attribute/void_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ragnarok/shotgun/mob_effect/rage.json",
+    "original_type": "apotheosis_modern_ragnarok:mob_effect_ads",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: apotheosis_modern_ragnarok:shotgun",
+      "AffixType sin implementación moderna confirmada: apotheosis_modern_ragnarok:mob_effect_ads",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/artifact_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/artifact_velocity.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/crit_chance.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/crit_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/esoteric_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/esoteric_velocity.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/shred.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/attribute/voidic_arrow.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/acidic.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/chemical.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/despoil.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/double_jump.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/inebriation.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/jaw_attack.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/planar.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/stun.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "ranged/mob_effect/sunbird.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/artifact_bleed_immune.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/artifact_regen.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/corruption.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/forsaken.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/irradiated_shield.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/omen.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/strong_armor.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/tears.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/venomous.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "shield/mob_effect/witherstorm.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/aa_mana.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_blood.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_ender.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_evocation.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_fire.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_holy.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_ice.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_lightning.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/power_nature.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/attribute/summon.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/charged.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/instant_mana.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/knowledge.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/magnetic.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/menders.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "spellbook/mob_effect/resistance.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: curios:spellbook",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/artifact_cold.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/artifact_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/artifact_fire.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/artifact_hp_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/artifact_knockback.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/esoteric_cold.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/esoteric_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/esoteric_fire.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/esoteric_hp_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/esoteric_knockback.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/pixie.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/reapers.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/spell_power.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/spell_resist.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/attribute/void_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/abyssal_curse.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/black_flame.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/blazing_brand.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/bone_shield.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/corrosive.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/flesh_infested.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/flicker.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/flight.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/frosted.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/haste_break.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/inebriation.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword, heavy_weapon",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/irradiated.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/rage.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/rat_chef.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/shock.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/shred.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/stun.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/tiger.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "sword/mob_effect/voodoo.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: sword",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/chanting.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/gaia.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/magic_damage.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/magic_power.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/spirit_spoils.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/attribute/xp.json",
+    "original_type": "apotheosis:attribute",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/hailing.json",
+    "original_type": "eidolon:hailing",
+    "notes": [
+      "AffixType sin implementación moderna confirmada: eidolon:hailing",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/mob_effect/knowledge.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/mob_effect/magnetic.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/mob_effect/menders.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/mob_effect/resistance.json",
+    "original_type": "apotheosis:mob_effect",
+    "notes": [
+      "Categorías exactas o integraciones todavía sin registry: wand",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  },
+  {
+    "path": "wand/tracking.json",
+    "original_type": "eidolon:tracking",
+    "notes": [
+      "AffixType sin implementación moderna confirmada: eidolon:tracking",
+      "Definition weights/type placeholder; requiere validación contra comportamiento del original"
+    ]
+  }
+]

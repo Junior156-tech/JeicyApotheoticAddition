@@ -1,0 +1,23 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "type": "apotheosis:gem",
+    "rarity": "apotheotic_additions:heirloom"
+  },
+  "outputs": [
+    {
+      "min_count": 13,
+      "max_count": 18,
+      "stack": {
+        "item": "apotheosis:gem_dust"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

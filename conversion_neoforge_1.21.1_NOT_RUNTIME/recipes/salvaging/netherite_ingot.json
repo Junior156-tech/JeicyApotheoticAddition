@@ -1,0 +1,29 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "outputs": [
+    {
+      "min_count": 2,
+      "max_count": 4,
+      "stack": {
+        "item": "minecraft:netherite_scrap"
+      }
+    },
+    {
+      "min_count": 2,
+      "max_count": 4,
+      "stack": {
+        "item": "minecraft:gold_ingot"
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "_migration_notes": "NO RUNTIME; requires_apotheosis_condition_migration; check registered items, tags, serializers, and recipes."
+}

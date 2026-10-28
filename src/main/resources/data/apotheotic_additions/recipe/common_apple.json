@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "something",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "W": "minecraft:apple",
+    "L": "apotheosis:common_material"
+  },
+  "result": {
+    "id": "apotheotic_additions:commonapple",
+    "count": 1
+  }
+}

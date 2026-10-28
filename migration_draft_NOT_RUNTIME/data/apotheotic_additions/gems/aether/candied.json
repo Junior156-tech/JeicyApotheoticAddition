@@ -1,0 +1,161 @@
+{
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": [
+          "apotheosis:breaker"
+        ]
+      },
+      "blocks": "aether:holystone",
+      "inputs": {
+        "tag": "aether:holystone"
+      },
+      "output": {
+        "item": "alexscaves:block_of_chocolate"
+      },
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.2,
+        "flawless": 0.3,
+        "perfect": 0.4
+      },
+      "desc": "gem.apotheotic_additions:alchemy/candied.pickaxe",
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 1
+      }
+    },
+    {
+      "type": "apotheosis:drop_transform",
+      "gem_class": {
+        "key": "axe",
+        "types": [
+          "apotheosis:melee_weapon"
+        ]
+      },
+      "blocks": "aether:skyroot_logs",
+      "inputs": {
+        "tag": "aether:skyroot_logs"
+      },
+      "output": {
+        "item": "alexscaves:candy_cane"
+      },
+      "values": {
+        "flawed": 0.1,
+        "normal": 0.2,
+        "flawless": 0.3,
+        "perfect": 0.4
+      },
+      "desc": "gem.apotheotic_additions:alchemy/candied.axe",
+      "original_tier_values": {
+        "rare": 0.1,
+        "epic": 0.2,
+        "mythic": 0.3,
+        "ancient": 0.4,
+        "apotheotic_additions:artifact": 0.5,
+        "apotheotic_additions:heirloom": 0.75,
+        "apotheotic_additions:esoteric": 1
+      }
+    },
+    {
+      "type": "apotheosis:mob_effect",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "apotheosis:melee_weapon",
+          "apotheosis:trident"
+        ]
+      },
+      "mob_effect": "alexscaves:sugar_rush",
+      "target": "attack_self",
+      "values": {
+        "flawed": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "normal": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "flawless": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "perfect": {
+          "duration": 160,
+          "amplifier": 0,
+          "cooldown": 900
+        }
+      },
+      "original_tier_values": {
+        "rare": {
+          "duration": 60,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "epic": {
+          "duration": 80,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "mythic": {
+          "duration": 120,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "ancient": {
+          "duration": 160,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:artifact": {
+          "duration": 200,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:heirloom": {
+          "duration": 240,
+          "amplifier": 0,
+          "cooldown": 900
+        },
+        "apotheotic_additions:esoteric": {
+          "duration": 280,
+          "amplifier": 0,
+          "cooldown": 900
+        }
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "type": "apotheosis:gem",
+  "weights": {
+    "weight": 5,
+    "quality": 2.5
+  },
+  "constraints": {
+    "dimensions": [
+      "aether:the_aether"
+    ]
+  },
+  "min_purity": "flawed"
+}
