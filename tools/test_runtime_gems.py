@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_ROOT = ROOT / "src/main/resources/data/apotheotic_additions/gems"
 ACTIVE = {
     "crafted/cornelia.json": "apotheotic_additions:artifact",
+    "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
     "crafted/hydra.json": "apotheotic_additions:artifact",
     "crafted/ignis.json": "apotheotic_additions:artifact",
@@ -21,6 +22,7 @@ ACTIVE = {
     "crafted/slider.json": "apotheotic_additions:artifact",
     "crafted/snow_queen.json": "apotheotic_additions:artifact",
     "crafted/warden.json": "apotheotic_additions:artifact",
+    "crafted/wither.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
     "modded/hearty.json": "common",
 }
@@ -51,6 +53,10 @@ def normalize_attribute(attribute: str) -> str:
     return attribute
 
 
+def normalize_enchantment(enchantment: str) -> str:
+    return enchantment if ":" in enchantment else "minecraft:" + enchantment
+
+
 def normalize_types(original_types: list[str]) -> set[str]:
     return {TYPE_MAP[value] for value in original_types}
 
@@ -75,8 +81,6 @@ def main() -> int:
             assert runtime["weights"]["weight"] == original["weight"]
             assert runtime["weights"]["quality"] == original["quality"]
             assert runtime.get("unique", False) == original.get("unique", False)
-            assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
-
             if minimum_rank == "apotheotic_additions:artifact":
                 assert original["min_rarity"] == minimum_rank
                 assert runtime["min_purity"] == "perfect"
@@ -84,18 +88,51 @@ def main() -> int:
                 assert "min_rarity" not in original
                 assert "min_purity" not in runtime
 
-            old_bonus = original["bonuses"][0]
-            new_bonus = runtime["bonuses"][0]
-            assert old_bonus["type"] == "apotheosis:attribute"
-            assert new_bonus["type"] == "apotheotic_additions:original_attribute"
-            assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
-            assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
-            assert new_bonus["values"] == old_bonus["values"]
-            assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
-            assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
-            assert set(new_bonus["gem_class"]["types"]) == normalize_types(
-                old_bonus["gem_class"]["types"]
-            )
+            if relative_path == "crafted/ender_dragon.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
+                old_bonus = original["bonuses"][0]
+                new_bonus = runtime["bonuses"][0]
+                assert old_bonus["type"] == "apotheosis:enchantment"
+                assert new_bonus["type"] == "apotheotic_additions:original_enchantment"
+                assert new_bonus["enchantment"] == normalize_enchantment(old_bonus["enchantment"])
+                assert new_bonus["global"] == old_bonus["global"]
+                assert new_bonus["values"] == old_bonus["values"]
+                assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                    old_bonus["gem_class"]["types"]
+                )
+            elif relative_path == "crafted/wither.json":
+                assert len(runtime["bonuses"]) == 1
+                new_bonus = runtime["bonuses"][0]
+                assert new_bonus["type"] == "apotheotic_additions:original_multi_attribute"
+                assert len(new_bonus["profiles"]) == len(original["bonuses"]) == 2
+                original_types = set()
+                for profile, old_bonus in zip(new_bonus["profiles"], original["bonuses"]):
+                    assert old_bonus["type"] == "apotheosis:multi_attribute"
+                    assert profile["key"] == old_bonus["gem_class"]["key"]
+                    assert profile["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert len(profile["modifiers"]) == len(old_bonus["modifiers"])
+                    original_types.update(old_bonus["gem_class"]["types"])
+                    for modifier, old_modifier in zip(profile["modifiers"], old_bonus["modifiers"]):
+                        assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+                        assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"].upper()]
+                        assert modifier["values"] == old_modifier["values"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(list(original_types))
+            else:
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
+                old_bonus = original["bonuses"][0]
+                new_bonus = runtime["bonuses"][0]
+                assert old_bonus["type"] == "apotheosis:attribute"
+                assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                assert new_bonus["values"] == old_bonus["values"]
+                assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                    old_bonus["gem_class"]["types"]
+                )
 
     print(f"PASS: {len(ACTIVE)} runtime gems match original weights, ranks, classes, and values")
     return 0

@@ -37,6 +37,10 @@ public final class JeicyApotheoticAddition {
         // Register custom bonus codec before Apotheosis reloads datapacks.
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_attribute"),
             JeicyTieredAttributeBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_enchantment"),
+            JeicyTieredEnchantmentBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_multi_attribute"),
+            JeicyTieredMultiAttributeBonus.CODEC);
         ITEMS.register(modBus);
         JeicyOriginalBlocks.register(modBus);
         JeicyGemComponents.register(modBus);

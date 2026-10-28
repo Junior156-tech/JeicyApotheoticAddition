@@ -14,21 +14,23 @@ NeoForge y Apotheosis 8.8.0.
 - `clean test` correcto; cuatro tests JUnit pasan sin fallos.
 - El servidor de desarrollo carga nueve mods, 26 recetas activas y llega a
   `Done` sin errores de recetas o codecs.
-- Apotheosis registra 32 gemas: sus 21 gemas base y 11 gemas originales
-  activadas (`Armor`, `Hearty` y nueve gemas crafted).
-- Las 11 gemas activadas conservan pesos, calidad, unicidad, restricciones y
+- Apotheosis registra 34 gemas: sus 21 gemas base y 13 gemas originales
+  activadas (`Armor`, `Hearty` y once gemas crafted).
+- Las 13 gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
 - El catálogo runtime ya conserva el rango mínimo original de las 67 gemas.
-- Un validador de socket restaura las distinciones espada/arma pesada y
-  pico/pala que Apotheosis 8.x fusionó; el arranque verifica cuatro decisiones
-  representativas.
+- Los bonuses portados cubren atributos simples, encantamientos globales y
+  multiatributos con perfiles distintos para espada/tridente y arma pesada.
+- Un validador restaura las categorías que Apotheosis 8.x fusionó; el arranque
+  verifica 78 asignaciones de rango, seis decisiones de socket y tres perfiles
+  de arma de la gema Wither.
 - Las pruebas de paridad estática validan 67/67 gemas, 263/263 affixes,
   229/229 recetas y los 85 bonuses de atributos contra el JAR original.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 56 gemas y los 263 affixes del port por activar en runtime. El JAR es un
+Quedan 54 gemas y los 263 affixes del port por activar en runtime. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.
 

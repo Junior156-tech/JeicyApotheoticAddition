@@ -58,6 +58,16 @@ final class OriginalGemLogicTest {
             () -> new OriginalRankValues(Map.of("common", Double.NaN)));
         assertThrows(IllegalArgumentException.class,
             () -> new OriginalRankValues(Map.of()));
+
+        OriginalIntegerRankValues enchantments = new OriginalIntegerRankValues(Map.of(
+            "apotheotic_additions:artifact", 2,
+            "apotheotic_additions:heirloom", 3,
+            "apotheotic_additions:esoteric", 4));
+        assertEquals(2, enchantments.get(OriginalGemRank.ARTIFACT));
+        assertEquals(4, enchantments.get(OriginalGemRank.ESOTERIC));
+        assertNull(enchantments.get(OriginalGemRank.ANCIENT));
+        assertThrows(IllegalArgumentException.class,
+            () -> new OriginalIntegerRankValues(Map.of("common", -1)));
     }
 
     @Test

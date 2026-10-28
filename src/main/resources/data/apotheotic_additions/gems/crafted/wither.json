@@ -1,0 +1,65 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": {
+        "key": "weapon",
+        "types": ["apotheosis:melee_weapon", "apotheosis:trident"]
+      },
+      "profiles": [
+        {
+          "key": "light_weapon",
+          "original_socket_types": ["sword", "trident"],
+          "modifiers": [
+            {
+              "attribute": "apothic_attributes:fire_damage",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 5.5,
+                "apotheotic_additions:heirloom": 6.0,
+                "apotheotic_additions:esoteric": 6.5
+              }
+            },
+            {
+              "attribute": "apothic_attributes:cold_damage",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 5.5,
+                "apotheotic_additions:heirloom": 6.0,
+                "apotheotic_additions:esoteric": 6.5
+              }
+            }
+          ]
+        },
+        {
+          "key": "heavy_weapon",
+          "original_socket_types": ["heavy_weapon"],
+          "modifiers": [
+            {
+              "attribute": "apothic_attributes:fire_damage",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 7.0,
+                "apotheotic_additions:heirloom": 8.0,
+                "apotheotic_additions:esoteric": 9.0
+              }
+            },
+            {
+              "attribute": "apothic_attributes:cold_damage",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 7.0,
+                "apotheotic_additions:heirloom": 8.0,
+                "apotheotic_additions:esoteric": 9.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
