@@ -4,6 +4,7 @@ Nothing under migration_draft_NOT_RUNTIME is automatically loaded by Minecraft.
 Run: py tools/validar_jeicy.py [path/to/ApotheoticAdditionsV2.2.2.jar]
 """
 import hashlib,json,pathlib,sys,zipfile,collections
+from test_runtime_gems import ACTIVE as REVIEWED_RUNTIME_GEMS
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 inventory=json.loads((ROOT/'ORIGINAL_2_2_2_INVENTORY.json').read_text(encoding='utf-8'))
 jar=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else None
@@ -31,8 +32,15 @@ for section,data in inventory['source_sections'].items():
   except Exception as exc: problems.append(f'JSON inválido: {f.relative_to(ROOT)}: {exc}')
 # Prevent data-driven 1.20.1 files from being erroneously enabled as resources at runtime
 runtime=ROOT/'src/main/resources/data/apotheotic_additions'
+runtime_gems=runtime/'gems'
+active_gems={p.relative_to(runtime_gems).as_posix() for p in runtime_gems.rglob('*.json')} if runtime_gems.exists() else set()
+if active_gems != set(REVIEWED_RUNTIME_GEMS):
+ problems.append(
+  'ACTIVACION DE GEMAS NO REVISADA: '
+  f'esperadas={sorted(REVIEWED_RUNTIME_GEMS)} activas={sorted(active_gems)}'
+ )
 if runtime.exists():
- unsupported=['gems','affixes','rarities','recipes','gear_sets','enchanting_stats','affix_loot_entries']
+ unsupported=['affixes','rarities','recipes','gear_sets','enchanting_stats','affix_loot_entries']
  for section in unsupported:
   if (runtime/section).exists(): problems.append(f'ACTIVACIÓN NO REVISADA: {runtime/section} (no hay validación de codecs)')
 print('JeicyApotheoticAddition — AUDITORÍA DEL PORT')

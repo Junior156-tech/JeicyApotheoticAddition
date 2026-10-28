@@ -31,6 +31,13 @@ final class OriginalGemLogicTest {
         assertThrows(IllegalArgumentException.class, () -> OriginalGemRank.fromIndex(-1));
         assertThrows(IllegalArgumentException.class, () -> OriginalGemRank.fromIndex(9));
         assertThrows(IllegalArgumentException.class, () -> OriginalGemRank.fromOriginalId("perfect"));
+        assertSame(OriginalGemRank.ARTIFACT,
+            OriginalGemRank.max(OriginalGemRank.ANCIENT, OriginalGemRank.ARTIFACT));
+        assertSame(OriginalGemRank.MYTHIC, OriginalGemCatalog.minimumRank("aether/aether"));
+        assertSame(OriginalGemRank.ARTIFACT, OriginalGemCatalog.minimumRank("crafted/cornelia"));
+        assertSame(OriginalGemRank.COMMON, OriginalGemCatalog.minimumRank("modded/armor"));
+        assertSame(OriginalGemRank.ARTIFACT, OriginalGemCatalog.initialRank("crafted/cornelia", 0));
+        assertSame(OriginalGemRank.ANCIENT, OriginalGemCatalog.initialRank("modded/armor", 5));
     }
 
     @Test

@@ -3,6 +3,7 @@ package org.jeicy.apotheoticadditions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.common.NeoForge;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.GemBonus;
@@ -39,5 +40,6 @@ public final class JeicyApotheoticAddition {
         ITEMS.register(modBus);
         JeicyOriginalBlocks.register(modBus);
         JeicyGemComponents.register(modBus);
+        NeoForge.EVENT_BUS.addListener(JeicyRuntimeGemVerifier::onServerStarted);
     }
 }

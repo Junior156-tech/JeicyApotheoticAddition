@@ -1,0 +1,23 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": {
+        "key": "pickaxe",
+        "types": ["apotheosis:breaker"]
+      },
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_value",
+      "original_socket_types": ["pickaxe"],
+      "values": {
+        "apotheotic_additions:artifact": 3.0,
+        "apotheotic_additions:heirloom": 3.5,
+        "apotheotic_additions:esoteric": 4.0
+      }
+    }
+  ]
+}

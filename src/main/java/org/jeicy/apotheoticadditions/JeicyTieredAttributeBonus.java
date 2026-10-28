@@ -1,6 +1,7 @@
 package org.jeicy.apotheoticadditions;
 
 import java.util.Map;
+import java.util.List;
 import java.util.function.Consumer;
 
 import com.mojang.serialization.Codec;
@@ -28,26 +29,38 @@ import net.neoforged.neoforge.common.util.AttributeTooltipContext;
  * It reads the real rank from the gem's stored ItemStack component, including
  * when the gem is inserted in an item (GemInstance implements GemView).
  *
- * Runtime compilation against Apotheosis 8.8.0 and NeoForge is still pending.
+ * Compiled and runtime-verified against Apotheosis 8.8.0 and NeoForge 21.1.251.
  */
-public final class JeicyTieredAttributeBonus extends GemBonus {
+public final class JeicyTieredAttributeBonus extends GemBonus implements JeicyExactSocketBonus {
     public static final Codec<JeicyTieredAttributeBonus> CODEC = RecordCodecBuilder.create(inst -> inst.group(
         gemClass(),
         BuiltInRegistries.ATTRIBUTE.holderByNameCodec().fieldOf("attribute").forGetter(a -> a.attribute),
         PlaceboCodecs.enumCodec(Operation.class).fieldOf("operation").forGetter(a -> a.operation),
-        Codec.unboundedMap(Codec.STRING, Codec.DOUBLE).fieldOf("values").forGetter(a -> a.values.serialized())
+        Codec.unboundedMap(Codec.STRING, Codec.DOUBLE).fieldOf("values").forGetter(a -> a.values.serialized()),
+        Codec.STRING.listOf().fieldOf("original_socket_types").forGetter(a -> a.originalSocketTypes)
     ).apply(inst, JeicyTieredAttributeBonus::new));
 
     private final Holder<Attribute> attribute;
     private final Operation operation;
     private final OriginalRankValues values;
+    private final List<String> originalSocketTypes;
 
     public JeicyTieredAttributeBonus(GemClass gemClass, Holder<Attribute> attribute,
-                                     Operation operation, Map<String, Double> rawValues) {
+                                     Operation operation, Map<String, Double> rawValues,
+                                     List<String> originalSocketTypes) {
         super(gemClass);
         this.attribute = attribute;
         this.operation = operation;
         this.values = new OriginalRankValues(rawValues);
+        if (originalSocketTypes.isEmpty()) {
+            throw new IllegalArgumentException("Original socket types cannot be empty");
+        }
+        this.originalSocketTypes = List.copyOf(originalSocketTypes);
+    }
+
+    @Override
+    public boolean matchesSocket(net.minecraft.world.item.ItemStack socketed) {
+        return OriginalSocketMatcher.matchesAny(socketed, this.originalSocketTypes);
     }
 
     private Double originalValue(GemView view) {
@@ -65,6 +78,7 @@ public final class JeicyTieredAttributeBonus extends GemBonus {
 
     @Override
     public void addModifiers(GemInstance gem, StackAttributeModifiersEvent event) {
+        if (!matchesSocket(event.getItemStack())) return;
         Double value = originalValue(gem);
         if (value != null) {
             AttributeModifier modifier = new AttributeModifier(makeUniqueId(gem), value, operation);

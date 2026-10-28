@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.jeicy.apotheoticadditions.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GemToStackMixin",
+    "GemSocketValidationMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

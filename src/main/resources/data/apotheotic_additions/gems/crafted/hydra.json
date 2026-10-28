@@ -1,0 +1,23 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": ["apotheosis:melee_weapon", "apotheosis:trident"]
+      },
+      "attribute": "minecraft:generic.luck",
+      "operation": "add_multiplied_total",
+      "original_socket_types": ["sword", "trident"],
+      "values": {
+        "apotheotic_additions:artifact": 0.25,
+        "apotheotic_additions:heirloom": 0.5,
+        "apotheotic_additions:esoteric": 0.75
+      }
+    }
+  ]
+}

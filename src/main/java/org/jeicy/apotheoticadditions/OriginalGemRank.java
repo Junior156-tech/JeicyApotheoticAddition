@@ -50,6 +50,14 @@ public enum OriginalGemRank {
 
     public boolean canAdvance() { return stableId < ESOTERIC.stableId; }
 
+    public boolean isAtLeast(OriginalGemRank other) {
+        return this.stableId >= other.stableId;
+    }
+
+    public static OriginalGemRank max(OriginalGemRank first, OriginalGemRank second) {
+        return first.stableId >= second.stableId ? first : second;
+    }
+
     /** Only a sequential upgrade is permitted. Material consumption is checked elsewhere. */
     public OriginalGemRank next() {
         if (!canAdvance()) throw new IllegalStateException("Esoteric is already the maximum rank");
