@@ -1,0 +1,52 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_all_stats",
+      "gem_class": {
+        "key": "boots",
+        "types": ["apotheosis:boots"]
+      },
+      "operation": "add_multiplied_total",
+      "values": {
+        "apotheotic_additions:artifact": 0.05,
+        "apotheotic_additions:heirloom": 0.075,
+        "apotheotic_additions:esoteric": 0.1
+      },
+      "attributes": [
+        "minecraft:generic.max_health",
+        "minecraft:generic.knockback_resistance",
+        "minecraft:generic.movement_speed",
+        "minecraft:generic.attack_damage",
+        "minecraft:generic.attack_knockback",
+        "minecraft:generic.attack_speed",
+        "minecraft:generic.armor",
+        "minecraft:generic.armor_toughness",
+        "minecraft:generic.luck",
+        "apothic_attributes:armor_pierce",
+        "apothic_attributes:armor_shred",
+        "apothic_attributes:arrow_damage",
+        "apothic_attributes:arrow_velocity",
+        "apothic_attributes:cold_damage",
+        "apothic_attributes:crit_chance",
+        "apothic_attributes:crit_damage",
+        "apothic_attributes:current_hp_damage",
+        "apothic_attributes:dodge_chance",
+        "apothic_attributes:draw_speed",
+        "apothic_attributes:experience_gained",
+        "apothic_attributes:fire_damage",
+        "apothic_attributes:ghost_health",
+        "apothic_attributes:healing_received",
+        "apothic_attributes:life_steal",
+        "apothic_attributes:mining_speed",
+        "apothic_attributes:overheal",
+        "apothic_attributes:prot_pierce",
+        "apothic_attributes:prot_shred"
+      ],
+      "original_socket_types": ["boots"]
+    }
+  ]
+}

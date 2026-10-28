@@ -21,8 +21,10 @@ ACTIVE = {
     "crafted/monstrosity.json": "apotheotic_additions:artifact",
     "crafted/slider.json": "apotheotic_additions:artifact",
     "crafted/snow_queen.json": "apotheotic_additions:artifact",
+    "crafted/ur-ghast.json": "apotheotic_additions:artifact",
     "crafted/warden.json": "apotheotic_additions:artifact",
     "crafted/wither.json": "apotheotic_additions:artifact",
+    "crafted/wroughtnaut.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
     "modded/hearty.json": "common",
 }
@@ -102,11 +104,11 @@ def main() -> int:
                 assert set(new_bonus["gem_class"]["types"]) == normalize_types(
                     old_bonus["gem_class"]["types"]
                 )
-            elif relative_path == "crafted/wither.json":
+            elif relative_path in {"crafted/wither.json", "crafted/wroughtnaut.json"}:
                 assert len(runtime["bonuses"]) == 1
                 new_bonus = runtime["bonuses"][0]
                 assert new_bonus["type"] == "apotheotic_additions:original_multi_attribute"
-                assert len(new_bonus["profiles"]) == len(original["bonuses"]) == 2
+                assert len(new_bonus["profiles"]) == len(original["bonuses"])
                 original_types = set()
                 for profile, old_bonus in zip(new_bonus["profiles"], original["bonuses"]):
                     assert old_bonus["type"] == "apotheosis:multi_attribute"
@@ -119,6 +121,22 @@ def main() -> int:
                         assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"].upper()]
                         assert modifier["values"] == old_modifier["values"]
                 assert set(new_bonus["gem_class"]["types"]) == normalize_types(list(original_types))
+            elif relative_path == "crafted/ur-ghast.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
+                old_bonus = original["bonuses"][0]
+                new_bonus = runtime["bonuses"][0]
+                assert old_bonus["type"] == "apotheosis:all_stats"
+                assert new_bonus["type"] == "apotheotic_additions:original_all_stats"
+                assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                assert new_bonus["values"] == old_bonus["values"]
+                assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert set(new_bonus["attributes"]) == {
+                    normalize_attribute(attribute) for attribute in old_bonus["attributes"]
+                }
+                assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                    old_bonus["gem_class"]["types"]
+                )
             else:
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
                 old_bonus = original["bonuses"][0]

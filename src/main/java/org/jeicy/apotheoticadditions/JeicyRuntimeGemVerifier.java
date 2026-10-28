@@ -26,8 +26,10 @@ public final class JeicyRuntimeGemVerifier {
         Map.entry("crafted/monstrosity", OriginalGemRank.ARTIFACT),
         Map.entry("crafted/slider", OriginalGemRank.ARTIFACT),
         Map.entry("crafted/snow_queen", OriginalGemRank.ARTIFACT),
+        Map.entry("crafted/ur-ghast", OriginalGemRank.ARTIFACT),
         Map.entry("crafted/warden", OriginalGemRank.ARTIFACT),
         Map.entry("crafted/wither", OriginalGemRank.ARTIFACT),
+        Map.entry("crafted/wroughtnaut", OriginalGemRank.ARTIFACT),
         Map.entry("modded/armor", OriginalGemRank.COMMON),
         Map.entry("modded/hearty", OriginalGemRank.COMMON)
     );
@@ -65,10 +67,17 @@ public final class JeicyRuntimeGemVerifier {
         verifySocketRule("crafted/maledictus", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
         verifySocketRule("crafted/ender_dragon", net.minecraft.world.item.Items.BOW, true);
         verifySocketRule("crafted/ender_dragon", net.minecraft.world.item.Items.CROSSBOW, true);
-        verifyWitherProfile(net.minecraft.world.item.Items.DIAMOND_SWORD, 0);
-        verifyWitherProfile(net.minecraft.world.item.Items.TRIDENT, 0);
-        verifyWitherProfile(net.minecraft.world.item.Items.DIAMOND_AXE, 1);
-        LOGGER.info("Verified 6 exact socket decisions and 3 split weapon profiles.");
+        verifySocketRule("crafted/ur-ghast", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("crafted/ur-ghast", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+        verifySocketRule("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.DIAMOND_SWORD, 0);
+        verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.TRIDENT, 0);
+        verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.DIAMOND_AXE, 1);
+        verifyMultiAttributeProfile("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_AXE, 0);
+        LOGGER.info("Verified 10 exact socket decisions and 4 multi-attribute profiles.");
+        verifyUrGhastAllStats();
+        LOGGER.info("Verified Ur-Ghast Artifact/Heirloom/Esoteric values across 28 attributes.");
         verifyEnderDragonEnchantments(event);
         LOGGER.info("Verified Ender Dragon Artifact rank adds 2 levels to all existing enchantments.");
         verifyOriginalRankEvolution(event);
@@ -87,19 +96,36 @@ public final class JeicyRuntimeGemVerifier {
         }
     }
 
-    private static void verifyWitherProfile(net.minecraft.world.item.Item target, int expected) {
+    private static void verifyMultiAttributeProfile(String gemPath,
+                                                     net.minecraft.world.item.Item target,
+                                                     int expected) {
         Gem gem = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
-            "apotheotic_additions", "crafted/wither"));
+            "apotheotic_additions", gemPath));
         ItemStack targetStack = new ItemStack(target);
         var bonus = gem.getBonus(dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(targetStack),
             Purity.PERFECT).orElseThrow();
         if (!(bonus instanceof JeicyTieredMultiAttributeBonus multi)) {
-            throw new IllegalStateException("Wither gem did not load its original multi-attribute bonus");
+            throw new IllegalStateException(gemPath + " did not load its original multi-attribute bonus");
         }
         int actual = multi.profileIndexFor(targetStack);
         if (actual != expected) {
-            throw new IllegalStateException("Wither profile mismatch for " + target
+            throw new IllegalStateException(gemPath + " profile mismatch for " + target
                 + ": expected " + expected + ", got " + actual);
+        }
+    }
+
+    private static void verifyUrGhastAllStats() {
+        Gem gem = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", "crafted/ur-ghast"));
+        ItemStack targetStack = new ItemStack(net.minecraft.world.item.Items.DIAMOND_BOOTS);
+        var bonus = gem.getBonus(dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(targetStack),
+            Purity.PERFECT).orElseThrow();
+        if (!(bonus instanceof JeicyTieredAllStatsBonus allStats)
+            || allStats.attributeCount() != 28
+            || !Double.valueOf(0.05).equals(allStats.valueForRank(OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(0.075).equals(allStats.valueForRank(OriginalGemRank.HEIRLOOM))
+            || !Double.valueOf(0.1).equals(allStats.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Ur-Ghast all-stats definition did not preserve original values");
         }
     }
 

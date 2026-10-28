@@ -1,0 +1,41 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": ["apotheosis:melee_weapon"]
+      },
+      "profiles": [
+        {
+          "key": "heavy_weapon",
+          "original_socket_types": ["heavy_weapon"],
+          "modifiers": [
+            {
+              "attribute": "minecraft:generic.armor",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 4.0,
+                "apotheotic_additions:heirloom": 5.0,
+                "apotheotic_additions:esoteric": 6.0
+              }
+            },
+            {
+              "attribute": "minecraft:generic.armor_toughness",
+              "operation": "add_value",
+              "values": {
+                "apotheotic_additions:artifact": 4.0,
+                "apotheotic_additions:heirloom": 5.0,
+                "apotheotic_additions:esoteric": 6.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
