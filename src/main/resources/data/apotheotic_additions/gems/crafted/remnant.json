@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "cataclysm" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": {
+        "key": "lower_armor",
+        "types": ["apotheosis:leggings", "apotheosis:boots"]
+      },
+      "mob_effect": "cataclysm:stun",
+      "target": "hurt_attacker",
+      "original_socket_types": ["leggings", "boots"],
+      "values": {
+        "apotheotic_additions:artifact": { "duration": 100, "amplifier": 0, "cooldown": 6000 },
+        "apotheotic_additions:heirloom": { "duration": 150, "amplifier": 0, "cooldown": 5000 },
+        "apotheotic_additions:esoteric": { "duration": 200, "amplifier": 0, "cooldown": 4000 }
+      }
+    }
+  ]
+}

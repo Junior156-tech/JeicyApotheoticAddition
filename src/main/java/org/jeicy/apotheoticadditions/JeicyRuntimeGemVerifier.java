@@ -87,6 +87,8 @@ public final class JeicyRuntimeGemVerifier {
         LOGGER.info("Verified Ur-Ghast Artifact/Heirloom/Esoteric values across 28 attributes.");
         verifyMidas(event);
         LOGGER.info("Verified Midas helmet defense, weapon profiles, enchantment, and drop values.");
+        verifyConditionalGemsSkipped();
+        LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
         verifyEnderDragonEnchantments(event);
         LOGGER.info("Verified Ender Dragon Artifact rank adds 2 levels to all existing enchantments.");
         verifyOriginalRankEvolution(event);
@@ -178,6 +180,23 @@ public final class JeicyRuntimeGemVerifier {
         if (enchantments.getLevel(sweeping) != 2) {
             throw new IllegalStateException("Midas Artifact rank did not add Sweeping Edge II");
         }
+    }
+
+    private static void verifyConditionalGemsSkipped() {
+        Map<String, String> conditionalGems = Map.of(
+            "crafted/harbringer", "cataclysm",
+            "crafted/leviathan", "cataclysm",
+            "crafted/remnant", "cataclysm",
+            "crafted/sunbird", "mowziesmobs");
+        conditionalGems.forEach((gemPath, modId) -> {
+            if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
+                ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
+                    "apotheotic_additions", gemPath);
+                if (GemRegistry.INSTANCE.getValue(id) != null) {
+                    throw new IllegalStateException("Conditional gem loaded without " + modId + ": " + id);
+                }
+            }
+        });
     }
 
     private static void verifyEnderDragonEnchantments(ServerStartedEvent serverEvent) {

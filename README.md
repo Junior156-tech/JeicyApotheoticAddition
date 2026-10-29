@@ -16,6 +16,8 @@ NeoForge y Apotheosis 8.8.0.
   `Done` sin errores de recetas o codecs.
 - Apotheosis registra 37 gemas: sus 21 gemas base y 16 gemas originales
   activadas (`Armor`, `Hearty`, `Midas` y trece gemas crafted).
+- El JAR incluye además cuatro definiciones crafted condicionales: Harbringer,
+  Leviathan y Remnant requieren Cataclysm; Sunbird requiere Mowzie's Mobs.
 - Las 16 gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -25,6 +27,8 @@ NeoForge y Apotheosis 8.8.0.
   Ur-Ghast conserva además su multiplicador simultáneo sobre 28 atributos.
 - Midas mantiene separados el casco Mageslayer, Sweeping para espada/tridente
   y la transformación de retoños en manzanas doradas para armas pesadas.
+- El bonus original de efectos temporales ya usa rangos Common–Esoteric y
+  respeta duración, amplificador, cooldown, objetivo y tipo de socket.
 - La mesa de corte conserva la evolución secuencial Common–Esoteric: consume
   dos gemas idénticas, `1 + rango×2` Gem Dust y material actual×3, siguiente×1
   o anterior×9. Las rutas nativa y extendida se verifican en cada arranque.
@@ -36,7 +40,9 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 51 gemas y los 263 affixes del port por activar en runtime. El JAR es un
+Quedan 47 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de prueba siguen activas 16 gemas porque no se instalan los mods
+opcionales de las otras cuatro. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.
 

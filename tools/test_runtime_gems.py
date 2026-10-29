@@ -15,12 +15,16 @@ ACTIVE = {
     "crafted/cornelia.json": "apotheotic_additions:artifact",
     "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
+    "crafted/harbringer.json": "apotheotic_additions:artifact",
     "crafted/hydra.json": "apotheotic_additions:artifact",
     "crafted/ignis.json": "apotheotic_additions:artifact",
+    "crafted/leviathan.json": "apotheotic_additions:artifact",
     "crafted/maledictus.json": "apotheotic_additions:artifact",
     "crafted/monstrosity.json": "apotheotic_additions:artifact",
+    "crafted/remnant.json": "apotheotic_additions:artifact",
     "crafted/slider.json": "apotheotic_additions:artifact",
     "crafted/snow_queen.json": "apotheotic_additions:artifact",
+    "crafted/sunbird.json": "apotheotic_additions:artifact",
     "crafted/ur-ghast.json": "apotheotic_additions:artifact",
     "crafted/warden.json": "apotheotic_additions:artifact",
     "crafted/wither.json": "apotheotic_additions:artifact",
@@ -174,6 +178,31 @@ def main() -> int:
                     "condition": "apotheosis:matches_block",
                     "valid_blocks": "#" + old_transform["blocks"],
                 }]
+            elif relative_path in {
+                "crafted/harbringer.json",
+                "crafted/leviathan.json",
+                "crafted/remnant.json",
+                "crafted/sunbird.json",
+            }:
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
+                old_bonus = original["bonuses"][0]
+                new_bonus = runtime["bonuses"][0]
+                assert old_bonus["type"] == "apotheosis:mob_effect"
+                assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+                assert new_bonus["mob_effect"] == old_bonus["mob_effect"]
+                assert new_bonus["target"] == old_bonus["target"].lower()
+                assert new_bonus["values"] == old_bonus["values"]
+                assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                    old_bonus["gem_class"]["types"]
+                )
+                expected_conditions = [
+                    {"type": "neoforge:mod_loaded", "modid": condition["modid"]}
+                    for condition in original["conditions"]
+                    if condition["type"] == "forge:mod_loaded"
+                ]
+                assert runtime["neoforge:conditions"] == expected_conditions
             else:
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
                 old_bonus = original["bonuses"][0]
@@ -189,7 +218,7 @@ def main() -> int:
                     old_bonus["gem_class"]["types"]
                 )
 
-    print(f"PASS: {len(ACTIVE)} runtime gems match original weights, ranks, classes, and values")
+    print(f"PASS: {len(ACTIVE)} packaged runtime gem definitions match original data")
     return 0
 
 
