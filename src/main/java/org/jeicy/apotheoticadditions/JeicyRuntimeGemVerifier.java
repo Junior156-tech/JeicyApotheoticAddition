@@ -45,6 +45,9 @@ public final class JeicyRuntimeGemVerifier {
             activeGems.put("aether/purity", OriginalGemRank.RARE);
             activeGems.put("aether/zanite_alchemist", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            activeGems.put("crafted/naga", OriginalGemRank.ARTIFACT);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -97,6 +100,10 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("aether")) {
             verifyAether();
             LOGGER.info("Verified Aether flight, alchemy, effects, values, ingredients, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            verifyNaga();
+            LOGGER.info("Verified Naga log transformation, values, ingredient, output, and heavy-weapon socket.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -198,6 +205,7 @@ public final class JeicyRuntimeGemVerifier {
             "aether/aether", "aether",
             "aether/purity", "aether",
             "aether/zanite_alchemist", "aether",
+            "crafted/naga", "twilightforest",
             "crafted/harbringer", "cataclysm",
             "crafted/leviathan", "cataclysm",
             "crafted/remnant", "cataclysm",
@@ -289,6 +297,23 @@ public final class JeicyRuntimeGemVerifier {
             || heavyRare == null || heavyRare.duration() != 60 || heavyRare.amplifier() != 0
             || heavyEsoteric == null || heavyEsoteric.duration() != 280 || heavyEsoteric.amplifier() != 2) {
             throw new IllegalStateException("Aether Zanite Alchemist values did not match the original");
+        }
+    }
+
+    private static void verifyNaga() {
+        verifySocketRule("crafted/naga", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("crafted/naga", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifySocketRule("crafted/naga", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
+
+        JeicyTieredDropTransformBonus drop = requireBonus(
+            gem("crafted/naga"), net.minecraft.world.item.Items.DIAMOND_AXE,
+            JeicyTieredDropTransformBonus.class);
+        if (!Double.valueOf(0.75).equals(drop.chanceForRank(OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(0.9).equals(drop.chanceForRank(OriginalGemRank.HEIRLOOM))
+            || !Double.valueOf(1).equals(drop.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !drop.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.OAK_LOG))
+            || !drop.outputForVerification().is(item("twilightforest:liveroot"))) {
+            throw new IllegalStateException("Naga values did not match the original");
         }
     }
 

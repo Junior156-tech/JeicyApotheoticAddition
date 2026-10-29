@@ -22,6 +22,8 @@ NeoForge y Apotheosis 8.8.0.
   en pechera; el entorno de desarrollo fija Aether 1.21.1 y owo-lib reales.
 - Purity y Zanite Alchemist conservan transformaciones de drops, atributos,
   efectos, cooldowns y restricciones exactas sobre pico, armadura y armas.
+- Naga transforma troncos en Liveroot exclusivamente con armas pesadas; el
+  entorno de desarrollo fija Twilight Forest 4.8.3802 desde su Maven oficial.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -44,8 +46,8 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 44 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 19 gemas; otras cuatro definiciones se
+Quedan 43 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 20 gemas; otras cuatro definiciones se
 omiten porque no están instalados Cataclysm ni Mowzie's Mobs. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.

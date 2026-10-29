@@ -10,6 +10,10 @@ base.archivesName = 'JeicyApotheoticAddition'
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 repositories {
     mavenCentral()
+    maven {
+        name = 'TeamTwilight'
+        url = 'https://maven.tamaized.com/releases'
+    }
     exclusiveContent {
         forRepository {
             maven {
@@ -44,6 +48,7 @@ dependencies {
     runtimeOnly 'maven.modrinth:pL8MtgqY:2vH7csNR' // Apothic Enchanting 1.6.2
     runtimeOnly 'maven.modrinth:YhmgMVyu:K5X5qMwG' // The Aether 1.21.1-1.5.10 NeoForge
     runtimeOnly 'maven.modrinth:ccKDOlHs:NMCHU6DZ' // owo-lib 0.12.15.5 (required by Aether)
+    runtimeOnly 'team-twilight:twilightforest:4.8.3802:universal' // Twilight Forest 1.21.1
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
