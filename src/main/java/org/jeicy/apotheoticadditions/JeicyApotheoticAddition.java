@@ -57,6 +57,10 @@ public final class JeicyApotheoticAddition {
             JeicyTieredMultiAttributeBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_all_stats"),
             JeicyTieredAllStatsBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_mageslayer"),
+            JeicyTieredMageSlayerBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_midas_weapon"),
+            JeicyMidasWeaponBonus.CODEC);
         ITEMS.register(modBus);
         RECIPE_SERIALIZERS.register(modBus);
         JeicyOriginalBlocks.register(modBus);

@@ -31,7 +31,8 @@ public final class JeicyRuntimeGemVerifier {
         Map.entry("crafted/wither", OriginalGemRank.ARTIFACT),
         Map.entry("crafted/wroughtnaut", OriginalGemRank.ARTIFACT),
         Map.entry("modded/armor", OriginalGemRank.COMMON),
-        Map.entry("modded/hearty", OriginalGemRank.COMMON)
+        Map.entry("modded/hearty", OriginalGemRank.COMMON),
+        Map.entry("modded/midas", OriginalGemRank.EPIC)
     );
 
     private JeicyRuntimeGemVerifier() {}
@@ -71,13 +72,21 @@ public final class JeicyRuntimeGemVerifier {
         verifySocketRule("crafted/ur-ghast", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
         verifySocketRule("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_AXE, true);
         verifySocketRule("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, false);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/midas", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
         verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.DIAMOND_SWORD, 0);
         verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.TRIDENT, 0);
         verifyMultiAttributeProfile("crafted/wither", net.minecraft.world.item.Items.DIAMOND_AXE, 1);
         verifyMultiAttributeProfile("crafted/wroughtnaut", net.minecraft.world.item.Items.DIAMOND_AXE, 0);
-        LOGGER.info("Verified 10 exact socket decisions and 4 multi-attribute profiles.");
+        LOGGER.info("Verified 16 exact socket decisions and 4 multi-attribute profiles.");
         verifyUrGhastAllStats();
         LOGGER.info("Verified Ur-Ghast Artifact/Heirloom/Esoteric values across 28 attributes.");
+        verifyMidas(event);
+        LOGGER.info("Verified Midas helmet defense, weapon profiles, enchantment, and drop values.");
         verifyEnderDragonEnchantments(event);
         LOGGER.info("Verified Ender Dragon Artifact rank adds 2 levels to all existing enchantments.");
         verifyOriginalRankEvolution(event);
@@ -126,6 +135,48 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(0.075).equals(allStats.valueForRank(OriginalGemRank.HEIRLOOM))
             || !Double.valueOf(0.1).equals(allStats.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Ur-Ghast all-stats definition did not preserve original values");
+        }
+    }
+
+    private static void verifyMidas(ServerStartedEvent serverEvent) {
+        Gem gem = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", "modded/midas"));
+        ItemStack gemStack = gem.toStack(Purity.PERFECT);
+        JeicyGemRankAccess.assign(gemStack, OriginalGemRank.ARTIFACT);
+
+        ItemStack helmet = new ItemStack(net.minecraft.world.item.Items.DIAMOND_HELMET);
+        var helmetBonus = gem.getBonus(
+            dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(helmet), Purity.PERFECT)
+            .orElseThrow();
+        if (!(helmetBonus instanceof JeicyTieredMageSlayerBonus mageSlayer)
+            || !Double.valueOf(0.2).equals(mageSlayer.valueForRank(OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(0.3).equals(mageSlayer.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Midas Mageslayer values did not match the original");
+        }
+
+        ItemStack sword = new ItemStack(net.minecraft.world.item.Items.DIAMOND_SWORD);
+        var category = dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(sword);
+        var weaponBonus = gem.getBonus(category, Purity.PERFECT).orElseThrow();
+        if (!(weaponBonus instanceof JeicyMidasWeaponBonus midas)
+            || midas.enchantmentValueForRank(OriginalGemRank.ARTIFACT) != 2
+            || !Double.valueOf(0.1).equals(midas.transformChanceForRank(OriginalGemRank.ARTIFACT))
+            || !midas.outputForVerification().is(net.minecraft.world.item.Items.GOLDEN_APPLE)) {
+            throw new IllegalStateException("Midas weapon values did not match the original");
+        }
+
+        var lookup = serverEvent.getServer().registryAccess()
+            .lookup(net.minecraft.core.registries.Registries.ENCHANTMENT).orElseThrow();
+        var sweeping = lookup.getOrThrow(
+            net.minecraft.world.item.enchantment.Enchantments.SWEEPING_EDGE);
+        var enchantments = new net.minecraft.world.item.enchantment.ItemEnchantments.Mutable(
+            net.minecraft.world.item.enchantment.ItemEnchantments.EMPTY);
+        var event = new net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent(
+            sword, enchantments, sweeping, lookup);
+        var instance = dev.shadowsoffire.apotheosis.socket.gem.GemInstance.socketed(
+            category, gemStack, 0);
+        weaponBonus.getEnchantmentLevels(instance, event);
+        if (enchantments.getLevel(sweeping) != 2) {
+            throw new IllegalStateException("Midas Artifact rank did not add Sweeping Edge II");
         }
     }
 

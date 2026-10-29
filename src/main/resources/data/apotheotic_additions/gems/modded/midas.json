@@ -1,0 +1,62 @@
+{
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "normal",
+  "constraints": {
+    "dimensions": ["minecraft:the_end"]
+  },
+  "weights": { "weight": 5, "quality": 1.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mageslayer",
+      "gem_class": {
+        "key": "helmet",
+        "types": ["apotheosis:helmet"]
+      },
+      "original_socket_types": ["helmet"],
+      "values": {
+        "epic": 0.05,
+        "mythic": 0.1,
+        "ancient": 0.15,
+        "apotheotic_additions:artifact": 0.2,
+        "apotheotic_additions:heirloom": 0.25,
+        "apotheotic_additions:esoteric": 0.3
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_midas_weapon",
+      "gem_class": {
+        "key": "weapon",
+        "types": ["apotheosis:melee_weapon", "apotheosis:trident"]
+      },
+      "enchantment": "minecraft:sweeping_edge",
+      "enchantment_values": {
+        "epic": 1,
+        "mythic": 1,
+        "ancient": 1,
+        "apotheotic_additions:artifact": 2,
+        "apotheotic_additions:heirloom": 2,
+        "apotheotic_additions:esoteric": 3
+      },
+      "conditions": [
+        {
+          "condition": "apotheosis:matches_block",
+          "valid_blocks": "#minecraft:leaves"
+        }
+      ],
+      "inputs": { "tag": "minecraft:saplings" },
+      "output": { "count": 1, "id": "minecraft:golden_apple" },
+      "transform_values": {
+        "epic": 0.01,
+        "mythic": 0.04,
+        "ancient": 0.07,
+        "apotheotic_additions:artifact": 0.1,
+        "apotheotic_additions:heirloom": 0.15,
+        "apotheotic_additions:esoteric": 0.2
+      },
+      "desc": "gem.apotheotic_additions:alchemy/midas.axe",
+      "light_socket_types": ["sword", "trident"],
+      "heavy_socket_types": ["heavy_weapon"]
+    }
+  ]
+}

@@ -27,6 +27,7 @@ ACTIVE = {
     "crafted/wroughtnaut.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
     "modded/hearty.json": "common",
+    "modded/midas.json": "epic",
 }
 TYPE_MAP = {
     "bow": "apotheosis:bow",
@@ -56,6 +57,8 @@ def normalize_attribute(attribute: str) -> str:
 
 
 def normalize_enchantment(enchantment: str) -> str:
+    if enchantment == "minecraft:sweeping":
+        return "minecraft:sweeping_edge"
     return enchantment if ":" in enchantment else "minecraft:" + enchantment
 
 
@@ -83,9 +86,13 @@ def main() -> int:
             assert runtime["weights"]["weight"] == original["weight"]
             assert runtime["weights"]["quality"] == original["quality"]
             assert runtime.get("unique", False) == original.get("unique", False)
-            if minimum_rank == "apotheotic_additions:artifact":
+            if minimum_rank != "common":
+                purity_by_rank = {
+                    "epic": "normal",
+                    "apotheotic_additions:artifact": "perfect",
+                }
                 assert original["min_rarity"] == minimum_rank
-                assert runtime["min_purity"] == "perfect"
+                assert runtime["min_purity"] == purity_by_rank[minimum_rank]
             else:
                 assert "min_rarity" not in original
                 assert "min_purity" not in runtime
@@ -137,6 +144,36 @@ def main() -> int:
                 assert set(new_bonus["gem_class"]["types"]) == normalize_types(
                     old_bonus["gem_class"]["types"]
                 )
+            elif relative_path == "modded/midas.json":
+                assert len(original["bonuses"]) == 3
+                assert len(runtime["bonuses"]) == 2
+                old_mage, old_enchantment, old_transform = original["bonuses"]
+                new_mage, new_weapon = runtime["bonuses"]
+                assert old_mage["type"] == "apotheosis:mageslayer"
+                assert new_mage["type"] == "apotheotic_additions:original_mageslayer"
+                assert new_mage["values"] == old_mage["values"]
+                assert new_mage["original_socket_types"] == ["helmet"]
+                assert new_mage["gem_class"]["types"] == ["apotheosis:helmet"]
+
+                assert old_enchantment["type"] == "apotheosis:enchantment"
+                assert old_transform["type"] == "apotheosis:drop_transform"
+                assert new_weapon["type"] == "apotheotic_additions:original_midas_weapon"
+                assert new_weapon["enchantment"] == normalize_enchantment(
+                    old_enchantment["enchantment"]
+                )
+                assert new_weapon["enchantment_values"] == old_enchantment["values"]
+                assert new_weapon["transform_values"] == old_transform["values"]
+                assert new_weapon["light_socket_types"] == old_enchantment["gem_class"]["types"]
+                assert new_weapon["heavy_socket_types"] == old_transform["gem_class"]["types"]
+                combined_types = old_enchantment["gem_class"]["types"] + old_transform["gem_class"]["types"]
+                assert set(new_weapon["gem_class"]["types"]) == normalize_types(combined_types)
+                assert new_weapon["inputs"] == old_transform["inputs"]
+                assert new_weapon["output"] == {"count": 1, "id": old_transform["output"]["item"]}
+                assert new_weapon["desc"] == old_transform["desc"]
+                assert new_weapon["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + old_transform["blocks"],
+                }]
             else:
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
                 old_bonus = original["bonuses"][0]
