@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "undergarden" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "constraints": { "dimensions": ["undergarden:undergarden"] },
+  "weights": { "weight": 5, "quality": 4.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "minecraft:generic.max_health",
+      "operation": "add_value",
+      "original_socket_types": ["chestplate"],
+      "values": {
+        "rare": 3.0,
+        "epic": 4.0,
+        "mythic": 5.0,
+        "ancient": 6.0,
+        "apotheotic_additions:artifact": 8.0,
+        "apotheotic_additions:heirloom": 10.0,
+        "apotheotic_additions:esoteric": 12.0
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "helmet", "types": ["apotheosis:helmet"] },
+      "attribute": "apothic_attributes:life_steal",
+      "operation": "add_multiplied_total",
+      "original_socket_types": ["helmet"],
+      "values": {
+        "rare": 0.10,
+        "epic": 0.15,
+        "mythic": 0.20,
+        "ancient": 0.25,
+        "apotheotic_additions:artifact": 0.30,
+        "apotheotic_additions:heirloom": 0.35,
+        "apotheotic_additions:esoteric": 0.40
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": {
+        "key": "ranged_weapon",
+        "types": ["apotheosis:bow", "apotheosis:trident"]
+      },
+      "mob_effect": "undergarden:virulence",
+      "target": "arrow_target",
+      "original_socket_types": ["bow", "crossbow", "trident"],
+      "values": {
+        "mythic": { "duration": 180, "amplifier": 0, "cooldown": 800 },
+        "ancient": { "duration": 240, "amplifier": 0, "cooldown": 800 },
+        "apotheotic_additions:artifact": { "duration": 300, "amplifier": 1, "cooldown": 800 },
+        "apotheotic_additions:heirloom": { "duration": 360, "amplifier": 1, "cooldown": 700 },
+        "apotheotic_additions:esoteric": { "duration": 420, "amplifier": 2, "cooldown": 700 }
+      }
+    }
+  ]
+}

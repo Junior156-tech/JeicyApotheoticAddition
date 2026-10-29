@@ -36,6 +36,8 @@ ACTIVE = {
     "modded/armor.json": "common",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
+    "undergarden/decay.json": "rare",
+    "undergarden/undergarden.json": "rare",
 }
 TYPE_MAP = {
     "bow": "apotheosis:bow",
@@ -235,7 +237,12 @@ def main() -> int:
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "aether"}
                 ]
-            elif relative_path in {"aether/purity.json", "aether/zanite_alchemist.json"}:
+            elif relative_path in {
+                "aether/purity.json",
+                "aether/zanite_alchemist.json",
+                "undergarden/decay.json",
+                "undergarden/undergarden.json",
+            }:
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 3
                 for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
                     assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
@@ -268,8 +275,9 @@ def main() -> int:
                         assert new_bonus["mob_effect"] == old_bonus["mob_effect"]
                         assert new_bonus["target"] == old_bonus["target"].lower()
                 assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                expected_mod = "undergarden" if relative_path.startswith("undergarden/") else "aether"
                 assert runtime["neoforge:conditions"] == [
-                    {"type": "neoforge:mod_loaded", "modid": "aether"}
+                    {"type": "neoforge:mod_loaded", "modid": expected_mod}
                 ]
             elif relative_path == "crafted/naga.json":
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1

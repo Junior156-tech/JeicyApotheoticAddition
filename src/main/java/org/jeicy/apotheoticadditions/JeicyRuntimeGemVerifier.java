@@ -48,6 +48,10 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             activeGems.put("crafted/naga", OriginalGemRank.ARTIFACT);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("undergarden")) {
+            activeGems.put("undergarden/decay", OriginalGemRank.RARE);
+            activeGems.put("undergarden/undergarden", OriginalGemRank.RARE);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -104,6 +108,10 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             verifyNaga();
             LOGGER.info("Verified Naga log transformation, values, ingredient, output, and heavy-weapon socket.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("undergarden")) {
+            verifyUndergarden();
+            LOGGER.info("Verified Undergarden alchemy, attributes, Virulence values, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -206,6 +214,8 @@ public final class JeicyRuntimeGemVerifier {
             "aether/purity", "aether",
             "aether/zanite_alchemist", "aether",
             "crafted/naga", "twilightforest",
+            "undergarden/decay", "undergarden",
+            "undergarden/undergarden", "undergarden",
             "crafted/harbringer", "cataclysm",
             "crafted/leviathan", "cataclysm",
             "crafted/remnant", "cataclysm",
@@ -314,6 +324,67 @@ public final class JeicyRuntimeGemVerifier {
             || !drop.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.OAK_LOG))
             || !drop.outputForVerification().is(item("twilightforest:liveroot"))) {
             throw new IllegalStateException("Naga values did not match the original");
+        }
+    }
+
+    private static void verifyUndergarden() {
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("undergarden/decay", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+
+        Gem decay = gem("undergarden/decay");
+        JeicyTieredDropTransformBonus decayDrop = requireBonus(
+            decay, net.minecraft.world.item.Items.DIAMOND_PICKAXE,
+            JeicyTieredDropTransformBonus.class);
+        JeicyTieredAttributeBonus decayWeapon = requireBonus(
+            decay, net.minecraft.world.item.Items.DIAMOND_SWORD,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus decayArmor = requireBonus(
+            decay, net.minecraft.world.item.Items.DIAMOND_BOOTS,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.15).equals(decayDrop.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1).equals(decayDrop.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !decayDrop.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.COBBLESTONE))
+            || !decayDrop.outputForVerification().is(item("undergarden:depthrock"))
+            || !Double.valueOf(0.015).equals(decayWeapon.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.12).equals(decayWeapon.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(decayArmor.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.35).equals(decayArmor.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Undergarden Decay values did not match the original");
+        }
+
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.BOW, true);
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.CROSSBOW, true);
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("undergarden/undergarden", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+
+        Gem undergarden = gem("undergarden/undergarden");
+        JeicyTieredAttributeBonus health = requireBonus(
+            undergarden, net.minecraft.world.item.Items.DIAMOND_CHESTPLATE,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus lifeSteal = requireBonus(
+            undergarden, net.minecraft.world.item.Items.DIAMOND_HELMET,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredMobEffectBonus virulence = requireBonus(
+            undergarden, net.minecraft.world.item.Items.BOW,
+            JeicyTieredMobEffectBonus.class);
+        var virulenceMythic = virulence.valueForRank(OriginalGemRank.MYTHIC);
+        var virulenceEsoteric = virulence.valueForRank(OriginalGemRank.ESOTERIC);
+        if (!Double.valueOf(3).equals(health.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(12).equals(health.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.1).equals(lifeSteal.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.4).equals(lifeSteal.valueForRank(OriginalGemRank.ESOTERIC))
+            || virulence.valueForRank(OriginalGemRank.RARE) != null
+            || virulenceMythic == null || virulenceMythic.duration() != 180
+            || virulenceMythic.amplifier() != 0 || virulenceMythic.cooldown() != 800
+            || virulenceEsoteric == null || virulenceEsoteric.duration() != 420
+            || virulenceEsoteric.amplifier() != 2 || virulenceEsoteric.cooldown() != 700) {
+            throw new IllegalStateException("Undergarden gem values did not match the original");
         }
     }
 
