@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "aether" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawless",
+  "constraints": {
+    "dimensions": ["aether:the_aether"]
+  },
+  "weights": { "weight": 1, "quality": 1.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "helmet", "types": ["apotheosis:helmet"] },
+      "attribute": "apothic_attributes:elytra_flight",
+      "operation": "add_value",
+      "original_socket_types": ["helmet"],
+      "values": {
+        "mythic": 1.0,
+        "ancient": 1.0,
+        "apotheotic_additions:artifact": 1.0,
+        "apotheotic_additions:heirloom": 1.0,
+        "apotheotic_additions:esoteric": 1.0
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "neoforge:creative_flight",
+      "operation": "add_value",
+      "original_socket_types": ["chestplate"],
+      "values": {
+        "mythic": 0.0,
+        "ancient": 0.0,
+        "apotheotic_additions:artifact": 0.0,
+        "apotheotic_additions:heirloom": 0.0,
+        "apotheotic_additions:esoteric": 1.0
+      }
+    }
+  ]
+}

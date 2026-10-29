@@ -68,6 +68,10 @@ public final class JeicyTieredAttributeBonus extends GemBonus implements JeicyEx
         return rank == null ? null : this.values.get(rank);
     }
 
+    Double valueForRank(OriginalGemRank rank) {
+        return this.values.get(rank);
+    }
+
     @Override
     public boolean supports(Purity purity) {
         // Apotheosis validates this axis before invoking the bonus. Actual

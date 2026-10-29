@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_ROOT = ROOT / "src/main/resources/data/apotheotic_additions/gems"
 ACTIVE = {
+    "aether/aether.json": "mythic",
     "crafted/cornelia.json": "apotheotic_additions:artifact",
     "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
@@ -55,6 +56,8 @@ OPERATION_MAP = {
 
 
 def normalize_attribute(attribute: str) -> str:
+    if attribute == "attributeslib:creative_flight":
+        return "neoforge:creative_flight"
     if attribute.startswith("attributeslib:"):
         return "apothic_attributes:" + attribute.split(":", 1)[1]
     return attribute
@@ -92,7 +95,10 @@ def main() -> int:
             assert runtime.get("unique", False) == original.get("unique", False)
             if minimum_rank != "common":
                 purity_by_rank = {
+                    "uncommon": "chipped",
+                    "rare": "flawed",
                     "epic": "normal",
+                    "mythic": "flawless",
                     "apotheotic_additions:artifact": "perfect",
                 }
                 assert original["min_rarity"] == minimum_rank
@@ -203,6 +209,23 @@ def main() -> int:
                     if condition["type"] == "forge:mod_loaded"
                 ]
                 assert runtime["neoforge:conditions"] == expected_conditions
+            elif relative_path == "aether/aether.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 2
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    assert old_bonus["type"] == "apotheosis:attribute"
+                    assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                    assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                    assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                    assert new_bonus["values"] == old_bonus["values"]
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"}
+                ]
             else:
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
                 old_bonus = original["bonuses"][0]

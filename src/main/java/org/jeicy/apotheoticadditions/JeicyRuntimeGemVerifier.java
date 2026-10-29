@@ -1,5 +1,6 @@
 package org.jeicy.apotheoticadditions;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -38,8 +39,12 @@ public final class JeicyRuntimeGemVerifier {
     private JeicyRuntimeGemVerifier() {}
 
     public static void onServerStarted(ServerStartedEvent event) {
+        Map<String, OriginalGemRank> activeGems = new LinkedHashMap<>(ACTIVE_GEMS);
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")) {
+            activeGems.put("aether/aether", OriginalGemRank.MYTHIC);
+        }
         int verified = 0;
-        for (var entry : ACTIVE_GEMS.entrySet()) {
+        for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
                 "apotheotic_additions", entry.getKey());
             Gem gem = GemRegistry.INSTANCE.getValue(id);
@@ -60,7 +65,7 @@ public final class JeicyRuntimeGemVerifier {
             }
         }
         LOGGER.info("Verified {} original gem rank assignments across {} active gems.",
-            verified, ACTIVE_GEMS.size());
+            verified, activeGems.size());
 
         verifySocketRule("crafted/hydra", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
         verifySocketRule("crafted/hydra", net.minecraft.world.item.Items.DIAMOND_AXE, false);
@@ -87,6 +92,10 @@ public final class JeicyRuntimeGemVerifier {
         LOGGER.info("Verified Ur-Ghast Artifact/Heirloom/Esoteric values across 28 attributes.");
         verifyMidas(event);
         LOGGER.info("Verified Midas helmet defense, weapon profiles, enchantment, and drop values.");
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")) {
+            verifyAether();
+            LOGGER.info("Verified Aether flight values and exact helmet/chestplate sockets.");
+        }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
         verifyEnderDragonEnchantments(event);
@@ -184,6 +193,7 @@ public final class JeicyRuntimeGemVerifier {
 
     private static void verifyConditionalGemsSkipped() {
         Map<String, String> conditionalGems = Map.of(
+            "aether/aether", "aether",
             "crafted/harbringer", "cataclysm",
             "crafted/leviathan", "cataclysm",
             "crafted/remnant", "cataclysm",
@@ -197,6 +207,26 @@ public final class JeicyRuntimeGemVerifier {
                 }
             }
         });
+    }
+
+    private static void verifyAether() {
+        verifySocketRule("aether/aether", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("aether/aether", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("aether/aether", net.minecraft.world.item.Items.DIAMOND_BOOTS, false);
+
+        Gem gem = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", "aether/aether"));
+        var helmetBonus = gem.getBonus(dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(
+            new ItemStack(net.minecraft.world.item.Items.DIAMOND_HELMET)), Purity.PERFECT).orElseThrow();
+        var chestBonus = gem.getBonus(dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(
+            new ItemStack(net.minecraft.world.item.Items.DIAMOND_CHESTPLATE)), Purity.PERFECT).orElseThrow();
+        if (!(helmetBonus instanceof JeicyTieredAttributeBonus helmet)
+            || !(chestBonus instanceof JeicyTieredAttributeBonus chest)
+            || !Double.valueOf(1).equals(helmet.valueForRank(OriginalGemRank.MYTHIC))
+            || !Double.valueOf(0).equals(chest.valueForRank(OriginalGemRank.MYTHIC))
+            || !Double.valueOf(1).equals(chest.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Aether flight values did not match the original");
+        }
     }
 
     private static void verifyEnderDragonEnchantments(ServerStartedEvent serverEvent) {

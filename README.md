@@ -18,7 +18,9 @@ NeoForge y Apotheosis 8.8.0.
   activadas (`Armor`, `Hearty`, `Midas` y trece gemas crafted).
 - El JAR incluye además cuatro definiciones crafted condicionales: Harbringer,
   Leviathan y Remnant requieren Cataclysm; Sunbird requiere Mowzie's Mobs.
-- Las 16 gemas activadas conservan pesos, calidad, unicidad, restricciones y
+- La gema Aether vuelve a habilitar vuelo con élitros en casco y vuelo creativo
+  en pechera; el entorno de desarrollo fija Aether 1.21.1 y owo-lib reales.
+- Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
 - El catálogo runtime ya conserva el rango mínimo original de las 67 gemas.
@@ -40,9 +42,9 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 47 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de prueba siguen activas 16 gemas porque no se instalan los mods
-opcionales de las otras cuatro. El JAR es un
+Quedan 46 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 17 gemas; otras cuatro definiciones se
+omiten porque no están instalados Cataclysm ni Mowzie's Mobs. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.
 
