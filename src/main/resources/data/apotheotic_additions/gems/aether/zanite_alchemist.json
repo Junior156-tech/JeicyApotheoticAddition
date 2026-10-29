@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "aether" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "constraints": { "dimensions": ["aether:the_aether"] },
+  "weights": { "weight": 5, "quality": 1.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [
+        { "condition": "apotheosis:matches_block", "valid_blocks": "#c:ores/iron" }
+      ],
+      "inputs": { "tag": "c:raw_materials/iron" },
+      "output": { "count": 1, "id": "aether:zanite_gemstone" },
+      "values": {
+        "rare": 0.15,
+        "epic": 0.30,
+        "mythic": 0.45,
+        "ancient": 0.60,
+        "apotheotic_additions:artifact": 0.75,
+        "apotheotic_additions:heirloom": 0.90,
+        "apotheotic_additions:esoteric": 1.0
+      },
+      "desc": "gem.apotheotic_additions:alchemy/zanite.bonus.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    },
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "mob_effect": "minecraft:instant_damage",
+      "target": "hurt_attacker",
+      "original_socket_types": ["chestplate"],
+      "values": {
+        "rare": { "duration": 1, "amplifier": 0, "cooldown": 1500 },
+        "epic": { "duration": 1, "amplifier": 0, "cooldown": 1400 },
+        "mythic": { "duration": 1, "amplifier": 0, "cooldown": 1300 },
+        "ancient": { "duration": 1, "amplifier": 1, "cooldown": 1200 },
+        "apotheotic_additions:artifact": { "duration": 1, "amplifier": 2, "cooldown": 1100 },
+        "apotheotic_additions:heirloom": { "duration": 1, "amplifier": 2, "cooldown": 1000 },
+        "apotheotic_additions:esoteric": { "duration": 1, "amplifier": 3, "cooldown": 1000 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "heavy_weapon", "types": ["apotheosis:melee_weapon"] },
+      "mob_effect": "minecraft:strength",
+      "target": "attack_self",
+      "original_socket_types": ["heavy_weapon"],
+      "values": {
+        "rare": { "duration": 60, "amplifier": 0, "cooldown": 900 },
+        "epic": { "duration": 80, "amplifier": 0, "cooldown": 900 },
+        "mythic": { "duration": 120, "amplifier": 0, "cooldown": 900 },
+        "ancient": { "duration": 160, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:artifact": { "duration": 200, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:heirloom": { "duration": 240, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:esoteric": { "duration": 280, "amplifier": 2, "cooldown": 900 }
+      }
+    }
+  ]
+}

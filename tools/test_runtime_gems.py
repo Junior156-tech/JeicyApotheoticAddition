@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_ROOT = ROOT / "src/main/resources/data/apotheotic_additions/gems"
 ACTIVE = {
     "aether/aether.json": "mythic",
+    "aether/purity.json": "rare",
+    "aether/zanite_alchemist.json": "rare",
     "crafted/cornelia.json": "apotheotic_additions:artifact",
     "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
@@ -52,6 +54,12 @@ OPERATION_MAP = {
     "ADDITION": "add_value",
     "MULTIPLY_BASE": "add_multiplied_base",
     "MULTIPLY_TOTAL": "add_multiplied_total",
+}
+COMMON_TAG_MAP = {
+    "forge:stone": "c:stones",
+    "forge:cobblestone": "c:cobblestones",
+    "forge:ores/iron": "c:ores/iron",
+    "forge:raw_materials/iron": "c:raw_materials/iron",
 }
 
 
@@ -222,6 +230,42 @@ def main() -> int:
                     assert set(new_bonus["gem_class"]["types"]) == normalize_types(
                         old_bonus["gem_class"]["types"]
                     )
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"}
+                ]
+            elif relative_path in {"aether/purity.json", "aether/zanite_alchemist.json"}:
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 3
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                    assert new_bonus["values"] == old_bonus["values"]
+                    if old_bonus["type"] == "apotheosis:drop_transform":
+                        assert new_bonus["type"] == "apotheotic_additions:original_drop_transform"
+                        assert new_bonus["conditions"] == [{
+                            "condition": "apotheosis:matches_block",
+                            "valid_blocks": "#" + COMMON_TAG_MAP[old_bonus["blocks"]],
+                        }]
+                        assert new_bonus["inputs"] == {
+                            "tag": COMMON_TAG_MAP[old_bonus["inputs"]["tag"]]
+                        }
+                        assert new_bonus["output"] == {
+                            "count": 1,
+                            "id": old_bonus["output"]["item"],
+                        }
+                        assert new_bonus["desc"] == old_bonus["desc"]
+                    elif old_bonus["type"] == "apotheosis:attribute":
+                        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                    else:
+                        assert old_bonus["type"] == "apotheosis:mob_effect"
+                        assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+                        assert new_bonus["mob_effect"] == old_bonus["mob_effect"]
+                        assert new_bonus["target"] == old_bonus["target"].lower()
                 assert runtime["constraints"]["dimensions"] == original["dimensions"]
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "aether"}

@@ -20,6 +20,8 @@ NeoForge y Apotheosis 8.8.0.
   Leviathan y Remnant requieren Cataclysm; Sunbird requiere Mowzie's Mobs.
 - La gema Aether vuelve a habilitar vuelo con élitros en casco y vuelo creativo
   en pechera; el entorno de desarrollo fija Aether 1.21.1 y owo-lib reales.
+- Purity y Zanite Alchemist conservan transformaciones de drops, atributos,
+  efectos, cooldowns y restricciones exactas sobre pico, armadura y armas.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -42,8 +44,8 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 46 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 17 gemas; otras cuatro definiciones se
+Quedan 44 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 19 gemas; otras cuatro definiciones se
 omiten porque no están instalados Cataclysm ni Mowzie's Mobs. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.

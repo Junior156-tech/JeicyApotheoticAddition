@@ -42,6 +42,8 @@ public final class JeicyRuntimeGemVerifier {
         Map<String, OriginalGemRank> activeGems = new LinkedHashMap<>(ACTIVE_GEMS);
         if (net.neoforged.fml.ModList.get().isLoaded("aether")) {
             activeGems.put("aether/aether", OriginalGemRank.MYTHIC);
+            activeGems.put("aether/purity", OriginalGemRank.RARE);
+            activeGems.put("aether/zanite_alchemist", OriginalGemRank.RARE);
         }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
@@ -94,7 +96,7 @@ public final class JeicyRuntimeGemVerifier {
         LOGGER.info("Verified Midas helmet defense, weapon profiles, enchantment, and drop values.");
         if (net.neoforged.fml.ModList.get().isLoaded("aether")) {
             verifyAether();
-            LOGGER.info("Verified Aether flight values and exact helmet/chestplate sockets.");
+            LOGGER.info("Verified Aether flight, alchemy, effects, values, ingredients, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -194,6 +196,8 @@ public final class JeicyRuntimeGemVerifier {
     private static void verifyConditionalGemsSkipped() {
         Map<String, String> conditionalGems = Map.of(
             "aether/aether", "aether",
+            "aether/purity", "aether",
+            "aether/zanite_alchemist", "aether",
             "crafted/harbringer", "cataclysm",
             "crafted/leviathan", "cataclysm",
             "crafted/remnant", "cataclysm",
@@ -227,6 +231,89 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(1).equals(chest.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Aether flight values did not match the original");
         }
+
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("aether/purity", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+
+        Gem purity = gem("aether/purity");
+        JeicyTieredDropTransformBonus purityDrop = requireBonus(
+            purity, net.minecraft.world.item.Items.DIAMOND_PICKAXE,
+            JeicyTieredDropTransformBonus.class);
+        JeicyTieredAttributeBonus purityWeapon = requireBonus(
+            purity, net.minecraft.world.item.Items.DIAMOND_SWORD,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus purityArmor = requireBonus(
+            purity, net.minecraft.world.item.Items.DIAMOND_BOOTS,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.15).equals(purityDrop.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1).equals(purityDrop.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !purityDrop.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.COBBLESTONE))
+            || !purityDrop.outputForVerification().is(item("aether:holystone"))
+            || !Double.valueOf(0.015).equals(purityWeapon.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.11).equals(purityWeapon.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(purityArmor.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.35).equals(purityArmor.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Aether Purity values did not match the original");
+        }
+
+        verifySocketRule("aether/zanite_alchemist", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("aether/zanite_alchemist", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+        verifySocketRule("aether/zanite_alchemist", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("aether/zanite_alchemist", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("aether/zanite_alchemist", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+
+        Gem zanite = gem("aether/zanite_alchemist");
+        JeicyTieredDropTransformBonus zaniteDrop = requireBonus(
+            zanite, net.minecraft.world.item.Items.DIAMOND_PICKAXE,
+            JeicyTieredDropTransformBonus.class);
+        JeicyTieredMobEffectBonus zaniteChest = requireBonus(
+            zanite, net.minecraft.world.item.Items.DIAMOND_CHESTPLATE,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus zaniteHeavy = requireBonus(
+            zanite, net.minecraft.world.item.Items.DIAMOND_AXE,
+            JeicyTieredMobEffectBonus.class);
+        var chestRare = zaniteChest.valueForRank(OriginalGemRank.RARE);
+        var chestEsoteric = zaniteChest.valueForRank(OriginalGemRank.ESOTERIC);
+        var heavyRare = zaniteHeavy.valueForRank(OriginalGemRank.RARE);
+        var heavyEsoteric = zaniteHeavy.valueForRank(OriginalGemRank.ESOTERIC);
+        if (!Double.valueOf(0.15).equals(zaniteDrop.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1).equals(zaniteDrop.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !zaniteDrop.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.RAW_IRON))
+            || !zaniteDrop.outputForVerification().is(item("aether:zanite_gemstone"))
+            || chestRare == null || chestRare.cooldown() != 1500 || chestRare.amplifier() != 0
+            || chestEsoteric == null || chestEsoteric.cooldown() != 1000 || chestEsoteric.amplifier() != 3
+            || heavyRare == null || heavyRare.duration() != 60 || heavyRare.amplifier() != 0
+            || heavyEsoteric == null || heavyEsoteric.duration() != 280 || heavyEsoteric.amplifier() != 2) {
+            throw new IllegalStateException("Aether Zanite Alchemist values did not match the original");
+        }
+    }
+
+    private static Gem gem(String path) {
+        Gem gem = GemRegistry.INSTANCE.getValue(ResourceLocation.fromNamespaceAndPath(
+            "apotheotic_additions", path));
+        if (gem == null) throw new IllegalStateException("Missing gem: " + path);
+        return gem;
+    }
+
+    private static net.minecraft.world.item.Item item(String id) {
+        return net.minecraft.core.registries.BuiltInRegistries.ITEM.get(
+            ResourceLocation.parse(id));
+    }
+
+    private static <T> T requireBonus(Gem gem, net.minecraft.world.item.Item target,
+                                      Class<T> expectedType) {
+        ItemStack stack = new ItemStack(target);
+        var bonus = gem.getBonus(dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(stack),
+            Purity.PERFECT).orElseThrow();
+        if (!expectedType.isInstance(bonus)) {
+            throw new IllegalStateException("Expected " + expectedType.getSimpleName()
+                + " for " + target + ", got " + bonus.getClass().getSimpleName());
+        }
+        return expectedType.cast(bonus);
     }
 
     private static void verifyEnderDragonEnchantments(ServerStartedEvent serverEvent) {
