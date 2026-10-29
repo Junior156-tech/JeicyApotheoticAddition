@@ -28,6 +28,8 @@ NeoForge y Apotheosis 8.8.0.
   minería, Armor Shred y Virulence; se prueba The Undergarden 0.9.6 real.
 - Heartland conserva sus dos transformaciones de bloques, Backstabbing y
   Comfort; se prueba Farmer's Delight 1.3.4 real.
+- Harbringer, Leviathan y Remnant se cargan y verifican contra L_Ender's
+  Cataclysm 3.33 real, junto con Lionfish API 3.1 y Curios API 9.5.1.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -51,8 +53,8 @@ NeoForge y Apotheosis 8.8.0.
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
 Quedan 40 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 23 gemas; otras cuatro definiciones se
-omiten porque no están instalados Cataclysm ni Mowzie's Mobs. El JAR es un
+configuración de desarrollo se registran 26 gemas; la definición de Sunbird se
+omite porque Mowzie's Mobs no está instalado. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.
 

@@ -55,6 +55,11 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("farmersdelight")) {
             activeGems.put("modded/heartland", OriginalGemRank.EPIC);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("cataclysm")) {
+            activeGems.put("crafted/harbringer", OriginalGemRank.ARTIFACT);
+            activeGems.put("crafted/leviathan", OriginalGemRank.ARTIFACT);
+            activeGems.put("crafted/remnant", OriginalGemRank.ARTIFACT);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -119,6 +124,10 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("farmersdelight")) {
             verifyHeartland(event);
             LOGGER.info("Verified Heartland alchemy, Backstabbing, Comfort values, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("cataclysm")) {
+            verifyCataclysmBossGems();
+            LOGGER.info("Verified Harbringer, Leviathan, and Remnant effects, values, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -454,6 +463,46 @@ public final class JeicyRuntimeGemVerifier {
         weapon.getEnchantmentLevels(instance, event);
         if (enchantments.getLevel(backstabbing) != 2) {
             throw new IllegalStateException("Heartland Artifact rank did not add Backstabbing II");
+        }
+    }
+
+    private static void verifyCataclysmBossGems() {
+        verifySocketRule("crafted/harbringer", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("crafted/harbringer", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+        verifySocketRule("crafted/leviathan", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("crafted/leviathan", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, false);
+        verifySocketRule("crafted/remnant", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("crafted/remnant", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("crafted/remnant", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+
+        JeicyTieredMobEffectBonus harbringer = requireBonus(
+            gem("crafted/harbringer"), net.minecraft.world.item.Items.DIAMOND_CHESTPLATE,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus leviathan = requireBonus(
+            gem("crafted/leviathan"), net.minecraft.world.item.Items.DIAMOND_HELMET,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus remnant = requireBonus(
+            gem("crafted/remnant"), net.minecraft.world.item.Items.DIAMOND_BOOTS,
+            JeicyTieredMobEffectBonus.class);
+        var harbringerArtifact = harbringer.valueForRank(OriginalGemRank.ARTIFACT);
+        var harbringerEsoteric = harbringer.valueForRank(OriginalGemRank.ESOTERIC);
+        var leviathanArtifact = leviathan.valueForRank(OriginalGemRank.ARTIFACT);
+        var leviathanEsoteric = leviathan.valueForRank(OriginalGemRank.ESOTERIC);
+        var remnantArtifact = remnant.valueForRank(OriginalGemRank.ARTIFACT);
+        var remnantEsoteric = remnant.valueForRank(OriginalGemRank.ESOTERIC);
+        if (harbringerArtifact == null || harbringerArtifact.duration() != 1000
+            || harbringerArtifact.amplifier() != 0 || harbringerArtifact.cooldown() != 6000
+            || harbringerEsoteric == null || harbringerEsoteric.duration() != 2000
+            || harbringerEsoteric.amplifier() != 0 || harbringerEsoteric.cooldown() != 4000
+            || leviathanArtifact == null || leviathanArtifact.duration() != 600
+            || leviathanArtifact.amplifier() != 0 || leviathanArtifact.cooldown() != 6000
+            || leviathanEsoteric == null || leviathanEsoteric.duration() != 900
+            || leviathanEsoteric.amplifier() != 0 || leviathanEsoteric.cooldown() != 4000
+            || remnantArtifact == null || remnantArtifact.duration() != 100
+            || remnantArtifact.amplifier() != 0 || remnantArtifact.cooldown() != 6000
+            || remnantEsoteric == null || remnantEsoteric.duration() != 200
+            || remnantEsoteric.amplifier() != 0 || remnantEsoteric.cooldown() != 4000) {
+            throw new IllegalStateException("Cataclysm boss gem values did not match the original");
         }
     }
 
