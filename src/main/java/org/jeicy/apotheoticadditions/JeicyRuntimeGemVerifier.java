@@ -52,6 +52,9 @@ public final class JeicyRuntimeGemVerifier {
             activeGems.put("undergarden/decay", OriginalGemRank.RARE);
             activeGems.put("undergarden/undergarden", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("farmersdelight")) {
+            activeGems.put("modded/heartland", OriginalGemRank.EPIC);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -112,6 +115,10 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("undergarden")) {
             verifyUndergarden();
             LOGGER.info("Verified Undergarden alchemy, attributes, Virulence values, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("farmersdelight")) {
+            verifyHeartland(event);
+            LOGGER.info("Verified Heartland alchemy, Backstabbing, Comfort values, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -209,17 +216,18 @@ public final class JeicyRuntimeGemVerifier {
     }
 
     private static void verifyConditionalGemsSkipped() {
-        Map<String, String> conditionalGems = Map.of(
-            "aether/aether", "aether",
-            "aether/purity", "aether",
-            "aether/zanite_alchemist", "aether",
-            "crafted/naga", "twilightforest",
-            "undergarden/decay", "undergarden",
-            "undergarden/undergarden", "undergarden",
-            "crafted/harbringer", "cataclysm",
-            "crafted/leviathan", "cataclysm",
-            "crafted/remnant", "cataclysm",
-            "crafted/sunbird", "mowziesmobs");
+        Map<String, String> conditionalGems = Map.ofEntries(
+            Map.entry("aether/aether", "aether"),
+            Map.entry("aether/purity", "aether"),
+            Map.entry("aether/zanite_alchemist", "aether"),
+            Map.entry("crafted/naga", "twilightforest"),
+            Map.entry("undergarden/decay", "undergarden"),
+            Map.entry("undergarden/undergarden", "undergarden"),
+            Map.entry("modded/heartland", "farmersdelight"),
+            Map.entry("crafted/harbringer", "cataclysm"),
+            Map.entry("crafted/leviathan", "cataclysm"),
+            Map.entry("crafted/remnant", "cataclysm"),
+            Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
                 ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -385,6 +393,67 @@ public final class JeicyRuntimeGemVerifier {
             || virulenceEsoteric == null || virulenceEsoteric.duration() != 420
             || virulenceEsoteric.amplifier() != 2 || virulenceEsoteric.cooldown() != 700) {
             throw new IllegalStateException("Undergarden gem values did not match the original");
+        }
+    }
+
+    private static void verifyHeartland(ServerStartedEvent serverEvent) {
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.BOW, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.CROSSBOW, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.DIAMOND_SHOVEL, true);
+        verifySocketRule("modded/heartland", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+
+        Gem heartland = gem("modded/heartland");
+        JeicyMidasWeaponBonus weapon = requireBonus(
+            heartland, net.minecraft.world.item.Items.DIAMOND_AXE,
+            JeicyMidasWeaponBonus.class);
+        JeicyTieredMobEffectBonus comfort = requireBonus(
+            heartland, net.minecraft.world.item.Items.BOW,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredDropTransformBonus shovel = requireBonus(
+            heartland, net.minecraft.world.item.Items.DIAMOND_SHOVEL,
+            JeicyTieredDropTransformBonus.class);
+        var comfortEpic = comfort.valueForRank(OriginalGemRank.EPIC);
+        var comfortEsoteric = comfort.valueForRank(OriginalGemRank.ESOTERIC);
+        if (weapon.enchantmentValueForRank(OriginalGemRank.EPIC) != 1
+            || weapon.enchantmentValueForRank(OriginalGemRank.ESOTERIC) != 3
+            || !Double.valueOf(0.05).equals(weapon.transformChanceForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(0.3).equals(weapon.transformChanceForRank(OriginalGemRank.ESOTERIC))
+            || !weapon.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.OAK_LOG))
+            || !weapon.outputForVerification().is(item("farmersdelight:tree_bark"))
+            || comfortEpic == null || comfortEpic.duration() != 80
+            || comfortEpic.amplifier() != 0 || comfortEpic.cooldown() != 900
+            || comfortEsoteric == null || comfortEsoteric.duration() != 280
+            || comfortEsoteric.amplifier() != 2 || comfortEsoteric.cooldown() != 900
+            || !Double.valueOf(0.02).equals(shovel.chanceForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(0.12).equals(shovel.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !shovel.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.DIRT))
+            || !shovel.outputForVerification().is(item("farmersdelight:rich_soil"))) {
+            throw new IllegalStateException("Heartland values did not match the original");
+        }
+
+        var lookup = serverEvent.getServer().registryAccess()
+            .lookup(net.minecraft.core.registries.Registries.ENCHANTMENT).orElseThrow();
+        var backstabbingKey = net.minecraft.resources.ResourceKey.create(
+            net.minecraft.core.registries.Registries.ENCHANTMENT,
+            ResourceLocation.parse("farmersdelight:backstabbing"));
+        var backstabbing = lookup.getOrThrow(backstabbingKey);
+        var enchantments = new net.minecraft.world.item.enchantment.ItemEnchantments.Mutable(
+            net.minecraft.world.item.enchantment.ItemEnchantments.EMPTY);
+        ItemStack sword = new ItemStack(net.minecraft.world.item.Items.DIAMOND_SWORD);
+        ItemStack gemStack = heartland.toStack(Purity.PERFECT);
+        JeicyGemRankAccess.assign(gemStack, OriginalGemRank.ARTIFACT);
+        var category = dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(sword);
+        var instance = dev.shadowsoffire.apotheosis.socket.gem.GemInstance.socketed(
+            category, gemStack, 0);
+        var event = new net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent(
+            sword, enchantments, backstabbing, lookup);
+        weapon.getEnchantmentLevels(instance, event);
+        if (enchantments.getLevel(backstabbing) != 2) {
+            throw new IllegalStateException("Heartland Artifact rank did not add Backstabbing II");
         }
     }
 

@@ -26,6 +26,8 @@ NeoForge y Apotheosis 8.8.0.
   entorno de desarrollo fija Twilight Forest 4.8.3802 desde su Maven oficial.
 - Decay y Undergarden conservan alquimia, salud, robo de vida, velocidad de
   minería, Armor Shred y Virulence; se prueba The Undergarden 0.9.6 real.
+- Heartland conserva sus dos transformaciones de bloques, Backstabbing y
+  Comfort; se prueba Farmer's Delight 1.3.4 real.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -48,8 +50,8 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 41 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 22 gemas; otras cuatro definiciones se
+Quedan 40 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 23 gemas; otras cuatro definiciones se
 omiten porque no están instalados Cataclysm ni Mowzie's Mobs. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.

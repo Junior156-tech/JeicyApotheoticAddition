@@ -34,6 +34,7 @@ ACTIVE = {
     "crafted/wither.json": "apotheotic_additions:artifact",
     "crafted/wroughtnaut.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
+    "modded/heartland.json": "epic",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
     "undergarden/decay.json": "rare",
@@ -195,6 +196,53 @@ def main() -> int:
                     "condition": "apotheosis:matches_block",
                     "valid_blocks": "#" + old_transform["blocks"],
                 }]
+            elif relative_path == "modded/heartland.json":
+                assert len(original["bonuses"]) == 4
+                assert len(runtime["bonuses"]) == 3
+                old_axe, old_knife, old_comfort, old_shovel = original["bonuses"]
+                new_weapon, new_comfort, new_shovel = runtime["bonuses"]
+
+                assert old_axe["type"] == "apotheosis:drop_transform"
+                assert old_knife["type"] == "apotheosis:enchantment"
+                assert new_weapon["type"] == "apotheotic_additions:original_midas_weapon"
+                assert new_weapon["enchantment"] == normalize_enchantment(old_knife["enchantment"])
+                assert new_weapon["enchantment_values"] == old_knife["values"]
+                assert new_weapon["transform_values"] == old_axe["values"]
+                assert new_weapon["light_socket_types"] == old_knife["gem_class"]["types"]
+                assert new_weapon["heavy_socket_types"] == old_axe["gem_class"]["types"]
+                assert new_weapon["inputs"] == old_axe["inputs"]
+                assert new_weapon["output"] == {"count": 1, "id": old_axe["output"]["item"]}
+                assert new_weapon["desc"] == old_axe["desc"]
+                assert new_weapon["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + old_axe["blocks"],
+                }]
+
+                assert old_comfort["type"] == "apotheosis:mob_effect"
+                assert new_comfort["type"] == "apotheotic_additions:original_mob_effect"
+                assert new_comfort["mob_effect"] == old_comfort["mob_effect"]
+                assert new_comfort["target"] == old_comfort["target"].lower()
+                assert new_comfort["values"] == old_comfort["values"]
+                assert new_comfort["original_socket_types"] == old_comfort["gem_class"]["types"]
+                assert set(new_comfort["gem_class"]["types"]) == normalize_types(
+                    old_comfort["gem_class"]["types"]
+                )
+
+                assert old_shovel["type"] == "apotheosis:drop_transform"
+                assert new_shovel["type"] == "apotheotic_additions:original_drop_transform"
+                assert new_shovel["values"] == old_shovel["values"]
+                assert new_shovel["inputs"] == old_shovel["inputs"]
+                assert new_shovel["output"] == {"count": 1, "id": old_shovel["output"]["item"]}
+                assert new_shovel["desc"] == old_shovel["desc"]
+                assert new_shovel["original_socket_types"] == old_shovel["gem_class"]["types"]
+                assert new_shovel["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + old_shovel["blocks"],
+                }]
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "farmersdelight"}
+                ]
             elif relative_path in {
                 "crafted/harbringer.json",
                 "crafted/leviathan.json",

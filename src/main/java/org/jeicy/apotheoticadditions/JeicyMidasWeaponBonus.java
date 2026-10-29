@@ -28,8 +28,8 @@ import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent;
 
 /**
- * Preserves Midas' distinct sword/trident and heavy-weapon effects after both
- * old categories were merged into melee_weapon by Apotheosis 8.x.
+ * Preserves distinct light/sword and heavy-weapon effects after both old
+ * categories were merged into melee_weapon by Apotheosis 8.x.
  */
 public final class JeicyMidasWeaponBonus extends GemBonus implements JeicyExactSocketBonus {
     public static final Codec<JeicyMidasWeaponBonus> CODEC = RecordCodecBuilder.create(inst -> inst.group(
@@ -64,9 +64,9 @@ public final class JeicyMidasWeaponBonus extends GemBonus implements JeicyExactS
                                  String descKey, List<String> lightSocketTypes,
                                  List<String> heavySocketTypes) {
         super(gemClass);
-        if (output.isEmpty()) throw new IllegalArgumentException("Midas output cannot be empty");
+        if (output.isEmpty()) throw new IllegalArgumentException("Split weapon output cannot be empty");
         if (lightSocketTypes.isEmpty() || heavySocketTypes.isEmpty()) {
-            throw new IllegalArgumentException("Midas socket profiles cannot be empty");
+            throw new IllegalArgumentException("Split weapon socket profiles cannot be empty");
         }
         if (rawTransformValues.values().stream().anyMatch(value -> value < 0 || value > 1)) {
             throw new IllegalArgumentException("Drop transform chances must be between zero and one");
@@ -160,6 +160,10 @@ public final class JeicyMidasWeaponBonus extends GemBonus implements JeicyExactS
 
     ItemStack outputForVerification() {
         return output.copy();
+    }
+
+    boolean acceptsForVerification(ItemStack stack) {
+        return inputs.test(stack);
     }
 
     @Override
