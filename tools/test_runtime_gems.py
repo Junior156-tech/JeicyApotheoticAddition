@@ -34,6 +34,7 @@ ACTIVE = {
     "crafted/wither.json": "apotheotic_additions:artifact",
     "crafted/wroughtnaut.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
+    "modded/cataclysm.json": "rare",
     "modded/heartland.json": "epic",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
@@ -242,6 +243,30 @@ def main() -> int:
                 assert runtime["constraints"]["dimensions"] == original["dimensions"]
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "farmersdelight"}
+                ]
+            elif relative_path == "modded/cataclysm.json":
+                assert len(original["bonuses"]) == 3
+                assert len(runtime["bonuses"]) == 2
+                old_chest, old_heavy, old_light = original["bonuses"]
+                new_chest, new_split = runtime["bonuses"]
+                assert new_chest["type"] == "apotheotic_additions:original_mob_effect"
+                assert new_chest["mob_effect"] == old_chest["mob_effect"]
+                assert new_chest["target"] == old_chest["target"]
+                assert new_chest["values"] == old_chest["values"]
+                assert new_chest["original_socket_types"] == old_chest["gem_class"]["types"]
+                assert new_split["type"] == "apotheotic_additions:original_split_attack_effect"
+                for profile_name, old_bonus in (
+                    ("heavy_profile", old_heavy), ("light_profile", old_light)
+                ):
+                    profile = new_split[profile_name]
+                    assert profile["mob_effect"] == old_bonus["mob_effect"]
+                    assert profile["values"] == old_bonus["values"]
+                    assert profile["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert new_split["light_profile"]["stack_on_reapply"] is True
+                assert old_light["stack_on_reapply"] is True
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "cataclysm"}
                 ]
             elif relative_path in {
                 "crafted/harbringer.json",

@@ -59,6 +59,7 @@ public final class JeicyRuntimeGemVerifier {
             activeGems.put("crafted/harbringer", OriginalGemRank.ARTIFACT);
             activeGems.put("crafted/leviathan", OriginalGemRank.ARTIFACT);
             activeGems.put("crafted/remnant", OriginalGemRank.ARTIFACT);
+            activeGems.put("modded/cataclysm", OriginalGemRank.RARE);
         }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
@@ -128,6 +129,8 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("cataclysm")) {
             verifyCataclysmBossGems();
             LOGGER.info("Verified Harbringer, Leviathan, and Remnant effects, values, and exact sockets.");
+            verifyCataclysmGeneralGem();
+            LOGGER.info("Verified Cataclysm split weapon effects, stacking, values, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -236,6 +239,7 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("crafted/harbringer", "cataclysm"),
             Map.entry("crafted/leviathan", "cataclysm"),
             Map.entry("crafted/remnant", "cataclysm"),
+            Map.entry("modded/cataclysm", "cataclysm"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -503,6 +507,45 @@ public final class JeicyRuntimeGemVerifier {
             || remnantEsoteric == null || remnantEsoteric.duration() != 200
             || remnantEsoteric.amplifier() != 0 || remnantEsoteric.cooldown() != 4000) {
             throw new IllegalStateException("Cataclysm boss gem values did not match the original");
+        }
+    }
+
+    private static void verifyCataclysmGeneralGem() {
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.DIAMOND_HELMET, false);
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/cataclysm", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
+
+        Gem cataclysm = gem("modded/cataclysm");
+        JeicyTieredMobEffectBonus chest = requireBonus(
+            cataclysm, net.minecraft.world.item.Items.DIAMOND_CHESTPLATE,
+            JeicyTieredMobEffectBonus.class);
+        JeicySplitAttackEffectBonus weapons = requireBonus(
+            cataclysm, net.minecraft.world.item.Items.DIAMOND_SWORD,
+            JeicySplitAttackEffectBonus.class);
+        var chestRare = chest.valueForRank(OriginalGemRank.RARE);
+        var chestEsoteric = chest.valueForRank(OriginalGemRank.ESOTERIC);
+        var heavyRare = weapons.heavyValueForRank(OriginalGemRank.RARE);
+        var heavyEsoteric = weapons.heavyValueForRank(OriginalGemRank.ESOTERIC);
+        var lightRare = weapons.lightValueForRank(OriginalGemRank.RARE);
+        var lightEsoteric = weapons.lightValueForRank(OriginalGemRank.ESOTERIC);
+        if (chestRare == null || chestRare.duration() != 80 || chestRare.amplifier() != 0
+            || chestRare.cooldown() != 900
+            || chestEsoteric == null || chestEsoteric.duration() != 500
+            || chestEsoteric.amplifier() != 2 || chestEsoteric.cooldown() != 900
+            || heavyRare == null || heavyRare.duration() != 60 || heavyRare.amplifier() != 0
+            || heavyRare.cooldown() != 900
+            || heavyEsoteric == null || heavyEsoteric.duration() != 280
+            || heavyEsoteric.amplifier() != 2 || heavyEsoteric.cooldown() != 900
+            || lightRare == null || lightRare.duration() != 140 || lightRare.amplifier() != 0
+            || lightRare.cooldown() != 120
+            || lightEsoteric == null || lightEsoteric.duration() != 2000
+            || lightEsoteric.amplifier() != 2 || lightEsoteric.cooldown() != 20
+            || !weapons.lightStacksOnReapply()
+            || weapons.lightStackedAmplifierForVerification(2, OriginalGemRank.ESOTERIC) != 5) {
+            throw new IllegalStateException("General Cataclysm gem values did not match the original");
         }
     }
 

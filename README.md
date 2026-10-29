@@ -30,6 +30,8 @@ NeoForge y Apotheosis 8.8.0.
   Comfort; se prueba Farmer's Delight 1.3.4 real.
 - Harbringer, Leviathan y Remnant se cargan y verifican contra L_Ender's
   Cataclysm 3.33 real, junto con Lionfish API 3.1 y Curios API 9.5.1.
+- La gema general de Cataclysm conserva Monstrous, Blazing Brand y Abyssal
+  Curse, incluida su acumulación al reaplicar y la separación hacha/espada.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -52,8 +54,8 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 40 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 26 gemas; la definición de Sunbird se
+Quedan 39 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 27 gemas; la definición de Sunbird se
 omite porque Mowzie's Mobs no está instalado. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.

@@ -63,6 +63,8 @@ public final class JeicyApotheoticAddition {
             JeicyMidasWeaponBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_mob_effect"),
             JeicyTieredMobEffectBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_split_attack_effect"),
+            JeicySplitAttackEffectBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_drop_transform"),
             JeicyTieredDropTransformBonus.CODEC);
         ITEMS.register(modBus);

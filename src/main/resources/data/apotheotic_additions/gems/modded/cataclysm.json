@@ -1,0 +1,63 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "cataclysm" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "constraints": { "dimensions": ["minecraft:the_end", "minecraft:the_nether"] },
+  "weights": { "weight": 3, "quality": 2.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "mob_effect": "cataclysm:monstrous",
+      "target": "attack_self",
+      "original_socket_types": ["chestplate"],
+      "values": {
+        "rare": { "duration": 80, "amplifier": 0, "cooldown": 900 },
+        "epic": { "duration": 100, "amplifier": 0, "cooldown": 900 },
+        "mythic": { "duration": 140, "amplifier": 0, "cooldown": 900 },
+        "ancient": { "duration": 200, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:artifact": { "duration": 300, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:heirloom": { "duration": 400, "amplifier": 1, "cooldown": 900 },
+        "apotheotic_additions:esoteric": { "duration": 500, "amplifier": 2, "cooldown": 900 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_split_attack_effect",
+      "gem_class": {
+        "key": "cataclysm_weapon",
+        "types": ["apotheosis:melee_weapon", "apotheosis:trident"]
+      },
+      "heavy_profile": {
+        "mob_effect": "cataclysm:blazing_brand",
+        "original_socket_types": ["heavy_weapon"],
+        "values": {
+          "rare": { "duration": 60, "amplifier": 0, "cooldown": 900 },
+          "epic": { "duration": 80, "amplifier": 0, "cooldown": 900 },
+          "mythic": { "duration": 120, "amplifier": 0, "cooldown": 900 },
+          "ancient": { "duration": 160, "amplifier": 1, "cooldown": 900 },
+          "apotheotic_additions:artifact": { "duration": 200, "amplifier": 1, "cooldown": 900 },
+          "apotheotic_additions:heirloom": { "duration": 240, "amplifier": 1, "cooldown": 900 },
+          "apotheotic_additions:esoteric": { "duration": 280, "amplifier": 2, "cooldown": 900 }
+        }
+      },
+      "light_profile": {
+        "mob_effect": "cataclysm:abyssal_curse",
+        "stack_on_reapply": true,
+        "stacking_limit": 255,
+        "original_socket_types": ["sword", "trident"],
+        "values": {
+          "rare": { "duration": 140, "amplifier": 0, "cooldown": 120 },
+          "epic": { "duration": 180, "amplifier": 0, "cooldown": 100 },
+          "mythic": { "duration": 220, "amplifier": 1, "cooldown": 80 },
+          "ancient": { "duration": 500, "amplifier": 1, "cooldown": 60 },
+          "apotheotic_additions:artifact": { "duration": 750, "amplifier": 1, "cooldown": 40 },
+          "apotheotic_additions:heirloom": { "duration": 1000, "amplifier": 2, "cooldown": 20 },
+          "apotheotic_additions:esoteric": { "duration": 2000, "amplifier": 2, "cooldown": 20 }
+        }
+      }
+    }
+  ]
+}
