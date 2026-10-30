@@ -37,6 +37,9 @@ public final class JeicyLootCategories {
     public static final DeferredHolder<LootCategory, LootCategory> AETHER_ACCESSORY = CATEGORIES.register(
         "aether_accessory", () -> new LootCategory(JeicyLootCategories::isAetherAccessory,
             ALObjects.EquipmentSlotGroups.ANY, 520));
+    public static final DeferredHolder<LootCategory, LootCategory> SPELLBOOK = CATEGORIES.register(
+        "spellbook", () -> new LootCategory(stack -> isCuriosSlot(stack, "spellbook"),
+            ALObjects.EquipmentSlotGroups.ANY, 530));
 
     private JeicyLootCategories() {}
 

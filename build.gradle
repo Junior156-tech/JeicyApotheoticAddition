@@ -64,6 +64,9 @@ dependencies {
     runtimeOnly 'maven.modrinth:bN3xUWdo:CohX6yP1' // Lodestone 1.21.1-1.8.2 (required by Malum)
     runtimeOnly 'maven.modrinth:jgzwYsAN:BIbVs1fo' // Malum 1.21.1-1.8.2
     runtimeOnly 'maven.modrinth:eWX2m1eM:GuRaBcEi' // Eidolon: Repraised 1.21.1-0.5.0.8
+    runtimeOnly 'maven.modrinth:s4OWxYQQ:slKLosTb' // Iron's Spells 'n Spellbooks 1.21.1-3.16.3
+    runtimeOnly 'maven.modrinth:9nfaJPtX:lUwUKYPl' // Iron's Lib 1.21.1-2.2.0
+    runtimeOnly 'maven.modrinth:gedNE4y2:HJZB6bmA' // playerAnimator 2.0.4+1.21.1
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'

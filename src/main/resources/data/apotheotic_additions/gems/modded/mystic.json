@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "eidolon_repraised" },
+    { "type": "neoforge:mod_loaded", "modid": "irons_spellbooks" },
+    { "type": "neoforge:mod_loaded", "modid": "curios" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "weights": { "weight": 3, "quality": 5.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "wand", "types": ["apotheotic_additions:wand"] },
+      "mob_effect": "eidolon_repraised:reinforced", "target": "attack_self",
+      "original_socket_types": ["wand"],
+      "values": { "epic": { "duration": 60, "amplifier": 0, "cooldown": 400 }, "mythic": { "duration": 100, "amplifier": 0, "cooldown": 400 }, "ancient": { "duration": 200, "amplifier": 0, "cooldown": 400 }, "apotheotic_additions:artifact": { "duration": 300, "amplifier": 0, "cooldown": 400 }, "apotheotic_additions:heirloom": { "duration": 400, "amplifier": 0, "cooldown": 400 }, "apotheotic_additions:esoteric": { "duration": 500, "amplifier": 0, "cooldown": 400 } }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "spellbook", "types": ["apotheotic_additions:spellbook"] },
+      "attribute": "irons_spellbooks:max_mana", "operation": "add_value",
+      "original_socket_types": ["curios:spellbook"],
+      "values": { "rare": 50.0, "epic": 75.0, "mythic": 100.0, "ancient": 125.0, "apotheotic_additions:artifact": 150.0, "apotheotic_additions:heirloom": 200.0, "apotheotic_additions:esoteric": 250.0 }
+    },
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [{ "condition": "apotheosis:matches_block", "valid_blocks": "#c:ores/silver" }],
+      "inputs": { "tag": "c:raw_materials/silver" },
+      "output": { "count": 1, "id": "irons_spellbooks:arcane_essence" },
+      "values": { "rare": 0.1, "epic": 0.2, "mythic": 0.3, "ancient": 0.4, "apotheotic_additions:artifact": 0.5, "apotheotic_additions:heirloom": 0.6, "apotheotic_additions:esoteric": 0.7 },
+      "desc": "gem.apotheotic_additions:alchemy/mystic.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    }
+  ]
+}

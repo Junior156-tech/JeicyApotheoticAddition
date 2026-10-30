@@ -16,6 +16,7 @@ ACTIVE = {
     "aether/purity.json": "rare",
     "aether/zanite_alchemist.json": "rare",
     "bumblezone/bee_queen.json": "uncommon",
+    "bumblezone/hive.json": "rare",
     "crafted/cornelia.json": "apotheotic_additions:artifact",
     "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
@@ -50,6 +51,8 @@ ACTIVE = {
     "curios/vitalic.json": "uncommon",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
+    "modded/bloodcaster.json": "rare",
+    "modded/mystic.json": "rare",
     "undergarden/decay.json": "rare",
     "undergarden/undergarden.json": "rare",
     "twilight/umbral_matrimony.json": "rare",
@@ -84,6 +87,7 @@ TYPE_MAP = {
     "curios:aether_cape": "apotheotic_additions:aether_accessory",
     "curios:aether_pendant": "apotheotic_additions:aether_accessory",
     "curios:aether_ring": "apotheotic_additions:aether_accessory",
+    "curios:spellbook": "apotheotic_additions:spellbook",
 }
 OPERATION_MAP = {
     "ADDITION": "add_value",
@@ -98,6 +102,8 @@ COMMON_TAG_MAP = {
     "forge:ores/diamond": "c:ores/diamond",
     "forge:gems/diamond": "c:gems/diamond",
     "forge:ores/zanite": "aether:ores/zanite",
+    "forge:ores/silver": "c:ores/silver",
+    "forge:raw_materials/silver": "c:raw_materials/silver",
 }
 
 
@@ -388,6 +394,99 @@ def main() -> int:
                     {"type": "neoforge:mod_loaded", "modid": "aether"},
                     {"type": "neoforge:mod_loaded", "modid": "curios"},
                     {"type": "neoforge:mod_loaded", "modid": "twilightforest"},
+                ]
+            elif relative_path == "bumblezone/hive.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 4
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    assert old_bonus["type"] == "apotheosis:attribute"
+                    assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                    assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                    assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                    assert new_bonus["values"] == old_bonus["values"]
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"},
+                    {"type": "neoforge:mod_loaded", "modid": "irons_spellbooks"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
+                    {"type": "neoforge:mod_loaded", "modid": "the_bumblezone"},
+                ]
+            elif relative_path == "modded/bloodcaster.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 3
+                old_effect, old_attribute, old_multi = original["bonuses"]
+                new_effect, new_attribute, new_multi = runtime["bonuses"]
+                assert new_effect["type"] == "apotheotic_additions:original_mob_effect"
+                assert new_effect["mob_effect"] == normalize_effect(old_effect["mob_effect"])
+                assert new_effect["target"] == old_effect["target"].lower()
+                assert new_effect["values"] == old_effect["values"]
+                assert new_effect["original_socket_types"] == old_effect["gem_class"]["types"]
+                assert set(new_effect["gem_class"]["types"]) == normalize_types(
+                    old_effect["gem_class"]["types"]
+                )
+                assert new_attribute["type"] == "apotheotic_additions:original_attribute"
+                assert new_attribute["attribute"] == normalize_attribute(old_attribute["attribute"])
+                assert new_attribute["operation"] == OPERATION_MAP[old_attribute["operation"].upper()]
+                assert new_attribute["values"] == old_attribute["values"]
+                assert new_attribute["original_socket_types"] == old_attribute["gem_class"]["types"]
+                assert set(new_attribute["gem_class"]["types"]) == normalize_types(
+                    old_attribute["gem_class"]["types"]
+                )
+                assert new_multi["type"] == "apotheotic_additions:original_multi_attribute"
+                assert len(new_multi["profiles"]) == 1
+                profile = new_multi["profiles"][0]
+                assert profile["original_socket_types"] == old_multi["gem_class"]["types"]
+                assert len(profile["modifiers"]) == len(old_multi["modifiers"])
+                for modifier, old_modifier in zip(profile["modifiers"], old_multi["modifiers"]):
+                    assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+                    assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"].upper()]
+                    assert modifier["values"] == old_modifier["values"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "eidolon_repraised"},
+                    {"type": "neoforge:mod_loaded", "modid": "irons_spellbooks"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
+                ]
+            elif relative_path == "modded/mystic.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 3
+                old_effect, old_attribute, old_drop = original["bonuses"]
+                new_effect, new_attribute, new_drop = runtime["bonuses"]
+                assert new_effect["type"] == "apotheotic_additions:original_mob_effect"
+                assert new_effect["mob_effect"] == normalize_effect(old_effect["mob_effect"])
+                assert new_effect["target"] == old_effect["target"].lower()
+                assert new_effect["values"] == old_effect["values"]
+                assert new_effect["original_socket_types"] == old_effect["gem_class"]["types"]
+                assert set(new_effect["gem_class"]["types"]) == normalize_types(
+                    old_effect["gem_class"]["types"]
+                )
+                assert new_attribute["type"] == "apotheotic_additions:original_attribute"
+                assert new_attribute["attribute"] == normalize_attribute(old_attribute["attribute"])
+                assert new_attribute["operation"] == OPERATION_MAP[old_attribute["operation"].upper()]
+                assert new_attribute["values"] == old_attribute["values"]
+                assert new_attribute["original_socket_types"] == old_attribute["gem_class"]["types"]
+                assert set(new_attribute["gem_class"]["types"]) == normalize_types(
+                    old_attribute["gem_class"]["types"]
+                )
+                assert new_drop["type"] == "apotheotic_additions:original_drop_transform"
+                assert new_drop["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + COMMON_TAG_MAP[old_drop["blocks"]],
+                }]
+                assert new_drop["inputs"] == {
+                    "tag": COMMON_TAG_MAP[old_drop["inputs"]["tag"]]
+                }
+                assert new_drop["output"] == {"count": 1, "id": old_drop["output"]["item"]}
+                assert new_drop["values"] == old_drop["values"]
+                assert new_drop["desc"] == old_drop["desc"]
+                assert new_drop["original_socket_types"] == old_drop["gem_class"]["types"]
+                assert set(new_drop["gem_class"]["types"]) == normalize_types(
+                    old_drop["gem_class"]["types"]
+                )
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "eidolon_repraised"},
+                    {"type": "neoforge:mod_loaded", "modid": "irons_spellbooks"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
                 ]
             elif relative_path == "modded/felfire.json":
                 assert len(original["bonuses"]) == 5

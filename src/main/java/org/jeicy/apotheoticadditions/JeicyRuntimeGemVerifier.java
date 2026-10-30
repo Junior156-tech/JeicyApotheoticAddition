@@ -97,6 +97,18 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             activeGems.put("twilight/umbral_matrimony", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")) {
+            activeGems.put("modded/bloodcaster", OriginalGemRank.RARE);
+            activeGems.put("modded/mystic", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
+            activeGems.put("bumblezone/hive", OriginalGemRank.RARE);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -210,6 +222,19 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             verifyUmbralMatrimony();
             LOGGER.info("Verified Umbral Matrimony alchemy, Curios/Aether categories, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")) {
+            verifyIronSpellbookGems();
+            LOGGER.info("Verified Bloodcaster and Mystic effects, spellbook attributes, alchemy, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
+            verifyHive();
+            LOGGER.info("Verified Hive Curios/Aether/spellbook attributes, values, and sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -332,6 +357,9 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("curios/twisted", "curios"),
             Map.entry("curios/vitalic", "curios"),
             Map.entry("twilight/umbral_matrimony", "curios"),
+            Map.entry("modded/bloodcaster", "irons_spellbooks"),
+            Map.entry("modded/mystic", "irons_spellbooks"),
+            Map.entry("bumblezone/hive", "irons_spellbooks"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -1000,6 +1028,95 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(0.25).equals(aether.valueForRank(OriginalGemRank.RARE))
             || !Double.valueOf(2).equals(aether.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Umbral Matrimony values did not match the original");
+        }
+    }
+
+    private static void verifyIronSpellbookGems() {
+        net.minecraft.world.item.Item wand = item("eidolon_repraised:bonechill_wand");
+        net.minecraft.world.item.Item spellbook = item("irons_spellbooks:iron_spell_book");
+        if (spellbook == net.minecraft.world.item.Items.AIR
+            || dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(new ItemStack(spellbook))
+                != JeicyLootCategories.SPELLBOOK.get()) {
+            throw new IllegalStateException("Restored spellbook category did not resolve iron_spell_book");
+        }
+
+        verifySocketRule("modded/bloodcaster", wand, true);
+        verifySocketRule("modded/bloodcaster", spellbook, true);
+        verifySocketRule("modded/bloodcaster", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/bloodcaster", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        Gem bloodcaster = gem("modded/bloodcaster");
+        JeicyTieredMobEffectBonus vigor = requireBonus(bloodcaster, wand,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredAttributeBonus bloodPower = requireBonus(bloodcaster, spellbook,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus bloodResist = requireBonus(bloodcaster,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMultiAttributeBonus.class);
+        var vigorEpic = vigor.valueForRank(OriginalGemRank.EPIC);
+        var vigorEsoteric = vigor.valueForRank(OriginalGemRank.ESOTERIC);
+        if (vigorEpic == null || vigorEpic.duration() != 60 || vigorEpic.cooldown() != 400
+            || vigorEsoteric == null || vigorEsoteric.duration() != 500
+            || vigorEsoteric.amplifier() != 1 || vigorEsoteric.cooldown() != 400
+            || !Double.valueOf(0.5).equals(bloodPower.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(3.5).equals(bloodPower.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.55).equals(bloodResist.valueForRank(0, 0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(-0.7).equals(bloodResist.valueForRank(0, 1, OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Bloodcaster values did not match the original");
+        }
+
+        verifySocketRule("modded/mystic", wand, true);
+        verifySocketRule("modded/mystic", spellbook, true);
+        verifySocketRule("modded/mystic", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/mystic", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        Gem mystic = gem("modded/mystic");
+        JeicyTieredMobEffectBonus reinforced = requireBonus(mystic, wand,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredAttributeBonus mana = requireBonus(mystic, spellbook,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredDropTransformBonus alchemy = requireBonus(mystic,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        var reinforcedEsoteric = reinforced.valueForRank(OriginalGemRank.ESOTERIC);
+        net.minecraft.world.item.Item rawSilver = item("eidolon_repraised:raw_silver");
+        if (reinforcedEsoteric == null || reinforcedEsoteric.duration() != 500
+            || reinforcedEsoteric.amplifier() != 0 || reinforcedEsoteric.cooldown() != 400
+            || !Double.valueOf(50).equals(mana.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(250).equals(mana.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.1).equals(alchemy.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.7).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || rawSilver == net.minecraft.world.item.Items.AIR
+            || !alchemy.acceptsForVerification(new ItemStack(rawSilver))
+            || !alchemy.outputForVerification().is(item("irons_spellbooks:arcane_essence"))) {
+            throw new IllegalStateException("Mystic values did not match the original");
+        }
+    }
+
+    private static void verifyHive() {
+        net.minecraft.world.item.Item aetherItem = item("aether:iron_ring");
+        net.minecraft.world.item.Item spellbook = item("irons_spellbooks:iron_spell_book");
+        net.minecraft.world.item.Item jewelryItem = item("eidolon_repraised:basic_ring");
+        net.minecraft.world.item.Item armorItem = item("eidolon_repraised:warded_mail");
+        verifySocketRule("bumblezone/hive", aetherItem, true);
+        verifySocketRule("bumblezone/hive", spellbook, true);
+        verifySocketRule("bumblezone/hive", jewelryItem, true);
+        verifySocketRule("bumblezone/hive", armorItem, true);
+        verifySocketRule("bumblezone/hive", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, false);
+        Gem hive = gem("bumblezone/hive");
+        JeicyTieredAttributeBonus arrows = requireBonus(hive, aetherItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus spellPower = requireBonus(hive, spellbook,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus jewelry = requireBonus(hive, jewelryItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus armor = requireBonus(hive, armorItem,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.015).equals(arrows.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.105).equals(arrows.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.5).equals(spellPower.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(3.5).equals(spellPower.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.01).equals(jewelry.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.07).equals(jewelry.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.01).equals(armor.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.07).equals(armor.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Hive values did not match the original");
         }
     }
 

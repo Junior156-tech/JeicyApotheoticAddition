@@ -3,7 +3,7 @@ loaderVersion="[4,)"
 license="Academic Free License v3.0"
 [[mods]]
 modId="apotheotic_additions"
-version="1.21.1-test.16"
+version="1.21.1-test.17"
 displayName="JeicyApotheoticAddition"
 authors="Original Apotheotic Additions by Bryce792; 1.21.1 port by JEICY"
 description='''Development TEST port for NeoForge 1.21.1. The complete gem, affix, rarity, and evolution systems are still being integrated; do not install on valuable worlds.'''
