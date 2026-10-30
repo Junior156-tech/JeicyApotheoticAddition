@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "alexscaves" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "normal",
+  "constraints": { "dimensions": ["minecraft:overworld"] },
+  "weights": { "weight": 1, "quality": 1.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_all_stats",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "operation": "add_multiplied_total",
+      "values": { "rare": 0.005, "epic": 0.01, "mythic": 0.015, "ancient": 0.02, "apotheotic_additions:artifact": 0.025, "apotheotic_additions:heirloom": 0.03, "apotheotic_additions:esoteric": 0.035 },
+      "attributes": [
+        "minecraft:generic.max_health", "minecraft:generic.knockback_resistance", "minecraft:generic.movement_speed", "minecraft:generic.attack_damage", "minecraft:generic.attack_knockback", "minecraft:generic.attack_speed", "minecraft:generic.armor", "minecraft:generic.armor_toughness", "minecraft:generic.luck",
+        "apothic_attributes:armor_pierce", "apothic_attributes:armor_shred", "apothic_attributes:arrow_damage", "apothic_attributes:arrow_velocity", "apothic_attributes:cold_damage", "apothic_attributes:crit_chance", "apothic_attributes:crit_damage", "apothic_attributes:current_hp_damage", "apothic_attributes:dodge_chance", "apothic_attributes:draw_speed", "apothic_attributes:experience_gained", "apothic_attributes:fire_damage", "apothic_attributes:ghost_health", "apothic_attributes:healing_received", "apothic_attributes:life_steal", "apothic_attributes:mining_speed", "apothic_attributes:overheal", "apothic_attributes:prot_pierce", "apothic_attributes:prot_shred"
+      ],
+      "original_socket_types": ["chestplate"]
+    },
+    {
+      "type": "apotheotic_additions:original_enchantment",
+      "gem_class": { "key": "ortholance", "types": ["apotheosis:melee_weapon"] },
+      "enchantment": "alexscaves:flinging", "original_socket_types": ["sword"],
+      "values": { "epic": 1, "mythic": 1, "ancient": 1, "apotheotic_additions:artifact": 2, "apotheotic_additions:heirloom": 2, "apotheotic_additions:esoteric": 3 }
+    },
+    {
+      "type": "apotheotic_additions:original_enchantment",
+      "gem_class": { "key": "breaker", "types": ["apotheosis:breaker"] },
+      "enchantment": "apothic_enchanting:boon_of_the_earth", "original_socket_types": ["shovel", "pickaxe"],
+      "values": { "ancient": 1, "apotheotic_additions:artifact": 1, "apotheotic_additions:heirloom": 1, "apotheotic_additions:esoteric": 2 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "helmet", "types": ["apotheosis:helmet"] },
+      "attribute": "apothic_attributes:cold_damage", "operation": "add_multiplied_total",
+      "original_socket_types": ["helmet"],
+      "values": { "epic": 0.15, "mythic": 0.3, "ancient": 0.45, "apotheotic_additions:artifact": 0.6, "apotheotic_additions:heirloom": 0.75, "apotheotic_additions:esoteric": 0.9 }
+    }
+  ]
+}

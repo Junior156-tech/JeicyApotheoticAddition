@@ -14,6 +14,11 @@ repositories {
         name = 'TeamTwilight'
         url = 'https://maven.tamaized.com/releases'
     }
+    maven {
+        name = 'CurseMaven'
+        url = 'https://www.cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
     exclusiveContent {
         forRepository {
             maven {
@@ -71,6 +76,8 @@ dependencies {
     runtimeOnly 'maven.modrinth:3ufwT9JF:9pnKHdCG' // Ad Astra 1.16.26 NeoForge 1.21.1
     runtimeOnly 'maven.modrinth:RgLrNK7l:SCkdlli6' // Common Storage Lib 0.0.10 (Ad Astra)
     runtimeOnly 'maven.modrinth:M1953qlQ:lSbyRD6v' // Resourceful Config 3.0.11 (Ad Astra)
+    runtimeOnly 'curse.maven:citadel-1-21-1-port-1415723:7982052' // Citadel 2.7.6 NeoForge 1.21.1
+    runtimeOnly 'curse.maven:alexs-caves-unofficial-port-1420348:7981977' // Alex's Caves 2.0.10 NeoForge 1.21.1
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'

@@ -118,6 +118,22 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("ad_astra")) {
             activeGems.put("modded/witch_queen", OriginalGemRank.UNCOMMON);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")) {
+            activeGems.put("modded/amber", OriginalGemRank.RARE);
+            activeGems.put("modded/depths", OriginalGemRank.EPIC);
+            activeGems.put("modded/uranium", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")) {
+            activeGems.put("aether/candied", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("undergarden")) {
+            activeGems.put("undergarden/forlorn", OriginalGemRank.RARE);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -256,6 +272,23 @@ public final class JeicyRuntimeGemVerifier {
             verifyWitchQueen();
             LOGGER.info("Verified Witch Queen effects, attributes, lunar alchemy, values, and sockets.");
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")) {
+            verifyAlexsCavesGems(event);
+            LOGGER.info("Verified Amber, Depths, and Uranium effects, enchantments, attributes, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")) {
+            verifyCandied();
+            LOGGER.info("Verified Candied alchemy, Sugar Rush, combined weapon routing, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")
+            && net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("undergarden")) {
+            verifyForlorn();
+            LOGGER.info("Verified Forlorn effects, spell/Curios/Aether attributes, values, and sockets.");
+        }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
         verifyEnderDragonEnchantments(event);
@@ -382,6 +415,11 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("bumblezone/hive", "irons_spellbooks"),
             Map.entry("otherside/sculk", "deeperdarker"),
             Map.entry("modded/witch_queen", "ad_astra"),
+            Map.entry("aether/candied", "alexscaves"),
+            Map.entry("undergarden/forlorn", "alexscaves"),
+            Map.entry("modded/amber", "alexscaves"),
+            Map.entry("modded/depths", "alexscaves"),
+            Map.entry("modded/uranium", "alexscaves"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -1222,6 +1260,206 @@ public final class JeicyRuntimeGemVerifier {
             || !alchemy.acceptsForVerification(new ItemStack(moonCobble))
             || !alchemy.outputForVerification().is(item("apotheosis:common_material"))) {
             throw new IllegalStateException("Witch Queen values did not match the original");
+        }
+    }
+
+    private static void verifyCandied() {
+        verifySocketRule("aether/candied", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("aether/candied", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+        verifySocketRule("aether/candied", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("aether/candied", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("aether/candied", net.minecraft.world.item.Items.TRIDENT, true);
+
+        Gem candied = gem("aether/candied");
+        JeicyTieredDropTransformBonus pickaxe = requireBonus(candied,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        JeicyCandiedWeaponBonus weapon = requireBonus(candied,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicyCandiedWeaponBonus.class);
+        JeicyCandiedWeaponBonus sword = requireBonus(candied,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyCandiedWeaponBonus.class);
+        var sugarRare = sword.lightValueForRank(OriginalGemRank.RARE);
+        var sugarEsoteric = sword.lightValueForRank(OriginalGemRank.ESOTERIC);
+        net.minecraft.world.item.Item holystone = item("aether:holystone");
+        net.minecraft.world.item.Item skyrootLog = item("aether:skyroot_log");
+        if (!Double.valueOf(0.1).equals(pickaxe.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1).equals(pickaxe.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !pickaxe.acceptsForVerification(new ItemStack(holystone))
+            || !pickaxe.outputForVerification().is(item("alexscaves:block_of_chocolate"))
+            || !Double.valueOf(0.1).equals(weapon.heavyChanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1).equals(weapon.heavyChanceForRank(OriginalGemRank.ESOTERIC))
+            || !weapon.heavyAcceptsForVerification(new ItemStack(skyrootLog))
+            || !weapon.heavyOutputForVerification().is(item("alexscaves:candy_cane"))
+            || sugarRare == null || sugarRare.duration() != 60 || sugarRare.amplifier() != 0
+            || sugarRare.cooldown() != 900
+            || sugarEsoteric == null || sugarEsoteric.duration() != 280
+            || sugarEsoteric.amplifier() != 0 || sugarEsoteric.cooldown() != 900) {
+            throw new IllegalStateException("Candied values did not match the original");
+        }
+    }
+
+    private static void verifyForlorn() {
+        net.minecraft.world.item.Item spellbook = item("irons_spellbooks:iron_spell_book");
+        net.minecraft.world.item.Item aetherRing = item("aether:iron_ring");
+        verifySocketRule("undergarden/forlorn", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("undergarden/forlorn", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("undergarden/forlorn", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        verifySocketRule("undergarden/forlorn", spellbook, true);
+        verifySocketRule("undergarden/forlorn", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("undergarden/forlorn", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("undergarden/forlorn", aetherRing, true);
+
+        Gem forlorn = gem("undergarden/forlorn");
+        JeicyTieredMobEffectBonus darkness = requireBonus(forlorn,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredMobEffectBonus.class);
+        JeicyTieredAttributeBonus nature = requireBonus(forlorn, spellbook,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus lowerArmor = requireBonus(forlorn,
+            net.minecraft.world.item.Items.DIAMOND_LEGGINGS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredAttributeBonus aether = requireBonus(forlorn, aetherRing,
+            JeicyTieredAttributeBonus.class);
+        var uncommon = darkness.valueForRank(OriginalGemRank.UNCOMMON);
+        var esoteric = darkness.valueForRank(OriginalGemRank.ESOTERIC);
+        if (uncommon == null || uncommon.duration() != 100 || uncommon.amplifier() != 0
+            || uncommon.cooldown() != 100
+            || esoteric == null || esoteric.duration() != 1000 || esoteric.amplifier() != 2
+            || esoteric.cooldown() != 100
+            || !Double.valueOf(0.25).equals(nature.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(3.5).equals(nature.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(lowerArmor.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(-0.4).equals(lowerArmor.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.01).equals(aether.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.07).equals(aether.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Forlorn core values did not match the original");
+        }
+
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")) {
+            net.minecraft.world.item.Item jewelry = item("eidolon_repraised:basic_ring");
+            net.minecraft.world.item.Item armor = item("eidolon_repraised:warded_mail");
+            verifySocketRule("undergarden/forlorn", jewelry, true);
+            verifySocketRule("undergarden/forlorn", armor, true);
+            JeicyTieredAttributeBonus luck = requireBonus(forlorn, jewelry,
+                JeicyTieredAttributeBonus.class);
+            JeicyTieredAttributeBonus speed = requireBonus(forlorn, armor,
+                JeicyTieredAttributeBonus.class);
+            if (!Double.valueOf(0.01).equals(luck.valueForRank(OriginalGemRank.RARE))
+                || !Double.valueOf(0.07).equals(luck.valueForRank(OriginalGemRank.ESOTERIC))
+                || !Double.valueOf(0.01).equals(speed.valueForRank(OriginalGemRank.RARE))
+                || !Double.valueOf(0.07).equals(speed.valueForRank(OriginalGemRank.ESOTERIC))) {
+                throw new IllegalStateException("Forlorn Curios values did not match the original");
+            }
+        }
+    }
+
+    private static void verifyAlexsCavesGems(ServerStartedEvent serverEvent) {
+        verifySocketRule("modded/amber", net.minecraft.world.item.Items.SHIELD, true);
+        verifySocketRule("modded/amber", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/amber", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        verifySocketRule("modded/amber", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/amber", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        Gem amber = gem("modded/amber");
+        JeicyTieredEnchantmentBonus heavySlam = requireBonus(amber,
+            net.minecraft.world.item.Items.SHIELD, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredEnchantmentBonus swiftwood = requireBonus(amber,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus mining = requireBonus(amber,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredAttributeBonus.class);
+        JeicyTieredMobEffectBonus rage = requireBonus(amber,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredMobEffectBonus.class);
+        var rageRare = rage.valueForRank(OriginalGemRank.RARE);
+        var rageEsoteric = rage.valueForRank(OriginalGemRank.ESOTERIC);
+        if (heavySlam.valueForRank(OriginalGemRank.RARE) != 1
+            || heavySlam.valueForRank(OriginalGemRank.ESOTERIC) != 3
+            || swiftwood.valueForRank(OriginalGemRank.ARTIFACT) != 2
+            || !Double.valueOf(0.05).equals(mining.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.5).equals(mining.valueForRank(OriginalGemRank.ESOTERIC))
+            || rageRare == null || rageRare.duration() != 40 || rageRare.amplifier() != 0
+            || rageRare.cooldown() != 900
+            || rageEsoteric == null || rageEsoteric.duration() != 500
+            || rageEsoteric.amplifier() != 2 || rageEsoteric.cooldown() != 900) {
+            throw new IllegalStateException("Amber values did not match the original");
+        }
+
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_SHOVEL, true);
+        verifySocketRule("modded/depths", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        Gem depths = gem("modded/depths");
+        JeicyTieredAllStatsBonus allStats = requireBonus(depths,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAllStatsBonus.class);
+        JeicyTieredEnchantmentBonus flinging = requireBonus(depths,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredEnchantmentBonus earthsBoon = requireBonus(depths,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus cold = requireBonus(depths,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        if (allStats.attributeCount() != 28
+            || !Double.valueOf(0.005).equals(allStats.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.035).equals(allStats.valueForRank(OriginalGemRank.ESOTERIC))
+            || flinging.valueForRank(OriginalGemRank.RARE) != null
+            || flinging.valueForRank(OriginalGemRank.EPIC) != 1
+            || flinging.valueForRank(OriginalGemRank.ESOTERIC) != 3
+            || earthsBoon.valueForRank(OriginalGemRank.ANCIENT) != 1
+            || earthsBoon.valueForRank(OriginalGemRank.ESOTERIC) != 2
+            || !Double.valueOf(0.15).equals(cold.valueForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(0.9).equals(cold.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Depths values did not match the original");
+        }
+
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/uranium", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        Gem uranium = gem("modded/uranium");
+        JeicyTieredEnchantmentBonus global = requireBonus(uranium,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredMultiAttributeBonus chest = requireBonus(uranium,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus lower = requireBonus(uranium,
+            net.minecraft.world.item.Items.DIAMOND_LEGGINGS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredMobEffectBonus irradiated = requireBonus(uranium,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredMobEffectBonus.class);
+        var irradiatedRare = irradiated.valueForRank(OriginalGemRank.RARE);
+        var irradiatedEsoteric = irradiated.valueForRank(OriginalGemRank.ESOTERIC);
+        if (global.valueForRank(OriginalGemRank.RARE) != null
+            || global.valueForRank(OriginalGemRank.MYTHIC) != 1
+            || global.valueForRank(OriginalGemRank.ESOTERIC) != 2
+            || !Double.valueOf(-0.15).equals(chest.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.8).equals(chest.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(-0.15).equals(lower.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.8).equals(lower.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || irradiatedRare == null || irradiatedRare.duration() != 220
+            || irradiatedRare.amplifier() != 0 || irradiatedRare.cooldown() != 200
+            || irradiatedEsoteric == null || irradiatedEsoteric.duration() != 2000
+            || irradiatedEsoteric.amplifier() != 2 || irradiatedEsoteric.cooldown() != 200
+            || !irradiated.stacksOnReapply()
+            || irradiated.stackedAmplifierForVerification(1, OriginalGemRank.RARE) != 2) {
+            throw new IllegalStateException("Uranium values did not match the original");
+        }
+
+        var lookup = serverEvent.getServer().registryAccess()
+            .lookup(net.minecraft.core.registries.Registries.ENCHANTMENT).orElseThrow();
+        var sharpness = lookup.getOrThrow(net.minecraft.world.item.enchantment.Enchantments.SHARPNESS);
+        var unbreaking = lookup.getOrThrow(net.minecraft.world.item.enchantment.Enchantments.UNBREAKING);
+        var enchantments = new net.minecraft.world.item.enchantment.ItemEnchantments.Mutable(
+            net.minecraft.world.item.enchantment.ItemEnchantments.EMPTY);
+        enchantments.set(sharpness, 3);
+        enchantments.set(unbreaking, 2);
+        ItemStack helmet = new ItemStack(net.minecraft.world.item.Items.DIAMOND_HELMET);
+        ItemStack gemStack = uranium.toStack(Purity.PERFECT);
+        JeicyGemRankAccess.assign(gemStack, OriginalGemRank.HEIRLOOM);
+        var category = dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(helmet);
+        var instance = dev.shadowsoffire.apotheosis.socket.gem.GemInstance.socketed(
+            category, gemStack, 0);
+        var levelEvent = new net.neoforged.neoforge.event.enchanting.GetEnchantmentLevelEvent(
+            helmet, enchantments, sharpness, lookup);
+        global.getEnchantmentLevels(instance, levelEvent);
+        if (enchantments.getLevel(sharpness) != 5 || enchantments.getLevel(unbreaking) != 4) {
+            throw new IllegalStateException("Uranium Heirloom rank did not add two global enchantment levels");
         }
     }
 
