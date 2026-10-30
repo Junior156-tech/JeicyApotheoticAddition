@@ -68,6 +68,21 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
             activeGems.put("bumblezone/bee_queen", OriginalGemRank.UNCOMMON);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("born_in_chaos_v1")) {
+            activeGems.put("modded/felfire", OriginalGemRank.UNCOMMON);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("enderio")) {
+            activeGems.put("modded/engineer", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("vampirism")) {
+            activeGems.put("modded/dracula", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("malum")) {
+            activeGems.put("modded/weeping_well", OriginalGemRank.EPIC);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")) {
+            activeGems.put("modded/soultwisted", OriginalGemRank.RARE);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -146,6 +161,26 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
             verifyBeeQueen();
             LOGGER.info("Verified Bee Queen stacking, attributes, values, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("born_in_chaos_v1")) {
+            verifyFelfire();
+            LOGGER.info("Verified Felfire alchemy, stacking, attributes, enchantment, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("enderio")) {
+            verifyEngineer();
+            LOGGER.info("Verified Engineer Withering, reach attributes, values, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("vampirism")) {
+            verifyDracula();
+            LOGGER.info("Verified Dracula enchantment, effects, attribute profiles, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("malum")) {
+            verifyWeepingWell();
+            LOGGER.info("Verified Weeping Well Malum attributes, enchantment, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")) {
+            verifySoultwisted();
+            LOGGER.info("Verified Soultwisted effects, restored wand category, attributes, values, and sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -258,6 +293,11 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("modded/archmage", "ars_nouveau"),
             Map.entry("modded/ars_mana", "ars_nouveau"),
             Map.entry("bumblezone/bee_queen", "the_bumblezone"),
+            Map.entry("modded/felfire", "born_in_chaos_v1"),
+            Map.entry("modded/engineer", "enderio"),
+            Map.entry("modded/dracula", "vampirism"),
+            Map.entry("modded/weeping_well", "malum"),
+            Map.entry("modded/soultwisted", "eidolon_repraised"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -640,6 +680,181 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(4).equals(fire.valueForRank(OriginalGemRank.ESOTERIC))
             || lower.profileIndexFor(new ItemStack(net.minecraft.world.item.Items.DIAMOND_BOOTS)) != 0) {
             throw new IllegalStateException("Bee Queen values did not match the original");
+        }
+    }
+
+    private static void verifyFelfire() {
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/felfire", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        Gem felfire = gem("modded/felfire");
+        JeicyFelfireWeaponBonus weapons = requireBonus(felfire,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicyFelfireWeaponBonus.class);
+        JeicyTieredDropTransformBonus alchemy = requireBonus(felfire,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        JeicyTieredEnchantmentBonus rebounding = requireBonus(felfire,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus lifeSteal = requireBonus(felfire,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        var flameUncommon = weapons.lightValueForRank(OriginalGemRank.UNCOMMON);
+        var flameEsoteric = weapons.lightValueForRank(OriginalGemRank.ESOTERIC);
+        if (!Double.valueOf(5.25).equals(weapons.heavyValueForRank(0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(6.25).equals(weapons.heavyValueForRank(1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(alchemy.chanceForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.4).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !alchemy.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.DIAMOND))
+            || !alchemy.outputForVerification().is(item("born_in_chaos_v1:pieceofdarkmetal"))
+            || flameUncommon == null || flameUncommon.duration() != 100
+            || flameEsoteric == null || flameEsoteric.duration() != 600
+            || flameEsoteric.amplifier() != 2 || !weapons.lightStacksOnReapply()
+            || weapons.lightStackedAmplifierForVerification(2, OriginalGemRank.ESOTERIC) != 5
+            || rebounding.valueForRank(OriginalGemRank.RARE) != 1
+            || rebounding.valueForRank(OriginalGemRank.ESOTERIC) != 3
+            || !Double.valueOf(0.05).equals(lifeSteal.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.4).equals(lifeSteal.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Felfire values did not match the original");
+        }
+    }
+
+    private static void verifyEngineer() {
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.BOW, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.CROSSBOW, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/engineer", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        Gem engineer = gem("modded/engineer");
+        JeicyTieredEnchantmentBonus withering = requireBonus(engineer,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus entityReach = requireBonus(engineer,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus blockReach = requireBonus(engineer,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredAttributeBonus.class);
+        if (withering.valueForRank(OriginalGemRank.RARE) != 1
+            || withering.valueForRank(OriginalGemRank.MYTHIC) != 2
+            || withering.valueForRank(OriginalGemRank.ESOTERIC) != 3
+            || !Double.valueOf(1).equals(entityReach.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(4).equals(entityReach.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(1).equals(blockReach.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(4).equals(blockReach.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Engineer values did not match the original");
+        }
+    }
+
+    private static void verifyDracula() {
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/dracula", net.minecraft.world.item.Items.TRIDENT, true);
+        Gem dracula = gem("modded/dracula");
+        JeicyTieredEnchantmentBonus thorns = requireBonus(dracula,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredMultiAttributeBonus chest = requireBonus(dracula,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus lower = requireBonus(dracula,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredMobEffectBonus sunscreen = requireBonus(dracula,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredMobEffectBonus.class);
+        var rare = sunscreen.valueForRank(OriginalGemRank.RARE);
+        var esoteric = sunscreen.valueForRank(OriginalGemRank.ESOTERIC);
+        if (thorns.valueForRank(OriginalGemRank.RARE) != 1
+            || thorns.valueForRank(OriginalGemRank.ESOTERIC) != 3
+            || !Double.valueOf(-0.3).equals(chest.valueForRank(0, 0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(-0.2).equals(chest.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(1.2).equals(lower.valueForRank(0, 0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(0.4).equals(lower.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || rare == null || rare.duration() != 300 || rare.cooldown() != 450
+            || esoteric == null || esoteric.duration() != 800
+            || esoteric.amplifier() != 2 || esoteric.cooldown() != 400) {
+            throw new IllegalStateException("Dracula values did not match the original");
+        }
+    }
+
+    private static void verifyWeepingWell() {
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/weeping_well", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        Gem well = gem("modded/weeping_well");
+        JeicyTieredAttributeBonus capacity = requireBonus(well,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredEnchantmentBonus plunder = requireBonus(well,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus experience = requireBonus(well,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus recovery = requireBonus(well,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus spoils = requireBonus(well,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(1).equals(capacity.valueForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(6).equals(capacity.valueForRank(OriginalGemRank.ESOTERIC))
+            || plunder.valueForRank(OriginalGemRank.EPIC) != 1
+            || plunder.valueForRank(OriginalGemRank.ESOTERIC) != 4
+            || !Double.valueOf(0.1).equals(experience.valueForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(1).equals(experience.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(recovery.valueForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(0.75).equals(recovery.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(spoils.valueForRank(OriginalGemRank.EPIC))
+            || !Double.valueOf(0.75).equals(spoils.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Weeping Well values did not match the original");
+        }
+    }
+
+    private static void verifySoultwisted() {
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/soultwisted", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        Gem soul = gem("modded/soultwisted");
+        JeicyTieredMobEffectBonus reinforced = requireBonus(soul,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus anchored = requireBonus(soul,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMobEffectBonus.class);
+        JeicySplitAttackEffectBonus weapons = requireBonus(soul,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicySplitAttackEffectBonus.class);
+        JeicyTieredAttributeBonus healing = requireBonus(soul,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus chanting = requireBonus(soul,
+            net.minecraft.world.item.Items.DIAMOND_LEGGINGS, JeicyTieredAttributeBonus.class);
+        var reinforcedEsoteric = reinforced.valueForRank(OriginalGemRank.ESOTERIC);
+        var anchoredHeirloom = anchored.valueForRank(OriginalGemRank.HEIRLOOM);
+        var vulnerableEsoteric = weapons.heavyValueForRank(OriginalGemRank.ESOTERIC);
+        var chilledEsoteric = weapons.lightValueForRank(OriginalGemRank.ESOTERIC);
+        net.minecraft.world.item.Item wandItem = item("eidolon_repraised:bonechill_wand");
+        ItemStack wand = new ItemStack(wandItem);
+        var wandCategory = dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(wand);
+        var wandBonus = soul.getBonus(wandCategory, Purity.PERFECT).orElseThrow();
+        if (wandItem == net.minecraft.world.item.Items.AIR
+            || wandCategory != JeicyLootCategories.WAND.get()
+            || !soul.canApplyTo(wand, soul.toStack(Purity.PERFECT), Purity.PERFECT)
+            || !(wandBonus instanceof JeicyTieredAttributeBonus magicPower)
+            || !Double.valueOf(0.1).equals(magicPower.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.7).equals(magicPower.valueForRank(OriginalGemRank.ESOTERIC))
+            || reinforcedEsoteric == null || reinforcedEsoteric.duration() != 500
+            || anchoredHeirloom == null || anchoredHeirloom.duration() != 400
+            || anchoredHeirloom.cooldown() != 40
+            || vulnerableEsoteric == null || vulnerableEsoteric.duration() != 1000
+            || vulnerableEsoteric.amplifier() != 3
+            || chilledEsoteric == null || chilledEsoteric.duration() != 1300
+            || chilledEsoteric.amplifier() != 2 || !weapons.lightStacksOnReapply()
+            || weapons.lightStackedAmplifierForVerification(2, OriginalGemRank.ESOTERIC) != 5
+            || !Double.valueOf(0.03).equals(healing.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.25).equals(healing.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.1).equals(chanting.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.7).equals(chanting.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Soultwisted values did not match the original");
         }
     }
 

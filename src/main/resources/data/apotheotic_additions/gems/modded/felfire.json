@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "born_in_chaos_v1" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "chipped",
+  "weights": { "weight": 3, "quality": 4.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_felfire_weapon",
+      "gem_class": { "key": "felfire_weapon", "types": ["apotheosis:melee_weapon", "apotheosis:trident"] },
+      "heavy_profiles": [{
+        "key": "heavy_weapon", "original_socket_types": ["heavy_weapon"],
+        "modifiers": [
+          {
+            "attribute": "apothic_attributes:fire_damage", "operation": "add_value",
+            "values": { "uncommon": 2.5, "rare": 3.25, "epic": 3.75, "mythic": 4.25, "ancient": 4.75, "apotheotic_additions:artifact": 5.25, "apotheotic_additions:heirloom": 5.75, "apotheotic_additions:esoteric": 6.25 }
+          },
+          {
+            "attribute": "apothic_attributes:cold_damage", "operation": "add_value",
+            "values": { "uncommon": 2.5, "rare": 3.25, "epic": 3.75, "mythic": 4.25, "ancient": 4.75, "apotheotic_additions:artifact": 5.25, "apotheotic_additions:heirloom": 5.75, "apotheotic_additions:esoteric": 6.25 }
+          }
+        ]
+      }],
+      "light_mob_effect": "born_in_chaos_v1:infernal_flame",
+      "light_target": "attack_target",
+      "light_stack_on_reapply": true,
+      "light_stacking_limit": 255,
+      "light_original_socket_types": ["sword", "trident"],
+      "light_values": {
+        "uncommon": { "duration": 100, "amplifier": 0, "cooldown": 100 }, "rare": { "duration": 150, "amplifier": 0, "cooldown": 100 },
+        "epic": { "duration": 200, "amplifier": 0, "cooldown": 100 }, "mythic": { "duration": 250, "amplifier": 1, "cooldown": 100 },
+        "ancient": { "duration": 300, "amplifier": 1, "cooldown": 100 }, "apotheotic_additions:artifact": { "duration": 400, "amplifier": 2, "cooldown": 100 },
+        "apotheotic_additions:heirloom": { "duration": 500, "amplifier": 2, "cooldown": 100 }, "apotheotic_additions:esoteric": { "duration": 600, "amplifier": 2, "cooldown": 100 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [{ "condition": "apotheosis:matches_block", "valid_blocks": "#c:ores/diamond" }],
+      "inputs": { "tag": "c:gems/diamond" },
+      "output": { "count": 1, "id": "born_in_chaos_v1:pieceofdarkmetal" },
+      "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.15, "mythic": 0.2, "ancient": 0.25, "apotheotic_additions:artifact": 0.3, "apotheotic_additions:heirloom": 0.35, "apotheotic_additions:esoteric": 0.4 },
+      "desc": "gem.apotheotic_additions:alchemy/felfire.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    },
+    {
+      "type": "apotheotic_additions:original_enchantment",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "enchantment": "apothic_enchanting:rebounding", "original_socket_types": ["chestplate"],
+      "values": { "rare": 1, "epic": 1, "mythic": 1, "ancient": 2, "apotheotic_additions:artifact": 2, "apotheotic_additions:heirloom": 2, "apotheotic_additions:esoteric": 3 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "helmet", "types": ["apotheosis:helmet"] },
+      "attribute": "apothic_attributes:life_steal", "operation": "add_multiplied_total", "original_socket_types": ["helmet"],
+      "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.15, "mythic": 0.2, "ancient": 0.25, "apotheotic_additions:artifact": 0.3, "apotheotic_additions:heirloom": 0.35, "apotheotic_additions:esoteric": 0.4 }
+    }
+  ]
+}

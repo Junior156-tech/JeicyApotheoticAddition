@@ -65,10 +65,13 @@ public final class JeicyApotheoticAddition {
             JeicyTieredMobEffectBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_split_attack_effect"),
             JeicySplitAttackEffectBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_felfire_weapon"),
+            JeicyFelfireWeaponBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_drop_transform"),
             JeicyTieredDropTransformBonus.CODEC);
         ITEMS.register(modBus);
         RECIPE_SERIALIZERS.register(modBus);
+        JeicyLootCategories.register(modBus);
         JeicyOriginalBlocks.register(modBus);
         JeicyGemComponents.register(modBus);
         NeoForge.EVENT_BUS.addListener(JeicyRuntimeGemVerifier::onServerStarted);

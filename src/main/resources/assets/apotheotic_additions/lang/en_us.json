@@ -1140,5 +1140,6 @@
   "attribute.name.ars_nouveau.max_mana": "Max Source",
   "attribute.name.tacz.bullet_resistance": "Bullet Resistance",
   "ars_nouveau.perk.max_mana": "Max Source",
-  "ars_nouveau.perk.mana_regen": "Source Regen"
+  "ars_nouveau.perk.mana_regen": "Source Regen",
+  "enchantment.enderio.withering": "Withering"
 }

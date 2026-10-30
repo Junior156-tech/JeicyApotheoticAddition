@@ -33,6 +33,7 @@ public final class OriginalSocketMatcher {
                 && stack.canPerformAction(ItemAbilities.SWORD_DIG);
             case "shield" -> stack.canPerformAction(ItemAbilities.SHIELD_BLOCK);
             case "trident" -> stack.getItem() instanceof TridentItem;
+            case "wand" -> JeicyLootCategories.isEidolonWand(stack);
             case "helmet", "chestplate", "leggings", "boots" ->
                 LootCategory.forItem(stack).getKey().getPath().equals(type);
             default -> false;

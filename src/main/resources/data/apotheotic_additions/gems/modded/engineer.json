@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "enderio" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "weights": { "weight": 5, "quality": 3.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_enchantment",
+      "gem_class": { "key": "weapon", "types": ["apotheosis:melee_weapon", "apotheosis:trident", "apotheosis:bow"] },
+      "enchantment": "enderio:withering", "original_socket_types": ["heavy_weapon", "sword", "trident", "bow", "crossbow"],
+      "values": { "rare": 1, "epic": 1, "mythic": 2, "ancient": 3, "apotheotic_additions:artifact": 3, "apotheotic_additions:heirloom": 3, "apotheotic_additions:esoteric": 3 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "minecraft:player.entity_interaction_range", "operation": "add_value", "original_socket_types": ["chestplate"],
+      "values": { "rare": 1.0, "epic": 1.5, "mythic": 2.0, "ancient": 2.5, "apotheotic_additions:artifact": 3.0, "apotheotic_additions:heirloom": 3.5, "apotheotic_additions:esoteric": 4.0 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "lower_armor", "types": ["apotheosis:boots", "apotheosis:leggings"] },
+      "attribute": "minecraft:player.block_interaction_range", "operation": "add_value", "original_socket_types": ["boots", "leggings"],
+      "values": { "rare": 1.0, "epic": 1.5, "mythic": 2.0, "ancient": 2.5, "apotheotic_additions:artifact": 3.0, "apotheotic_additions:heirloom": 3.5, "apotheotic_additions:esoteric": 4.0 }
+    }
+  ]
+}

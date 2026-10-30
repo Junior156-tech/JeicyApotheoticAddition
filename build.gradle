@@ -58,6 +58,12 @@ dependencies {
     runtimeOnly 'maven.modrinth:TKB6INcv:yWDnir1o' // Ars Nouveau 1.21.1-5.13.3
     runtimeOnly 'maven.modrinth:G1hIVOrD:x99nCLTm' // Resourceful Lib 1.21-3.0.12
     runtimeOnly 'maven.modrinth:38tpSycf:LwGXnQCW' // The Bumblezone 7.17.3+1.21.1
+    runtimeOnly 'maven.modrinth:1kcHy4de:ttcWWp3r' // Born in Chaos 1.21.1-1.7.6
+    runtimeOnly 'maven.modrinth:49ZofO4f:2bHl1dCW' // Ender IO 8.2.12-beta
+    runtimeOnly 'maven.modrinth:jVZ0F1wn:8KCSZKt6' // Vampirism 1.21-1.10.13
+    runtimeOnly 'maven.modrinth:bN3xUWdo:CohX6yP1' // Lodestone 1.21.1-1.8.2 (required by Malum)
+    runtimeOnly 'maven.modrinth:jgzwYsAN:BIbVs1fo' // Malum 1.21.1-1.8.2
+    runtimeOnly 'maven.modrinth:eWX2m1eM:GuRaBcEi' // Eidolon: Repraised 1.21.1-0.5.0.8
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'

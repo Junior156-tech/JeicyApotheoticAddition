@@ -77,6 +77,10 @@ public final class JeicyTieredMultiAttributeBonus extends GemBonus implements Je
         return profile == null ? -1 : profiles.indexOf(profile);
     }
 
+    Double valueForRank(int profileIndex, int modifierIndex, OriginalGemRank rank) {
+        return profiles.get(profileIndex).modifiers.get(modifierIndex).values.get(rank);
+    }
+
     private OriginalGemRank originalRank(GemView gem) {
         return JeicyGemRankAccess.get(gem.gemStack());
     }
