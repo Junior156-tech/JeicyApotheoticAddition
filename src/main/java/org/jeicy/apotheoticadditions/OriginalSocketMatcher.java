@@ -23,6 +23,12 @@ public final class OriginalSocketMatcher {
     }
 
     public static boolean matches(ItemStack stack, String type) {
+        if (type.startsWith("curios:aether_")) {
+            return JeicyLootCategories.isAetherAccessory(stack);
+        }
+        if (type.startsWith("curios:")) {
+            return JeicyLootCategories.isCuriosSlot(stack, type.substring("curios:".length()));
+        }
         return switch (type) {
             case "bow" -> stack.getItem() instanceof BowItem;
             case "crossbow" -> stack.getItem() instanceof CrossbowItem;

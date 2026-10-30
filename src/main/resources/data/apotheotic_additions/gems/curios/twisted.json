@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "curios" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "chipped",
+  "weights": { "weight": 3, "quality": 3.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "curios_armor", "types": ["apotheotic_additions:curios_armor"] },
+      "profiles": [{
+        "key": "curios_armor",
+        "original_socket_types": ["curios:body", "curios:head", "curios:back", "curios:feet", "curios:hands"],
+        "modifiers": [
+          { "attribute": "minecraft:generic.max_health", "operation": "add_value", "values": { "uncommon": 0.5, "rare": 1.0, "epic": 1.5, "mythic": 2.0, "ancient": 2.5, "apotheotic_additions:artifact": 3.0, "apotheotic_additions:heirloom": 3.5, "apotheotic_additions:esoteric": 4.0 } },
+          { "attribute": "minecraft:generic.armor", "operation": "add_value", "values": { "uncommon": -0.5, "rare": -1.0, "epic": -1.5, "mythic": -2.0, "ancient": -2.5, "apotheotic_additions:artifact": -3.0, "apotheotic_additions:heirloom": -3.5, "apotheotic_additions:esoteric": -4.0 } }
+        ]
+      }]
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "curios_jewelry", "types": ["apotheotic_additions:curios_jewelry"] },
+      "profiles": [{
+        "key": "curios_jewelry",
+        "original_socket_types": ["curios:ring", "curios:an_focus", "curios:necklace", "curios:charm", "curios:belt"],
+        "modifiers": [
+          { "attribute": "minecraft:generic.movement_speed", "operation": "add_multiplied_total", "values": { "uncommon": 0.01, "rare": 0.02, "epic": 0.03, "mythic": 0.04, "ancient": 0.05, "apotheotic_additions:artifact": 0.06, "apotheotic_additions:heirloom": 0.07, "apotheotic_additions:esoteric": 0.08 } },
+          { "attribute": "minecraft:generic.flying_speed", "operation": "add_multiplied_total", "values": { "uncommon": -0.01, "rare": -0.02, "epic": -0.03, "mythic": -0.04, "ancient": -0.05, "apotheotic_additions:artifact": -0.06, "apotheotic_additions:heirloom": -0.07, "apotheotic_additions:esoteric": -0.08 } }
+        ]
+      }]
+    }
+  ]
+}

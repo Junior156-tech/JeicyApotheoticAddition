@@ -23,6 +23,7 @@ ACTIVE = {
     "crafted/hydra.json": "apotheotic_additions:artifact",
     "crafted/ignis.json": "apotheotic_additions:artifact",
     "crafted/leviathan.json": "apotheotic_additions:artifact",
+    "crafted/lich.json": "apotheotic_additions:artifact",
     "crafted/maledictus.json": "apotheotic_additions:artifact",
     "crafted/monstrosity.json": "apotheotic_additions:artifact",
     "crafted/naga.json": "apotheotic_additions:artifact",
@@ -44,10 +45,14 @@ ACTIVE = {
     "modded/dracula.json": "rare",
     "modded/weeping_well.json": "epic",
     "modded/soultwisted.json": "rare",
+    "curios/reinforced.json": "uncommon",
+    "curios/twisted.json": "uncommon",
+    "curios/vitalic.json": "uncommon",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
     "undergarden/decay.json": "rare",
     "undergarden/undergarden.json": "rare",
+    "twilight/umbral_matrimony.json": "rare",
 }
 TYPE_MAP = {
     "bow": "apotheosis:bow",
@@ -63,6 +68,22 @@ TYPE_MAP = {
     "shield": "apotheosis:shield",
     "trident": "apotheosis:trident",
     "wand": "apotheotic_additions:wand",
+    "curios:body": "apotheotic_additions:curios_armor",
+    "curios:head": "apotheotic_additions:curios_armor",
+    "curios:back": "apotheotic_additions:curios_armor",
+    "curios:feet": "apotheotic_additions:curios_armor",
+    "curios:hands": "apotheotic_additions:curios_armor",
+    "curios:ring": "apotheotic_additions:curios_jewelry",
+    "curios:an_focus": "apotheotic_additions:curios_jewelry",
+    "curios:necklace": "apotheotic_additions:curios_jewelry",
+    "curios:charm": "apotheotic_additions:curios_jewelry",
+    "curios:belt": "apotheotic_additions:curios_jewelry",
+    "curios:aether_gloves": "apotheotic_additions:aether_accessory",
+    "curios:aether_accessory": "apotheotic_additions:aether_accessory",
+    "curios:aether_shield": "apotheotic_additions:aether_accessory",
+    "curios:aether_cape": "apotheotic_additions:aether_accessory",
+    "curios:aether_pendant": "apotheotic_additions:aether_accessory",
+    "curios:aether_ring": "apotheotic_additions:aether_accessory",
 }
 OPERATION_MAP = {
     "ADDITION": "add_value",
@@ -76,6 +97,7 @@ COMMON_TAG_MAP = {
     "forge:raw_materials/iron": "c:raw_materials/iron",
     "forge:ores/diamond": "c:ores/diamond",
     "forge:gems/diamond": "c:gems/diamond",
+    "forge:ores/zanite": "aether:ores/zanite",
 }
 
 
@@ -292,6 +314,80 @@ def main() -> int:
                 assert runtime["constraints"]["dimensions"] == original["dimensions"]
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "cataclysm"}
+                ]
+            elif relative_path == "crafted/lich.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
+                old_bonus = original["bonuses"][0]
+                new_bonus = runtime["bonuses"][0]
+                assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"]]
+                assert new_bonus["values"] == old_bonus["values"]
+                assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                    old_bonus["gem_class"]["types"]
+                )
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "eidolon_repraised"},
+                    {"type": "neoforge:mod_loaded", "modid": "twilightforest"},
+                ]
+            elif relative_path in {
+                "curios/reinforced.json",
+                "curios/twisted.json",
+                "curios/vitalic.json",
+            }:
+                assert len(runtime["bonuses"]) == len(original["bonuses"])
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    old_types = old_bonus["gem_class"]["types"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(old_types)
+                    if old_bonus["type"] == "apotheosis:attribute":
+                        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"]]
+                        assert new_bonus["values"] == old_bonus["values"]
+                        assert new_bonus["original_socket_types"] == old_types
+                    else:
+                        assert old_bonus["type"] == "apotheosis:multi_attribute"
+                        assert new_bonus["type"] == "apotheotic_additions:original_multi_attribute"
+                        assert len(new_bonus["profiles"]) == 1
+                        profile = new_bonus["profiles"][0]
+                        assert profile["original_socket_types"] == old_types
+                        assert len(profile["modifiers"]) == len(old_bonus["modifiers"])
+                        for modifier, old_modifier in zip(profile["modifiers"], old_bonus["modifiers"]):
+                            assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+                            assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"]]
+                            assert modifier["values"] == old_modifier["values"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "curios"}
+                ]
+            elif relative_path == "twilight/umbral_matrimony.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 4
+                old_drop, *old_attributes = original["bonuses"]
+                new_drop, *new_attributes = runtime["bonuses"]
+                assert new_drop["type"] == "apotheotic_additions:original_drop_transform"
+                assert new_drop["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + COMMON_TAG_MAP[old_drop["blocks"]],
+                }]
+                assert new_drop["inputs"] == old_drop["inputs"]
+                assert new_drop["output"] == {"count": 1, "id": old_drop["output"]["item"]}
+                assert new_drop["values"] == old_drop["values"]
+                assert new_drop["desc"] == old_drop["desc"]
+                assert new_drop["original_socket_types"] == old_drop["gem_class"]["types"]
+                for old_bonus, new_bonus in zip(old_attributes, new_attributes):
+                    assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                    assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                    assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"]]
+                    assert new_bonus["values"] == old_bonus["values"]
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
+                    {"type": "neoforge:mod_loaded", "modid": "twilightforest"},
                 ]
             elif relative_path == "modded/felfire.json":
                 assert len(original["bonuses"]) == 5

@@ -83,6 +83,20 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")) {
             activeGems.put("modded/soultwisted", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            activeGems.put("crafted/lich", OriginalGemRank.ARTIFACT);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("curios")) {
+            activeGems.put("curios/reinforced", OriginalGemRank.UNCOMMON);
+            activeGems.put("curios/twisted", OriginalGemRank.UNCOMMON);
+            activeGems.put("curios/vitalic", OriginalGemRank.UNCOMMON);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            activeGems.put("twilight/umbral_matrimony", OriginalGemRank.RARE);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -181,6 +195,21 @@ public final class JeicyRuntimeGemVerifier {
         if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")) {
             verifySoultwisted();
             LOGGER.info("Verified Soultwisted effects, restored wand category, attributes, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            verifyLich();
+            LOGGER.info("Verified Lich wand category, magic-power values, and exact socket.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("curios")) {
+            verifyCuriosGems();
+            LOGGER.info("Verified Reinforced, Twisted, and Vitalic Curios categories, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            verifyUmbralMatrimony();
+            LOGGER.info("Verified Umbral Matrimony alchemy, Curios/Aether categories, values, and sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -298,6 +327,11 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("modded/dracula", "vampirism"),
             Map.entry("modded/weeping_well", "malum"),
             Map.entry("modded/soultwisted", "eidolon_repraised"),
+            Map.entry("crafted/lich", "eidolon_repraised"),
+            Map.entry("curios/reinforced", "curios"),
+            Map.entry("curios/twisted", "curios"),
+            Map.entry("curios/vitalic", "curios"),
+            Map.entry("twilight/umbral_matrimony", "curios"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -855,6 +889,117 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(0.1).equals(chanting.valueForRank(OriginalGemRank.RARE))
             || !Double.valueOf(0.7).equals(chanting.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Soultwisted values did not match the original");
+        }
+    }
+
+    private static void verifyLich() {
+        net.minecraft.world.item.Item wand = item("eidolon_repraised:bonechill_wand");
+        verifySocketRule("crafted/lich", wand, true);
+        verifySocketRule("crafted/lich", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        if (dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(new ItemStack(wand))
+                != JeicyLootCategories.WAND.get()) {
+            throw new IllegalStateException("Lich wand did not resolve the restored wand category");
+        }
+        JeicyTieredAttributeBonus magicPower = requireBonus(gem("crafted/lich"), wand,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(1).equals(magicPower.valueForRank(OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(1.5).equals(magicPower.valueForRank(OriginalGemRank.HEIRLOOM))
+            || !Double.valueOf(2).equals(magicPower.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Lich values did not match the original");
+        }
+    }
+
+    private static void verifyCuriosGems() {
+        net.minecraft.world.item.Item armorItem = item("eidolon_repraised:warded_mail");
+        net.minecraft.world.item.Item jewelryItem = item("eidolon_repraised:basic_ring");
+        ItemStack armorStack = new ItemStack(armorItem);
+        ItemStack jewelryStack = new ItemStack(jewelryItem);
+        if (armorItem == net.minecraft.world.item.Items.AIR
+            || jewelryItem == net.minecraft.world.item.Items.AIR
+            || dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(armorStack)
+                != JeicyLootCategories.CURIOS_ARMOR.get()
+            || dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(jewelryStack)
+                != JeicyLootCategories.CURIOS_JEWELRY.get()) {
+            throw new IllegalStateException("Restored Curios categories did not resolve real Eidolon items");
+        }
+
+        verifySocketRule("curios/reinforced", armorItem, true);
+        verifySocketRule("curios/reinforced", jewelryItem, true);
+        verifySocketRule("curios/reinforced", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, false);
+        Gem reinforced = gem("curios/reinforced");
+        JeicyTieredAttributeBonus reinforcedArmor = requireBonus(reinforced, armorItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus reinforcedJewelry = requireBonus(reinforced, jewelryItem,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.5).equals(reinforcedArmor.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(5).equals(reinforcedArmor.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.5).equals(reinforcedJewelry.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(5).equals(reinforcedJewelry.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Reinforced values did not match the original");
+        }
+
+        verifySocketRule("curios/twisted", armorItem, true);
+        verifySocketRule("curios/twisted", jewelryItem, true);
+        Gem twisted = gem("curios/twisted");
+        JeicyTieredMultiAttributeBonus twistedArmor = requireBonus(twisted, armorItem,
+            JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus twistedJewelry = requireBonus(twisted, jewelryItem,
+            JeicyTieredMultiAttributeBonus.class);
+        if (!Double.valueOf(3).equals(twistedArmor.valueForRank(0, 0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(-4).equals(twistedArmor.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.06).equals(twistedJewelry.valueForRank(0, 0, OriginalGemRank.ARTIFACT))
+            || !Double.valueOf(-0.08).equals(twistedJewelry.valueForRank(0, 1, OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Twisted values did not match the original");
+        }
+
+        verifySocketRule("curios/vitalic", armorItem, true);
+        verifySocketRule("curios/vitalic", jewelryItem, true);
+        Gem vitalic = gem("curios/vitalic");
+        JeicyTieredAttributeBonus vitalicArmor = requireBonus(vitalic, armorItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus vitalicJewelry = requireBonus(vitalic, jewelryItem,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.5).equals(vitalicArmor.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(5).equals(vitalicArmor.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(5).equals(vitalicJewelry.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Vitalic values did not match the original");
+        }
+    }
+
+    private static void verifyUmbralMatrimony() {
+        net.minecraft.world.item.Item armorItem = item("eidolon_repraised:warded_mail");
+        net.minecraft.world.item.Item jewelryItem = item("eidolon_repraised:basic_ring");
+        net.minecraft.world.item.Item aetherItem = item("aether:iron_ring");
+        verifySocketRule("twilight/umbral_matrimony", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("twilight/umbral_matrimony", armorItem, true);
+        verifySocketRule("twilight/umbral_matrimony", jewelryItem, true);
+        verifySocketRule("twilight/umbral_matrimony", aetherItem, true);
+        if (aetherItem == net.minecraft.world.item.Items.AIR
+            || dev.shadowsoffire.apotheosis.loot.LootCategory.forItem(new ItemStack(aetherItem))
+                != JeicyLootCategories.AETHER_ACCESSORY.get()) {
+            throw new IllegalStateException("Restored Aether accessory category did not resolve iron_ring");
+        }
+
+        Gem umbral = gem("twilight/umbral_matrimony");
+        JeicyTieredDropTransformBonus alchemy = requireBonus(umbral,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        JeicyTieredAttributeBonus armor = requireBonus(umbral, armorItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus jewelry = requireBonus(umbral, jewelryItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus aether = requireBonus(umbral, aetherItem,
+            JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(0.05).equals(alchemy.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.35).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !alchemy.acceptsForVerification(new ItemStack(item("aether:zanite_gemstone")))
+            || !alchemy.outputForVerification().is(item("twilightforest:liveroot"))
+            || !Double.valueOf(0.5).equals(armor.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(3.5).equals(armor.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.5).equals(jewelry.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(3.5).equals(jewelry.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.25).equals(aether.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(2).equals(aether.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Umbral Matrimony values did not match the original");
         }
     }
 

@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "eidolon_repraised" },
+    { "type": "neoforge:mod_loaded", "modid": "twilightforest" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "perfect",
+  "weights": { "weight": 0, "quality": 0.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "wand", "types": ["apotheotic_additions:wand"] },
+      "attribute": "eidolon_repraised:magic_power",
+      "operation": "add_multiplied_total",
+      "original_socket_types": ["wand"],
+      "values": {
+        "apotheotic_additions:artifact": 1.0,
+        "apotheotic_additions:heirloom": 1.5,
+        "apotheotic_additions:esoteric": 2.0
+      }
+    }
+  ]
+}
