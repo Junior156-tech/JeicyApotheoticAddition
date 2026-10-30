@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "the_bumblezone" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "chipped",
+  "constraints": { "dimensions": ["the_bumblezone:the_bumblezone"] },
+  "weights": { "weight": 7, "quality": 5.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "light_weapon", "types": ["apotheosis:melee_weapon", "apotheosis:trident"] },
+      "mob_effect": "the_bumblezone:beenergized",
+      "target": "attack_self",
+      "stack_on_reapply": true,
+      "stacking_limit": 255,
+      "original_socket_types": ["sword", "trident"],
+      "values": {
+        "uncommon": { "duration": 100, "amplifier": 0, "cooldown": 100 }, "rare": { "duration": 150, "amplifier": 0, "cooldown": 100 },
+        "epic": { "duration": 200, "amplifier": 0, "cooldown": 100 }, "mythic": { "duration": 250, "amplifier": 1, "cooldown": 100 },
+        "ancient": { "duration": 300, "amplifier": 1, "cooldown": 100 }, "apotheotic_additions:artifact": { "duration": 400, "amplifier": 2, "cooldown": 100 },
+        "apotheotic_additions:heirloom": { "duration": 500, "amplifier": 2, "cooldown": 100 }, "apotheotic_additions:esoteric": { "duration": 1000, "amplifier": 2, "cooldown": 100 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "apothic_attributes:fire_damage", "operation": "add_value", "original_socket_types": ["chestplate"],
+      "values": { "uncommon": 0.5, "rare": 1.0, "epic": 1.5, "mythic": 2.0, "ancient": 2.5, "apotheotic_additions:artifact": 3.0, "apotheotic_additions:heirloom": 3.5, "apotheotic_additions:esoteric": 4.0 }
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "lower_armor", "types": ["apotheosis:leggings", "apotheosis:boots"] },
+      "profiles": [{
+        "key": "lower_armor", "original_socket_types": ["leggings", "boots"],
+        "modifiers": [
+          { "attribute": "apothic_attributes:cold_damage", "operation": "add_multiplied_total", "values": { "uncommon": 0.03, "rare": 0.06, "epic": 0.09, "mythic": 0.12, "ancient": 0.15, "apotheotic_additions:artifact": 0.18, "apotheotic_additions:heirloom": 0.21, "apotheotic_additions:esoteric": 0.24 } },
+          { "attribute": "apothic_attributes:fire_damage", "operation": "add_multiplied_total", "values": { "uncommon": -0.03, "rare": -0.06, "epic": -0.09, "mythic": -0.12, "ancient": -0.15, "apotheotic_additions:artifact": -0.18, "apotheotic_additions:heirloom": -0.21, "apotheotic_additions:esoteric": -0.24 } }
+        ]
+      }]
+    }
+  ]
+}

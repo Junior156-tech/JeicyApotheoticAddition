@@ -15,6 +15,7 @@ ACTIVE = {
     "aether/aether.json": "mythic",
     "aether/purity.json": "rare",
     "aether/zanite_alchemist.json": "rare",
+    "bumblezone/bee_queen.json": "uncommon",
     "crafted/cornelia.json": "apotheotic_additions:artifact",
     "crafted/ender_dragon.json": "apotheotic_additions:artifact",
     "crafted/frostmaw.json": "apotheotic_additions:artifact",
@@ -35,6 +36,8 @@ ACTIVE = {
     "crafted/wroughtnaut.json": "apotheotic_additions:artifact",
     "modded/armor.json": "common",
     "modded/cataclysm.json": "rare",
+    "modded/archmage.json": "rare",
+    "modded/ars_mana.json": "common",
     "modded/heartland.json": "epic",
     "modded/hearty.json": "common",
     "modded/midas.json": "epic",
@@ -267,6 +270,51 @@ def main() -> int:
                 assert runtime["constraints"]["dimensions"] == original["dimensions"]
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "cataclysm"}
+                ]
+            elif relative_path in {"modded/archmage.json", "modded/ars_mana.json"}:
+                assert len(runtime["bonuses"]) == len(original["bonuses"])
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+                    assert new_bonus["values"] == old_bonus["values"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                    if old_bonus["type"] == "apotheosis:attribute":
+                        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+                    elif old_bonus["type"] == "apotheosis:enchantment":
+                        assert new_bonus["type"] == "apotheotic_additions:original_enchantment"
+                        assert new_bonus["enchantment"] == normalize_enchantment(old_bonus["enchantment"])
+                    else:
+                        assert old_bonus["type"] == "apotheosis:mob_effect"
+                        assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+                        assert new_bonus["mob_effect"] == old_bonus["mob_effect"]
+                        assert new_bonus["target"] == old_bonus["target"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "ars_nouveau"}
+                ]
+            elif relative_path == "bumblezone/bee_queen.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 3
+                old_effect, old_attribute, old_multi = original["bonuses"]
+                new_effect, new_attribute, new_multi = runtime["bonuses"]
+                assert new_effect["values"] == old_effect["values"]
+                assert new_effect["mob_effect"] == old_effect["mob_effect"]
+                assert new_effect["stack_on_reapply"] == old_effect["stack_on_reapply"]
+                assert new_effect["original_socket_types"] == old_effect["gem_class"]["types"]
+                assert new_attribute["attribute"] == normalize_attribute(old_attribute["attribute"])
+                assert new_attribute["operation"] == OPERATION_MAP[old_attribute["operation"]]
+                assert new_attribute["values"] == old_attribute["values"]
+                profile = new_multi["profiles"][0]
+                assert profile["original_socket_types"] == old_multi["gem_class"]["types"]
+                assert len(profile["modifiers"]) == len(old_multi["modifiers"])
+                for modifier, old_modifier in zip(profile["modifiers"], old_multi["modifiers"]):
+                    assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+                    assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"]]
+                    assert modifier["values"] == old_modifier["values"]
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "the_bumblezone"}
                 ]
             elif relative_path in {
                 "crafted/harbringer.json",

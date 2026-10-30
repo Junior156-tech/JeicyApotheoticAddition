@@ -100,4 +100,8 @@ public final class JeicyTieredEnchantmentBonus extends GemBonus implements Jeicy
     public Codec<? extends GemBonus> getCodec() {
         return CODEC;
     }
+
+    Integer valueForRank(OriginalGemRank rank) {
+        return values.get(rank);
+    }
 }

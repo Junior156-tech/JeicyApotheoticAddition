@@ -61,6 +61,13 @@ public final class JeicyRuntimeGemVerifier {
             activeGems.put("crafted/remnant", OriginalGemRank.ARTIFACT);
             activeGems.put("modded/cataclysm", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("ars_nouveau")) {
+            activeGems.put("modded/archmage", OriginalGemRank.RARE);
+            activeGems.put("modded/ars_mana", OriginalGemRank.COMMON);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
+            activeGems.put("bumblezone/bee_queen", OriginalGemRank.UNCOMMON);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -131,6 +138,14 @@ public final class JeicyRuntimeGemVerifier {
             LOGGER.info("Verified Harbringer, Leviathan, and Remnant effects, values, and exact sockets.");
             verifyCataclysmGeneralGem();
             LOGGER.info("Verified Cataclysm split weapon effects, stacking, values, and exact sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("ars_nouveau")) {
+            verifyArsNouveauGems();
+            LOGGER.info("Verified Archmage and Ars Mana attributes, enchantment, effect, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
+            verifyBeeQueen();
+            LOGGER.info("Verified Bee Queen stacking, attributes, values, and exact sockets.");
         }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
@@ -240,6 +255,9 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("crafted/leviathan", "cataclysm"),
             Map.entry("crafted/remnant", "cataclysm"),
             Map.entry("modded/cataclysm", "cataclysm"),
+            Map.entry("modded/archmage", "ars_nouveau"),
+            Map.entry("modded/ars_mana", "ars_nouveau"),
+            Map.entry("bumblezone/bee_queen", "the_bumblezone"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -546,6 +564,82 @@ public final class JeicyRuntimeGemVerifier {
             || !weapons.lightStacksOnReapply()
             || weapons.lightStackedAmplifierForVerification(2, OriginalGemRank.ESOTERIC) != 5) {
             throw new IllegalStateException("General Cataclysm gem values did not match the original");
+        }
+    }
+
+    private static void verifyArsNouveauGems() {
+        verifySocketRule("modded/archmage", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/archmage", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/archmage", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/archmage", net.minecraft.world.item.Items.BOW, true);
+        verifySocketRule("modded/archmage", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        Gem archmage = gem("modded/archmage");
+        JeicyTieredEnchantmentBonus manaRegen = requireBonus(archmage,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredEnchantmentBonus.class);
+        JeicyTieredAttributeBonus spellDamage = requireBonus(archmage,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus maxMana = requireBonus(archmage,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredAttributeBonus.class);
+        JeicyTieredMobEffectBonus shocked = requireBonus(archmage,
+            net.minecraft.world.item.Items.BOW, JeicyTieredMobEffectBonus.class);
+        var shockedMythic = shocked.valueForRank(OriginalGemRank.MYTHIC);
+        var shockedEsoteric = shocked.valueForRank(OriginalGemRank.ESOTERIC);
+        if (manaRegen.valueForRank(OriginalGemRank.RARE) != 1
+            || manaRegen.valueForRank(OriginalGemRank.ESOTERIC) != 5
+            || !Double.valueOf(0.2).equals(spellDamage.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.8).equals(spellDamage.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(maxMana.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.35).equals(maxMana.valueForRank(OriginalGemRank.ESOTERIC))
+            || shockedMythic == null || shockedMythic.duration() != 180 || shockedMythic.cooldown() != 500
+            || shockedEsoteric == null || shockedEsoteric.duration() != 500
+            || shockedEsoteric.amplifier() != 2 || shockedEsoteric.cooldown() != 200) {
+            throw new IllegalStateException("Ars Nouveau Archmage values did not match the original");
+        }
+
+        verifySocketRule("modded/ars_mana", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/ars_mana", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/ars_mana", net.minecraft.world.item.Items.SHIELD, true);
+        verifySocketRule("modded/ars_mana", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, false);
+        Gem arsMana = gem("modded/ars_mana");
+        JeicyTieredAttributeBonus helmet = requireBonus(arsMana,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus boots = requireBonus(arsMana,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus shield = requireBonus(arsMana,
+            net.minecraft.world.item.Items.SHIELD, JeicyTieredAttributeBonus.class);
+        if (!Double.valueOf(25).equals(helmet.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(225).equals(helmet.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.5).equals(boots.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(4.5).equals(boots.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.025).equals(shield.valueForRank(OriginalGemRank.COMMON))
+            || !Double.valueOf(0.225).equals(shield.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Ars Mana values did not match the original");
+        }
+    }
+
+    private static void verifyBeeQueen() {
+        verifySocketRule("bumblezone/bee_queen", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("bumblezone/bee_queen", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("bumblezone/bee_queen", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        verifySocketRule("bumblezone/bee_queen", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("bumblezone/bee_queen", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        Gem bee = gem("bumblezone/bee_queen");
+        JeicyTieredMobEffectBonus effect = requireBonus(bee,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredMobEffectBonus.class);
+        JeicyTieredAttributeBonus fire = requireBonus(bee,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus lower = requireBonus(bee,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMultiAttributeBonus.class);
+        var uncommon = effect.valueForRank(OriginalGemRank.UNCOMMON);
+        var esoteric = effect.valueForRank(OriginalGemRank.ESOTERIC);
+        if (uncommon == null || uncommon.duration() != 100 || uncommon.cooldown() != 100
+            || esoteric == null || esoteric.duration() != 1000 || esoteric.amplifier() != 2
+            || !effect.stacksOnReapply()
+            || effect.stackedAmplifierForVerification(2, OriginalGemRank.ESOTERIC) != 5
+            || !Double.valueOf(0.5).equals(fire.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(4).equals(fire.valueForRank(OriginalGemRank.ESOTERIC))
+            || lower.profileIndexFor(new ItemStack(net.minecraft.world.item.Items.DIAMOND_BOOTS)) != 0) {
+            throw new IllegalStateException("Bee Queen values did not match the original");
         }
     }
 

@@ -54,6 +54,10 @@ dependencies {
     runtimeOnly 'maven.modrinth:FoVacERa:fTRMVgyZ' // Lionfish API 3.1
     runtimeOnly 'maven.modrinth:vvuO3ImH:yohfFbgD' // Curios API 9.5.1+1.21.1
     runtimeOnly 'maven.modrinth:46KJle7n:PsPYpoCC' // L_Ender's Cataclysm 1.21.1-3.33
+    runtimeOnly 'maven.modrinth:8BmcQJ2H:Grwn5rUB' // GeckoLib 4.9.3 (required by Ars Nouveau)
+    runtimeOnly 'maven.modrinth:TKB6INcv:yWDnir1o' // Ars Nouveau 1.21.1-5.13.3
+    runtimeOnly 'maven.modrinth:G1hIVOrD:x99nCLTm' // Resourceful Lib 1.21-3.0.12
+    runtimeOnly 'maven.modrinth:38tpSycf:LwGXnQCW' // The Bumblezone 7.17.3+1.21.1
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'

@@ -53,6 +53,8 @@ public final class JeicyTieredMobEffectBonus extends GemBonus implements JeicyEx
         Target.CODEC.fieldOf("target").forGetter(b -> b.target),
         Codec.unboundedMap(Codec.STRING, EFFECT_DATA_CODEC).fieldOf("values")
             .forGetter(b -> b.serializedValues),
+        Codec.BOOL.optionalFieldOf("stack_on_reapply", false).forGetter(b -> b.stackOnReapply),
+        Codec.intRange(1, 255).optionalFieldOf("stacking_limit", 255).forGetter(b -> b.stackingLimit),
         Codec.STRING.listOf().fieldOf("original_socket_types")
             .forGetter(b -> b.originalSocketTypes)
     ).apply(inst, JeicyTieredMobEffectBonus::new));
@@ -61,10 +63,13 @@ public final class JeicyTieredMobEffectBonus extends GemBonus implements JeicyEx
     private final Target target;
     private final Map<OriginalGemRank, EffectData> values;
     private final Map<String, EffectData> serializedValues;
+    private final boolean stackOnReapply;
+    private final int stackingLimit;
     private final List<String> originalSocketTypes;
 
     public JeicyTieredMobEffectBonus(GemClass gemClass, Holder<MobEffect> effect, Target target,
                                      Map<String, EffectData> rawValues,
+                                     boolean stackOnReapply, int stackingLimit,
                                      List<String> originalSocketTypes) {
         super(gemClass);
         if (rawValues.isEmpty()) throw new IllegalArgumentException("Effect values cannot be empty");
@@ -85,6 +90,8 @@ public final class JeicyTieredMobEffectBonus extends GemBonus implements JeicyEx
         this.target = target;
         this.values = Collections.unmodifiableMap(byRank);
         this.serializedValues = Collections.unmodifiableMap(serialized);
+        this.stackOnReapply = stackOnReapply;
+        this.stackingLimit = stackingLimit;
         this.originalSocketTypes = List.copyOf(originalSocketTypes);
     }
 
@@ -161,7 +168,15 @@ public final class JeicyTieredMobEffectBonus extends GemBonus implements JeicyEx
         var cooldownId = makeUniqueId(gem);
         if (value.cooldown != 0
             && AbilityCooldowns.isOnCooldown(recipient, cooldownId, value.cooldown)) return;
-        recipient.addEffect(value.build(effect));
+        MobEffectInstance existing = recipient.getEffect(effect);
+        if (stackOnReapply && existing != null) {
+            int duration = Math.max(existing.getDuration(), value.duration());
+            int amplifier = Math.min(stackingLimit,
+                existing.getAmplifier() + 1 + value.amplifier());
+            recipient.addEffect(new MobEffectInstance(effect, duration, amplifier,
+                existing.isAmbient(), existing.isVisible(), existing.showIcon()));
+        }
+        else recipient.addEffect(value.build(effect));
         if (value.cooldown != 0) AbilityCooldowns.startCooldown(recipient, cooldownId);
     }
 
@@ -176,11 +191,23 @@ public final class JeicyTieredMobEffectBonus extends GemBonus implements JeicyEx
             result.append(" ").append(Component.translatable("affix.apotheosis.cooldown",
                 StringUtil.formatTickDuration(value.cooldown, ctx.tickRate())));
         }
+        if (stackOnReapply) {
+            result.append(" ").append(Component.translatable("affix.apotheosis.stacking"));
+        }
         return result;
     }
 
     EffectData valueForRank(OriginalGemRank rank) {
         return values.get(rank);
+    }
+
+    boolean stacksOnReapply() {
+        return stackOnReapply;
+    }
+
+    int stackedAmplifierForVerification(int existingAmplifier, OriginalGemRank rank) {
+        EffectData value = values.get(rank);
+        return Math.min(stackingLimit, existingAmplifier + 1 + value.amplifier());
     }
 
     @Override
