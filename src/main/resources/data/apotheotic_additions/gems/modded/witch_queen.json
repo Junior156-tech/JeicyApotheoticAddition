@@ -1,0 +1,84 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "eidolon_repraised" },
+    { "type": "neoforge:mod_loaded", "modid": "ad_astra" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "chipped",
+  "constraints": { "dimensions": ["ad_astra:moon", "ad_astra:mars", "ad_astra:mercury", "ad_astra:venus", "ad_astra:glacio"] },
+  "weights": { "weight": 5, "quality": 5.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "wand", "types": ["apotheotic_additions:wand"] },
+      "mob_effect": "eidolon_repraised:anchored", "target": "attack_self",
+      "original_socket_types": ["wand"],
+      "values": {
+        "uncommon": { "duration": 30, "amplifier": 0, "cooldown": 3000 },
+        "rare": { "duration": 30, "amplifier": 0, "cooldown": 1500 },
+        "epic": { "duration": 60, "amplifier": 0, "cooldown": 1000 },
+        "mythic": { "duration": 100, "amplifier": 0, "cooldown": 1000 },
+        "ancient": { "duration": 140, "amplifier": 0, "cooldown": 1000 },
+        "apotheotic_additions:artifact": { "duration": 180, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:heirloom": { "duration": 220, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:esoteric": { "duration": 300, "amplifier": 1, "cooldown": 1000 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "heavy_weapon", "types": ["apotheosis:melee_weapon"] },
+      "mob_effect": "apothic_attributes:grievous", "target": "attack_target",
+      "original_socket_types": ["heavy_weapon"],
+      "values": {
+        "uncommon": { "duration": 150, "amplifier": 0, "cooldown": 1000 },
+        "rare": { "duration": 240, "amplifier": 0, "cooldown": 1000 },
+        "epic": { "duration": 330, "amplifier": 0, "cooldown": 1000 },
+        "mythic": { "duration": 420, "amplifier": 0, "cooldown": 1000 },
+        "ancient": { "duration": 510, "amplifier": 0, "cooldown": 1000 },
+        "apotheotic_additions:artifact": { "duration": 700, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:heirloom": { "duration": 890, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:esoteric": { "duration": 1000, "amplifier": 2, "cooldown": 1000 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "ranged_weapon", "types": ["apotheosis:bow", "apotheosis:trident"] },
+      "profiles": [{
+        "key": "ranged_weapon", "original_socket_types": ["bow", "crossbow", "trident"],
+        "modifiers": [
+          { "attribute": "apothic_attributes:fire_damage", "operation": "add_value", "values": { "uncommon": 1, "rare": 2, "epic": 3, "mythic": 4, "ancient": 5, "apotheotic_additions:artifact": 6, "apotheotic_additions:heirloom": 7, "apotheotic_additions:esoteric": 8 } },
+          { "attribute": "apothic_attributes:cold_damage", "operation": "add_value", "values": { "uncommon": 1, "rare": 2, "epic": 3, "mythic": 4, "ancient": 5, "apotheotic_additions:artifact": 6, "apotheotic_additions:heirloom": 7, "apotheotic_additions:esoteric": 8 } }
+        ]
+      }]
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "eidolon_repraised:chanting_speed", "operation": "add_multiplied_total",
+      "original_socket_types": ["chestplate"],
+      "values": { "uncommon": 0.15, "rare": 0.25, "epic": 0.5, "mythic": 0.75, "ancient": 1.0, "apotheotic_additions:artifact": 1.5, "apotheotic_additions:heirloom": 2.0 }
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "leggings", "types": ["apotheosis:leggings"] },
+      "profiles": [{
+        "key": "leggings", "original_socket_types": ["leggings"],
+        "modifiers": [
+          { "attribute": "apothic_attributes:experience_gained", "operation": "add_multiplied_total", "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.2, "mythic": 0.3, "ancient": 0.4, "apotheotic_additions:artifact": 0.5, "apotheotic_additions:heirloom": 0.6, "apotheotic_additions:esoteric": 0.7 } },
+          { "attribute": "eidolon_repraised:magic_power", "operation": "add_multiplied_total", "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.2, "mythic": 0.3, "ancient": 0.4, "apotheotic_additions:artifact": 0.5, "apotheotic_additions:heirloom": 0.6, "apotheotic_additions:esoteric": 0.7 } }
+        ]
+      }]
+    },
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [{ "condition": "apotheosis:matches_block", "valid_blocks": "#apotheotic_additions:moon_blocks" }],
+      "inputs": { "item": "ad_astra:moon_cobblestone" },
+      "output": { "count": 1, "id": "apotheosis:common_material" },
+      "values": { "uncommon": 0.01, "rare": 0.03, "epic": 0.06, "mythic": 0.09, "ancient": 0.12, "apotheotic_additions:artifact": 0.15, "apotheotic_additions:heirloom": 0.18, "apotheotic_additions:esoteric": 0.21 },
+      "desc": "gem.apotheotic_additions:alchemy/witch_queen.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    }
+  ]
+}

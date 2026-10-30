@@ -67,6 +67,10 @@ dependencies {
     runtimeOnly 'maven.modrinth:s4OWxYQQ:slKLosTb' // Iron's Spells 'n Spellbooks 1.21.1-3.16.3
     runtimeOnly 'maven.modrinth:9nfaJPtX:lUwUKYPl' // Iron's Lib 1.21.1-2.2.0
     runtimeOnly 'maven.modrinth:gedNE4y2:HJZB6bmA' // playerAnimator 2.0.4+1.21.1
+    runtimeOnly 'maven.modrinth:fnAffV0n:G6YDRA79' // Deeper and Darker 1.4 NeoForge 1.21.1
+    runtimeOnly 'maven.modrinth:3ufwT9JF:9pnKHdCG' // Ad Astra 1.16.26 NeoForge 1.21.1
+    runtimeOnly 'maven.modrinth:RgLrNK7l:SCkdlli6' // Common Storage Lib 0.0.10 (Ad Astra)
+    runtimeOnly 'maven.modrinth:M1953qlQ:lSbyRD6v' // Resourceful Config 3.0.11 (Ad Astra)
 
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'

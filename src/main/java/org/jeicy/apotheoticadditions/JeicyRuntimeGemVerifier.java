@@ -109,6 +109,15 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("the_bumblezone")) {
             activeGems.put("bumblezone/hive", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("deeperdarker")) {
+            activeGems.put("otherside/sculk", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("ad_astra")) {
+            activeGems.put("modded/witch_queen", OriginalGemRank.UNCOMMON);
+        }
         int verified = 0;
         for (var entry : activeGems.entrySet()) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
@@ -236,6 +245,17 @@ public final class JeicyRuntimeGemVerifier {
             verifyHive();
             LOGGER.info("Verified Hive Curios/Aether/spellbook attributes, values, and sockets.");
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("aether")
+            && net.neoforged.fml.ModList.get().isLoaded("curios")
+            && net.neoforged.fml.ModList.get().isLoaded("deeperdarker")) {
+            verifySculk();
+            LOGGER.info("Verified Sculk alchemy, Curios/Aether attributes, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("ad_astra")) {
+            verifyWitchQueen();
+            LOGGER.info("Verified Witch Queen effects, attributes, lunar alchemy, values, and sockets.");
+        }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
         verifyEnderDragonEnchantments(event);
@@ -360,6 +380,8 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("modded/bloodcaster", "irons_spellbooks"),
             Map.entry("modded/mystic", "irons_spellbooks"),
             Map.entry("bumblezone/hive", "irons_spellbooks"),
+            Map.entry("otherside/sculk", "deeperdarker"),
+            Map.entry("modded/witch_queen", "ad_astra"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -1117,6 +1139,89 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(0.01).equals(armor.valueForRank(OriginalGemRank.RARE))
             || !Double.valueOf(0.07).equals(armor.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Hive values did not match the original");
+        }
+    }
+
+    private static void verifySculk() {
+        net.minecraft.world.item.Item armorItem = item("eidolon_repraised:warded_mail");
+        net.minecraft.world.item.Item aetherItem = item("aether:iron_ring");
+        verifySocketRule("otherside/sculk", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("otherside/sculk", armorItem, true);
+        verifySocketRule("otherside/sculk", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("otherside/sculk", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifySocketRule("otherside/sculk", aetherItem, true);
+
+        Gem sculk = gem("otherside/sculk");
+        JeicyTieredDropTransformBonus alchemy = requireBonus(sculk,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        JeicyTieredAttributeBonus armor = requireBonus(sculk, armorItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus heavy = requireBonus(sculk,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus aether = requireBonus(sculk, aetherItem,
+            JeicyTieredAttributeBonus.class);
+        net.minecraft.world.item.Item gravitite = item("aether:gravitite_ore");
+        if (!Double.valueOf(0.01).equals(alchemy.chanceForRank(OriginalGemRank.MYTHIC))
+            || !Double.valueOf(0.05).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || gravitite == net.minecraft.world.item.Items.AIR
+            || !alchemy.acceptsForVerification(new ItemStack(gravitite))
+            || !alchemy.outputForVerification().is(item("deeperdarker:warden_carapace"))
+            || !Double.valueOf(0.25).equals(armor.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(1.75).equals(armor.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.01).equals(heavy.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.1).equals(heavy.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.25).equals(aether.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(2).equals(aether.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Sculk values did not match the original");
+        }
+    }
+
+    private static void verifyWitchQueen() {
+        net.minecraft.world.item.Item wand = item("eidolon_repraised:bonechill_wand");
+        verifySocketRule("modded/witch_queen", wand, true);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.BOW, true);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/witch_queen", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+
+        Gem witch = gem("modded/witch_queen");
+        JeicyTieredMobEffectBonus anchored = requireBonus(witch, wand,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus grievous = requireBonus(witch,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicyTieredMobEffectBonus.class);
+        JeicyTieredMultiAttributeBonus ranged = requireBonus(witch,
+            net.minecraft.world.item.Items.BOW, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredAttributeBonus chanting = requireBonus(witch,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredMultiAttributeBonus leggings = requireBonus(witch,
+            net.minecraft.world.item.Items.DIAMOND_LEGGINGS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredDropTransformBonus alchemy = requireBonus(witch,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        var anchoredUncommon = anchored.valueForRank(OriginalGemRank.UNCOMMON);
+        var anchoredEsoteric = anchored.valueForRank(OriginalGemRank.ESOTERIC);
+        var grievousEsoteric = grievous.valueForRank(OriginalGemRank.ESOTERIC);
+        net.minecraft.world.item.Item moonCobble = item("ad_astra:moon_cobblestone");
+        if (anchoredUncommon == null || anchoredUncommon.duration() != 30
+            || anchoredUncommon.amplifier() != 0 || anchoredUncommon.cooldown() != 3000
+            || anchoredEsoteric == null || anchoredEsoteric.duration() != 300
+            || anchoredEsoteric.amplifier() != 1 || anchoredEsoteric.cooldown() != 1000
+            || grievousEsoteric == null || grievousEsoteric.duration() != 1000
+            || grievousEsoteric.amplifier() != 2 || grievousEsoteric.cooldown() != 1000
+            || !Double.valueOf(1).equals(ranged.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(8).equals(ranged.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.15).equals(chanting.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(2).equals(chanting.valueForRank(OriginalGemRank.HEIRLOOM))
+            || chanting.valueForRank(OriginalGemRank.ESOTERIC) != null
+            || !Double.valueOf(0.05).equals(leggings.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.7).equals(leggings.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.01).equals(alchemy.chanceForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.21).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || moonCobble == net.minecraft.world.item.Items.AIR
+            || !alchemy.acceptsForVerification(new ItemStack(moonCobble))
+            || !alchemy.outputForVerification().is(item("apotheosis:common_material"))) {
+            throw new IllegalStateException("Witch Queen values did not match the original");
         }
     }
 

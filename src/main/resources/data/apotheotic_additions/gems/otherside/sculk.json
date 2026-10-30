@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "aether" },
+    { "type": "neoforge:mod_loaded", "modid": "curios" },
+    { "type": "neoforge:mod_loaded", "modid": "deeperdarker" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "constraints": { "dimensions": ["aether:the_aether", "deeperdarker:otherside"] },
+  "weights": { "weight": 7, "quality": 3.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [{ "condition": "apotheosis:matches_block", "valid_blocks": "#aether:ores/gravitite" }],
+      "inputs": { "item": "aether:gravitite_ore" },
+      "output": { "count": 1, "id": "deeperdarker:warden_carapace" },
+      "values": { "mythic": 0.01, "ancient": 0.02, "apotheotic_additions:artifact": 0.03, "apotheotic_additions:heirloom": 0.04, "apotheotic_additions:esoteric": 0.05 },
+      "desc": "gem.apotheotic_additions:alchemy/sculk.bonus.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "curios_armor", "types": ["apotheotic_additions:curios_armor"] },
+      "attribute": "apothic_attributes:cold_damage", "operation": "add_value",
+      "original_socket_types": ["curios:body", "curios:head", "curios:back", "curios:feet", "curios:hands"],
+      "values": { "rare": 0.25, "epic": 0.5, "mythic": 0.75, "ancient": 1.0, "apotheotic_additions:artifact": 1.25, "apotheotic_additions:heirloom": 1.5, "apotheotic_additions:esoteric": 1.75 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "heavy_weapon", "types": ["apotheosis:melee_weapon"] },
+      "attribute": "apothic_attributes:current_hp_damage", "operation": "add_multiplied_base",
+      "original_socket_types": ["heavy_weapon"],
+      "values": { "rare": 0.01, "epic": 0.02, "mythic": 0.03, "ancient": 0.04, "apotheotic_additions:artifact": 0.06, "apotheotic_additions:heirloom": 0.08, "apotheotic_additions:esoteric": 0.1 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "curios_aether", "types": ["apotheotic_additions:aether_accessory"] },
+      "attribute": "minecraft:generic.max_health", "operation": "add_value",
+      "original_socket_types": ["curios:aether_gloves", "curios:aether_accessory", "curios:aether_shield", "curios:aether_cape", "curios:aether_pendant", "curios:aether_ring"],
+      "values": { "rare": 0.25, "epic": 0.5, "mythic": 0.75, "ancient": 1.0, "apotheotic_additions:artifact": 1.25, "apotheotic_additions:heirloom": 1.5, "apotheotic_additions:esoteric": 2.0 }
+    }
+  ]
+}

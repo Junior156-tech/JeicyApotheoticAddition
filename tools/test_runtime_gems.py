@@ -53,6 +53,8 @@ ACTIVE = {
     "modded/midas.json": "epic",
     "modded/bloodcaster.json": "rare",
     "modded/mystic.json": "rare",
+    "modded/witch_queen.json": "uncommon",
+    "otherside/sculk.json": "rare",
     "undergarden/decay.json": "rare",
     "undergarden/undergarden.json": "rare",
     "twilight/umbral_matrimony.json": "rare",
@@ -102,6 +104,7 @@ COMMON_TAG_MAP = {
     "forge:ores/diamond": "c:ores/diamond",
     "forge:gems/diamond": "c:gems/diamond",
     "forge:ores/zanite": "aether:ores/zanite",
+    "forge:ores/gravitite": "aether:ores/gravitite",
     "forge:ores/silver": "c:ores/silver",
     "forge:raw_materials/silver": "c:raw_materials/silver",
 }
@@ -130,6 +133,8 @@ def normalize_enchantment(enchantment: str) -> str:
 
 
 def normalize_effect(effect: str) -> str:
+    if effect.startswith("attributeslib:"):
+        return "apothic_attributes:" + effect.split(":", 1)[1]
     if effect.startswith("eidolon:"):
         return "eidolon_repraised:" + effect.split(":", 1)[1]
     return effect
@@ -760,6 +765,84 @@ def main() -> int:
                 expected_mod = "undergarden" if relative_path.startswith("undergarden/") else "aether"
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": expected_mod}
+                ]
+            elif relative_path == "otherside/sculk.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 4
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    old_types = old_bonus["gem_class"]["types"]
+                    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(old_types)
+                    assert new_bonus["original_socket_types"] == old_types
+                    assert new_bonus["values"] == old_bonus["values"]
+                    if old_bonus["type"] == "apotheosis:drop_transform":
+                        assert new_bonus["type"] == "apotheotic_additions:original_drop_transform"
+                        assert new_bonus["conditions"] == [{
+                            "condition": "apotheosis:matches_block",
+                            "valid_blocks": "#" + COMMON_TAG_MAP[old_bonus["blocks"]],
+                        }]
+                        assert new_bonus["inputs"] == old_bonus["inputs"]
+                        assert new_bonus["output"] == {
+                            "count": 1,
+                            "id": old_bonus["output"]["item"],
+                        }
+                        assert new_bonus["desc"] == old_bonus["desc"]
+                    else:
+                        assert old_bonus["type"] == "apotheosis:attribute"
+                        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"]]
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
+                    {"type": "neoforge:mod_loaded", "modid": "deeperdarker"},
+                ]
+            elif relative_path == "modded/witch_queen.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 6
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    old_types = old_bonus["gem_class"]["types"]
+                    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(old_types)
+                    if old_bonus["type"] == "apotheosis:mob_effect":
+                        assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+                        assert new_bonus["mob_effect"] == normalize_effect(old_bonus["mob_effect"])
+                        assert new_bonus["target"] == old_bonus["target"]
+                        assert new_bonus["values"] == old_bonus["values"]
+                        assert new_bonus["original_socket_types"] == old_types
+                    elif old_bonus["type"] == "apotheosis:attribute":
+                        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+                        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+                        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"]]
+                        assert new_bonus["values"] == old_bonus["values"]
+                        assert new_bonus["original_socket_types"] == old_types
+                    elif old_bonus["type"] == "apotheosis:multi_attribute":
+                        assert new_bonus["type"] == "apotheotic_additions:original_multi_attribute"
+                        profile = new_bonus["profiles"][0]
+                        assert profile["key"] == old_bonus["gem_class"]["key"]
+                        assert profile["original_socket_types"] == old_types
+                        for modifier, old_modifier in zip(profile["modifiers"], old_bonus["modifiers"]):
+                            assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+                            assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"]]
+                            assert modifier["values"] == old_modifier["values"]
+                    else:
+                        assert old_bonus["type"] == "apotheosis:drop_transform"
+                        assert new_bonus["type"] == "apotheotic_additions:original_drop_transform"
+                        assert new_bonus["conditions"] == [{
+                            "condition": "apotheosis:matches_block",
+                            "valid_blocks": "#apotheotic_additions:moon_blocks",
+                        }]
+                        assert new_bonus["inputs"] == old_bonus["inputs"]
+                        assert new_bonus["output"] == {
+                            "count": 1,
+                            "id": old_bonus["output"]["item"],
+                        }
+                        assert new_bonus["values"] == old_bonus["values"]
+                        assert new_bonus["desc"] == old_bonus["desc"]
+                        assert new_bonus["original_socket_types"] == old_types
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "eidolon_repraised"},
+                    {"type": "neoforge:mod_loaded", "modid": "ad_astra"},
                 ]
             elif relative_path == "crafted/naga.json":
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
