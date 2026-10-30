@@ -123,6 +123,16 @@ public final class JeicyRuntimeGemVerifier {
             activeGems.put("modded/depths", OriginalGemRank.EPIC);
             activeGems.put("modded/uranium", OriginalGemRank.RARE);
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("iceandfire")) {
+            activeGems.put("modded/draconic_legacy", OriginalGemRank.UNCOMMON);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexsmobs")) {
+            activeGems.put("modded/safari", OriginalGemRank.RARE);
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("rats")) {
+            activeGems.put("modded/rat_chef", OriginalGemRank.UNCOMMON);
+        }
         if (net.neoforged.fml.ModList.get().isLoaded("alexscaves")
             && net.neoforged.fml.ModList.get().isLoaded("aether")) {
             activeGems.put("aether/candied", OriginalGemRank.RARE);
@@ -289,6 +299,19 @@ public final class JeicyRuntimeGemVerifier {
             verifyForlorn();
             LOGGER.info("Verified Forlorn effects, spell/Curios/Aether attributes, values, and sockets.");
         }
+        if (net.neoforged.fml.ModList.get().isLoaded("iceandfire")) {
+            verifyDraconicLegacy();
+            LOGGER.info("Verified Draconic Legacy attributes, Strength, dragonbone alchemy, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("alexsmobs")) {
+            verifySafari();
+            LOGGER.info("Verified Safari effects, combined weapon routing, attributes, values, and sockets.");
+        }
+        if (net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
+            && net.neoforged.fml.ModList.get().isLoaded("rats")) {
+            verifyRatChef();
+            LOGGER.info("Verified Rat Chef effects, attributes, all-stats shield, alchemy, values, and sockets.");
+        }
         verifyConditionalGemsSkipped();
         LOGGER.info("Verified optional gem definitions are skipped when their source mods are absent.");
         verifyEnderDragonEnchantments(event);
@@ -420,6 +443,9 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("modded/amber", "alexscaves"),
             Map.entry("modded/depths", "alexscaves"),
             Map.entry("modded/uranium", "alexscaves"),
+            Map.entry("modded/draconic_legacy", "iceandfire"),
+            Map.entry("modded/safari", "alexsmobs"),
+            Map.entry("modded/rat_chef", "rats"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
@@ -1460,6 +1486,151 @@ public final class JeicyRuntimeGemVerifier {
         global.getEnchantmentLevels(instance, levelEvent);
         if (enchantments.getLevel(sharpness) != 5 || enchantments.getLevel(unbreaking) != 4) {
             throw new IllegalStateException("Uranium Heirloom rank did not add two global enchantment levels");
+        }
+    }
+
+    private static void verifyDraconicLegacy() {
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_SWORD, false);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_SHOVEL, true);
+        verifySocketRule("modded/draconic_legacy", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
+
+        Gem draconic = gem("modded/draconic_legacy");
+        JeicyTieredAttributeBonus luck = requireBonus(draconic,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus toughness = requireBonus(draconic,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAttributeBonus fire = requireBonus(draconic,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredAttributeBonus.class);
+        JeicyTieredMobEffectBonus strength = requireBonus(draconic,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicyTieredMobEffectBonus.class);
+        JeicyTieredDropTransformBonus alchemy = requireBonus(draconic,
+            net.minecraft.world.item.Items.DIAMOND_SHOVEL, JeicyTieredDropTransformBonus.class);
+        var strengthRare = strength.valueForRank(OriginalGemRank.RARE);
+        var strengthEsoteric = strength.valueForRank(OriginalGemRank.ESOTERIC);
+        if (!Double.valueOf(0.02).equals(luck.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.16).equals(luck.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.03).equals(toughness.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.24).equals(toughness.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.015).equals(fire.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.12).equals(fire.valueForRank(OriginalGemRank.ESOTERIC))
+            || strengthRare == null || strengthRare.duration() != 60
+            || strengthRare.amplifier() != 0 || strengthRare.cooldown() != 900
+            || strengthEsoteric == null || strengthEsoteric.duration() != 280
+            || strengthEsoteric.amplifier() != 2 || strengthEsoteric.cooldown() != 900
+            || !Double.valueOf(0.01).equals(alchemy.chanceForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.13).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !alchemy.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.GRAVEL))
+            || !alchemy.outputForVerification().is(item("iceandfire:dragonbone"))) {
+            throw new IllegalStateException("Draconic Legacy values did not match the original");
+        }
+    }
+
+    private static void verifySafari() {
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_AXE, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_HELMET, true);
+        verifySocketRule("modded/safari", net.minecraft.world.item.Items.DIAMOND_PICKAXE, false);
+
+        Gem safari = gem("modded/safari");
+        JeicyTieredMobEffectBonus poison = requireBonus(safari,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus knockback = requireBonus(safari,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMobEffectBonus.class);
+        JeicySafariWeaponBonus heavy = requireBonus(safari,
+            net.minecraft.world.item.Items.DIAMOND_AXE, JeicySafariWeaponBonus.class);
+        JeicySafariWeaponBonus light = requireBonus(safari,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicySafariWeaponBonus.class);
+        JeicyTieredAttributeBonus experience = requireBonus(safari,
+            net.minecraft.world.item.Items.DIAMOND_HELMET, JeicyTieredAttributeBonus.class);
+        var poisonMythic = poison.valueForRank(OriginalGemRank.MYTHIC);
+        var poisonEsoteric = poison.valueForRank(OriginalGemRank.ESOTERIC);
+        var knockbackHeirloom = knockback.valueForRank(OriginalGemRank.HEIRLOOM);
+        var bloodRare = heavy.heavyValueForRank(OriginalGemRank.RARE);
+        var bloodEsoteric = heavy.heavyValueForRank(OriginalGemRank.ESOTERIC);
+        if (poison.valueForRank(OriginalGemRank.RARE) != null
+            || poisonMythic == null || poisonMythic.duration() != 100
+            || poisonMythic.amplifier() != 0 || poisonMythic.cooldown() != 400
+            || poisonEsoteric == null || poisonEsoteric.duration() != 500
+            || poisonEsoteric.cooldown() != 40
+            || knockbackHeirloom == null || knockbackHeirloom.duration() != 400
+            || knockbackHeirloom.cooldown() != 40
+            || bloodRare == null || bloodRare.duration() != 140 || bloodRare.cooldown() != 200
+            || bloodEsoteric == null || bloodEsoteric.duration() != 1100
+            || bloodEsoteric.amplifier() != 1 || bloodEsoteric.cooldown() != 200
+            || !heavy.heavyStacksOnReapply()
+            || heavy.heavyStackedAmplifierForVerification(0, OriginalGemRank.RARE) != 1
+            || !Double.valueOf(0.02).equals(light.lightValueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.25).equals(light.lightValueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.03).equals(experience.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.25).equals(experience.valueForRank(OriginalGemRank.ESOTERIC))) {
+            throw new IllegalStateException("Safari values did not match the original");
+        }
+    }
+
+    private static void verifyRatChef() {
+        net.minecraft.world.item.Item wand = item("eidolon_repraised:bonechill_wand");
+        verifySocketRule("modded/rat_chef", wand, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_SWORD, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.TRIDENT, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_AXE, false);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_BOOTS, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.SHIELD, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_LEGGINGS, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("modded/rat_chef", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+
+        Gem ratChef = gem("modded/rat_chef");
+        JeicyTieredMobEffectBonus synesthesia = requireBonus(ratChef, wand,
+            JeicyTieredMobEffectBonus.class);
+        JeicyTieredMobEffectBonus plague = requireBonus(ratChef,
+            net.minecraft.world.item.Items.DIAMOND_SWORD, JeicyTieredMobEffectBonus.class);
+        JeicyTieredMultiAttributeBonus boots = requireBonus(ratChef,
+            net.minecraft.world.item.Items.DIAMOND_BOOTS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredAttributeBonus magic = requireBonus(ratChef,
+            net.minecraft.world.item.Items.DIAMOND_CHESTPLATE, JeicyTieredAttributeBonus.class);
+        JeicyTieredAllStatsBonus shield = requireBonus(ratChef,
+            net.minecraft.world.item.Items.SHIELD, JeicyTieredAllStatsBonus.class);
+        JeicyTieredMultiAttributeBonus leggings = requireBonus(ratChef,
+            net.minecraft.world.item.Items.DIAMOND_LEGGINGS, JeicyTieredMultiAttributeBonus.class);
+        JeicyTieredDropTransformBonus alchemy = requireBonus(ratChef,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        var synUncommon = synesthesia.valueForRank(OriginalGemRank.UNCOMMON);
+        var synEsoteric = synesthesia.valueForRank(OriginalGemRank.ESOTERIC);
+        var plagueUncommon = plague.valueForRank(OriginalGemRank.UNCOMMON);
+        var plagueEsoteric = plague.valueForRank(OriginalGemRank.ESOTERIC);
+        net.minecraft.world.item.Item rawLead = item("eidolon_repraised:raw_lead");
+        if (synUncommon == null || synUncommon.duration() != 30
+            || synUncommon.amplifier() != 0 || synUncommon.cooldown() != 3000
+            || synEsoteric == null || synEsoteric.duration() != 260
+            || synEsoteric.amplifier() != 1 || synEsoteric.cooldown() != 1000
+            || plagueUncommon == null || plagueUncommon.duration() != 300
+            || plagueUncommon.cooldown() != 1000
+            || plagueEsoteric == null || plagueEsoteric.duration() != 5400
+            || plagueEsoteric.amplifier() != 2 || plagueEsoteric.cooldown() != 400
+            || !Double.valueOf(0.5).equals(boots.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(-4).equals(boots.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(magic.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.4).equals(magic.valueForRank(OriginalGemRank.ESOTERIC))
+            || shield.attributeCount() != 36
+            || !Double.valueOf(0.005).equals(shield.valueForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.07).equals(shield.valueForRank(OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(leggings.valueForRank(0, 0, OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(0.7).equals(leggings.valueForRank(0, 1, OriginalGemRank.ESOTERIC))
+            || !Double.valueOf(0.05).equals(alchemy.chanceForRank(OriginalGemRank.UNCOMMON))
+            || !Double.valueOf(1).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || rawLead == net.minecraft.world.item.Items.AIR
+            || !alchemy.acceptsForVerification(new ItemStack(rawLead))
+            || !alchemy.outputForVerification().is(item("rats:cheese"))) {
+            throw new IllegalStateException("Rat Chef values did not match the original");
         }
     }
 

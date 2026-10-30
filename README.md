@@ -14,10 +14,12 @@ NeoForge y Apotheosis 8.8.0.
 - `clean test` correcto; cinco tests JUnit pasan sin fallos.
 - El servidor de desarrollo carga las dependencias reales, mantiene 27 recetas
   activas del puerto y llega a `Done` sin errores en datos propios. Malum 1.8.2
-  registra errores externos en recetas opcionales de compatibilidad con Undergarden.
-- Apotheosis registra 73 gemas en el entorno completo y el verificador confirma
-  50 gemas originales activas con sus nueve rangos.
-- El JAR incluye 51 definiciones runtime; Sunbird sigue siendo condicional
+  registra errores externos en recetas opcionales de compatibilidad con
+  Undergarden; Rats 8.2.6R01 registra además una tabla de pesca externa con
+  sintaxis antigua, y el port de Alex's Mobs avisa sobre spawn placements.
+- Apotheosis registra 76 gemas en el entorno completo y el verificador confirma
+  53 gemas originales activas con sus nueve rangos.
+- El JAR incluye 54 definiciones runtime; Sunbird sigue siendo condicional
   porque requiere Mowzie's Mobs.
 - La gema Aether vuelve a habilitar vuelo con élitros en casco y vuelo creativo
   en pechera; el entorno de desarrollo fija Aether 1.21.1 y owo-lib reales.
@@ -58,6 +60,11 @@ NeoForge y Apotheosis 8.8.0.
   efectos, encantamientos, stacking y atributos; se prueban con el port
   comunitario NeoForge 1.21.1 de Alex's Caves 2.0.10 y Citadel 2.7.6, sin AO
   Port ni KubeJS.
+- Draconic Legacy, Safari y Rat Chef conservan sus 17 bonuses originales:
+  dragonbone, efectos de Alex's Mobs y Rats, perfiles separados para arma
+  pesada/ligera, los 36 atributos del escudo, magia de Eidolon y alquimia de
+  plomo. Se prueban con Ice and Fire CE 2.1.4, Alex's Mobs 1.22.17 y Rats
+  8.2.6R01 reales, sin AO Port ni KubeJS.
 - Las gemas activadas conservan pesos, calidad, unicidad, restricciones y
   valores exactos de los nueve rangos mediante el componente independiente
   `original_gem_rank`.
@@ -73,15 +80,15 @@ NeoForge y Apotheosis 8.8.0.
   dos gemas idénticas, `1 + rango×2` Gem Dust y material actual×3, siguiente×1
   o anterior×9. Las rutas nativa y extendida se verifican en cada arranque.
 - Un validador restaura las categorías que Apotheosis 8.x fusionó; el arranque
-  verifica 300 asignaciones de rango, decisiones exactas de socket, cuatro
+  verifica 318 asignaciones de rango, decisiones exactas de socket, cuatro
   perfiles multiatributo y los 28 atributos de Ur-Ghast.
 - Las pruebas de paridad estática validan 67/67 gemas, 263/263 affixes,
   229/229 recetas y los 85 bonuses de atributos contra el JAR original.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 16 definiciones de gemas por portar y los 263 affixes por activar. En la
-configuración de desarrollo se registran 50 gemas; la definición de Sunbird se
+Quedan 13 definiciones de gemas por portar y los 263 affixes por activar. En la
+configuración de desarrollo se registran 53 gemas; la definición de Sunbird se
 omite porque Mowzie's Mobs no está instalado. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.

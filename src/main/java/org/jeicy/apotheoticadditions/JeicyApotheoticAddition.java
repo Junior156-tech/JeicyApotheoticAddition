@@ -69,6 +69,8 @@ public final class JeicyApotheoticAddition {
             JeicyFelfireWeaponBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_candied_weapon"),
             JeicyCandiedWeaponBonus.CODEC);
+        GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_safari_weapon"),
+            JeicySafariWeaponBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_drop_transform"),
             JeicyTieredDropTransformBonus.CODEC);
         ITEMS.register(modBus);

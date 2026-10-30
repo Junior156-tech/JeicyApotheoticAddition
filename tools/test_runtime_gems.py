@@ -47,6 +47,9 @@ ACTIVE = {
     "modded/engineer.json": "rare",
     "modded/dracula.json": "rare",
     "modded/depths.json": "epic",
+    "modded/draconic_legacy.json": "uncommon",
+    "modded/safari.json": "rare",
+    "modded/rat_chef.json": "uncommon",
     "modded/weeping_well.json": "epic",
     "modded/soultwisted.json": "rare",
     "curios/reinforced.json": "uncommon",
@@ -112,6 +115,9 @@ COMMON_TAG_MAP = {
     "forge:ores/gravitite": "aether:ores/gravitite",
     "forge:ores/silver": "c:ores/silver",
     "forge:raw_materials/silver": "c:raw_materials/silver",
+    "forge:gravel": "c:gravels",
+    "forge:ores/lead": "c:ores/lead",
+    "forge:raw_materials/lead": "c:raw_materials/lead",
 }
 
 
@@ -124,6 +130,14 @@ def normalize_attribute(attribute: str) -> str:
         return "minecraft:player.entity_interaction_range"
     if attribute == "forge:block_reach":
         return "minecraft:player.block_interaction_range"
+    if attribute in {"forge:step_height", "forge:step_height_addition"}:
+        return "minecraft:generic.step_height"
+    if attribute == "forge:entity_gravity":
+        return "minecraft:generic.gravity"
+    if attribute == "forge:swim_speed":
+        return "neoforge:swim_speed"
+    if attribute == "forge:nametag_distance":
+        return "neoforge:nametag_distance"
     if attribute.startswith("eidolon:"):
         return "eidolon_repraised:" + attribute.split(":", 1)[1]
     return attribute
@@ -145,6 +159,12 @@ def normalize_effect(effect: str) -> str:
     if effect.startswith("eidolon:"):
         return "eidolon_repraised:" + effect.split(":", 1)[1]
     return effect
+
+
+def normalize_ingredient(ingredient: dict) -> dict:
+    if "tag" in ingredient:
+        return {"tag": COMMON_TAG_MAP.get(ingredient["tag"], ingredient["tag"])}
+    return ingredient
 
 
 def normalize_types(original_types: list[str]) -> set[str]:
@@ -903,10 +923,63 @@ def main() -> int:
                     {"type": "neoforge:mod_loaded", "modid": "aether"},
                     {"type": "neoforge:mod_loaded", "modid": "alexscaves"},
                 ]
+            elif relative_path == "modded/safari.json":
+                assert len(original["bonuses"]) == 5
+                assert len(runtime["bonuses"]) == 4
+                old_chest, old_boots, old_heavy, old_light, old_helmet = original["bonuses"]
+                new_chest, new_boots, combined, new_helmet = runtime["bonuses"]
+
+                for old_bonus, new_bonus in (
+                    (old_chest, new_chest),
+                    (old_boots, new_boots),
+                ):
+                    assert old_bonus["type"] == "apotheosis:mob_effect"
+                    assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+                    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+                    assert set(new_bonus["gem_class"]["types"]) == normalize_types(
+                        old_bonus["gem_class"]["types"]
+                    )
+                    assert new_bonus["mob_effect"] == old_bonus["mob_effect"]
+                    assert new_bonus["target"] == old_bonus["target"]
+                    assert new_bonus["values"] == old_bonus["values"]
+                    assert new_bonus["original_socket_types"] == old_bonus["gem_class"]["types"]
+
+                assert old_heavy["type"] == "apotheosis:mob_effect"
+                assert old_light["type"] == "apotheosis:attribute"
+                assert combined["type"] == "apotheotic_additions:original_safari_weapon"
+                assert set(combined["gem_class"]["types"]) == normalize_types(
+                    old_heavy["gem_class"]["types"] + old_light["gem_class"]["types"]
+                )
+                assert combined["heavy_mob_effect"] == old_heavy["mob_effect"]
+                assert combined["heavy_target"] == old_heavy["target"]
+                assert combined["heavy_values"] == old_heavy["values"]
+                assert combined["heavy_stack_on_reapply"] == old_heavy["stack_on_reapply"]
+                assert combined["heavy_original_socket_types"] == old_heavy["gem_class"]["types"]
+                assert combined["light_attribute"] == normalize_attribute(old_light["attribute"])
+                assert combined["light_operation"] == OPERATION_MAP[old_light["operation"]]
+                assert combined["light_values"] == old_light["values"]
+                assert combined["light_original_socket_types"] == old_light["gem_class"]["types"]
+
+                assert old_helmet["type"] == "apotheosis:attribute"
+                assert new_helmet["type"] == "apotheotic_additions:original_attribute"
+                assert new_helmet["gem_class"]["key"] == old_helmet["gem_class"]["key"]
+                assert set(new_helmet["gem_class"]["types"]) == normalize_types(
+                    old_helmet["gem_class"]["types"]
+                )
+                assert new_helmet["attribute"] == normalize_attribute(old_helmet["attribute"])
+                assert new_helmet["operation"] == OPERATION_MAP[old_helmet["operation"]]
+                assert new_helmet["values"] == old_helmet["values"]
+                assert new_helmet["original_socket_types"] == old_helmet["gem_class"]["types"]
+                assert runtime.get("constraints", {}).get("dimensions", []) == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "alexsmobs"}
+                ]
             elif relative_path in {
                 "undergarden/forlorn.json",
                 "modded/amber.json",
                 "modded/depths.json",
+                "modded/draconic_legacy.json",
+                "modded/rat_chef.json",
                 "modded/uranium.json",
             }:
                 assert len(runtime["bonuses"]) == len(original["bonuses"])
@@ -945,9 +1018,11 @@ def main() -> int:
                         assert new_bonus["type"] == "apotheotic_additions:original_drop_transform"
                         assert new_bonus["conditions"] == [{
                             "condition": "apotheosis:matches_block",
-                            "valid_blocks": "#" + old_bonus["blocks"],
+                            "valid_blocks": "#" + COMMON_TAG_MAP.get(
+                                old_bonus["blocks"], old_bonus["blocks"]
+                            ),
                         }]
-                        assert new_bonus["inputs"] == old_bonus["inputs"]
+                        assert new_bonus["inputs"] == normalize_ingredient(old_bonus["inputs"])
                         assert new_bonus["output"] == {
                             "count": 1,
                             "id": old_bonus["output"]["item"],

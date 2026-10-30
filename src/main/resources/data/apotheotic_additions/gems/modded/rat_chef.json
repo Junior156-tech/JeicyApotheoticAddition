@@ -1,0 +1,95 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "eidolon_repraised" },
+    { "type": "neoforge:mod_loaded", "modid": "rats" }
+  ],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "chipped",
+  "weights": { "weight": 3, "quality": 2.5 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "wand", "types": ["apotheotic_additions:wand"] },
+      "mob_effect": "rats:synesthesia", "target": "attack_self",
+      "original_socket_types": ["wand"],
+      "values": {
+        "uncommon": { "duration": 30, "amplifier": 0, "cooldown": 3000 },
+        "rare": { "duration": 30, "amplifier": 0, "cooldown": 1500 },
+        "epic": { "duration": 60, "amplifier": 0, "cooldown": 1000 },
+        "mythic": { "duration": 100, "amplifier": 0, "cooldown": 1000 },
+        "ancient": { "duration": 140, "amplifier": 0, "cooldown": 1000 },
+        "apotheotic_additions:artifact": { "duration": 180, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:heirloom": { "duration": 220, "amplifier": 1, "cooldown": 1000 },
+        "apotheotic_additions:esoteric": { "duration": 260, "amplifier": 1, "cooldown": 1000 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_mob_effect",
+      "gem_class": { "key": "light_weapon", "types": ["apotheosis:melee_weapon", "apotheosis:trident"] },
+      "mob_effect": "rats:plague", "target": "attack_target",
+      "original_socket_types": ["sword", "trident"],
+      "values": {
+        "uncommon": { "duration": 300, "amplifier": 0, "cooldown": 1000 },
+        "rare": { "duration": 1200, "amplifier": 0, "cooldown": 500 },
+        "epic": { "duration": 1800, "amplifier": 0, "cooldown": 450 },
+        "mythic": { "duration": 2400, "amplifier": 1, "cooldown": 425 },
+        "ancient": { "duration": 3000, "amplifier": 1, "cooldown": 400 },
+        "apotheotic_additions:artifact": { "duration": 3600, "amplifier": 2, "cooldown": 400 },
+        "apotheotic_additions:heirloom": { "duration": 4200, "amplifier": 2, "cooldown": 400 },
+        "apotheotic_additions:esoteric": { "duration": 5400, "amplifier": 2, "cooldown": 400 }
+      }
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "boots", "types": ["apotheosis:boots"] },
+      "profiles": [{
+        "key": "boots", "original_socket_types": ["boots"],
+        "modifiers": [
+          { "attribute": "minecraft:generic.step_height", "operation": "add_value", "values": { "uncommon": 0.5, "rare": 1, "epic": 1.5, "mythic": 2, "ancient": 2.5, "apotheotic_additions:artifact": 3, "apotheotic_additions:heirloom": 3.5, "apotheotic_additions:esoteric": 4 } },
+          { "attribute": "minecraft:player.block_interaction_range", "operation": "add_value", "values": { "uncommon": -0.5, "rare": -1, "epic": -1.5, "mythic": -2, "ancient": -2.5, "apotheotic_additions:artifact": -3, "apotheotic_additions:heirloom": -3.5, "apotheotic_additions:esoteric": -4 } }
+        ]
+      }]
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "chestplate", "types": ["apotheosis:chestplate"] },
+      "attribute": "eidolon_repraised:magic_power", "operation": "add_multiplied_total",
+      "original_socket_types": ["chestplate"],
+      "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.15, "mythic": 0.2, "ancient": 0.25, "apotheotic_additions:artifact": 0.3, "apotheotic_additions:heirloom": 0.35, "apotheotic_additions:esoteric": 0.4 }
+    },
+    {
+      "type": "apotheotic_additions:original_all_stats",
+      "gem_class": { "key": "shield", "types": ["apotheosis:shield"] },
+      "operation": "add_multiplied_total",
+      "values": { "uncommon": 0.005, "rare": 0.01, "epic": 0.02, "mythic": 0.03, "ancient": 0.04, "apotheotic_additions:artifact": 0.05, "apotheotic_additions:heirloom": 0.06, "apotheotic_additions:esoteric": 0.07 },
+      "attributes": [
+        "minecraft:generic.max_health", "minecraft:generic.knockback_resistance", "minecraft:generic.movement_speed", "minecraft:generic.attack_damage", "minecraft:generic.attack_knockback", "minecraft:generic.attack_speed", "minecraft:generic.armor", "minecraft:generic.armor_toughness", "minecraft:generic.luck",
+        "apothic_attributes:armor_pierce", "apothic_attributes:armor_shred", "apothic_attributes:arrow_damage", "apothic_attributes:arrow_velocity", "apothic_attributes:cold_damage", "apothic_attributes:crit_chance", "apothic_attributes:crit_damage", "apothic_attributes:current_hp_damage", "apothic_attributes:dodge_chance", "apothic_attributes:draw_speed", "apothic_attributes:experience_gained", "apothic_attributes:fire_damage", "apothic_attributes:ghost_health", "apothic_attributes:healing_received", "apothic_attributes:life_steal", "apothic_attributes:mining_speed", "apothic_attributes:overheal", "apothic_attributes:prot_pierce", "apothic_attributes:prot_shred", "apothic_attributes:elytra_flight", "neoforge:creative_flight",
+        "neoforge:swim_speed", "neoforge:nametag_distance", "minecraft:generic.gravity", "minecraft:player.block_interaction_range", "minecraft:player.entity_interaction_range", "minecraft:generic.step_height"
+      ],
+      "original_socket_types": ["shield"]
+    },
+    {
+      "type": "apotheotic_additions:original_multi_attribute",
+      "gem_class": { "key": "leggings", "types": ["apotheosis:leggings"] },
+      "profiles": [{
+        "key": "leggings", "original_socket_types": ["leggings"],
+        "modifiers": [
+          { "attribute": "eidolon_repraised:chanting_speed", "operation": "add_multiplied_total", "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.2, "mythic": 0.3, "ancient": 0.4, "apotheotic_additions:artifact": 0.5, "apotheotic_additions:heirloom": 0.6, "apotheotic_additions:esoteric": 0.7 } },
+          { "attribute": "eidolon_repraised:magic_power", "operation": "add_multiplied_total", "values": { "uncommon": 0.05, "rare": 0.1, "epic": 0.2, "mythic": 0.3, "ancient": 0.4, "apotheotic_additions:artifact": 0.5, "apotheotic_additions:heirloom": 0.6, "apotheotic_additions:esoteric": 0.7 } }
+        ]
+      }]
+    },
+    {
+      "type": "apotheotic_additions:original_drop_transform",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "conditions": [{ "condition": "apotheosis:matches_block", "valid_blocks": "#c:ores/lead" }],
+      "inputs": { "tag": "c:raw_materials/lead" },
+      "output": { "count": 1, "id": "rats:cheese" },
+      "values": { "uncommon": 0.05, "rare": 0.15, "epic": 0.3, "mythic": 0.45, "ancient": 0.6, "apotheotic_additions:artifact": 0.75, "apotheotic_additions:heirloom": 0.9, "apotheotic_additions:esoteric": 1.0 },
+      "desc": "gem.apotheotic_additions:alchemy/rat_chef.pickaxe",
+      "original_socket_types": ["pickaxe"]
+    }
+  ]
+}
