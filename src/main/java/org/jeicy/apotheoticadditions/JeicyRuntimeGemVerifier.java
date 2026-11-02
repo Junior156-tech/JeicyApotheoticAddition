@@ -10,6 +10,7 @@ import com.mojang.logging.LogUtils;
 import dev.shadowsoffire.apotheosis.socket.gem.Gem;
 import dev.shadowsoffire.apotheosis.socket.gem.GemRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -96,6 +97,7 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("curios")
             && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             activeGems.put("twilight/umbral_matrimony", OriginalGemRank.RARE);
+            activeGems.put("twilight/wildheart", OriginalGemRank.RARE);
         }
         if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
             && net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
@@ -257,6 +259,8 @@ public final class JeicyRuntimeGemVerifier {
             && net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
             verifyUmbralMatrimony();
             LOGGER.info("Verified Umbral Matrimony alchemy, Curios/Aether categories, values, and sockets.");
+            verifyWildheart();
+            LOGGER.info("Verified Wildheart alchemy, Treasure Goblin, experience, fortification, values, and sockets.");
         }
         if (net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks")
             && net.neoforged.fml.ModList.get().isLoaded("eidolon_repraised")
@@ -433,6 +437,7 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("curios/twisted", "curios"),
             Map.entry("curios/vitalic", "curios"),
             Map.entry("twilight/umbral_matrimony", "curios"),
+            Map.entry("twilight/wildheart", "curios"),
             Map.entry("modded/bloodcaster", "irons_spellbooks"),
             Map.entry("modded/mystic", "irons_spellbooks"),
             Map.entry("bumblezone/hive", "irons_spellbooks"),
@@ -1114,6 +1119,51 @@ public final class JeicyRuntimeGemVerifier {
             || !Double.valueOf(0.25).equals(aether.valueForRank(OriginalGemRank.RARE))
             || !Double.valueOf(2).equals(aether.valueForRank(OriginalGemRank.ESOTERIC))) {
             throw new IllegalStateException("Umbral Matrimony values did not match the original");
+        }
+    }
+
+    private static void verifyWildheart() {
+        net.minecraft.world.item.Item armorItem = item("eidolon_repraised:warded_mail");
+        net.minecraft.world.item.Item jewelryItem = item("eidolon_repraised:basic_ring");
+        net.minecraft.world.item.Item aetherItem = item("aether:iron_ring");
+        verifySocketRule("twilight/wildheart", net.minecraft.world.item.Items.DIAMOND_PICKAXE, true);
+        verifySocketRule("twilight/wildheart", net.minecraft.world.item.Items.DIAMOND_SHOVEL, false);
+        verifySocketRule("twilight/wildheart", armorItem, true);
+        verifySocketRule("twilight/wildheart", jewelryItem, true);
+        verifySocketRule("twilight/wildheart", aetherItem, true);
+
+        Gem wildheart = gem("twilight/wildheart");
+        JeicyTieredDropTransformBonus alchemy = requireBonus(wildheart,
+            net.minecraft.world.item.Items.DIAMOND_PICKAXE, JeicyTieredDropTransformBonus.class);
+        JeicyTwilightTreasureGoblinBonus goblin = requireBonus(wildheart, armorItem,
+            JeicyTwilightTreasureGoblinBonus.class);
+        JeicyTieredAttributeBonus experience = requireBonus(wildheart, jewelryItem,
+            JeicyTieredAttributeBonus.class);
+        JeicyTwilightFortificationBonus fortification = requireBonus(wildheart, aetherItem,
+            JeicyTwilightFortificationBonus.class);
+        var goblinRare = goblin.valueForRank(OriginalGemRank.RARE);
+        var goblinEsoteric = goblin.valueForRank(OriginalGemRank.ESOTERIC);
+        var fortificationRare = fortification.valueForRank(OriginalGemRank.RARE);
+        var fortificationEsoteric = fortification.valueForRank(OriginalGemRank.ESOTERIC);
+        if (!Double.valueOf(0.05).equals(alchemy.chanceForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.35).equals(alchemy.chanceForRank(OriginalGemRank.ESOTERIC))
+            || !alchemy.acceptsForVerification(new ItemStack(net.minecraft.world.item.Items.LAPIS_LAZULI))
+            || !alchemy.outputForVerification().is(item("aether:ambrosium_shard"))
+            || goblinRare == null || Float.compare(goblinRare.chance(), 0.001F) != 0
+            || goblinRare.cooldown() != 4800
+            || goblinEsoteric == null || Float.compare(goblinEsoteric.chance(), 0.007F) != 0
+            || goblinEsoteric.cooldown() != 4800
+            || !Double.valueOf(0.01).equals(experience.valueForRank(OriginalGemRank.RARE))
+            || !Double.valueOf(0.07).equals(experience.valueForRank(OriginalGemRank.ESOTERIC))
+            || fortificationRare == null || Float.compare(fortificationRare.chance(), 0.001F) != 0
+            || fortificationRare.cooldown() != 4800
+            || fortificationEsoteric == null
+            || Float.compare(fortificationEsoteric.chance(), 0.007F) != 0
+            || fortificationEsoteric.cooldown() != 4800
+            || JeicyTwilightFortificationBonus.replenishedTemporaryShieldsForVerification() != 5
+            || BuiltInRegistries.ENTITY_TYPE.getOptional(ResourceLocation.fromNamespaceAndPath(
+                "twilightforest", "redcap")).isEmpty()) {
+            throw new IllegalStateException("Wildheart values or Twilight behavior did not match the original");
         }
     }
 

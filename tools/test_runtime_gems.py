@@ -66,6 +66,7 @@ ACTIVE = {
     "undergarden/forlorn.json": "rare",
     "undergarden/undergarden.json": "rare",
     "twilight/umbral_matrimony.json": "rare",
+    "twilight/wildheart.json": "rare",
 }
 TYPE_MAP = {
     "bow": "apotheosis:bow",
@@ -118,6 +119,7 @@ COMMON_TAG_MAP = {
     "forge:gravel": "c:gravels",
     "forge:ores/lead": "c:ores/lead",
     "forge:raw_materials/lead": "c:raw_materials/lead",
+    "forge:ores/lapis": "c:ores/lapis",
 }
 
 
@@ -397,6 +399,60 @@ def main() -> int:
                             assert modifier["values"] == old_modifier["values"]
                 assert runtime["neoforge:conditions"] == [
                     {"type": "neoforge:mod_loaded", "modid": "curios"}
+                ]
+            elif relative_path == "twilight/wildheart.json":
+                assert len(runtime["bonuses"]) == len(original["bonuses"]) == 4
+                old_drop, old_goblin, old_attribute, old_fortification = original["bonuses"]
+                new_drop, new_goblin, new_attribute, new_fortification = runtime["bonuses"]
+
+                assert old_drop["type"] == "apotheosis:drop_transform"
+                assert new_drop["type"] == "apotheotic_additions:original_drop_transform"
+                assert new_drop["conditions"] == [{
+                    "condition": "apotheosis:matches_block",
+                    "valid_blocks": "#" + COMMON_TAG_MAP[old_drop["blocks"]],
+                }]
+                assert new_drop["inputs"] == old_drop["inputs"]
+                assert new_drop["output"] == {"count": 1, "id": old_drop["output"]["item"]}
+                assert new_drop["values"] == old_drop["values"]
+                assert new_drop["desc"] == old_drop["desc"]
+                assert new_drop["original_socket_types"] == old_drop["gem_class"]["types"]
+
+                assert old_goblin["type"] == "apotheosis:twilight_treasure_goblin"
+                assert new_goblin["type"] == (
+                    "apotheotic_additions:original_twilight_treasure_goblin"
+                )
+                assert new_goblin["values"] == old_goblin["values"]
+                assert new_goblin["original_socket_types"] == old_goblin["gem_class"]["types"]
+                assert set(new_goblin["gem_class"]["types"]) == normalize_types(
+                    old_goblin["gem_class"]["types"]
+                )
+
+                assert old_attribute["type"] == "apotheosis:attribute"
+                assert new_attribute["type"] == "apotheotic_additions:original_attribute"
+                assert new_attribute["attribute"] == normalize_attribute(old_attribute["attribute"])
+                assert new_attribute["operation"] == OPERATION_MAP[old_attribute["operation"]]
+                assert new_attribute["values"] == old_attribute["values"]
+                assert new_attribute["original_socket_types"] == old_attribute["gem_class"]["types"]
+                assert set(new_attribute["gem_class"]["types"]) == normalize_types(
+                    old_attribute["gem_class"]["types"]
+                )
+
+                assert old_fortification["type"] == "apotheosis:twilight_fortification"
+                assert new_fortification["type"] == (
+                    "apotheotic_additions:original_twilight_fortification"
+                )
+                assert new_fortification["values"] == old_fortification["values"]
+                assert new_fortification["original_socket_types"] == (
+                    old_fortification["gem_class"]["types"]
+                )
+                assert set(new_fortification["gem_class"]["types"]) == normalize_types(
+                    old_fortification["gem_class"]["types"]
+                )
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime["neoforge:conditions"] == [
+                    {"type": "neoforge:mod_loaded", "modid": "aether"},
+                    {"type": "neoforge:mod_loaded", "modid": "curios"},
+                    {"type": "neoforge:mod_loaded", "modid": "twilightforest"},
                 ]
             elif relative_path == "twilight/umbral_matrimony.json":
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 4

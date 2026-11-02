@@ -73,6 +73,13 @@ public final class JeicyApotheoticAddition {
             JeicySafariWeaponBonus.CODEC);
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_drop_transform"),
             JeicyTieredDropTransformBonus.CODEC);
+        if (net.neoforged.fml.ModList.get().isLoaded("twilightforest")) {
+            GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_twilight_treasure_goblin"),
+                JeicyTwilightTreasureGoblinBonus.CODEC);
+            GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_twilight_fortification"),
+                JeicyTwilightFortificationBonus.CODEC);
+            NeoForge.EVENT_BUS.addListener(JeicyTwilightTreasureGoblinBonus::onEntityJoin);
+        }
         ITEMS.register(modBus);
         RECIPE_SERIALIZERS.register(modBus);
         JeicyLootCategories.register(modBus);
