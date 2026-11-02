@@ -1,0 +1,47 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#551097",
+  "material": "apotheotic_additions:esoteric_material",
+  "render_data": {
+    "beam_height": 3.5,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": { "enabled": true },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 7,
+      "size": 0.4,
+      "texture": "apotheosis:textures/rarity/shadow_t4.png"
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheotic_additions:original_rarity",
+      "affixes": [
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 }
+      ],
+      "socket_chances": [1.0, 1.0, 1.0, 1.0, 1.0],
+      "durability": 0.7
+    }
+  ],
+  "sort_index": 850,
+  "weights": {
+    "haven": { "weight": 0, "quality": 0.0 },
+    "frontier": { "weight": 0, "quality": 0.0 },
+    "ascent": { "weight": 0, "quality": 0.0 },
+    "summit": { "weight": 0, "quality": 0.0 },
+    "pinnacle": { "weight": 0, "quality": 0.0 }
+  }
+}

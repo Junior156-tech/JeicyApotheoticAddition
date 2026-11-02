@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.GemBonus;
+import dev.shadowsoffire.apotheosis.loot.LootRule;
 
 /**
  * Original ID bridge for JEICY port. Source snapshot; not yet a complete playable mod.
@@ -48,6 +49,8 @@ public final class JeicyApotheoticAddition {
     }
 
     public JeicyApotheoticAddition(IEventBus modBus) {
+        LootRule.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_rarity"),
+            JeicyOriginalRarityLootRule.CODEC);
         // Register custom bonus codec before Apotheosis reloads datapacks.
         GemBonus.CODEC.register(ResourceLocation.fromNamespaceAndPath("apotheotic_additions", "original_attribute"),
             JeicyTieredAttributeBonus.CODEC);
@@ -86,5 +89,6 @@ public final class JeicyApotheoticAddition {
         JeicyOriginalBlocks.register(modBus);
         JeicyGemComponents.register(modBus);
         NeoForge.EVENT_BUS.addListener(JeicyRuntimeGemVerifier::onServerStarted);
+        NeoForge.EVENT_BUS.addListener(JeicyRuntimeRarityVerifier::onServerStarted);
     }
 }

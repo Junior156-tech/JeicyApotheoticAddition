@@ -11,7 +11,7 @@ NeoForge y Apotheosis 8.8.0.
 - Datos originales inventariados: 67 gemas, 263 affixes y 229 recetas.
 - `compileJava` correcto contra NeoForge 21.1.251, Apotheosis 8.8.0, Placebo
   9.9.2 y Apothic Attributes 2.10.1.
-- `clean test` correcto; cinco tests JUnit pasan sin fallos.
+- `clean test` correcto; seis tests JUnit pasan sin fallos.
 - El servidor de desarrollo carga las dependencias reales, mantiene 27 recetas
   activas del puerto y llega a `Done` sin errores en datos propios. Malum 1.8.2
   registra errores externos en recetas opcionales de compatibilidad con
@@ -19,6 +19,13 @@ NeoForge y Apotheosis 8.8.0.
   sintaxis antigua, y el port de Alex's Mobs avisa sobre spawn placements.
 - Apotheosis registra 77 gemas en el entorno completo y el verificador confirma
   54 gemas originales activas con sus nueve rangos.
+- Apotheosis registra las nueve rarezas: las cinco actuales y Ancient,
+  Artifact, Heirloom y Esoteric. Un codec propio conserva la secuencia original
+  de reglas, sus probabilidades, el incremento de sockets y los 15 valores
+  discretos de durabilidad que Apotheosis 8 ya no representa por sí solo.
+- Ocho affixes de armadura de Artifact/Heirloom/Esoteric están activos con sus
+  valores originales y categorías exactas. El servidor genera pecheras de las
+  tres rarezas y verifica affixes, 4/1/5 sockets y durabilidad escalonada.
 - El JAR incluye 55 definiciones runtime; Sunbird sigue siendo condicional
   porque requiere Mowzie's Mobs.
 - La gema Aether vuelve a habilitar vuelo con élitros en casco y vuelo creativo
@@ -90,11 +97,15 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 12 definiciones de gemas por portar y los 263 affixes por activar. En la
+Quedan 12 definiciones de gemas por portar y 255 affixes por activar. En la
 configuración de desarrollo se registran 54 gemas; la definición de Sunbird se
 omite porque Mowzie's Mobs no está instalado. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No
 debe instalarse en mundos valiosos.
+
+La animación arcoíris de Ancient todavía requiere un hook de renderizado en
+cliente; el datapack usa temporalmente un color púrpura fijo. No se considera
+cerrada la fidelidad visual de esa rareza.
 
 ## Compilar
 

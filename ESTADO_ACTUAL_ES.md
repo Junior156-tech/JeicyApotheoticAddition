@@ -1,29 +1,32 @@
-# ESTADO DE AVANCE — JeicyApotheoticAddition 1.21.1
+# Estado actual — TEST.22
 
-## Trabajo realizado en esta continuación
+Puerto en desarrollo para Minecraft 1.21.1, NeoForge 21.1.251 y Apotheosis
+8.8.0. No usa AO Port ni KubeJS.
 
-- 263 affixes originales: convertidos **solo a borradores** con adaptación de estructura NeoForge y preservación de valores.
-- 67 gemas originales: convertidas **solo a borradores**. No se ha alterado ni simulado su rareza/pureza.
-- 229 recetas originales: clasificadas y reescritas parcialmente, pero sin activación automática.
-- 4 rarezas (incluida Ancient): borradores con colores y reglas tomados del mod original.
-- 21 bloques originales: registros NeoForge añadidos en Java, además de sus BlockItems (base sin efectos completos).
-- Restricciones exactas de clases de arma: código Java de referencia y prueba ejecutada.
+## Activo y verificado en servidor
 
-## Comprobaciones ejecutadas
+- 55 JSON de gemas empaquetados; 54 se activan en el entorno completo actual.
+- 324 asignaciones de los nueve rangos originales verificadas en cada arranque.
+- Ancient, Artifact, Heirloom y Esoteric activas junto a las cinco rarezas de
+  Apotheosis 8, para un total de nueve.
+- Codec de rareza propio que reproduce probabilidades, fallbacks, sockets
+  incrementales y los 15 pasos discretos de durabilidad de 1.20.1.
+- 8 affixes de estadísticas de armadura Artifact/Heirloom/Esoteric activos y
+  comparados con los valores originales.
+- 27 recetas runtime y evolución secuencial de gemas Common–Esoteric.
 
-- Python: JSON de 263 affixes, 67 gemas, 229 recetas y 4 rarezas válido.
-- Python: integridad SHA256 de todos los ficheros del JAR 2.2.2 verificada.
-- Java: `OriginalSocketRules` compiló con `javac` real y pasó sus aserciones.
-- Java NeoForge: **NO COMPILADO**, falta Gradle y las dependencias NeoForge y Apotheosis (sin acceso a sus repositorios Maven en este entorno).
-- Dentro de Minecraft: **NO PROBADO**.
+El servidor de desarrollo registra 9 rarezas, 105 affixes y 77 gemas, llega a
+`Done` y ejecuta los verificadores de gemas, rarezas y affixes. Los errores de
+recetas de compatibilidad de Malum/Rats y los avisos de Alex's Mobs proceden de
+esas dependencias externas y también aparecen sin los datos nuevos del port.
 
-## Falta para JAR jugable
+## Pendiente
 
-1. Registrar correctamente APIs de Apotheosis 8.8.0 para rarezas, afijos y gem bonuses.
-2. Resolver categorías exactas de arma/Curios en 166 afijos, más 9 tipos especiales.
-3. Implementar las 67 gemas en runtime y la evolución fiel, incluyendo DataComponents, menús y salvaging.
-4. Completar stats de los shelves y otras mecánicas de 21 bloques; recetas/tagging.
-5. Compilar con NeoForge 21.1.251 / Minecraft 1.21.1 / Apotheosis 8.8.0 y probar en TEST.
-6. Fase posterior: bosses, minibosses, rogue spawners, monedas, intercambios, drops e integraciones.
+- 12 definiciones de gemas cuyos mods fuente no tienen una versión oficial
+  comprobada para 1.21.1.
+- 255 affixes, 202 recetas y el resto de sistemas de loot, bloques y contenido.
+- Restaurar la animación arcoíris de Ancient; por ahora usa un púrpura fijo.
+- Pruebas de cliente y pruebas manuales prolongadas en juego.
 
-**No instales este ZIP ni el JAR preliminar anterior en la carpeta `mods`.** No existe todavía un `.jar` instalable y verificado. 
+El JAR sigue siendo un artefacto de TEST. No debe usarse en mundos valiosos ni
+se declara completo o listo para producción.

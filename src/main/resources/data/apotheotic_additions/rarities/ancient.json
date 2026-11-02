@@ -1,0 +1,49 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#AA00AA",
+  "material": "apotheotic_additions:ancient_material",
+  "render_data": {
+    "beam_height": 3.5,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 7,
+      "size": 0.4,
+      "texture": "apotheosis:textures/rarity/shadow_t4.png"
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheotic_additions:original_rarity",
+      "removed_affix_chances": [1.0],
+      "affixes": [
+        { "affix_type": "stat", "chance": 1.0 },
+        { "affix_type": "stat", "chance": 1.0, "backup_affix_type": "ability", "backup_chance": 0.7 },
+        { "affix_type": "stat", "chance": 1.0, "backup_affix_type": "ability", "backup_chance": 0.6 },
+        { "affix_type": "stat", "chance": 1.0, "backup_affix_type": "ability", "backup_chance": 0.5 },
+        { "affix_type": "stat", "chance": 1.0, "backup_affix_type": "ability", "backup_chance": 0.4 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 1.0 },
+        { "affix_type": "ability", "chance": 0.75 },
+        { "affix_type": "ability", "chance": 0.45 }
+      ],
+      "socket_chances": [1.0, 0.85, 0.65, 0.45, 0.25],
+      "durability": 0.75
+    }
+  ],
+  "sort_index": 725,
+  "weights": {
+    "haven": { "weight": 1, "quality": 5.0 },
+    "frontier": { "weight": 1, "quality": 5.0 },
+    "ascent": { "weight": 1, "quality": 5.0 },
+    "summit": { "weight": 1, "quality": 5.0 },
+    "pinnacle": { "weight": 1, "quality": 5.0 }
+  }
+}

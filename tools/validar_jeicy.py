@@ -5,6 +5,7 @@ Run: py tools/validar_jeicy.py [path/to/ApotheoticAdditionsV2.2.2.jar]
 """
 import hashlib,json,pathlib,sys,zipfile,collections
 from test_runtime_gems import ACTIVE as REVIEWED_RUNTIME_GEMS
+from test_runtime_rarities_affixes import ACTIVE_AFFIXES, RARITIES, validate as validate_rarities_affixes
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 inventory=json.loads((ROOT/'ORIGINAL_2_2_2_INVENTORY.json').read_text(encoding='utf-8'))
 jar=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else None
@@ -40,7 +41,12 @@ if active_gems != set(REVIEWED_RUNTIME_GEMS):
   f'esperadas={sorted(REVIEWED_RUNTIME_GEMS)} activas={sorted(active_gems)}'
  )
 if runtime.exists():
- unsupported=['affixes','rarities','recipes','gear_sets','enchanting_stats','affix_loot_entries']
+ active_affixes={p.relative_to(runtime/'affixes').as_posix() for p in (runtime/'affixes').rglob('*.json')} if (runtime/'affixes').exists() else set()
+ if active_affixes != ACTIVE_AFFIXES: problems.append(f'ACTIVACION DE AFFIXES NO REVISADA: {sorted(active_affixes)}')
+ active_rarities={p.stem for p in (runtime/'rarities').glob('*.json')} if (runtime/'rarities').exists() else set()
+ if active_rarities != set(RARITIES): problems.append(f'ACTIVACION DE RAREZAS NO REVISADA: {sorted(active_rarities)}')
+ problems.extend(validate_rarities_affixes())
+ unsupported=['recipes','gear_sets','enchanting_stats','affix_loot_entries']
  for section in unsupported:
   if (runtime/section).exists(): problems.append(f'ACTIVACIÓN NO REVISADA: {runtime/section} (no hay validación de codecs)')
 print('JeicyApotheoticAddition — AUDITORÍA DEL PORT')

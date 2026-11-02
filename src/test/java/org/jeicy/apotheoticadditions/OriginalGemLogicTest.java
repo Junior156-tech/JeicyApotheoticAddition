@@ -116,4 +116,15 @@ final class OriginalGemLogicTest {
         assertThrows(IllegalArgumentException.class,
             () -> OriginalGemUpgradeCosts.dustCost(OriginalGemRank.ESOTERIC));
     }
+
+    @Test
+    void preservesTheFifteenOriginalDurabilitySteps() {
+        assertEquals(0.43F, OriginalRarityMath.steppedDurability(0.5F, 0.0F), 0.000001F);
+        assertEquals(0.50F, OriginalRarityMath.steppedDurability(0.5F, 0.5F), 0.000001F);
+        assertEquals(0.57F, OriginalRarityMath.steppedDurability(0.5F, 0.999999F), 0.000001F);
+        assertEquals(0.63F, OriginalRarityMath.steppedDurability(0.7F, 0.0F), 0.000001F);
+        assertEquals(0.77F, OriginalRarityMath.steppedDurability(0.7F, 0.999999F), 0.000001F);
+        assertEquals(0.68F, OriginalRarityMath.steppedDurability(0.75F, 0.0F), 0.000001F);
+        assertEquals(0.82F, OriginalRarityMath.steppedDurability(0.75F, 0.999999F), 0.000001F);
+    }
 }
