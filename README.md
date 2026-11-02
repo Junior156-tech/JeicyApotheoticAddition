@@ -26,7 +26,7 @@ NeoForge y Apotheosis 8.8.0.
 - Diez affixes de armadura de Artifact/Heirloom/Esoteric están activos con sus
   valores originales y categorías exactas. El servidor genera pecheras de las
   tres rarezas y verifica affixes, 4/1/5 sockets y durabilidad escalonada.
-- El JAR incluye 60 definiciones runtime; Sunbird sigue siendo condicional
+- El JAR incluye las 67 definiciones runtime; Sunbird sigue siendo condicional
   porque requiere Mowzie's Mobs.
 - La gema Aether vuelve a habilitar vuelo con élitros en casco y vuelo creativo
   en pechera; el entorno de desarrollo fija Aether 1.21.1 y owo-lib reales.
@@ -82,6 +82,10 @@ NeoForge y Apotheosis 8.8.0.
   bonuses, dimensiones y condiciones exactas. Su paridad se compara con el JAR
   2.2.2; permanecen inactivas porque Blue Skies no tiene una versión 1.21.1 en
   este entorno de pruebas.
+- Las siete últimas gemas de Midnight, Biomancy, Thermal y Wither Storm también
+  están empaquetadas con sus 26 bonuses originales. Sus mods fuente no están
+  disponibles en este entorno 1.21.1, por lo que se verifica la paridad de datos
+  y su exclusión condicional, no su ejecución dentro de esos mods.
 - El catálogo runtime ya conserva el rango mínimo original de las 67 gemas.
 - Los bonuses portados cubren atributos simples, encantamientos globales y
   multiatributos con perfiles distintos para espada/tridente y arma pesada.
@@ -101,7 +105,8 @@ NeoForge y Apotheosis 8.8.0.
 - `apotheotic_additions:ancient_material` restaura el material eliminado por
   Apotheosis 8.8.0 y mantiene separados los costes Mythic y Ancient.
 
-Quedan 7 definiciones de gemas por portar y 253 affixes por activar. En la
+Las 67 definiciones de gemas originales ya están empaquetadas; quedan 253
+affixes por activar. En la
 configuración de desarrollo se registran 54 gemas; la definición de Sunbird se
 omite porque Mowzie's Mobs no está instalado. El JAR es un
 artefacto de diagnóstico y **todavía no se declara funcional ni completo**. No

@@ -48,6 +48,13 @@ ACTIVE = {
     "modded/archmage.json": "rare",
     "modded/ars_mana.json": "common",
     "modded/heartland.json": "epic",
+    "midnight/darkheart.json": "rare",
+    "midnight/midnight.json": "rare",
+    "modded/flesh.json": "uncommon",
+    "modded/flux.json": "rare",
+    "modded/marrow.json": "uncommon",
+    "modded/thermal.json": "uncommon",
+    "modded/witherstorm.json": "rare",
     "modded/felfire.json": "uncommon",
     "modded/engineer.json": "rare",
     "modded/dracula.json": "rare",
@@ -116,6 +123,8 @@ COMMON_TAG_MAP = {
     "forge:ores/iron": "c:ores/iron",
     "forge:raw_materials/iron": "c:raw_materials/iron",
     "forge:raw_materials/gold": "c:raw_materials/gold",
+    "forge:ores/nickel": "c:ores/nickel",
+    "forge:raw_materials/nickel": "c:raw_materials/nickel",
     "forge:ores/diamond": "c:ores/diamond",
     "forge:gems/diamond": "c:gems/diamond",
     "forge:ores/zanite": "aether:ores/zanite",
@@ -218,6 +227,12 @@ def assert_standard_bonus(old_bonus: dict, new_bonus: dict) -> None:
         assert new_bonus["values"] == old_bonus["values"]
         assert new_bonus["desc"] == old_bonus["desc"]
         assert new_bonus["original_socket_types"] == old_types
+    elif old_bonus["type"] == "apotheosis:enchantment":
+        assert new_bonus["type"] == "apotheotic_additions:original_enchantment"
+        assert new_bonus["enchantment"] == normalize_enchantment(old_bonus["enchantment"])
+        assert new_bonus.get("global", False) == old_bonus.get("global", False)
+        assert new_bonus["values"] == old_bonus["values"]
+        assert new_bonus["original_socket_types"] == old_types
     else:
         raise AssertionError(f"Unsupported standard bonus {old_bonus['type']}")
 
@@ -256,11 +271,20 @@ def main() -> int:
                 assert "min_rarity" not in original
                 assert "min_purity" not in runtime
 
-            if relative_path.startswith("blue_skies/"):
+            standard_conditional = (
+                relative_path.startswith(("blue_skies/", "midnight/"))
+                or relative_path in {
+                    "modded/flesh.json", "modded/flux.json", "modded/marrow.json",
+                    "modded/thermal.json", "modded/witherstorm.json",
+                }
+            )
+            if standard_conditional:
                 assert len(runtime["bonuses"]) == len(original["bonuses"])
                 for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
                     assert_standard_bonus(old_bonus, new_bonus)
-                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                assert runtime.get("constraints", {}).get("dimensions", []) == original.get(
+                    "dimensions", []
+                )
                 modid_map = {"apothiccurios": "curios", "eidolon": "eidolon_repraised"}
                 assert runtime["neoforge:conditions"] == [
                     {

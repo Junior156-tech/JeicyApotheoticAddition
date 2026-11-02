@@ -1,16 +1,19 @@
-# Estado actual — TEST.23
+# Estado actual — TEST.24
 
 Puerto en desarrollo para Minecraft 1.21.1, NeoForge 21.1.251 y Apotheosis
 8.8.0. No usa AO Port ni KubeJS.
 
 ## Activo y verificado en servidor
 
-- 60 JSON de gemas empaquetados; 54 se activan en el entorno completo actual.
+- 67/67 JSON de gemas empaquetados; 54 se activan en el entorno completo actual.
 - Las cinco gemas originales de Blue Skies conservan sus 16 bonuses, pesos,
   calidad, dimensiones, unicidad, rango mínimo y restricciones de socket.
   Quedan protegidas por condiciones de carga porque Blue Skies no está
   disponible para 1.21.1 en este entorno; su fidelidad se verifica contra el
   JAR original, no se declara probada dentro del juego con ese mod.
+- Las siete gemas de Midnight, Biomancy, Thermal y Wither Storm conservan sus
+  26 bonuses originales y quedan igualmente protegidas por condiciones de
+  carga. Su paridad se comprueba, pero sus mods no están instalados en 1.21.1.
 - 324 asignaciones de los nueve rangos originales verificadas en cada arranque.
 - Ancient, Artifact, Heirloom y Esoteric activas junto a las cinco rarezas de
   Apotheosis 8, para un total de nueve.
@@ -28,8 +31,6 @@ esas dependencias externas y también aparecen sin los datos nuevos del port.
 
 ## Pendiente
 
-- 7 definiciones de gemas cuyos mods fuente no tienen una versión oficial
-  comprobada para 1.21.1.
 - 253 affixes, 202 recetas y el resto de sistemas de loot, bloques y contenido.
 - Restaurar la animación arcoíris de Ancient; por ahora usa un púrpura fijo.
 - Pruebas de cliente y pruebas manuales prolongadas en juego.

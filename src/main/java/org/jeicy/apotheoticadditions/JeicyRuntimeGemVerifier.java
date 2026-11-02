@@ -456,6 +456,13 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("blue_skies/horizonite_alchemist", "blue_skies"),
             Map.entry("blue_skies/twin_magi", "blue_skies"),
             Map.entry("blue_skies/ventium_alchemist", "blue_skies"),
+            Map.entry("midnight/darkheart", "midnight"),
+            Map.entry("midnight/midnight", "midnight"),
+            Map.entry("modded/flesh", "biomancy"),
+            Map.entry("modded/flux", "cofh_core"),
+            Map.entry("modded/marrow", "biomancy"),
+            Map.entry("modded/thermal", "cofh_core"),
+            Map.entry("modded/witherstorm", "witherstormmod"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {
