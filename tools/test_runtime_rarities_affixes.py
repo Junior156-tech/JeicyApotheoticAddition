@@ -9,10 +9,12 @@ ACTIVE_AFFIXES = {
     "armor/attribute/artifact_armor.json",
     "armor/attribute/artifact_hp.json",
     "armor/attribute/artifact_luck.json",
+    "armor/attribute/artifact_source.json",
     "armor/attribute/artifact_toughness.json",
     "armor/attribute/esoteric_armor.json",
     "armor/attribute/esoteric_hp.json",
     "armor/attribute/esoteric_luck.json",
+    "armor/attribute/esoteric_source.json",
     "armor/attribute/esoteric_toughness.json",
 }
 RARITIES = {
@@ -42,12 +44,17 @@ def validate():
         source = load(original_root / relative)
         current = load(affix_root / relative)
         expected_categories = [f"apotheosis:{name}" for name in source["types"]]
+        expected_conditions = [
+            {"type": "neoforge:mod_loaded", "modid": condition["modid"]}
+            for condition in source.get("conditions", [])
+        ]
         checks = {
             "type": current.get("type") == source.get("type"),
             "attribute": current.get("attribute") == source.get("attribute"),
             "operation": current.get("operation") == operation[source["operation"]],
             "values": current.get("values") == source.get("values"),
             "categories": current.get("categories") == expected_categories,
+            "conditions": current.get("neoforge:conditions", []) == expected_conditions,
             "definition": current.get("definition") == {
                 "affix_type": "stat", "exclusive_set": [],
                 "weights": {"weight": 1, "quality": 0}},
@@ -82,4 +89,4 @@ if __name__ == "__main__":
         print("ERROR:", error)
     if errors:
         sys.exit(1)
-    print("OK: 4 runtime rarities and 8 runtime affixes match the reviewed original data")
+    print("OK: 4 runtime rarities and 10 runtime affixes match the reviewed original data")

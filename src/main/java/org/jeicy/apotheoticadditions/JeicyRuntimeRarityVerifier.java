@@ -82,9 +82,11 @@ public final class JeicyRuntimeRarityVerifier {
     private static void verifyAffixesAndGeneratedItems() {
         String[] affixPaths = {
             "armor/attribute/artifact_armor", "armor/attribute/artifact_hp",
-            "armor/attribute/artifact_luck", "armor/attribute/artifact_toughness",
+            "armor/attribute/artifact_luck", "armor/attribute/artifact_source",
+            "armor/attribute/artifact_toughness",
             "armor/attribute/esoteric_armor", "armor/attribute/esoteric_hp",
-            "armor/attribute/esoteric_luck", "armor/attribute/esoteric_toughness"
+            "armor/attribute/esoteric_luck", "armor/attribute/esoteric_source",
+            "armor/attribute/esoteric_toughness"
         };
         LootRarity artifact = rarity("artifact");
         LootRarity esoteric = rarity("esoteric");
@@ -110,7 +112,7 @@ public final class JeicyRuntimeRarityVerifier {
         verifyGenerated("artifact", 4, 0.5F, 2);
         verifyGenerated("heirloom", 1, 0.7F, 1);
         verifyGenerated("esoteric", 5, 0.7F, 4);
-        LOGGER.info("Verified 8 high-tier armor affixes and generated Artifact/Heirloom/Esoteric chestplates with exact sockets and stepped durability.");
+        LOGGER.info("Verified 10 high-tier armor affixes and generated Artifact/Heirloom/Esoteric chestplates with exact sockets and stepped durability.");
     }
 
     private static void verifyGenerated(String rarityName, int expectedSockets, float durabilityBase,

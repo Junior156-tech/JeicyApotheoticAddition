@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [{ "type": "neoforge:mod_loaded", "modid": "blue_skies" }],
+  "type": "apotheosis:gem",
+  "unique": true,
+  "min_purity": "flawed",
+  "constraints": { "dimensions": ["blue_skies:everdawn", "blue_skies:everbright"] },
+  "weights": { "weight": 5, "quality": 5.0 },
+  "bonuses": [
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "lower_armor", "types": ["apotheosis:boots", "apotheosis:leggings"] },
+      "attribute": "minecraft:player.block_interaction_range",
+      "operation": "add_value",
+      "original_socket_types": ["boots", "leggings"],
+      "values": { "rare": 1.0, "epic": 1.5, "mythic": 2.0, "ancient": 2.5, "apotheotic_additions:artifact": 3.0, "apotheotic_additions:heirloom": 4.0, "apotheotic_additions:esoteric": 5.0 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "pickaxe", "types": ["apotheosis:breaker"] },
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_value",
+      "original_socket_types": ["pickaxe"],
+      "values": { "rare": 0.5, "epic": 1.0, "mythic": 1.5, "ancient": 2.0, "apotheotic_additions:artifact": 2.5, "apotheotic_additions:heirloom": 3.0, "apotheotic_additions:esoteric": 3.5 }
+    },
+    {
+      "type": "apotheotic_additions:original_attribute",
+      "gem_class": { "key": "helmet", "types": ["apotheosis:helmet"] },
+      "attribute": "apothic_attributes:dodge_chance",
+      "operation": "add_value",
+      "original_socket_types": ["helmet"],
+      "values": { "rare": 0.1, "epic": 0.15, "mythic": 0.2, "ancient": 0.25, "apotheotic_additions:artifact": 0.3, "apotheotic_additions:heirloom": 0.35, "apotheotic_additions:esoteric": 0.4 }
+    }
+  ]
+}

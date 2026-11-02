@@ -451,6 +451,11 @@ public final class JeicyRuntimeGemVerifier {
             Map.entry("modded/draconic_legacy", "iceandfire"),
             Map.entry("modded/safari", "alexsmobs"),
             Map.entry("modded/rat_chef", "rats"),
+            Map.entry("blue_skies/arachnarch", "blue_skies"),
+            Map.entry("blue_skies/blue_skies", "blue_skies"),
+            Map.entry("blue_skies/horizonite_alchemist", "blue_skies"),
+            Map.entry("blue_skies/twin_magi", "blue_skies"),
+            Map.entry("blue_skies/ventium_alchemist", "blue_skies"),
             Map.entry("crafted/sunbird", "mowziesmobs"));
         conditionalGems.forEach((gemPath, modId) -> {
             if (!net.neoforged.fml.ModList.get().isLoaded(modId)) {

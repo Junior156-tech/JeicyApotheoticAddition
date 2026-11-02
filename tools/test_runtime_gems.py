@@ -16,6 +16,11 @@ ACTIVE = {
     "aether/candied.json": "rare",
     "aether/purity.json": "rare",
     "aether/zanite_alchemist.json": "rare",
+    "blue_skies/arachnarch.json": "rare",
+    "blue_skies/blue_skies.json": "rare",
+    "blue_skies/horizonite_alchemist.json": "rare",
+    "blue_skies/twin_magi.json": "rare",
+    "blue_skies/ventium_alchemist.json": "rare",
     "bumblezone/bee_queen.json": "uncommon",
     "bumblezone/hive.json": "rare",
     "crafted/cornelia.json": "apotheotic_additions:artifact",
@@ -110,6 +115,7 @@ COMMON_TAG_MAP = {
     "forge:cobblestone": "c:cobblestones",
     "forge:ores/iron": "c:ores/iron",
     "forge:raw_materials/iron": "c:raw_materials/iron",
+    "forge:raw_materials/gold": "c:raw_materials/gold",
     "forge:ores/diamond": "c:ores/diamond",
     "forge:gems/diamond": "c:gems/diamond",
     "forge:ores/zanite": "aether:ores/zanite",
@@ -173,6 +179,49 @@ def normalize_types(original_types: list[str]) -> set[str]:
     return {TYPE_MAP[value] for value in original_types}
 
 
+def assert_standard_bonus(old_bonus: dict, new_bonus: dict) -> None:
+    old_types = old_bonus["gem_class"]["types"]
+    assert new_bonus["gem_class"]["key"] == old_bonus["gem_class"]["key"]
+    assert set(new_bonus["gem_class"]["types"]) == normalize_types(old_types)
+    if old_bonus["type"] == "apotheosis:attribute":
+        assert new_bonus["type"] == "apotheotic_additions:original_attribute"
+        assert new_bonus["attribute"] == normalize_attribute(old_bonus["attribute"])
+        assert new_bonus["operation"] == OPERATION_MAP[old_bonus["operation"].upper()]
+        assert new_bonus["values"] == old_bonus["values"]
+        assert new_bonus["original_socket_types"] == old_types
+    elif old_bonus["type"] == "apotheosis:multi_attribute":
+        assert new_bonus["type"] == "apotheotic_additions:original_multi_attribute"
+        assert len(new_bonus["profiles"]) == 1
+        profile = new_bonus["profiles"][0]
+        assert profile["key"] == old_bonus["gem_class"]["key"]
+        assert profile["original_socket_types"] == old_types
+        assert len(profile["modifiers"]) == len(old_bonus["modifiers"])
+        for modifier, old_modifier in zip(profile["modifiers"], old_bonus["modifiers"]):
+            assert modifier["attribute"] == normalize_attribute(old_modifier["attribute"])
+            assert modifier["operation"] == OPERATION_MAP[old_modifier["operation"].upper()]
+            assert modifier["values"] == old_modifier["values"]
+    elif old_bonus["type"] == "apotheosis:mob_effect":
+        assert new_bonus["type"] == "apotheotic_additions:original_mob_effect"
+        assert new_bonus["mob_effect"] == normalize_effect(old_bonus["mob_effect"])
+        assert new_bonus["target"] == old_bonus["target"].lower()
+        assert new_bonus["values"] == old_bonus["values"]
+        assert new_bonus.get("stack_on_reapply", False) == old_bonus.get("stack_on_reapply", False)
+        assert new_bonus["original_socket_types"] == old_types
+    elif old_bonus["type"] == "apotheosis:drop_transform":
+        assert new_bonus["type"] == "apotheotic_additions:original_drop_transform"
+        assert new_bonus["conditions"] == [{
+            "condition": "apotheosis:matches_block",
+            "valid_blocks": "#" + COMMON_TAG_MAP.get(old_bonus["blocks"], old_bonus["blocks"]),
+        }]
+        assert new_bonus["inputs"] == normalize_ingredient(old_bonus["inputs"])
+        assert new_bonus["output"] == {"count": 1, "id": old_bonus["output"]["item"]}
+        assert new_bonus["values"] == old_bonus["values"]
+        assert new_bonus["desc"] == old_bonus["desc"]
+        assert new_bonus["original_socket_types"] == old_types
+    else:
+        raise AssertionError(f"Unsupported standard bonus {old_bonus['type']}")
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         raise SystemExit("usage: test_runtime_gems.py <ApotheoticAdditionsV2.2.2.jar>")
@@ -207,7 +256,20 @@ def main() -> int:
                 assert "min_rarity" not in original
                 assert "min_purity" not in runtime
 
-            if relative_path == "crafted/ender_dragon.json":
+            if relative_path.startswith("blue_skies/"):
+                assert len(runtime["bonuses"]) == len(original["bonuses"])
+                for old_bonus, new_bonus in zip(original["bonuses"], runtime["bonuses"]):
+                    assert_standard_bonus(old_bonus, new_bonus)
+                assert runtime["constraints"]["dimensions"] == original["dimensions"]
+                modid_map = {"apothiccurios": "curios", "eidolon": "eidolon_repraised"}
+                assert runtime["neoforge:conditions"] == [
+                    {
+                        "type": "neoforge:mod_loaded",
+                        "modid": modid_map.get(condition["modid"], condition["modid"]),
+                    }
+                    for condition in original["conditions"]
+                ]
+            elif relative_path == "crafted/ender_dragon.json":
                 assert len(runtime["bonuses"]) == len(original["bonuses"]) == 1
                 old_bonus = original["bonuses"][0]
                 new_bonus = runtime["bonuses"][0]
